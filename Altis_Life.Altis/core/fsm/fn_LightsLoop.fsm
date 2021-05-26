@@ -1,0 +1,513 @@
+/*%FSM<COMPILE "D:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, sirenLightsLoop">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-12.527224,-278.608246,77.472786,-228.608246,0.000000,"init"};
+item1[] = {"time_check",4,218,964.120728,-7.313935,1054.120361,42.685997,0.000000,"time check"};
+item2[] = {"blinker",4,218,48.927406,-155.015381,138.927399,-105.015381,1.000000,"blinker"};
+item3[] = {"Warnlicht",4,218,-101.357986,-163.364563,-11.357986,-113.364563,2.000000,"Warnlicht"};
+item4[] = {"End",1,250,-4.314882,-539.172852,85.685196,-489.172913,0.000000,"End"};
+item5[] = {"_",4,218,-4.028528,-413.101959,85.971481,-363.101959,0.000000,""};
+item6[] = {"setup_lights",2,250,-241.323502,-155.358109,-151.323486,-105.358109,0.000000,"setup lights"};
+item7[] = {"setup_lights_1",2,250,205.586227,-157.719467,295.586243,-107.719467,0.000000,"setup lights"};
+item8[] = {"time_check",4,218,-913.603760,-161.760117,-823.604370,-111.760178,0.000000,"time check"};
+item9[] = {"_",2,250,-513.828369,-37.348366,-423.828308,12.651644,0.000000,""};
+item10[] = {"vehicle_dead",4,218,-395.655151,23.165438,-305.655151,73.165474,2.000000,"vehicle dead"};
+item11[] = {"Lights_off",4,218,-512.539673,75.181953,-422.539581,125.181961,1.000000,"Lights off"};
+item12[] = {"Distance__150",4,218,-732.775696,-38.985420,-642.775818,11.014577,0.000000,"Distance  150"};
+item13[] = {"End_1",1,250,-395.890106,143.279373,-305.890076,193.279312,0.000000,"End"};
+item14[] = {"light_on",2,250,-919.833679,-42.929672,-829.833679,7.070537,0.000000,"light on"};
+item15[] = {"true",4,218,-367.132690,-99.458015,-277.132690,-49.458015,0.000000,"true"};
+item16[] = {"__1",2,250,-909.812256,-265.555603,-819.812256,-215.555603,0.000000,""};
+item17[] = {"time_check",4,218,-504.592346,-261.260010,-414.592346,-211.260010,0.000000,"time check"};
+item18[] = {"__2",2,250,531.021851,-13.526278,621.021912,36.473709,0.000000,""};
+item19[] = {"vehicle_dead",4,218,395.937469,52.533279,485.937408,102.533333,2.000000,"vehicle dead"};
+item20[] = {"Lights_off",4,218,528.613342,89.761055,618.613403,139.761108,1.000000,"Lights off"};
+item21[] = {"Distance__150",4,218,642.086121,-9.915743,732.085999,40.084248,0.000000,"Distance  150"};
+item22[] = {"End_2",1,4346,384.964264,154.467499,474.964294,204.467346,0.000000,"End"};
+item23[] = {"light_on_1",2,250,753.486938,-0.293730,843.486816,49.706459,0.000000,"light on"};
+item24[] = {"true",4,218,396.731171,-77.484367,486.731018,-27.484425,0.000000,"true"};
+item25[] = {"__3",2,250,986.122437,-247.033463,1076.122803,-197.033371,0.000000,""};
+item26[] = {"time_check",4,218,550.432556,-261.849945,640.432556,-211.849915,0.000000,"time check"};
+link0[] = {0,2};
+link1[] = {0,3};
+link2[] = {0,5};
+link3[] = {1,25};
+link4[] = {2,7};
+link5[] = {3,6};
+link6[] = {5,4};
+link7[] = {6,15};
+link8[] = {7,24};
+link9[] = {8,16};
+link10[] = {9,10};
+link11[] = {9,11};
+link12[] = {9,12};
+link13[] = {10,13};
+link14[] = {11,13};
+link15[] = {12,14};
+link16[] = {14,8};
+link17[] = {15,9};
+link18[] = {16,17};
+link19[] = {17,9};
+link20[] = {18,19};
+link21[] = {18,20};
+link22[] = {18,21};
+link23[] = {19,22};
+link24[] = {20,22};
+link25[] = {21,23};
+link26[] = {23,1};
+link27[] = {24,18};
+link28[] = {25,26};
+link29[] = {26,18};
+globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-26.489075,773.031128,375.736176,-324.733459,670,587,1};
+window[] = {0,-1,-1,-1,-1,837,78,1518,78,1,688};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "sirenLightsLoop";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_vehicle =param[0,objNull,[objNull]];" \n
+                         "_lightcolor = param[1,[],[[]]];" \n
+                         "_lights = param[2,[],[[]]];" \n
+                         "_time = time;" \n
+                         "_sleep = 0.5;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Warnlicht">*/
+                                class Warnlicht
+                                {
+                                        itemno = 3;
+                                        priority = 2.000000;
+                                        to="setup_lights";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _lights > 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "blinker">*/
+                                class blinker
+                                {
+                                        itemno = 2;
+                                        priority = 1.000000;
+                                        to="setup_lights_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _lights > 0 && count _lights < 4"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _lights isequalto 0 || isnull _vehicle"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setup_lights">*/
+                class setup_lights
+                {
+                        name = "setup_lights";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_lightrightfront_pos = _lights select 0;" \n
+                         "_lightleftfront_pos = _lights select 1;" \n
+                         "_lightleftback_pos = _lights select 2;" \n
+                         "_lightrightback_pos = _lights select 3;" \n
+                         "" \n
+                         "" \n
+                         "_lightright_front = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_lightright_front setLightColor _lightcolor;" \n
+                         "_lightright_front setLightBrightness 0;" \n
+                         "_lightright_front lightAttachObject [_vehicle,_lightrightfront_pos];" \n
+                         "_lightright_front setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_lightright_front setLightIntensity 25;" \n
+                         "_lightright_front setLightFlareSize 0.58;" \n
+                         "_lightright_front setLightFlareMaxDistance 150;" \n
+                         "_lightright_front setLightUseFlare true;" \n
+                         "_lightright_front setLightDayLight true;" \n
+                         "" \n
+                         "" \n
+                         "_lightleft_front = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_lightleft_front setLightColor _lightcolor;" \n
+                         "_lightleft_front setLightBrightness 0;" \n
+                         "_lightleft_front lightAttachObject [_vehicle, _lightleftfront_pos];" \n
+                         "_lightleft_front setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_lightleft_front setLightIntensity 25;" \n
+                         "_lightleft_front setLightFlareSize 0.58;" \n
+                         "_lightleft_front setLightFlareMaxDistance 150;" \n
+                         "_lightleft_front setLightUseFlare true;" \n
+                         "_lightleft_front setLightDayLight true;" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "_lightleft_back = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_lightleft_back setLightColor _lightcolor;" \n
+                         "_lightleft_back setLightBrightness 0;" \n
+                         "_lightleft_back lightAttachObject [_vehicle,_lightleftback_pos];" \n
+                         "_lightleft_back setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_lightleft_back setLightIntensity 25;" \n
+                         "_lightleft_back setLightFlareSize 0.58;" \n
+                         "_lightleft_back setLightFlareMaxDistance 150;" \n
+                         "_lightleft_back setLightUseFlare true;" \n
+                         "_lightleft_back setLightDayLight true;" \n
+                         "" \n
+                         "" \n
+                         "_lightright_back = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_lightright_back setLightColor _lightcolor;" \n
+                         "_lightright_back setLightBrightness 0;" \n
+                         "_lightright_back lightAttachObject [_vehicle, _lightrightback_pos];" \n
+                         "_lightright_back setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_lightright_back setLightIntensity 25;" \n
+                         "_lightright_back setLightFlareSize 0.58;" \n
+                         "_lightright_back setLightFlareMaxDistance 150;" \n
+                         "_lightright_back setLightUseFlare true;" \n
+                         "_lightright_back setLightDayLight true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setup_lights_1">*/
+                class setup_lights_1
+                {
+                        name = "setup_lights_1";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"_lightfront_pos = _lights select 0;" \n
+                         "_lightback_pos = _lights select 1;" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "_light_front = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_light_front setLightColor _lightcolor;" \n
+                         "_light_front setLightBrightness 0;" \n
+                         "_light_front lightAttachObject [_vehicle,_lightfront_pos];" \n
+                         "_light_front setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_light_front setLightIntensity 25;" \n
+                         "_light_front setLightFlareSize 0.58;" \n
+                         "_light_front setLightFlareMaxDistance 150;" \n
+                         "_light_front setLightUseFlare true;" \n
+                         "_light_front setLightDayLight true;" \n
+                         "" \n
+                         "" \n
+                         "_light_back = ""#lightpoint"" createVehicleLocal getPos _vehicle;" \n
+                         "" \n
+                         "_light_back setLightColor _lightcolor;" \n
+                         "_light_back setLightBrightness 0;" \n
+                         "_light_back lightAttachObject [_vehicle, _lightback_pos];" \n
+                         "_light_back setLightAttenuation [0.181, 0, 1000, 130];" \n
+                         "_light_back setLightIntensity 25;" \n
+                         "_light_back setLightFlareSize 0.58;" \n
+                         "_light_back setLightFlareMaxDistance 150;" \n
+                         "_light_back setLightUseFlare true;" \n
+                         "_light_back setLightDayLight true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="__2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vehicle_dead">*/
+                                class vehicle_dead
+                                {
+                                        itemno = 10;
+                                        priority = 2.000000;
+                                        to="End_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _vehicle"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Lights_off">*/
+                                class Lights_off
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="End_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_vehicle getVariable [""W_light"",false])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Distance__150">*/
+                                class Distance__150
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="light_on";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(player distance _vehicle) < 150"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_1">*/
+                class End_1
+                {
+                        name = "End_1";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"deleteVehicle _lightright_front;" \n
+                         "deleteVehicle _lightleft_front;" \n
+                         "" \n
+                         "deleteVehicle _lightleft_back;" \n
+                         "deleteVehicle _lightright_back;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "light_on">*/
+                class light_on
+                {
+                        name = "light_on";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_brightness = 50;" \n
+                         "if (sunOrMoon < 1) then {" \n
+                         "	_brightness = 5;" \n
+                         "};" \n
+                         "" \n
+                         "_time = time;" \n
+                         "_lightright_front setLightBrightness _brightness;" \n
+                         "_lightleft_front setLightBrightness _brightness;" \n
+                         "_lightleft_back setLightBrightness _brightness;" \n
+                         "_lightright_back setLightBrightness _brightness;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "time_check">*/
+                                class time_check
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _time) > alpha_time_wait_light"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__1">*/
+                class __1
+                {
+                        name = "__1";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"_lightright_front setLightBrightness 0;" \n
+                         "_lightleft_front setLightBrightness 0;" \n
+                         "_lightleft_back setLightBrightness 0;" \n
+                         "_lightright_back setLightBrightness 0;" \n
+                         "" \n
+                         "_time = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "time_check">*/
+                                class time_check
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _time) > alpha_time_wait_light"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__2">*/
+                class __2
+                {
+                        name = "__2";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vehicle_dead">*/
+                                class vehicle_dead
+                                {
+                                        itemno = 19;
+                                        priority = 2.000000;
+                                        to="End_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _vehicle"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Lights_off">*/
+                                class Lights_off
+                                {
+                                        itemno = 20;
+                                        priority = 1.000000;
+                                        to="End_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_vehicle getVariable [""bl"",false])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Distance__150">*/
+                                class Distance__150
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="light_on_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(player distance _vehicle) < 150"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_2">*/
+                class End_2
+                {
+                        name = "End_2";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"deleteVehicle _light_front;" \n
+                         "deleteVehicle _light_back;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "light_on_1">*/
+                class light_on_1
+                {
+                        name = "light_on_1";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"_brightness = 50;" \n
+                         "if (sunOrMoon < 1) then {" \n
+                         "	_brightness = 5;" \n
+                         "};" \n
+                         "" \n
+                         "_time = time;" \n
+                         "_light_front setLightBrightness _brightness;" \n
+                         "_light_back setLightBrightness _brightness;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "time_check">*/
+                                class time_check
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="__3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _time) > alpha_time_wait_light"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__3">*/
+                class __3
+                {
+                        name = "__3";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"_light_front setLightBrightness 0;" \n
+                         "_light_back setLightBrightness 0;" \n
+                         "" \n
+                         "" \n
+                         "_time = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "time_check">*/
+                                class time_check
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="__2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _time) > alpha_time_wait_light"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "End",
+                "End_1",
+                "End_2",
+        };
+};
+/*%FSM</COMPILE>*/
