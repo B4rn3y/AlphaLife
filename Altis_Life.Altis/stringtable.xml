@@ -328,16 +328,16 @@
 			<Chinesesimp>黄金贸易商</Chinesesimp>
         </Key>
         <Key ID="STR_Shops_Diamond">
-            <Original>Diamond Dealer</Original>
-            <Czech>Diamond Dealer</Czech>
-            <Spanish>Comerciante de Diamantes</Spanish>
+            <Original>Jewelry Dealer</Original>
+            <Czech>Jewelry Dealer</Czech>
+            <Spanish>Jewelry Dealer</Spanish>
             <Russian></Russian>
             <German>Juwelier</German>
-            <Italian>Gioielleria</Italian>
-            <French>Acheteur de Diamant</French>
-            <Portuguese>Comprador de Diamante</Portuguese>
-            <Polish>Skup Diamentów</Polish>
-			<Chinesesimp>钻石贸易商</Chinesesimp>
+            <Italian>Jewelry Dealer</Italian>
+            <French>Jewelry Dealer</French>
+            <Portuguese>Jewelry Dealer</Portuguese>
+            <Polish>Jewelry Dealer</Polish>
+			<Chinesesimp>Jewelry Dealer</Chinesesimp>
         </Key>
         <Key ID="STR_Shops_Pearl">
             <Original>Pearl Dealer</Original>

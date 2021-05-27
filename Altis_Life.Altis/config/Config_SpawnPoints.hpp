@@ -16,7 +16,14 @@ class CfgSpawnPoints {
                 displayName = "Kavala";
                 spawnMarker = "civ_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "!license_civ_rebel";
+                conditions = "";
+            };
+
+            class Airfield {
+                displayName = "Airfield";
+                spawnMarker = "civ_spawn_5";
+                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                conditions = "license_civ_pilot";
             };
 
             class Athira {
