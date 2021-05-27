@@ -8030,6 +8030,30 @@
             <Polish>Trening rebelianta</Polish>
 			<Chinesesimp>叛军训练</Chinesesimp>
         </Key>
+        <Key ID="STR_License_Mercenary">
+            <Original>Mercenary License</Original>
+            <Czech>Mercenary License</Czech>
+            <Spanish>Mercenary License</Spanish>
+            <Russian></Russian>
+            <German>Söldnerlizenz</German>
+            <French>Mercenary License</French>
+            <Italian>Mercenary License</Italian>
+            <Portuguese>Mercenary License</Portuguese>
+            <Polish>Mercenary License</Polish>
+            <Chinesesimp>Mercenary License</Chinesesimp>
+        </Key>
+        <Key ID="STR_License_Alpha">
+            <Original>Alpha License</Original>
+            <Czech>Alpha License</Czech>
+            <Spanish>Alpha License</Spanish>
+            <Russian></Russian>
+            <German>Söldnerlizenz</German>
+            <French>Alpha License</French>
+            <Italian>Alpha License</Italian>
+            <Portuguese>Alpha License</Portuguese>
+            <Polish>Alpha License</Polish>
+            <Chinesesimp>Alpha License</Chinesesimp>
+        </Key>
         <Key ID="STR_License_Truck">
             <Original>Truck License</Original>
             <Czech>Truck licence</Czech>

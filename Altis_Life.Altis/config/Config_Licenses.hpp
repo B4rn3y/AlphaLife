@@ -250,6 +250,22 @@ class Licenses {
         side = "civ";
     };
 
+    class mercenary {
+        variable = "mercenary";
+        displayName = "STR_License_Mercenary";
+        price = 75000;
+        illegal = true;
+        side = "civ";
+    };
+
+    class alpha {
+        variable = "alpha";
+        displayName = "STR_License_Alpha";
+        price = 75000;
+        illegal = true;
+        side = "civ";
+    };
+
     //Cop Licenses
     class cAir {
         variable = "cAir";
