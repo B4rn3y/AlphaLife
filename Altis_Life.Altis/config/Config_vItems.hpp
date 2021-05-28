@@ -185,7 +185,7 @@ class VirtualItems {
         variable = "pickaxe";
         displayName = "STR_Item_Pickaxe";
         weight = 2;
-        buyPrice = 750;
+        buyPrice = 1500;
         sellPrice = 350;
         illegal = false;
         edible = -1;
@@ -197,7 +197,7 @@ class VirtualItems {
         variable = "frogtrap";
         displayName = "STR_Item_Frog_trap";
         weight = 1;
-        buyPrice = 100;
+        buyPrice = 10000;
         sellPrice = 50;
         illegal = false;
         edible = -1;
@@ -221,7 +221,7 @@ class VirtualItems {
         variable = "toolkit";
         displayName = "STR_Item_Toolkit";
         weight = 4;
-        buyPrice = 350;
+        buyPrice = 5000;
         sellPrice = 100;
         illegal = false;
         edible = -1;
@@ -245,7 +245,7 @@ class VirtualItems {
         variable = "fuelFull";
         displayName = "STR_Item_FuelF";
         weight = 5;
-        buyPrice = 850;
+        buyPrice = 25000;
         sellPrice = 500;
         illegal = false;
         edible = -1;
@@ -269,7 +269,7 @@ class VirtualItems {
         variable = "lockpick";
         displayName = "STR_Item_Lockpick";
         weight = 1;
-        buyPrice = 150;
+        buyPrice = 15000;
         sellPrice = 75;
         illegal = true;
         edible = -1;
@@ -293,7 +293,7 @@ class VirtualItems {
         variable = "blastingCharge";
         displayName = "STR_Item_BCharge";
         weight = 15;
-        buyPrice = 35000;
+        buyPrice = 50000;
         sellPrice = 10000;
         illegal = true;
         edible = -1;
@@ -305,7 +305,7 @@ class VirtualItems {
         variable = "boltCutter";
         displayName = "STR_Item_BCutter";
         weight = 5;
-        buyPrice = 7500;
+        buyPrice = 50000;
         sellPrice = 1000;
         illegal = true;
         edible = -1;
@@ -329,7 +329,7 @@ class VirtualItems {
         variable = "storageSmall";
         displayName = "STR_Item_StorageBS";
         weight = 5;
-        buyPrice = 75000;
+        buyPrice = 750000;
         sellPrice = 50000;
         illegal = false;
         edible = -1;
@@ -341,7 +341,7 @@ class VirtualItems {
         variable = "storageBig";
         displayName = "STR_Item_StorageBL";
         weight = 10;
-        buyPrice = 150000;
+        buyPrice = 1000000;
         sellPrice = 125000;
         illegal = false;
         edible = -1;
@@ -822,7 +822,7 @@ class VirtualItems {
         variable = "waterBottle";
         displayName = "STR_Item_WaterBottle";
         weight = 1;
-        buyPrice = 10;
+        buyPrice = 100;
         sellPrice = 5;
         illegal = false;
         edible = -1;
@@ -835,7 +835,7 @@ class VirtualItems {
         variable = "apple";
         displayName = "STR_Item_Apple";
         weight = 1;
-        buyPrice = 65;
+        buyPrice = 100;
         sellPrice = 750;
         illegal = false;
         edible = 10;
@@ -859,7 +859,7 @@ class VirtualItems {
         variable = "tbacon";
         displayName = "STR_Item_TBacon";
         weight = 1;
-        buyPrice = 75;
+        buyPrice = 100;
         sellPrice = 25;
         illegal = false;
         edible = 40;

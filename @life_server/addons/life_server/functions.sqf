@@ -14,7 +14,7 @@ compileFinal "
         ""_item"",
         [""_stack"",[],[[]]]
     ];
-    
+
     _stack findIf {_item in _x};
 ";
 
@@ -25,7 +25,7 @@ compileFinal "
     if (isNull _ret) exitWith {};
     if (isNil ""_ret"") exitWith {};
 
-    [life_atmbank,life_cash,owner player,player,profileNameSteam,getPlayerUID player,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
+    [alpha_atmbank,alpha_cash,owner player,player,profileNameSteam,getPlayerUID player,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
 ";
 publicVariable "TON_fnc_player_query";
 publicVariable "TON_fnc_index";
