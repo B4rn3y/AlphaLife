@@ -60,6 +60,9 @@ class CfgFunctions {
         class Evidence_room {
             file = "\life_server\Functions\Evidence_room"
             class init_evidence_room {};
+            class insert_weapons_evidence_room {};
+            class insert_items_evidence_room {};
+            class update_evidence_room {};
         };
     };
 

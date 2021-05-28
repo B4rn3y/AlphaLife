@@ -15,15 +15,41 @@ params [
 ];
 if (isNull _container) exitWith {};
 
-if ((typeOf _container) in ["Box_IND_Grenades_F", "B_supplyCrate_F"]) exitWith {
-    if (life_HC_isActive) then {
-        [_container] remoteExecCall ["HC_fnc_updateHouseContainers", HC_Life];
-    } else {
-        [_container] remoteExecCall ["TON_fnc_updateHouseContainers", RSERV];
+
+
+switch (typeOf _container) do
+{
+    case "Box_IND_Grenades_F":
+    {
+        if (life_HC_isActive) then {
+            [_container] remoteExecCall ["HC_fnc_updateHouseContainers", HC_Life];
+        } else {
+            [_container] remoteExecCall ["TON_fnc_updateHouseContainers", RSERV];
+        };
+
+        [3] call SOCK_fnc_updatePartial;
     };
 
-    [3] call SOCK_fnc_updatePartial;
+    case "B_supplyCrate_F":
+    {
+        if (life_HC_isActive) then {
+            [_container] remoteExecCall ["HC_fnc_updateHouseContainers", HC_Life];
+        } else {
+            [_container] remoteExecCall ["TON_fnc_updateHouseContainers", RSERV];
+        };
+
+        [3] call SOCK_fnc_updatePartial;
+    };
+
+    case "O_CargoNet_01_ammo_F":
+    {
+        [false,(_container getvariable["evidence_chest",-1])] remoteExec["life_fnc_update_evidence_room",2];
+
+        [3] call SOCK_fnc_updatePartial;
+    };
 };
+
+
 
 if (LIFE_SETTINGS(getNumber, "save_vehicle_inventory") isEqualTo 1) exitWith {
     if (_container isKindOf "Car" || {_container isKindOf "Air"} || {_container isKindOf "Ship"}) then {

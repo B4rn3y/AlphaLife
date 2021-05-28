@@ -51,7 +51,9 @@ if (_curTarget isKindOf "House_F" && playerSide isEqualTo west) exitWith {
     private _tanoaArray = [11074.2,11501.5,0.00137329];
     private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
-    if ((nearestObject [_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget || (nearestObject [_pos,_vaultHouse]) isEqualTo _curTarget) then {
+    _ev_pos = [20902.4,19233.8,0.00143909];
+    diag_log str ((nearestObject [_ev_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget);
+    if ((nearestObject [_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget || (nearestObject [_pos,_vaultHouse]) isEqualTo _curTarget || (nearestObject [_ev_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget || (nearestObject [_ev_pos,"Land_Research_HQ_F"]) isEqualTo _curTarget) then {
 
         _Btn1 ctrlSetText localize "STR_pInAct_Repair";
         _Btn1 buttonSetAction "closeDialog 0; [life_pInact_curTarget] spawn life_fnc_repairDoor;";
@@ -94,7 +96,7 @@ if (!(_curTarget in life_vehicles) || isNil {_curTarget getVariable "house_owner
         "STR_pInAct_BuyGarage",
         "STR_pInAct_BuyHouse"
     ] select _isHouse;
-    
+
     _Btn1 ctrlSetText localize _buildingPurchaseString;
     _Btn1 buttonSetAction "closeDialog 0; [life_pInact_curTarget] spawn life_fnc_buyHouse;";
     _Btn1 ctrlShow true;

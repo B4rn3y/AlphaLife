@@ -120,6 +120,9 @@ class CfgRemoteExec {
 
         F(life_fnc_invisibleOff,SERVER)
         F(life_fnc_invisibleOn,SERVER)
+        F(life_fnc_insert_weapons_evidence_room,SERVER)
+        F(life_fnc_insert_items_evidence_room,SERVER)
+        F(life_fnc_update_evidence_room,SERVER)
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)

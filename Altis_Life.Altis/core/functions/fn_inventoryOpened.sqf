@@ -18,6 +18,10 @@ private _list = ["LandVehicle", "Ship", "Air"];
 {
     if (isNull _x) then {false breakOut "main"};
 
+    if((_x getVariable["evidence_chest",-1]) != -1 && !(_x getvariable["safe_open",false])) exitWith { // its the evidence room and its not open, so close the inventory
+        true breakOut "main";
+    };
+
     private _containerType = typeOf _x;
 
     if (FETCH_CONFIG2(getNumber, "CfgVehicles", _containerType, "isBackpack") isEqualTo 1) exitWith {

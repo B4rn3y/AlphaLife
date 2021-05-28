@@ -8321,16 +8321,16 @@
     </Package>
     <Package name="More_Item_Strings">
         <Key ID="STR_ISTR_Blast_VaultOnly">
-            <Original>This can only be used on a vault.</Original>
-            <Czech>To lze použít pouze v trezoru.</Czech>
-            <Spanish>Esto solo se puede usar en una bóveda.</Spanish>
+            <Original>This can only be used on a vault or evidence room.</Original>
+            <Czech>This can only be used on a vault or evidence room.</Czech>
+            <Spanish>This can only be used on a vault or evidence room.</Spanish>
             <Russian></Russian>
-            <German>Dies kann nur an einem Tresor benutzt werden.</German>
-            <French>Cela ne peut être utilisé que sur un coffre-fort.</French>
-            <Italian>Può essere usata solo sulla cassaforte.</Italian>
-            <Portuguese>Isso só pode ser usado em um cofre.</Portuguese>
-            <Polish>Możesz tego użyć na skarbcu.</Polish>
-			<Chinesesimp>这只能用于金库。</Chinesesimp>
+            <German>Dies kann nur an einem Tresor oder der Asservatenkammer benutzt werden.</German>
+            <French>This can only be used on a vault or evidence room.</French>
+            <Italian>This can only be used on a vault or evidence room.</Italian>
+            <Portuguese>This can only be used on a vault or evidence room.</Portuguese>
+            <Polish>This can only be used on a vault or evidence room.</Polish>
+			<Chinesesimp>This can only be used on a vault or evidence room.</Chinesesimp>
         </Key>
         <Key ID="STR_ISTR_Blast_AlreadyPlaced">
             <Original>There is already a charge placed on this vault.</Original>
@@ -8367,6 +8367,10 @@
             <Portuguese>O explosivo foi colocado no cofre , você tem até o tempo acabar para desarmar o explosivo.</Portuguese>
             <Polish>Ładunek wybuchowy został założony na skarbcu rezerw federalnych, musisz rozbroić ładunek nim wybuchnie!</Polish>
 			<Chinesesimp>金库里已经安装了爆破装置，你必须有足够的时间解除爆破装置！</Chinesesimp>
+        </Key>
+        <Key ID="STR_ISTR_Blast_Placed_Evidence_Room">
+            <Original>A blasting charge has been placed on the evedince rooms vault, You have till the clock runs out to disarm the charge!</Original>
+            <German>Eine Sprengladung wurde an der Asservatenkammer angebracht. Du hast Zeit, bis die Uhr abläuft, um die Ladung zu entschärfen!</German>
         </Key>
         <Key ID="STR_ISTR_Blast_KeepOff">
             <Original>The timer is ticking! Keep the cops away from the vault!</Original>
@@ -8439,6 +8443,18 @@
             <Portuguese>!!!!! A RESERVA FEDERAL ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
             <Polish>!!!!!! KTOŚ SIĘ WŁAMUJE DO BANKU REZERW FEDERALNYCH !!!!!</Polish>
 			<Chinesesimp>!!!!! 有人闯进金库 !!!!!!</Chinesesimp>
+        </Key>
+        <Key ID="STR_ISTR_Bolt_AlertEvidence_ROOM">
+            <Original>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Original>
+            <Czech>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Czech>
+            <Spanish>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Spanish>
+            <Russian></Russian>
+            <German>!!!!! JEMAND BRICHT IN DIE ASSERVATENKAMMER EIN !!!!!!</German>
+            <French>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</French>
+            <Italian>!!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Italian>
+            <Portuguese>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Portuguese>
+            <Polish>!!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!</Polish>
+            <Chinesesimp>!!!!! SOMEONE IS BREAKING INTO EVIDENCE ROOM !!!!!!</Chinesesimp>
         </Key>
         <Key ID="STR_ISTR_Bolt_AlertHouse">
             <Original>%1 was seen breaking into a house.</Original>
@@ -10936,6 +10952,18 @@
             <Italian>Pescivendolo</Italian>
 			<Chinesesimp>海产品市场</Chinesesimp>
         </Key>
+        <Key ID="STR_MAR_Evidence_Room">
+            <Original>Evidence Room</Original>
+            <Czech>Evidence Room</Czech>
+            <French>Evidence Room</French>
+            <Spanish>Evidence Room</Spanish>
+            <Russian></Russian>
+            <German>Asservatenkammer</German>
+            <Portuguese>Evidence Room</Portuguese>
+            <Polish>Evidence Room</Polish>
+            <Italian>Evidence Room</Italian>
+			<Chinesesimp>Evidence Room</Chinesesimp>
+        </Key>
         <Key ID="STR_MAR_Hospital">
             <Original>Hospital</Original>
             <Czech>Nemocnice</Czech>
@@ -10946,7 +10974,7 @@
             <Portuguese>Hospital</Portuguese>
             <Polish>Szpital</Polish>
             <Italian>Ospedale</Italian>
-			<Chinesesimp>医院</Chinesesimp>
+            <Chinesesimp>医院</Chinesesimp>
         </Key>
         <Key ID="STR_MAR_Police_Station">
             <Original>Police Station</Original>

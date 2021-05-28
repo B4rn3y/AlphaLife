@@ -6,7 +6,7 @@
     Description:
     Used a refresher for the vehicle inventory / trunk menu items.
 */
-private ["_veh","_tInv","_pInv","_veh_data"];
+private ["_veh","_tInv","_pInv","_store_item_button","_veh_data","_data","_val","_icon"];
 _veh = param [0,objNull,[objNull]];
 if (isNull _veh || !alive _veh) exitWith {closeDialog 0;}; //If null / dead exit menu
 disableSerialization;
@@ -15,6 +15,11 @@ _tInv = CONTROL(3500,3502);
 _pInv = CONTROL(3500,3503);
 lbClear _tInv;
 lbClear _pInv;
+
+_store_item_button = CONTROL(3500,3700);
+if!((_veh getVariable["evidence_chest",-1]) isEqualTo -1) then { // disable the store button if its the evidence room
+    _store_item_button ctrlEnable false;
+};
 
 _veh_data = [_veh] call life_fnc_vehicleWeight;
 

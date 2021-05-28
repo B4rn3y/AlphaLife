@@ -175,7 +175,7 @@ switch (_code) do {
                 };
             } else {
 
-                if((typeof cursorObject) isEqualTo "Land_Cages_F") then {
+                if((typeof cursorObject) in ["Land_Cages_F","O_CargoNet_01_ammo_F"] && {player distance cursorObject < 7}) then {
                     [cursorObject] spawn life_fnc_openInventory;
                 } else {
                     private "_list";
