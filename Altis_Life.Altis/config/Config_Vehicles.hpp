@@ -1,6 +1,6 @@
 class CarShops {
     /*
-    *    ARRAY FORMAT: Hura
+    *    ARRAY FORMAT: 
     *        0: STRING (Classname)
     *        1: STRING (Condition)
     *    FORMAT:
