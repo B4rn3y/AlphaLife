@@ -61,7 +61,7 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "I_LT_01_scout_F", "" },
+            { "C_Heli_Light_01_civil_F", "" },
             { "O_Heli_Light_02_unarmed_F", "" },
             { "I_Heli_Transport_02_F", "" },
             { "O_Heli_Transport_04_box_F", "" },
@@ -964,8 +964,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class C_Heli_Light_01_civil_F : B_Heli_Light_01_F {
-        vItemSpace = 75;
-        price = 245000;
+        vItemSpace = 125;
+        conditions = "license_civ_pilot || {!(playerSide isEqualTo civilian)}";
+        price = 350000;
+        textures[] = {};
     };
 
     class O_Heli_Light_02_unarmed_F {
