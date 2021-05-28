@@ -9,7 +9,7 @@
 private ["_vehicle","_veh_data"];
 if (dialog) exitWith {};
 _vehicle = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-if (isNull _vehicle || !(_vehicle isKindOf "Car" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" || _vehicle isKindOf "Box_IND_Grenades_F" || _vehicle isKindOf "B_supplyCrate_F" || _vehicle isKindOf "Land_Cages_F")) exitWith {}; //Either a null or invalid vehicle type.
+if (isNull _vehicle || !(_vehicle isKindOf "Car" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" || _vehicle isKindOf "Box_IND_Grenades_F" || _vehicle isKindOf "B_supplyCrate_F" || _vehicle isKindOf "Land_Cages_F" || _vehicle isKindOf "O_CargoNet_01_ammo_F")) exitWith {}; //Either a null or invalid vehicle type.
 if((_vehicle getVariable["evidence_chest",-1]) != -1 && !(_vehicle getvariable["safe_open",false])) exitWith {}; // asservatenkammer - nicht öffnen wenn nicht offen
 if ((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint localize "STR_MISC_VehInvUse"};
 _vehicle setVariable ["trunk_in_use",true,true];

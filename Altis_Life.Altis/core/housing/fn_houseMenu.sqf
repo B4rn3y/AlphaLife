@@ -16,7 +16,7 @@
 #define Btn8 37457
 #define Title 37401
 
-private ["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8"];
+private ["_curTarget","_houseCfg","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_vaultHouse","_altisArray","_tanoaArray","_pos","_ev_pos","_isHouse","_buildingPurchaseString"];
 disableSerialization;
 _curTarget = param [0,objNull,[objNull]];
 if (isNull _curTarget) exitWith {}; //Bad target
@@ -52,7 +52,7 @@ if (_curTarget isKindOf "House_F" && playerSide isEqualTo west) exitWith {
     private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
     _ev_pos = [20902.4,19233.8,0.00143909];
-    diag_log str ((nearestObject [_ev_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget);
+
     if ((nearestObject [_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget || (nearestObject [_pos,_vaultHouse]) isEqualTo _curTarget || (nearestObject [_ev_pos,"Land_Dome_Big_F"]) isEqualTo _curTarget || (nearestObject [_ev_pos,"Land_Research_HQ_F"]) isEqualTo _curTarget) then {
 
         _Btn1 ctrlSetText localize "STR_pInAct_Repair";

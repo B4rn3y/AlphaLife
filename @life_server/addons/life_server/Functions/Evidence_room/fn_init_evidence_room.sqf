@@ -21,25 +21,11 @@ _rsb allowDamage false;
 _query = "SELECT classname,pos,inventory,gear, id FROM `evidence_room`";
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
-diag_log str _queryResult;
-{
-	diag_log str _x;
-    diag_log typename _x;
-    diag_log typename (_x select 0);
-    diag_log typename (_x select 1);
-    diag_log typename (_x select 2);
-    diag_log typename (_x select 3);
-    diag_log typename (_x select 4);
 
-} foreach _queryResult;
 
 {
-    diag_log "blah";
 	_classname = _x select 0;
-    diag_log _classname;
-    diag_log str [_classname];
     _classname = call compile _classname;
-    diag_log _classname;
 	_pos = (call compile(_x select 1)) select 0;
 	_dir = (call compile(_x select 1)) select 1;
     _trunk = [_x select 2] call DB_fnc_mresToArray; // z items
