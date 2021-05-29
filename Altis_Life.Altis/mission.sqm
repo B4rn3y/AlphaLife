@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=84;
+		nextID=102;
 	};
 	class Camera
 	{
-		pos[]={16740.115,41.435341,12304.875};
-		dir[]={-0.84821123,-0.52819413,-0.039426301};
-		up[]={-0.5276255,0.8491208,-0.02452475};
-		aside[]={-0.046431918,-5.6785211e-008,0.998923};
+		pos[]={16744.865,37.778561,12322.213};
+		dir[]={-0.82155836,-0.56854641,-0.042569421};
+		up[]={-0.56778884,0.8226468,-0.02941999};
+		aside[]={-0.051746469,-1.5896512e-007,0.99866575};
 	};
 };
 binarizationWanted=0;
@@ -647,24 +647,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -679,6 +661,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -2089,7 +2089,7 @@ class Mission
 			position[]={12289.683,123.59532,8929.1797};
 			name="reb_v_2";
 			type="Empty";
-			angle=76.716057;
+			angle=76.716049;
 			id=157;
 		};
 		class Item136
@@ -13638,7 +13638,6 @@ class Mission
 				angles[]={0,2.3506639,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -13646,6 +13645,7 @@ class Mission
 			};
 			id=544;
 			type="Land_CashDesk_F";
+			atlOffset=0.47982728;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27514,7 +27514,6 @@ class Mission
 						angles[]={0,5.2196865,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -27523,7 +27522,7 @@ class Mission
 					};
 					id=984;
 					type="C_man_1";
-					atlOffset=1.3828278e-005;
+					atlOffset=0.45300007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30695,19 +30694,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16637.773,4.2137976,12305.476};
-						angles[]={0,1.3958321,0};
+						position[]={16637.773,4.2141352,12305.476};
+						angles[]={0,1.3958271,0};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this enableSimulation false; this allowDamage false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide isEqualTo independent ',5]; this addAction[localize""STR_MAR_EMS_Item_Shop"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[localize""STR_MAR_EMS_Clothing_Shop"",life_fnc_clothingMenu,""med_clothing""]; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Helicopter_Shop"", life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""medic_spawn_3"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_W_Car_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""med_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo independent',5]; this addAction[localize""STR_MAR_Helicopter_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""medic_spawn_3""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide isEqualTo independent ',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5]; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""med_market"",1.5,false,false,"""",' isNull objectParent player && player distance _target < 5 && playerSide isEqualTo independent ',5]; this setObjectTextureGlobal [0,""textures\medic_uniform.jpg""];";
+						init="this enableSimulation false; this allowDamage false;  " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide isEqualTo independent ',5];  " \n "this addAction[localize""STR_MAR_EMS_Item_Shop"",life_fnc_weaponShopMenu,""med_basic""]; " \n " this addAction[localize""STR_MAR_EMS_Clothing_Shop"",life_fnc_clothingMenu,""med_clothing""];  " \n " this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5]; " \n " this addAction[localize""STR_MAR_Helicopter_Shop"", life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_car_2"",""med"",""Pyrgos Hospital""],1.5,true,true,"""",""true"",5];  " \n " this addAction[localize""STR_MAR_W_Car_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""med_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo independent',5]; this addAction[localize""STR_MAR_Helicopter_Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""med_car_2""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide isEqualTo independent ',5];  " \n "this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5]; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""med_market"",1.5,false,false,"""",' isNull objectParent player && player distance _target < 5 && playerSide isEqualTo independent ',5]; this setObjectTextureGlobal [0,""textures\medic_uniform.jpg""];";
 						disableSimulation=1;
 					};
 					id=1045;
 					type="B_RangeMaster_F";
+					atlOffset=0.00033807755;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36091,7 +36091,7 @@ class Mission
 			type="mil_box";
 			colorName="ColorBrown";
 			id=1204;
-			atlOffset=2.4264982;
+			atlOffset=2.4652107;
 		};
 		class Item729
 		{
@@ -36628,6 +36628,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="NeuBauMap";
+			state=1;
 			class Entities
 			{
 				items=4;
@@ -36635,6 +36636,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="CopHQs";
+					state=1;
 					class Entities
 					{
 						items=4;
@@ -78460,6 +78462,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Märkte";
+					state=1;
 					class Entities
 					{
 						items=4;
@@ -103454,6 +103457,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Krankenhäuser";
+					state=1;
 					class Entities
 					{
 						items=3;
@@ -103461,6 +103465,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="KHPyrgos";
+							state=1;
 							class Entities
 							{
 								items=281;
@@ -126571,6 +126576,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Rebelenposten";
+					state=1;
 					class Entities
 					{
 						items=2;
@@ -126578,6 +126584,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="RebelSüd";
+							state=1;
 							class Entities
 							{
 								items=195;
@@ -130322,6 +130329,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="RebelNord";
+							state=1;
 							class Entities
 							{
 								items=213;
