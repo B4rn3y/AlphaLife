@@ -103583,7 +103583,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\werbetafel\Werbung.paa""];";
+										init="this setObjectTexture [0, ""texture\Werbung.paa""];";
 										disableSimulation=1;
 									};
 									id=2935;
@@ -109163,7 +109163,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\laptop_ziv.paa""];  this addAction[format [""%1 ($%2)"",(getText(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gro_trucking"",0,false,false,"""",' !license_civ_gro_trucking && playerSide isEqualTo civilian '];";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];  this addAction[format [""%1 ($%2)"",(getText(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gro_trucking"",0,false,false,"""",' !license_civ_gro_trucking && playerSide isEqualTo civilian '];";
 									};
 									id=3069;
 									type="Land_InfoStand_V2_F";
@@ -110833,7 +110833,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\laptop_ziv.paa""];   " \n "this setVariable [""realname"",""<t color='#ff000c'>Freiwillige Feuerwehr-Shops</t>""];   " \n "this addAction[""<t color='#f70000'>Bankautomat</t>"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];   " \n "this addAction[""Kantine"",life_fnc_virt_menu,""ffw_market"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];     " \n "this addAction[""Dienstkleidung"",life_fnc_clothingMenu,""ffw_clothing"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];  ";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];   " \n "this setVariable [""realname"",""<t color='#ff000c'>Freiwillige Feuerwehr-Shops</t>""];   " \n "this addAction[""<t color='#f70000'>Bankautomat</t>"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];   " \n "this addAction[""Kantine"",life_fnc_virt_menu,""ffw_market"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];     " \n "this addAction[""Dienstkleidung"",life_fnc_clothingMenu,""ffw_clothing"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];  ";
 									};
 									id=3113;
 									type="Land_Laptop_unfolded_F";
@@ -111372,7 +111372,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\roentgen.paa""];";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -111414,7 +111414,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\roentgen.paa""];";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -111456,7 +111456,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\roentgen.paa""];";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -111498,7 +111498,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\roentgen.paa""];";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -112734,7 +112734,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\laptop_med.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
 									};
 									id=3161;
 									type="Land_Laptop_03_olive_F";
@@ -112751,7 +112751,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""texture\laptop\laptop_med.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Löschboote"",life_fnc_vehicleShopMenu,[""med_ship"",independent,[""boot_med_1"",""boot_med_2""],""med"",""Feuerwehr Schiffsladen""]]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
+										init="this setObjectTexture [0, ""texture\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Löschboote"",life_fnc_vehicleShopMenu,[""med_ship"",independent,[""boot_med_1"",""boot_med_2""],""med"",""Feuerwehr Schiffsladen""]]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
 									};
 									id=3162;
 									type="Land_Laptop_03_sand_F";
@@ -113154,7 +113154,7 @@ class Mission
 									class Attributes
 									{
 										lock="LOCKED";
-										init="this setObjectTexture [0, ""texture\fw\boot\miniBoot_1.jpg""];  this setObjectTexture [1, ""texture\fw\boot\miniBoot_2.jpg""]; ";
+										init="this setObjectTexture [0, ""texture\Werbung.paa""];  this setObjectTexture [1, ""texture\Werbung.paa""]; ";
 										disableSimulation=1;
 									};
 									id=3171;
