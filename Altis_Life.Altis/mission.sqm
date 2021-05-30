@@ -37453,7 +37453,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Werbung.paa";
+													value="textures\plakate\Werbung.paa";
 												};
 											};
 										};
@@ -44135,7 +44135,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];";
 										disableSimulation=1;
 									};
 									id=1857;
@@ -44158,7 +44158,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -44195,7 +44195,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];    this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_2"",""cop"",""APD - Athira District""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""cop_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo west',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5]; ";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];    this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_2"",""cop"",""APD - Athira District""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""cop_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo west',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5]; ";
 										name="Polizei_car_4";
 										disableSimulation=1;
 									};
@@ -44219,7 +44219,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -44256,7 +44256,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];";
 										name="Polizei_heli_3";
 										disableSimulation=1;
 									};
@@ -44280,7 +44280,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -44317,7 +44317,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this enableSimulation false; this addAction[localize""STR_MAR_Cop_Item_Shop"",life_fnc_virt_menu,""cop"",1.5,true,true,"""",""true"",5]; this allowDamage false; this addAction[localize""STR_MAR_Cop_Clothing_Shop"",life_fnc_clothingMenu,""cop"",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Cop_Weapon_Shop"",life_fnc_weaponShopMenu,""cop_basic""]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide isEqualTo west ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide isEqualTo west ',5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this enableSimulation false; this addAction[localize""STR_MAR_Cop_Item_Shop"",life_fnc_virt_menu,""cop"",1.5,true,true,"""",""true"",5]; this allowDamage false; this addAction[localize""STR_MAR_Cop_Clothing_Shop"",life_fnc_clothingMenu,""cop"",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Cop_Weapon_Shop"",life_fnc_weaponShopMenu,""cop_basic""]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide isEqualTo west ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide isEqualTo west ',5];";
 										name="Polizei_shop_2";
 										disableSimulation=1;
 									};
@@ -44341,7 +44341,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -63007,7 +63007,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Werbung.paa";
+													value="textures\plakate\Werbung.paa";
 												};
 											};
 										};
@@ -65634,7 +65634,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_3"",""cop"",""APD - Pyrgos District""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""cop_car_3""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo west',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_3"",""cop"",""APD - Pyrgos District""],1.5,true,true,"""",""true"",5]; this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};  createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""cop_car_3""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide isEqualTo west',5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
 										name="Polizei_car_3";
 										disableSimulation=1;
 									};
@@ -65658,7 +65658,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -65695,7 +65695,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];";
 										name="Polizei_heli_2";
 										disableSimulation=1;
 									};
@@ -65719,7 +65719,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -65756,7 +65756,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this enableSimulation false; this addAction[localize""STR_MAR_Cop_Item_Shop"",life_fnc_virt_menu,""cop"",1.5,true,true,"""",""true"",5]; this allowDamage false; this addAction[localize""STR_MAR_Cop_Clothing_Shop"",life_fnc_clothingMenu,""cop"",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Cop_Weapon_Shop"",life_fnc_weaponShopMenu,""cop_basic"",1.5,true,true,"""",""true"",5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide isEqualTo west ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide isEqualTo west ',5]; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 ',5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this enableSimulation false; this addAction[localize""STR_MAR_Cop_Item_Shop"",life_fnc_virt_menu,""cop"",1.5,true,true,"""",""true"",5]; this allowDamage false; this addAction[localize""STR_MAR_Cop_Clothing_Shop"",life_fnc_clothingMenu,""cop"",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Cop_Weapon_Shop"",life_fnc_weaponShopMenu,""cop_basic"",1.5,true,true,"""",""true"",5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide isEqualTo west ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide isEqualTo west ',5]; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 ',5];";
 										name="Polizei_Shop_3";
 										disableSimulation=1;
 									};
@@ -65780,7 +65780,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -83091,7 +83091,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
 										name="clothing_1";
 										disableSimulation=1;
 									};
@@ -83115,7 +83115,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -83152,7 +83152,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ']; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ']; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
 										name="licence_1";
 										disableSimulation=1;
 									};
@@ -83176,7 +83176,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -83213,7 +83213,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
 										name="markt_shop_1";
 										disableSimulation=1;
 									};
@@ -83237,7 +83237,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -83274,7 +83274,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
 										name="supermarkt_shop_1";
 										disableSimulation=1;
 									};
@@ -83298,7 +83298,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -86530,7 +86530,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -86569,7 +86569,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -86608,7 +86608,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -92000,7 +92000,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];";
 										name="car_2";
 										disableSimulation=1;
 									};
@@ -92024,7 +92024,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -92061,7 +92061,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
 										name="colthing_2";
 										disableSimulation=1;
 									};
@@ -92085,7 +92085,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -92122,7 +92122,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
 										name="licence_2";
 										disableSimulation=1;
 									};
@@ -92146,7 +92146,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -92183,7 +92183,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
 										name="markt_shop_2";
 										disableSimulation=1;
 									};
@@ -92207,7 +92207,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -92244,7 +92244,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
 										name="supermarkt_shop_2";
 										disableSimulation=1;
 									};
@@ -92268,7 +92268,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -94278,7 +94278,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2544;
 									type="UserTexture10m_F";
@@ -94300,7 +94300,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -94318,7 +94318,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2545;
 									type="UserTexture10m_F";
@@ -94340,7 +94340,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -94358,7 +94358,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2546;
 									type="UserTexture10m_F";
@@ -94380,7 +94380,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -94398,7 +94398,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2547;
 									type="UserTexture10m_F";
@@ -94420,7 +94420,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -94438,7 +94438,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2548;
 									type="UserTexture10m_F";
@@ -94460,7 +94460,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -94478,7 +94478,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Shop_Text.paa""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Shop_Text.paa""];";
 									};
 									id=2549;
 									type="UserTexture10m_F";
@@ -94500,7 +94500,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Shop_Text.paa";
+													value="textures\plakate\Shop_Text.paa";
 												};
 											};
 										};
@@ -100802,7 +100802,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
 										name="colthing_4";
 										disableSimulation=1;
 									};
@@ -100826,7 +100826,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -100863,7 +100863,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
 										name="licence_4";
 										disableSimulation=1;
 									};
@@ -100887,7 +100887,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -100924,7 +100924,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
 										name="markt_shop_4";
 										disableSimulation=1;
 									};
@@ -100948,7 +100948,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -100985,7 +100985,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];    this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];    this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
 										name="supermarkt_shop_4";
 										disableSimulation=1;
 									};
@@ -101009,7 +101009,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -101911,7 +101911,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Werbung.paa";
+													value="textures\plakate\Werbung.paa";
 												};
 											};
 										};
@@ -106045,7 +106045,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_Car_shop"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,""civ_car_2"",""civ"",""Bruce's New & Used Auto's""],1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];  this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_Car_shop"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,""civ_car_2"",""civ"",""Bruce's New & Used Auto's""],1.5,true,true,"""",""true"",5];";
 										name="car_3";
 										disableSimulation=1;
 									};
@@ -106069,7 +106069,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -106106,7 +106106,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""bruce"",1.5,true,true,"""",""true"",5];";
 										name="colthing_3";
 										disableSimulation=1;
 									};
@@ -106130,7 +106130,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -106167,7 +106167,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
 										name="licence_3";
 										disableSimulation=1;
 									};
@@ -106191,7 +106191,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -106228,7 +106228,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market"",1.5,true,true,"""",""true"",5];";
 										name="markt_shop_3";
 										disableSimulation=1;
 									};
@@ -106252,7 +106252,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -106289,7 +106289,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTextureGlobal [0,""textures\Latop_Text.paa""];   this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
+										init="this setObjectTextureGlobal [0,""textures\plakate\Latop_Text.paa""];   this enableSimulation false; this allowDamage false; this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore"",1.5,true,true,"""",""true"",5];";
 										name="supermarkt_shop_3";
 										disableSimulation=1;
 									};
@@ -106313,7 +106313,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="textures\Latop_Text.paa";
+													value="textures\plakate\Latop_Text.paa";
 												};
 											};
 										};
@@ -109961,7 +109961,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Werbung.paa""];";
+										init="this setObjectTexture [0, ""textures\plakate\Werbung.paa""];";
 										disableSimulation=1;
 									};
 									id=2935;
@@ -115541,7 +115541,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];  this addAction[format [""%1 ($%2)"",(getText(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gro_trucking"",0,false,false,"""",' !license_civ_gro_trucking && playerSide isEqualTo civilian '];";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];  this addAction[format [""%1 ($%2)"",(getText(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gro_trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gro_trucking"",0,false,false,"""",' !license_civ_gro_trucking && playerSide isEqualTo civilian '];";
 									};
 									id=3069;
 									type="Land_InfoStand_V2_F";
@@ -117211,7 +117211,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];   " \n "this setVariable [""realname"",""<t color='#ff000c'>Freiwillige Feuerwehr-Shops</t>""];   " \n "this addAction[""<t color='#f70000'>Bankautomat</t>"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];   " \n "this addAction[""Kantine"",life_fnc_virt_menu,""ffw_market"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];     " \n "this addAction[""Dienstkleidung"",life_fnc_clothingMenu,""ffw_clothing"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];  ";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];   " \n "this setVariable [""realname"",""<t color='#ff000c'>Freiwillige Feuerwehr-Shops</t>""];   " \n "this addAction[""<t color='#f70000'>Bankautomat</t>"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];   " \n "this addAction[""Kantine"",life_fnc_virt_menu,""ffw_market"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];     " \n "this addAction[""Dienstkleidung"",life_fnc_clothingMenu,""ffw_clothing"",0,false,false,"""",'playerSide isEqualTo civilian && (player distance _target)<4'];  ";
 									};
 									id=3113;
 									type="Land_Laptop_unfolded_F";
@@ -117750,7 +117750,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -117792,7 +117792,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -117834,7 +117834,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -117876,7 +117876,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""];";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""];";
 										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
@@ -119112,7 +119112,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
 									};
 									id=3161;
 									type="Land_Laptop_03_olive_F";
@@ -119129,7 +119129,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="this setObjectTexture [0, ""textures\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Löschboote"",life_fnc_vehicleShopMenu,[""med_ship"",independent,[""boot_med_1"",""boot_med_2""],""med"",""Feuerwehr Schiffsladen""]]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
+										init="this setObjectTexture [0, ""textures\plakate\Latop_Text.paa""]; this setVariable [""realname"", ""<t color='#ff000c'>Garage-Boote</t>""]; this addAction[""Löschboote"",life_fnc_vehicleShopMenu,[""med_ship"",independent,[""boot_med_1"",""boot_med_2""],""med"",""Feuerwehr Schiffsladen""]]; this addAction[""Bootgarage"",  {[getPlayerUID player,playerSide,""Ship"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Boats....""]; life_garage_sp = [""boot_med_1"",""boot_med_2""]; life_garage_type = ""Ship""; },"""",0,false,false,"""",'playerSide isEqualTo independent'];   this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; ";
 									};
 									id=3162;
 									type="Land_Laptop_03_sand_F";
@@ -119532,7 +119532,7 @@ class Mission
 									class Attributes
 									{
 										lock="LOCKED";
-										init="this setObjectTexture [0, ""textures\Werbung.paa""];  this setObjectTexture [1, ""textures\Werbung.paa""]; ";
+										init="this setObjectTexture [0, ""textures\plakate\Werbung.paa""];  this setObjectTexture [1, ""textures\plakate\Werbung.paa""]; ";
 										disableSimulation=1;
 									};
 									id=3171;
