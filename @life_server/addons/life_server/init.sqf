@@ -147,6 +147,11 @@ cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 [] spawn TON_fnc_initHouses;
 cleanup = [] spawn TON_fnc_cleanup;
 
+
+//Objekte Spawn
+[] execVM "\life_server\Functions\Objekte\kavala.sqf";
+
+
 TON_fnc_playtime_values = [];
 TON_fnc_playtime_values_request = [];
 
