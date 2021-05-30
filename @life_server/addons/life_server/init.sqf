@@ -88,6 +88,8 @@ if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then 
 /* Map-based server side initialization. */
 master_group attachTo[bank_obj,[0,0,0]];
 
+//Hier war Krankenhaus ServerSpawn
+
 {
     if (!isPlayer _x) then {
         _npc = _x;
