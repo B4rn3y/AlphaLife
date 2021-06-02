@@ -153,14 +153,6 @@ class ProcessAction {
         NoLicenseCost = 650;
     };
 
-    class salt {
-        MaterialsReq[] = {{"salt_unrefined",1}};
-        MaterialsGive[] = {{"salt_refined",1}};
-        Text = "STR_Process_Salt";
-        //ScrollText = "Refine Salt";
-        NoLicenseCost = 450;
-    };
-
     class cocaine {
         MaterialsReq[] = {{"cocaine_unprocessed",1}};
         MaterialsGive[] = {{"cocaine_processed",1}};

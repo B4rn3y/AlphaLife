@@ -44,6 +44,10 @@ life_storagePlacing = scriptNull;
 life_hideoutBuildings = [];
 life_firstSpawn = true;
 
+if(isnil "LIFE_ID_RevealObjects") then {
+    LIFE_ID_RevealObjects = -1;
+};
+LIFE_SAVED_NAME = "";
 alpha_frogtime = 300;
 alpha_time_wait_light = 0.5; // warnblinker wartezeit
 

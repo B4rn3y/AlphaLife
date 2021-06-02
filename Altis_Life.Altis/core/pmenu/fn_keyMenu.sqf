@@ -7,11 +7,23 @@
     Initializes the key menu
     Will be revised.
 */
-private ["_display","_vehicles","_plist","_near_units","_pic","_name","_text","_color","_index"];
+private ["_display","_time","_gang_key_btn","_vehicles","_plist","_near_units","_veh","_color","_text","_pic"];
 disableSerialization;
 
 waitUntil {!isNull (findDisplay 2700)};
 _display = findDisplay 2700;
+_time = _display displayCtrl 7858;
+_time ctrlsettext format["%1:%2",systemtime select 3,systemtime select 4];
+_gang_key_btn = _display displayCtrl  2704;
+ctrlSetText[2009,format ["%1 / %2", life_carryWeight, life_maxWeight]];
+if(playerSide isEqualTo civilian) then {
+    if(isnil "life_gangdata") then {
+        _gang_key_btn ctrlShow false;
+    };
+    if(life_gangdata isEqualTo []) then {
+        _gang_key_btn ctrlShow false;
+    };
+};
 _vehicles = _display displayCtrl 2701;
 lbClear _vehicles;
 _plist = _display displayCtrl 2702;

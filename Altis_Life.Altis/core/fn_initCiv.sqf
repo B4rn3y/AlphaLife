@@ -16,6 +16,15 @@ civ_spawn_3 = nearestObjects[getMarkerPos  "civ_spawn_3", _spawnBuildings,350];
 civ_spawn_4 = nearestObjects[getMarkerPos  "civ_spawn_4", _spawnBuildings,350];
 
 waitUntil {!(isNull (findDisplay 46))};
+
+
+if!(profileName isEqualTo LIFE_SAVED_NAME) exitWith {
+    [LIFE_SAVED_NAME] spawn life_fnc_show_name_message;
+};
+
+
+
+
 if (life_is_alive && !life_is_arrested) then {
     /* Spawn at our last position */
     player setVehiclePosition [life_civ_position, [], 0, "CAN_COLLIDE"];

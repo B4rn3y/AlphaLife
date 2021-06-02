@@ -11,7 +11,8 @@ disableSerialization;
 if (isNull (findDisplay 2620)) then {
     if (!(createDialog "Life_My_Gang_Diag")) exitWith {}; //NOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOO00000000000000oooooo
 };
-
+ctrlSetText[7858,format["%1:%2",systemtime select 3,systemtime select 4]];
+ctrlSetText[2009,format ["%1 / %2", life_carryWeight, life_maxWeight]];
 _ownerID = group player getVariable ["gang_owner",""];
 if (_ownerID isEqualTo "") exitWith {closeDialog 0;}; //Bad juju
 

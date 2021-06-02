@@ -226,6 +226,17 @@ switch (_code) do {
         };
     };
 
+    // Key 1 Menu System
+    case 2:
+    {
+        if(playerSide isEqualTo west)then
+        {
+            [] call life_fnc_wantedMenu;
+        };
+
+
+    };
+
     //F Key
     case 33: {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {

@@ -1,7 +1,7 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
 overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
 unsafeCVL = 1; // Allows createVehicleLocal to be executed in Multiplayer
-enableDebugConsole[] = { "76561198018512569", "76561198250018450"};
+enableDebugConsole[] = { "76561198018512569"};
 
 
 #include "CfgRemoteExec.hpp"
@@ -84,6 +84,15 @@ class CfgDebriefing {
         title = "$STR_NotWhitelisted_Title";
         subtitle = "$STR_NotWhitelisted_SubTitle";
         description = "$STR_NotWhitelisted_Descript";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0,0.3,0.6,1};
+    };
+
+    class WrongName {
+        title = "$STR_NotWhitelisted_Title";
+        subtitle = "$STR_Wrong_name_SubTitle";
+        description = "$STR_Wrong_name_Descript";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};

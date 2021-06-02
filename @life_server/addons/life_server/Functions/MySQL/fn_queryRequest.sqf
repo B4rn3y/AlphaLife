@@ -27,8 +27,8 @@ _ownerID = owner _ownerID;
 _query = switch (_side) do {
     // West - 11 entries returned
     case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime FROM players WHERE pid='%1'",_uid];};
-    // Civilian - 12 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime FROM players WHERE pid='%1'",_uid];};
+    // Civilian - 13 entries returned
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, name FROM players WHERE pid='%1'",_uid];};
     // Independent - 10 entries returned
     case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime FROM players WHERE pid='%1'",_uid];};
 };
@@ -45,11 +45,13 @@ if (EXTDB_SETTING(getNumber,"DebugMode") isEqualTo 1) then {
 };
 
 if (_queryResult isEqualType "") exitWith {
-    [] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
+    //[] remoteExec ["SOCK_fnc_insertPlayerInfo",_ownerID];
+    [] remoteExec["life_fnc_show_name_message",_ownerID];
 };
 
 if (count _queryResult isEqualTo 0) exitWith {
-    [] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
+    //[] remoteExec ["SOCK_fnc_insertPlayerInfo",_ownerID];
+    [] remoteExec["life_fnc_show_name_message",_ownerID];
 };
 
 //Blah conversion thing from a2net->extdb
@@ -125,6 +127,7 @@ switch (_side) do {
             TON_fnc_playtime_values_request pushBack [_uid, _new];
         };
         [_uid,_new select 2] call TON_fnc_setPlayTime;
+
 
         /* Make sure nothing else is added under here */
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;

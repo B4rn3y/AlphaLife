@@ -162,6 +162,7 @@ class Life_Client_Core {
         class useGangBank {};
         class vehicleGarage {};
         class wireTransfer {};
+        class show_name_message {};
     };
 
     class Functions {
@@ -324,6 +325,10 @@ class Life_Client_Core {
         class wantedInfo {};
         class wantedList {};
         class wantedMenu {};
+        class keyGiveGang {};
+        class licenseMenu {};
+        class p_market_menu {};
+        class p_market_menu_EVH {};
     };
 
     class Shops {

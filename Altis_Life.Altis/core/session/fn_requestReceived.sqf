@@ -55,6 +55,7 @@ switch (playerSide) do {
 
     case civilian: {
         life_is_arrested = _this select 7;
+        LIFE_SAVED_NAME = _this select 13;
         CONST(life_coplevel, 0);
         CONST(life_medicLevel, 0);
         life_houses = _this select (_count - 3);

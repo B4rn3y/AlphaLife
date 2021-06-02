@@ -279,17 +279,13 @@
             <Polish>Skup Szkła</Polish>
 			<Chinesesimp>玻璃贸易商</Chinesesimp>
         </Key>
-        <Key ID="STR_Shops_Minerals">
-            <Original>Altis Industrial Trader</Original>
-            <Czech>Altis Industrial Trader</Czech>
-            <Spanish>Comerciante Industrial</Spanish>
-            <Russian></Russian>
-            <German>Altis Industriehandel</German>
-            <Italian>Vendita materiali industriali</Italian>
-            <French>Acheteur de minerais</French>
-            <Portuguese>Comprador de Material Indústrial</Portuguese>
-            <Polish>Skup materiałów przemysłowych</Polish>
-			<Chinesesimp>铁/铜贸易</Chinesesimp>
+        <Key ID="STR_Shops_Iron">
+            <Original>Altis Iron Trader</Original>
+            <German>Eisenhändler</German>
+        </Key>
+        <Key ID="STR_Shops_Copper">
+            <Original>Copper Trader</Original>
+            <German>Kupferhändler</German>
         </Key>
         <Key ID="STR_Shops_Cop">
             <Original>APD Item Shop</Original>
@@ -1417,16 +1413,8 @@
 			<Chinesesimp>发送信息:</Chinesesimp>
         </Key>
         <Key ID="STR_CELL_TextMSGBtn">
-            <Original>Text Message:</Original>
-            <Czech>Textová zpráva:</Czech>
-            <Spanish>Mensaje:</Spanish>
-            <Russian></Russian>
-            <German>Nachricht:</German>
-            <French>Message Texte :</French>
-            <Italian>Msg Giocatore:</Italian>
-            <Portuguese>Mensagem:</Portuguese>
-            <Polish>Do: Gracz</Polish>
-			<Chinesesimp>发短信:</Chinesesimp>
+            <Original>Send</Original>
+            <German>Send</German>
         </Key>
         <Key ID="STR_CELL_TextPolice">
             <Original>Text Police</Original>
@@ -2773,6 +2761,10 @@
             <Portuguese>Gangue</Portuguese>
             <Polish>Gang</Polish>
 			<Chinesesimp>我的帮派</Chinesesimp>
+        </Key>
+        <Key ID="STR_PM_Market">
+            <Original>Market</Original>
+            <German>Markt</German>
         </Key>
         <Key ID="STR_PM_WantedList">
             <Original>Wanted List</Original>
@@ -7517,7 +7509,7 @@
             <Czech>Unwashed Uran</Czech>
             <Spanish>Unwashed Uran</Spanish>
             <Russian>Unwashed Uran</Russian>
-            <German>Unwashed Uran</German>
+            <German>Ungewaschenes Uran</German>
             <French>Unwashed Uran</French>
             <Italian>Unwashed Uran</Italian>
             <Portuguese>Unwashed Uran</Portuguese>
@@ -13491,6 +13483,14 @@
             <Russian>Миссия провалена</Russian>
             <German>Nicht auf der Whitelist.</German>
 			<Chinesesimp>你不是白名单不能使用这个栏位。</Chinesesimp>
+        </Key>
+        <Key ID="STR_Wrong_name_SubTitle">
+            <Original>Wrong name.</Original>
+            <German>Falscher Name.</German>
+        </Key>
+        <Key ID="STR_Wrong_name_Descript">
+            <Original>Your current name and the name in the Database do not match. Please change your name.</Original>
+            <German>Deine aktueller Name und dein in der Datenbank hinterlegter Name stimmen nicht überein. Bitte ändere deinen Namen.</German>
         </Key>
         <Key ID="STR_NotWhitelisted_Descript">
             <Original>You are not allowed to use this slot because you do not have the appropriate permissions. Try another slot.</Original>

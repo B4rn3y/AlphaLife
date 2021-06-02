@@ -87,14 +87,14 @@ class VirtualShops {
     };
 
     class iron  {
-        name = "STR_Shops_Minerals";
+        name = "STR_Shops_Iron";
         side = "civ";
         conditions = "";
         items[] = { "iron_refined"};
     };
 
     class copper  {
-        name = "STR_Shops_Minerals";
+        name = "STR_Shops_Copper";
         side = "civ";
         conditions = "";
         items[] = {"copper_refined" };
@@ -112,13 +112,6 @@ class VirtualShops {
         side = "civ";
         conditions = "";
         items[] = { "salt_refined" };
-    };
-
-    class cement {
-        name = "STR_Shops_Cement";
-        side = "civ";
-        conditions = "";
-        items[] = { "cement" };
     };
 
     class gold {
@@ -391,7 +384,7 @@ class VirtualItems {
         displayName = "STR_Item_CopperIngot";
         weight = 3;
         buyPrice = -1;
-        sellPrice = 400;
+        sellPrice = 4000;
         illegal = false;
         edible = -1;
         drinkable = -1;
@@ -494,30 +487,6 @@ class VirtualItems {
         icon = "icons\ico_diamondCut.paa";
     };
 
-    class rock {
-        variable = "rock";
-        displayName = "STR_Item_Rock";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        edible = -1;
-        drinkable = -1;
-        icon = "icons\ico_rock.paa";
-    };
-
-    class cement {
-        variable = "cement";
-        displayName = "STR_Item_CementBag";
-        weight = 5;
-        buyPrice = -1;
-        sellPrice = 1950;
-        illegal = false;
-        edible = -1;
-        drinkable = -1;
-        icon = "icons\ico_cement.paa";
-    };
-
     //new stuff(not everything new)
 
 
@@ -542,7 +511,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_unwashed_uran.paa";
+        icon = "icons\ico_uran.paa";
     };
 
     class washed_uran {
@@ -554,7 +523,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_washed_uran.paa";
+        icon = "icons\ico_uran.paa";
     };
 
     class dried_uran {
@@ -566,7 +535,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_dried_uran.paa";
+        icon = "icons\ico_uran.paa";
     };
 
     class uran {
@@ -599,10 +568,10 @@ class VirtualItems {
         weight = 6;
         buyPrice = -1;
         sellPrice = -1;
-        illegal = false;
+        illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_coal_ore.paa";
+        icon = "icons\ico_coal.paa";
     };
 
     class coal {
@@ -611,7 +580,7 @@ class VirtualItems {
         weight = 4;
         buyPrice = -1;
         sellPrice = -1;
-        illegal = false;
+        illegal = true;
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_coal.paa";

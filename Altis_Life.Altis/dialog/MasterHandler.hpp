@@ -29,3 +29,6 @@
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
 #include "BA_admin_menu.hpp" // id 9000
+#include "licenses.hpp" // 9580
+#include "player_inv_market.hpp" //9001
+#include "welcome_server.hpp" //9002
