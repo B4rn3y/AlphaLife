@@ -27,9 +27,13 @@ if(_actual_name isEqualTo "") then {
 	_ok_btn ctrlShow false;
 	_back_btn buttonSetAction "closeDialog 0;";
 
-	_text = "<t align='center' size='6' shadow='0' >ERROR</t><br /><br /><br /><br />";
+	_text = "<t align='center' size='6' shadow='0' >Alpha Life</t><br /><br /><br /><br />";
 
-	_text = _text + format["Dein aktueller Name %1 stimmt nicht mit dem in der Datenbank hinterlegten Namen '%2' überein.<br /><br />Gehe zurück in das Arma 3 Hauptmenü und ändere deinen Namen.",profileName, _actual_name];
+	_text = _text + format["Dein aktueller Name %1 stimmt nicht mit dem in der Datenbank hinterlegten Namen '%2' überein.<br /><br />Gehe zurück in das Arma 3 Hauptmenü und ändere deinen Namen.<br /><br />",profileName, _actual_name];
+
+	_text = _text + "Solltest du deinen Namen ändern wollen, so geht das nur über den Support.<br /><br />";
+
+	_text = _text + "- Teamspeak: 45.89.140.192<br />- Website: website.de<br /><br />";
 
 	_str_text ctrlSetStructuredText parseText _text;
 

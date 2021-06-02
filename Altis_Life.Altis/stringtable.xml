@@ -13492,6 +13492,14 @@
             <Original>Your current name and the name in the Database do not match. Please change your name.</Original>
             <German>Deine aktueller Name und dein in der Datenbank hinterlegter Name stimmen nicht überein. Bitte ändere deinen Namen.</German>
         </Key>
+        <Key ID="STR_name_invalid_SubTitle">
+            <Original>Invalid name.</Original>
+            <German>Ungültiger Name.</German>
+        </Key>
+        <Key ID="STR_name_invalid_Descript">
+            <Original>Your current name contains special characters that are not allowed on this server. Please remove them and try again.</Original>
+            <German>Deine aktueller Name beinhaltet Sonderzeichen die auf diesem Server nicht erlaubt sind. Bitte entferne diese und verbinde neu.</German>
+        </Key>
         <Key ID="STR_NotWhitelisted_Descript">
             <Original>You are not allowed to use this slot because you do not have the appropriate permissions. Try another slot.</Original>
             <Czech>Ty jsou není dovoleno používat tento slot, protože nemáte příslušná oprávnění. Zkuste použít jiný slot.</Czech>

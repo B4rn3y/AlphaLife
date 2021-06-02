@@ -62,7 +62,8 @@ if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnou
 
 private _spawnPoints = life_veh_shop select 1;
 private _spawnPoint = "";
-
+private _is_coordinate = false;
+private _exit = false;
 if ((life_veh_shop select 0) == "med_air_hs") then {
     if (nearestObjects[(getMarkerPos _spawnPoints),["Air"],35] isEqualTo []) exitWith {_spawnPoint = _spawnPoints};
 } else {
@@ -70,7 +71,13 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     if (_spawnPoints isEqualType []) then {
         //Find an available spawn point.
         {
-            if ((nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) isEqualTo []) exitWith {_spawnPoint = _x};
+            if(_x isEqualType []) then {
+                _is_coordinate = true;
+                if ((nearestObjects[(_x select 0),["Car","Ship","Air"],5]) isEqualTo []) exitWith {_spawnPoint = _x;_exit = true;};
+            } else {
+                if ((nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) isEqualTo []) exitWith {_spawnPoint = _x;_exit =true;};
+            };
+            if(_exit) exitWith {};
             true
         } count _spawnPoints;
     } else {
@@ -79,7 +86,8 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
 };
 
 
-if (_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
+if (_spawnPoint isEqualTo "" && _spawnPoint isEqualType "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
+if (_spawnPoint isEqualTo [] && _spawnPoint isEqualType []) exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
 CASH = CASH - _purchasePrice;
 [0] call SOCK_fnc_updatePartial;
 if (_mode) then {
@@ -95,17 +103,30 @@ private "_vehicle";
 if ((life_veh_shop select 0) == "med_air_hs") then {
     _vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}}; //Wait?
+    _pos= if(_is_coordinate) then {_spawnPoint} else {getmarkerpos _spawnPoint};
     _vehicle allowDamage false;
-    _hs = nearestObjects[getMarkerPos _spawnPoint,["Land_Hospital_side2_F"],50] select 0;
-    _vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
+    if(_is_coordinate) then {
+        _hs = nearestObjects[_pos select 0,["Land_Hospital_side2_F"],50] select 0;
+        _vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
+    } else {
+        _hs = nearestObjects[(getmarkerpos _spawnPoint),["Land_Hospital_side2_F"],50] select 0;
+        _vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
+    };
     sleep 0.6;
 } else {
-    _vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
+    _pos= if(_is_coordinate) then {_spawnPoint} else {getmarkerpos _spawnPoint};
+    _vehicle = createVehicle [_className, _pos, [], 0, "NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}}; //Wait?
     _vehicle allowDamage false; //Temp disable damage handling..
-    _vehicle setPos (getMarkerPos _spawnPoint);
-    _vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
-    _vehicle setDir (markerDir _spawnPoint);
+    if(_is_coordinate) then {
+        _vehicle setPosatl (_pos select 0);
+        _vehicle setVectorUp (surfaceNormal (_pos select 0));
+        _vehicle setDir (_pos select 1);
+    } else {
+        _vehicle setPosatl (getMarkerPos _spawnPoint);
+        _vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+        _vehicle setDir (markerDir _spawnPoint);
+    };
 };
 
 _vehicle lock 2;

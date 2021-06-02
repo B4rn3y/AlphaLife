@@ -98,6 +98,15 @@ class CfgDebriefing {
         pictureColor[] = {0,0.3,0.6,1};
     };
 
+    class InvalidChar {
+        title = "$STR_NotWhitelisted_Title";
+        subtitle = "$STR_name_invalid_SubTitle";
+        description = "$STR_name_invalid_Descript";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0,0.3,0.6,1};
+    };
+
     class Blacklisted {
         title = "$STR_Blacklisted_Title";
         subtitle = "$STR_Blacklisted_SubTitle";

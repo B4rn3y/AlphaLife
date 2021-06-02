@@ -16,6 +16,16 @@ _timeStamp = diag_tickTime;
 waitUntil {!isNull (findDisplay 46)};
 [] call compile preprocessFileLineNumbers "core\clientValidator.sqf";
 enableSentences false;
+_fail = false;
+_wrong_chars = "'´´`";
+_wrong_chars = toarray _wrong_chars;
+{
+    if(_x in _wrong_chars) exitWith {_fail = true;};
+
+} foreach (toarray profileName);
+if(_fail) exitWith {
+    ["InvalidChar",false,true] call BIS_fnc_endMission;
+};
 
 MISSION_ROOT = call {
     private "_arr";
@@ -23,6 +33,12 @@ MISSION_ROOT = call {
     _arr resize (count _arr - 15);
     toString _arr
 };
+
+
+profileNamespace setVariable ['GUI_BCG_RGB_R',0];
+profileNamespace setVariable ['GUI_BCG_RGB_G',0.25];
+profileNamespace setVariable ['GUI_BCG_RGB_B',0.65];
+profileNamespace setVariable ['GUI_BCG_RGB_A',0.937124];
 
 diag_log "[Life Client] Initialization Variables";
 [] call compile preprocessFileLineNumbers "core\configuration.sqf";

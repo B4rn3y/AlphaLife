@@ -15,8 +15,7 @@ if (!isNil "_value") exitWith {
     deleteVehicle _this;
 
     switch (true) do {
-        case (_value > 20000000) : {_value = 100000;}; //VAL>20mil->100k
-        case (_value > 5000000) : {_value = 250000;}; //VAL>5mil->250k
+        case (_value > 70000000) : {_value = 100000;}; //VAL>70mil->100k
         default {};
     };
 

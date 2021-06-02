@@ -45,6 +45,6 @@ if (EXTDB_SETTING(getNumber,"DebugMode") isEqualTo 1) then {
     false
 } count _queryResult;
 
-if (count _list isEqualTo 0) exitWith {[_list] remoteExec ["life_fnc_wantedList",_ret];};
+
 
 [_list] remoteExec ["life_fnc_wantedList",_ret];

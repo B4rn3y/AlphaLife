@@ -83,26 +83,23 @@ if (_exit) exitWith {hint localize "STR_Process_Weight"; life_is_processing = fa
 
 //Setup our progress bar.
 disableSerialization;
-"progressBar" cutRsc ["life_progress","PLAIN"];
-_ui = uiNamespace getVariable "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
+
 
 life_is_processing = true;
+
+_vendor setVariable["percent",1];
+[_vendor,_upp] spawn life_fnc_processEVH;
+_cP = 0.01;
 
 if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.28;
         _cP = _cP + 0.01;
-        _progress progressSetPosition _cP;
-        _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+        _vendor setVariable["percent",_cP*100];
         if (_cP >= 1) exitWith {};
         if (player distance _vendor > 10) exitWith {};
     };
-    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay";  life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
@@ -112,7 +109,7 @@ if (_hasLicense) then {
         [true,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
     } count _newItem;
 
-    "progressBar" cutText ["","PLAIN"];
+
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
     life_is_processing = false; life_action_inUse = false;
 } else {
@@ -121,14 +118,13 @@ if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.9;
         _cP = _cP + 0.01;
-        _progress progressSetPosition _cP;
-        _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+        _vendor setVariable["percent",_cP*100];
         if (_cP >= 1) exitWith {};
         if (player distance _vendor > 10) exitWith {};
     };
 
-    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
-    if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay";  life_is_processing = false; life_action_inUse = false;};
+    if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText];  life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
@@ -138,7 +134,7 @@ if (_hasLicense) then {
         [true,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
     } count _newItem;
 
-    "progressBar" cutText ["","PLAIN"];
+
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
     CASH = CASH - _cost;
     [0] call SOCK_fnc_updatePartial;

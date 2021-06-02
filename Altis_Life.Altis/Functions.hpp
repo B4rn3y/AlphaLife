@@ -218,6 +218,7 @@ class Life_Client_Core {
         class exp_hint {};
         class nearestObjects {};
         class showInvInfo {};
+        class processEVH {};
     };
 
     class FSM {

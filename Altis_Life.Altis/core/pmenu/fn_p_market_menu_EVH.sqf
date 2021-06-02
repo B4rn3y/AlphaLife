@@ -57,7 +57,7 @@ while{true} do {
 };
 
 reverse _item_circle;
-_string = format["<br/><t align='center' size='1.4'>%1$</t><br/><t align='center' color='%3' size='1.1'>%2</t><br/><br/><t align='center' size='1.2'>Farmrouten:</t><br/>",_sell_price,if(_illegal) then {"Illegal"} else{"Legal"},if(_illegal) then {"#ff0000"} else{"#08FF00"}];
+_string = format["<br/><t align='center' size='1.4'>%1$</t><br/><t align='center' color='%3' size='1.1'>%2</t><br/><br/><t align='center' size='1.2'>Farmrouten:</t><br/>",[_sell_price] call life_Fnc_numbertext,if(_illegal) then {"Illegal"} else{"Legal"},if(_illegal) then {"#ff0000"} else{"#08FF00"}];
 
 
 {
