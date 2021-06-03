@@ -88,6 +88,10 @@ switch (_mode) do {
         _membersFinal = [_membersFinal] call DB_fnc_mresArray;
         _query = format ["UPDATE gangs SET members='%1' WHERE id='%2'",_membersFinal,_groupID];
     };
+
+    case 5: {
+        _query = format ["UPDATE gangs SET bank='%1' WHERE id='%2'",(_group getVariable ["gang_bank",0]),_groupID];
+    };
 };
 
 if (!isNil "_query") then {

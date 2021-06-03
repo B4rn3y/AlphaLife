@@ -5,6 +5,10 @@
     Master settings for various features and functionality
 */
 class Life_Settings {
+/* BA SHIT*/
+    min_player_gang_area = 0; // minimum amount of players needed to be online to capture the gangarea
+    gang_area_paycheck_timer = 60; // get every 10 Minutes money from the gang area (in seconds)
+    gang_area_paycheck = 50000; // get 50k for every gang member online
 /* Logging and Security Settings*/
     /* Security Settings */
     spyGlass_toggle = false; //Spyglass On/Off Toggle --> True = On & False = Off

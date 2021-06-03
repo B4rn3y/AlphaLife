@@ -4,6 +4,7 @@
 
 _vendor = param[0,objNull,[objNull]];
 _text  = param[1,"",[""]]; // UPP
+_var_to_be_nilled = param[2,"",[""]];
 Vendor = _vendor;
 EVHText = _text;
 _code = "";
@@ -193,8 +194,10 @@ switch (true) do
 			_obj = Vendor;
 		    _pos = [visiblePosition _obj select 0, visiblePosition _obj select 1, (getPosATL _obj select 2) + 1.5];
 		    _sPos = worldToScreen _pos;
+		    if!(_sPos isEqualTo []) then {
+		    	_sPos = [(_sPos select 0) - 0.15, _sPos select 1];
+		    };
 
-		    _sPos = [(_sPos select 0) - 0.15, _sPos select 1];
 		    _ctrl2 = controlNull;
 		    _ctrl = controlNull;
 		    _distance = (positionCameraToWorld [0,0,0]) distance _obj;
@@ -233,8 +236,11 @@ switch (true) do
 _evh_id = addMissionEventHandler ["EachFrame", _code];
 
 
-
-waitUntil {!life_is_processing};
+if(_var_to_be_nilled isEqualto "") then {
+	waitUntil {!life_is_processing};
+} else {
+	waitUntil {isnil _var_to_be_nilled};
+};
 
 removeMissionEventHandler["EachFrame",_evh_id];
 ctrldelete ((finddisplay 46) displayctrl 1234);

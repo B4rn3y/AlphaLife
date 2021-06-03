@@ -50,9 +50,7 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 
 
-	_marker = createMarker[format["ALPHA_evidence_%1",_id],_pos];
-	_marker setMarkertype "mil_triangle";
-	_marker setmarkertext localize format["$STR_MAR_Evidence_Room"];
+
 
 
 	clearWeaponCargoGlobal _chest;

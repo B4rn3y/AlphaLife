@@ -8,15 +8,15 @@ class EditorData
 	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=1386;
+		nextID=1395;
 	};
 	class MarkerIDProvider
 	{
-		nextID=222;
+		nextID=223;
 	};
 	class Camera
 	{
-		pos[]={14360.034,24.960556,5816.6064};
+		pos[]={25741.227,41.37249,21190.348};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
 		aside[]={0.99999994,0,-0};
@@ -74,13 +74,14 @@ addons[]=
 	"A3_Structures_F_Exp_Naval_Piers",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Props_F_Tank_Military_TankAcc",
-	"A3_Structures_F_Heli_Ind_Cargo"
+	"A3_Structures_F_Heli_Ind_Cargo",
+	"A3_Missions_F_Oldman"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=22;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -228,6 +229,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item21
+		{
+			className="A3_Missions_F_Oldman";
+			name="Arma 3 Old Man - Playable Content";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -271,6 +279,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -285,24 +311,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -360,7 +368,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=929;
+		items=936;
 		class Item0
 		{
 			dataType="Marker";
@@ -721,7 +729,7 @@ class Mission
 			position[]={3662.7031,10.440324,13096.991};
 			name="civ_car_1";
 			type="Empty";
-			angle=181.86745;
+			angle=181.86742;
 			id=39;
 		};
 		class Item37
@@ -730,7 +738,7 @@ class Mission
 			position[]={3669.5737,10.445809,13096.474};
 			name="civ_car_1_1";
 			type="Empty";
-			angle=180.06453;
+			angle=180.06448;
 			id=40;
 		};
 		class Item38
@@ -741,7 +749,7 @@ class Mission
 			text="@STR_MAR_Bruce_Outfits";
 			type="c_unknown";
 			colorName="ColorGreen";
-			angle=3.4230127;
+			angle=3.423012;
 			id=41;
 		};
 		class Item39
@@ -972,7 +980,7 @@ class Mission
 			text="DP 17";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=219.81371;
+			angle=90.679047;
 			id=67;
 		};
 		class Item62
@@ -1004,7 +1012,7 @@ class Mission
 			text="DP 13";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=180.18132;
+			angle=180.18127;
 			id=70;
 		};
 		class Item65
@@ -1035,7 +1043,7 @@ class Mission
 			text="DP 15";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=92.117294;
+			angle=92.117271;
 			id=73;
 		};
 		class Item68
@@ -1046,7 +1054,7 @@ class Mission
 			text="DP 21";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=90.348785;
+			angle=90.348778;
 			id=74;
 		};
 		class Item69
@@ -1057,7 +1065,7 @@ class Mission
 			text="DP 22";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=297.85162;
+			angle=90.390999;
 			id=75;
 		};
 		class Item70
@@ -1068,7 +1076,7 @@ class Mission
 			text="DP 24";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=144.67552;
+			angle=90.739281;
 			id=76;
 		};
 		class Item71
@@ -1079,7 +1087,7 @@ class Mission
 			text="DP 23";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=315.43076;
+			angle=92.312218;
 			id=77;
 		};
 		class Item72
@@ -1120,7 +1128,7 @@ class Mission
 			text="DP 9";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=91.374504;
+			angle=91.374481;
 			id=81;
 		};
 		class Item76
@@ -1172,7 +1180,7 @@ class Mission
 			text="DP 25";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=334.67407;
+			angle=89.617599;
 			id=86;
 		};
 		class Item81
@@ -1466,12 +1474,13 @@ class Mission
 		class Item111
 		{
 			dataType="Marker";
-			position[]={14074.721,23.343645,18559.061};
+			position[]={14061.45,23.34375,18718.734};
 			name="Gen_3_4_1";
 			text="@STR_MAR_Bruce_Outfits";
 			type="c_unknown";
 			colorName="ColorGreen";
 			id=119;
+			atlOffset=-3.1937714;
 		};
 		class Item112
 		{
@@ -1491,7 +1500,7 @@ class Mission
 			text="@STR_MAR_DMV";
 			type="c_unknown";
 			colorName="ColorBlue";
-			angle=358.09689;
+			angle=2.2457423;
 			id=121;
 		};
 		class Item114
@@ -1523,7 +1532,7 @@ class Mission
 			text="@STR_MAR_DMV";
 			type="c_unknown";
 			colorName="ColorBlue";
-			angle=0.78927594;
+			angle=0.78927588;
 			id=124;
 		};
 		class Item117
@@ -1718,7 +1727,7 @@ class Mission
 			name="civ_gar_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=226.90576;
+			angle=226.90572;
 			id=144;
 		};
 		class Item136
@@ -1737,7 +1746,7 @@ class Mission
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.99417;
+			angle=224.99413;
 			id=146;
 		};
 		class Item138
@@ -1756,7 +1765,7 @@ class Mission
 			name="civ_gar_1_2";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=168.39319;
+			angle=224.54625;
 			id=148;
 		};
 		class Item140
@@ -1775,7 +1784,7 @@ class Mission
 			name="civ_gar_1_3";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=226.90166;
+			angle=226.90161;
 			id=150;
 		};
 		class Item142
@@ -1829,18 +1838,19 @@ class Mission
 			text="@STR_MAR_Market";
 			type="c_unknown";
 			colorName="ColorGreen";
-			angle=1.4016132;
+			angle=1.4016129;
 			id=155;
 		};
 		class Item147
 		{
 			dataType="Marker";
-			position[]={13946.49,22.888865,18664.123};
+			position[]={14067.282,22.888672,18720.1};
 			name="Gen_4";
 			text="@STR_MAR_General_Store";
 			type="c_unknown";
 			colorName="ColorGreen";
 			id=156;
+			atlOffset=-3.3927021;
 		};
 		class Item148
 		{
@@ -2043,7 +2053,7 @@ class Mission
 			name="atm_marker_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=36.949192;
+			angle=359.27817;
 			id=181;
 		};
 		class Item168
@@ -2093,7 +2103,7 @@ class Mission
 			name="atm_marker_2_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=128.67664;
+			angle=359.69061;
 			id=186;
 		};
 		class Item173
@@ -2113,7 +2123,7 @@ class Mission
 			name="atm_marker_2_4";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=2.4656444;
+			angle=2.4656436;
 			id=188;
 		};
 		class Item175
@@ -2123,7 +2133,7 @@ class Mission
 			name="atm_marker_2_5";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=0.84252411;
+			angle=0.84252393;
 			id=189;
 		};
 		class Item176
@@ -2163,7 +2173,7 @@ class Mission
 			name="atm_marker_2_9";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=131.43578;
+			angle=359.61102;
 			id=193;
 		};
 		class Item180
@@ -2201,7 +2211,7 @@ class Mission
 			text="@STR_MAR_Hospital";
 			type="loc_Hospital";
 			colorName="ColorRed";
-			angle=181.52283;
+			angle=181.52278;
 			id=197;
 		};
 		class Item184
@@ -2212,7 +2222,7 @@ class Mission
 			text="@STR_MAR_Hospital";
 			type="loc_Hospital";
 			colorName="ColorRed";
-			angle=180.91971;
+			angle=180.91966;
 			id=198;
 		};
 		class Item185
@@ -2278,7 +2288,7 @@ class Mission
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=138.34398;
+			angle=359.47092;
 			id=205;
 		};
 		class Item192
@@ -2288,7 +2298,7 @@ class Mission
 			name="atm_marker_1_3";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=134.47447;
+			angle=3.1753542;
 			id=206;
 		};
 		class Item193
@@ -2319,7 +2329,7 @@ class Mission
 			name="atm_marker_2_10";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=139.89175;
+			angle=358.19577;
 			id=209;
 		};
 		class Item196
@@ -13526,8 +13536,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13948.376,23.751408,18665.617};
-				angles[]={0,3.8686273,6.2826972};
+				position[]={14062.487,27.14851,18717.961};
+				angles[]={0,4.2830868,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13535,10 +13545,11 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this enableSimulation false; this allowDamage false;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=539;
 			type="Land_CashDesk_F";
-			atlOffset=3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27692,7 +27703,7 @@ class Mission
 			side="Civilian";
 			class Entities
 			{
-				items=150;
+				items=151;
 				class Item0
 				{
 					dataType="Object";
@@ -27932,7 +27943,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+						init="this allowDamage false; " \n "this enableSimulation false; " \n "this setVariable [""realname"",""License Shop""]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gun"",0,false,false,"""",' !license_civ_gun && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""sand"",0,false,false,"""",' !license_civ_sand && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""iron"",0,false,false,"""",' !license_civ_iron && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""copper"",0,false,false,"""",' !license_civ_copper && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""shell"",0,false,false,"""",' !license_civ_shell && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""whiskey"",0,false,false,"""",' !license_civ_whiskey && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
 						name="license_shop_1";
 						disableSimulation=1;
 					};
@@ -31029,15 +31040,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3645.5547,10.185566,13128.207};
-						angles[]={0.0066682254,3.2200291,0.0093286335};
+						position[]={3645.5549,10.185568,13128.207};
+						angles[]={0.0066671576,3.2200277,0.0093200579};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ']; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+						init="this allowDamage false; " \n "this enableSimulation false; " \n "this setVariable [""realname"",""License Shop""]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gun"",0,false,false,"""",' !license_civ_gun && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""sand"",0,false,false,"""",' !license_civ_sand && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""iron"",0,false,false,"""",' !license_civ_iron && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""copper"",0,false,false,"""",' !license_civ_copper && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""shell"",0,false,false,"""",' !license_civ_shell && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""whiskey"",0,false,false,"""",' !license_civ_whiskey && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
 						name="license_shop";
 						disableSimulation=1;
 					};
@@ -32137,7 +32148,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+						init="this allowDamage false; " \n "this enableSimulation false; " \n "this setVariable [""realname"",""License Shop""]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gun"",0,false,false,"""",' !license_civ_gun && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""sand"",0,false,false,"""",' !license_civ_sand && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""iron"",0,false,false,"""",' !license_civ_iron && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""copper"",0,false,false,"""",' !license_civ_copper && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""shell"",0,false,false,"""",' !license_civ_shell && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""whiskey"",0,false,false,"""",' !license_civ_whiskey && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
 						name="license_shop_2";
 						disableSimulation=1;
 					};
@@ -32280,7 +32291,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this allowDamage false; this enableSimulation false; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; this setVariable [""realname"",""License Shop""];";
+						init="this allowDamage false; " \n "this enableSimulation false; " \n "this setVariable [""realname"",""License Shop""]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""boat"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""pilot"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_pilot && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""trucking"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""trucking"",0,false,false,"""",' !license_civ_trucking && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""home"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""home"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""gun"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""gun"",0,false,false,"""",' !license_civ_gun && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""dive"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""sand"",0,false,false,"""",' !license_civ_sand && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""iron"",0,false,false,"""",' !license_civ_iron && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""copper"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""copper"",0,false,false,"""",' !license_civ_copper && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""shell"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""shell"",0,false,false,"""",' !license_civ_shell && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""whiskey"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""whiskey"",0,false,false,"""",' !license_civ_whiskey && playerSide isEqualTo civilian ',5]; " \n "this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
 						name="license_shop_3";
 						disableSimulation=1;
 					};
@@ -33184,8 +33195,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14075.289,23.919411,18559.809};
-						angles[]={0,0.53848642,6.2823472};
+						position[]={14061.539,27.150602,18717.447};
+						angles[]={0,1.1290575,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -33197,7 +33208,6 @@ class Mission
 					};
 					id=1020;
 					type="C_man_1";
-					atlOffset=0.00035095215;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33490,10 +33500,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13947.773,23.752754,18665.164};
-						angles[]={0,0.85486227,6.2826962};
+						position[]={14067.442,27.146524,18720.328};
+						angles[]={0,4.2220244,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -33503,7 +33514,6 @@ class Mission
 					};
 					id=1024;
 					type="C_man_p_fugitive_F_asia";
-					atlOffset=0.71000099;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -35494,7 +35504,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3637.2622,10.240938,13100.549};
-						angles[]={-0,0.055300701,-0};
+						angles[]={0,0.055300701,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -39093,7 +39103,7 @@ class Mission
 					};
 					id=1346;
 					type="O_Soldier_F";
-					atlOffset=0.00014972687;
+					atlOffset=0.00014925003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39232,6 +39242,87 @@ class Mission
 										};
 									};
 									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item150
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17003.936,16.644314,12824.704};
+						angles[]={0,5.4982057,0};
+					};
+					side="Civilian";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""car_g_4""; },"""",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
+						disableSimulation=1;
+					};
+					id=1393;
+					type="C_man_1";
+					atlOffset=-1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
 								};
 							};
 						};
@@ -40974,7 +41065,7 @@ class Mission
 			text="@STR_MAR_Grenade_Manufacturer";
 			type="mil_box";
 			colorName="ColorBrown";
-			angle=233.03493;
+			angle=87.8069;
 			id=1245;
 			atlOffset=-1.9073486e-005;
 		};
@@ -41034,7 +41125,6 @@ class Mission
 			};
 			id=1247;
 			type="Land_WallCity_01_8m_grey_F";
-			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41403,7 +41493,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3666.1497,10.950686,13101.853};
+				position[]={3666.1497,10.950687,13101.853};
 				angles[]={0,3.2148118,0};
 			};
 			side="Empty";
@@ -41414,6 +41504,7 @@ class Mission
 			};
 			id=1265;
 			type="Land_Pipe_fence_4m_F";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41494,6 +41585,7 @@ class Mission
 			};
 			id=1267;
 			type="Land_WallCity_01_8m_grey_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41935,7 +42027,6 @@ class Mission
 			};
 			id=1284;
 			type="Land_WallCity_01_pillar_grey_F";
-			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42806,7 +42897,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3666.9438,11.151587,13128.027};
-				angles[]={-0,3.0926454,0.013327583};
+				angles[]={0,3.0926454,0.013327583};
 			};
 			side="Empty";
 			flags=4;
@@ -42816,6 +42907,7 @@ class Mission
 			};
 			id=1318;
 			type="Land_CratesWooden_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42846,7 +42938,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3664.5527,10.875179,13128.375};
-				angles[]={-0,0,0.013327583};
+				angles[]={0,0,0.013327583};
 			};
 			side="Empty";
 			flags=4;
@@ -43521,7 +43613,7 @@ class Mission
 			};
 			id=1354;
 			type="Land_HBarrierWall6_F";
-			atlOffset=2.9418769;
+			atlOffset=2.9418764;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43555,13 +43647,13 @@ class Mission
 				angles[]={0,1.2861891,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1357;
 			type="Land_HBarrierWall6_F";
+			atlOffset=4.4407253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43756,13 +43848,13 @@ class Mission
 				angles[]={0,2.8551273,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1362;
 			type="Land_HBarrierWall6_F";
+			atlOffset=2.7197156;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43796,13 +43888,13 @@ class Mission
 				angles[]={0,2.8551273,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1363;
 			type="Land_HBarrierWall6_F";
+			atlOffset=0.85477829;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43836,13 +43928,13 @@ class Mission
 				angles[]={0,2.8551273,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1364;
 			type="Land_HBarrierWall6_F";
+			atlOffset=4.4432545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43876,13 +43968,13 @@ class Mission
 				angles[]={0,2.8551273,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1365;
 			type="Land_HBarrierWall6_F";
+			atlOffset=3.733212;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43956,13 +44048,13 @@ class Mission
 				angles[]={0,4.4398103,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1367;
 			type="Land_HBarrierWall6_F";
+			atlOffset=4.2743683;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43996,13 +44088,13 @@ class Mission
 				angles[]={0,4.4398103,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1368;
 			type="Land_HBarrierWall6_F";
+			atlOffset=4.0240831;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44076,13 +44168,13 @@ class Mission
 				angles[]={0,4.4398103,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1370;
 			type="Land_HBarrierWall6_F";
+			atlOffset=3.7081814;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44202,6 +44294,7 @@ class Mission
 			};
 			id=1373;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44241,6 +44334,7 @@ class Mission
 			};
 			id=1374;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44280,6 +44374,7 @@ class Mission
 			};
 			id=1375;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44393,7 +44488,6 @@ class Mission
 				angles[]={0,1.1004339,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				createAsSimpleObject=1;
@@ -44401,6 +44495,7 @@ class Mission
 			};
 			id=1378;
 			type="Land_TankEngine_01_F";
+			atlOffset=5.632843;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44434,13 +44529,13 @@ class Mission
 				angles[]={0,4.3782983,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1379;
 			type="Land_PaperBox_closed_F";
+			atlOffset=4.3580685;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44481,7 +44576,7 @@ class Mission
 			};
 			id=1380;
 			type="Land_Cargo10_grey_F";
-			atlOffset=4.4250002;
+			atlOffset=4.4522901;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44582,7 +44677,7 @@ class Mission
 			};
 			id=1382;
 			type="CamoNet_BLUFOR_F";
-			atlOffset=3.8998165;
+			atlOffset=3.899817;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44617,6 +44712,144 @@ class Mission
 			colorName="ColorGUER";
 			id=1385;
 			atlOffset=-4.0531158e-005;
+		};
+		class Item929
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21975.426,29.515829,21030.148};
+				angles[]={0,5.4342399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=1386;
+			type="Land_WoodenTable_small_F";
+			atlOffset=8.9393482;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item930
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21975.439,30.216129,21030.121};
+				angles[]={0,0.7208035,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction [""Capture Gang Area"",life_fnc_capture_area,"""",0,false,false,"""",'_target getvariable[""capturing"",""""] isEqualTo """"']; " \n "this addAction [""Abort Capture"",{(_this select 0) setvariable[""abort"",true];},"""",0,false,false,"""",'!(_target getvariable[""capturing"",""""] isEqualTo """")'];";
+				name="gang_area";
+				disableSimulation=1;
+			};
+			id=1387;
+			type="Item_Laptop_Unfolded";
+			atlOffset=0.00037002563;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item931
+		{
+			dataType="Marker";
+			position[]={21975.029,21.141001,21030.461};
+			name="gang_area_radius";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=750;
+			b=750;
+			id=1388;
+			atlOffset=1.0992661;
+		};
+		class Item932
+		{
+			dataType="Marker";
+			position[]={21975.369,21.735352,21030.205};
+			name="gang_area_text";
+			type="mil_dot";
+			colorName="ColorBlue";
+			id=1389;
+			atlOffset=1.5918465;
+		};
+		class Item933
+		{
+			dataType="Marker";
+			position[]={16997.725,16.707001,12829.685};
+			name="car_g_4";
+			type="Empty";
+			angle=318.97198;
+			id=1390;
+			atlOffset=-0.00018501282;
+		};
+		class Item934
+		{
+			dataType="Marker";
+			position[]={17003.992,16.643053,12824.755};
+			name="civ_gar_1_4";
+			text="@STR_MAR_Garage";
+			type="o_service";
+			angle=226.90161;
+			id=1391;
+		};
+		class Item935
+		{
+			dataType="Marker";
+			position[]={20893.811,10.84,19228.717};
+			name="evidence_room";
+			text="@STR_MAR_Evidence_Room";
+			type="mil_box";
+			colorName="Color4_FD_F";
+			id=1394;
 		};
 	};
 };

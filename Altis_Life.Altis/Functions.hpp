@@ -242,6 +242,11 @@ class Life_Client_Core {
         class initGang {};
     };
 
+    class Gang_Area {
+        file = "core\gang_area";
+        class capture_area {};
+    };
+
     class Housing {
         file = "core\housing";
         class buyHouse {};
