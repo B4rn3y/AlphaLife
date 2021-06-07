@@ -6,8 +6,10 @@
     Description:
     Sell a virtual item to the store / shop
 */
-private ["_type","_index","_price","_amount","_name"];
+private ["_sell_all","_type","_price","_amount","_array","_ind","_val"];
 if ((lbCurSel 2402) isEqualTo -1) exitWith {};
+_sell_all = param[0,false,[false]];
+
 _type = lbData[2402,(lbCurSel 2402)];
 _price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
 if (_price isEqualTo -1) exitWith {};
@@ -15,6 +17,11 @@ if (_price isEqualTo -1) exitWith {};
 _amount = ctrlText 2405;
 if (!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _amount = parseNumber (_amount);
+
+if(_sell_all) then {
+    _amount = ITEM_VALUE(_type);
+};
+
 if (_amount > (ITEM_VALUE(_type))) exitWith {hint localize "STR_Shop_Virt_NotEnough"};
 if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
 life_action_delay = time;

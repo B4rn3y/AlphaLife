@@ -37,6 +37,8 @@ _items_farm_and_sellble = [];
 	};
 } foreach _items;
 
+_items_farm_and_sellble pushBackUnique "turtle_raw";
+_items_farm_and_sellble pushBackUnique "goldbar";
 
 {
 	_sell_price = getNumber(missionConfigFile >> "VirtualItems" >> _x >> "sellPrice");

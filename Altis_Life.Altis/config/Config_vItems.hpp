@@ -62,7 +62,7 @@ class VirtualShops {
         name = "STR_Shops_DrugDealer";
         side = "civ";
         conditions = "";
-        items[] = { "cocaine_processed", "heroin_processed", "marijuana", "lsd_frog" };
+        items[] = { "cocaine_processed", "heroin_processed", "marijuana", "lsd" };
     };
 
     class oil {
@@ -505,7 +505,7 @@ class VirtualItems {
     class unwashed_uran {
         variable = "unwashed_uran";
         displayName = "STR_Item_Unwashed_Uran";
-        weight = 2;
+        weight = 6;
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
@@ -517,7 +517,7 @@ class VirtualItems {
     class washed_uran {
         variable = "washed_uran";
         displayName = "STR_Item_Washed_Uran";
-        weight = 2;
+        weight = 4;
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
@@ -529,7 +529,7 @@ class VirtualItems {
     class dried_uran {
         variable = "dried_uran";
         displayName = "STR_Item_Dried_Uran";
-        weight = 2;
+        weight = 3;
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;

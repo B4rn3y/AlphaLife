@@ -3058,6 +3058,10 @@
             <Polish>Sprzedaj obiekt</Polish>
 			<Chinesesimp>卖东西</Chinesesimp>
         </Key>
+        <Key ID="STR_VS_SellAllItem">
+            <Original>Sell Max</Original>
+            <German>Verk. Max</German>
+        </Key>
     </Package>
     <Package name="Spawn_Menu">
         <Key ID="STR_Spawn_Title">

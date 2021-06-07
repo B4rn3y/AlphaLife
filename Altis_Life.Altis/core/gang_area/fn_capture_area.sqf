@@ -91,7 +91,7 @@ _markername_text setMarkerText format["Eingenommen durch: %1",_gang_name];
 _laptop setvariable["gang_area_info",[_gang_id,_gang_name],true];
 
 
-[format["Du hast erfolgreich die Gang-Area eingenommen. Ihr erhaltet nun alle %1 Minuten pro Gangmitglied $%2 solange die Gang-Area euch gehört.",getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck_timer"),getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck")]] spawn life_fnc_exp_hint;
+[format["Du hast erfolgreich die Gang-Area eingenommen. Ihr erhaltet nun alle %1 Minuten pro Gangmitglied $%2 solange die Gang-Area euch gehört.",(getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck_timer")/60),getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck")]] spawn life_fnc_exp_hint;
 
 
 /*
