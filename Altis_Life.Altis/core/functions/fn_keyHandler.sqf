@@ -137,6 +137,24 @@ switch (_code) do {
         };
     };
 
+
+    case 86: // Volume Sound up and down
+    {
+        //Reset den Sound
+        if(_shift AND _ctrlKey) exitWith
+        {
+            life_fadeSound = -1;
+            [] call life_fnc_fadeSound;
+            _handled = true;
+        };
+
+        if(_shift) then
+        {
+            [] call life_fnc_fadeSound;
+            _handled = true;
+        };
+    };
+
     //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
     case _interactionKey: {
         if (!life_action_inUse) then {

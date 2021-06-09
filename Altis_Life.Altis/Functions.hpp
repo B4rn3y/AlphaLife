@@ -219,6 +219,8 @@ class Life_Client_Core {
         class nearestObjects {};
         class showInvInfo {};
         class processEVH {};
+        class centerMsg {};
+        class fadeSound {};
     };
 
     class FSM {

@@ -61,11 +61,18 @@ class CfgSpawnPoints {
                 conditions = "license_civ_rebel";
             };
 
-            class RebelE {
-                displayName = $STR_SP_Reb_E;
-                spawnMarker = "Rebelop_2";
+            class Mercenary {
+                displayName = $STR_MAR_Mercenary_Outpost;
+                spawnMarker = "mercenary_op";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "license_civ_mercenary";
+            };
+
+            class alpha {
+                displayName = $STR_MAR_Alpha_Outpost;
+                spawnMarker = "Alpha_op";
+                icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
+                conditions = "license_civ_alpha";
             };
         };
 

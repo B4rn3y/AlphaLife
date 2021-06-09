@@ -9,6 +9,9 @@
     if the vehicle has room for the item.
 */
 private ["_ctrl","_num","_totalWeight","_itemWeight","_veh_data","_inv","_index","_val"];
+
+_all = param[0,false,[false]];
+
 disableSerialization;
 if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith { closeDialog 0; hint localize "STR_MISC_VehInvUse"; };
 
@@ -20,9 +23,15 @@ if (_num < 1) exitWith {hint localize "STR_MISC_Under1";};
 
 _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 
+if(_all) then {
+    _num = [_ctrl,missionNamespace getvariable[format["life_inv_%1",_ctrl],0],_totalWeight select 1,_totalWeight select 0] call life_fnc_calWeightDiff;
+};
+
 _itemWeight = ([_ctrl] call life_fnc_itemWeight) * _num;
 _veh_data = life_trunk_vehicle getVariable ["Trunk",[[],0]];
 _inv = _veh_data select 0;
+
+
 
 if (_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle")}) exitWith {hint localize "STR_NOTF_canOnlyStoreInLandVeh";};
 

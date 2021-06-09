@@ -11092,6 +11092,14 @@
             <Polish>Baza rebeliantów</Polish>
 			<Chinesesimp>叛军前哨</Chinesesimp>
         </Key>
+        <Key ID="STR_MAR_Mercenary_Outpost">
+            <Original>Mercenary Outpost</Original>
+            <German>Söldner Außenposten</German>
+        </Key>
+        <Key ID="STR_MAR_Alpha_Outpost">
+            <Original>Alpha Outpost</Original>
+            <German>Alpha Außenposten</German>
+        </Key>
         <Key ID="STR_MAR_Air_Shop">
             <Original>Air Shop</Original>
             <Czech>Air Shop</Czech>
@@ -11259,6 +11267,10 @@
             <Portuguese>Coal Mine</Portuguese>
             <Polish>Coal Mine</Polish>
             <Chinesesimp>Coal Mine</Chinesesimp>
+        </Key>
+        <Key ID="STR_MAR_Frog_Swamp">
+            <Original>Frog Swamp</Original>
+            <German>Froschsumpf</German>
         </Key>
         <Key ID="STR_MAR_Snake_isle">
             <Original>Snake Isle</Original>
@@ -12075,6 +12087,22 @@
             <Polish>Zbrojownia rebelianta</Polish>
             <Italian>Armeria della Guerriglia</Italian>
 			<Chinesesimp>叛军武器店</Chinesesimp>
+        </Key>
+        <Key ID="STR_MAR_Alpha_Clothing_Shop">
+            <Original>Alpha Clothing Shop</Original>
+            <German>Alpha Kleidungsgeschäft</German>
+        </Key>
+        <Key ID="STR_MAR_Alpha_Weapon_Shop">
+            <Original>Alpha Weapon Shop</Original>
+            <German>Alpha Waffenhändler</German>
+        </Key>
+        <Key ID="STR_MAR_Mercenary_Clothing_Shop">
+            <Original>Mercenary Clothing Shop</Original>
+            <German>Söldner Kleidungsgeschäft</German>
+        </Key>
+        <Key ID="STR_MAR_Mercenary_Weapon_Shop">
+            <Original>Mercenary Weapon Shop</Original>
+            <German>Söldner Waffenhändler</German>
         </Key>
         <Key ID="STR_MAR_Helicopter_Shop">
             <Original>Helicopter Shop</Original>

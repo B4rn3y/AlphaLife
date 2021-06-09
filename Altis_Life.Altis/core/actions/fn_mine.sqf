@@ -18,6 +18,7 @@ if (player getVariable "playerSurrender") exitWith {
     hint localize "STR_NOTF_surrender";
 };
 life_action_inUse = true;
+life_action_gathering = true;
 _zone = "";
 _requiredItem = "";
 
@@ -61,6 +62,7 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
 
 if (_zone isEqualTo "") exitWith {
     life_action_inUse = false;
+    life_action_gathering = false;
 };
 
 if (_requiredItem != "") then {
@@ -73,35 +75,41 @@ if (_requiredItem != "") then {
             };
         };
         life_action_inUse = false;
+        life_action_gathering = false;
         _exit = true;
   };
 };
 
 if (_exit) exitWith {
     life_action_inUse = false;
+    life_action_gathering = false;
 };
-
-_amount = round(random(_maxGather)) + 1;
-_diff = [_mined, _amount, life_carryWeight, life_maxWeight] call life_fnc_calWeightDiff;
-if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
-    life_action_inUse = false;
-};
-
-[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT];
-
-for "_i" from 0 to 4 do {
-    player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-    waitUntil {
-        animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+_pos = getposatl player;
+while{True} do {
+    if((getPosATL player) distance _pos > 0.5) exitWith {};
+    _amount = round(random(_maxGather)) + 1;
+    _diff = [_mined, _amount, life_carryWeight, life_maxWeight] call life_fnc_calWeightDiff;
+    if (_diff isEqualTo 0) exitWith {
+        hint localize "STR_NOTF_InvFull";
+        life_action_inUse = false;
+        life_action_gathering = false;
     };
-    sleep 0.5;
+
+    [player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT];
+
+    for "_i" from 0 to 4 do {
+        player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+        waitUntil {
+            animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+        };
+        if((getPosATL player) distance _pos > 0.5) exitWith {};
+        sleep 0.5;
+    };
+    if((getPosATL player) distance _pos > 0.5) exitWith {};
+    if !(([true, _mined, _diff] call life_fnc_handleInv)) exitWith {};
+    sleep 1;
 };
 
-if (([true, _mined, _diff] call life_fnc_handleInv)) then {
-    //_itemName = M_CONFIG(getText, "VirtualItems", _mined, "displayName");
-    //titleText[format [localize "STR_NOTF_Mine_Success", (localize _itemName), _diff], "PLAIN"];
-};
 
-sleep 2.5;
 life_action_inUse = false;
+life_action_gathering = false;

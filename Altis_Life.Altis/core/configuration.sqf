@@ -50,6 +50,7 @@ if(isnil "LIFE_ID_RevealObjects") then {
 LIFE_SAVED_NAME = "";
 alpha_frogtime = 300;
 alpha_time_wait_light = 0.5; // warnblinker wartezeit
+life_fadeSound = 0;
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast", true];

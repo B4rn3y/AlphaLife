@@ -92,7 +92,7 @@ if (_sp isEqualType "") then {
     _vehicle = createVehicle [(_vInfo select 2),_sp,[],0,"NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
     _vehicle allowDamage false;
-    _vehicle setPos _sp;
+    _vehicle setPosAtl _sp;
     _vehicle setVectorUp (surfaceNormal _sp);
     _vehicle setDir _dir;
 };
@@ -111,25 +111,25 @@ _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
 
     _vehicle setVariable ["Trunk",_trunk,true];
-    
+
     if (_wasIllegal) then {
         private _refPoint = if (_sp isEqualType "") then {getMarkerPos _sp;} else {_sp;};
-        
+
         private _distance = 100000;
         private "_location";
 
         {
             private _tempLocation = nearestLocation [_refPoint, _x];
             private _tempDistance = _refPoint distance _tempLocation;
-    
+
             if (_tempDistance < _distance) then {
                 _location = _tempLocation;
                 _distance = _tempDistance;
             };
             false
-    
+
         } count ["NameCityCapital", "NameCity", "NameVillage"];
- 
+
         _location = text _location;
         [1,"STR_NOTF_BlackListedVehicle",true,[_location,_name]] remoteExecCall ["life_fnc_broadcast",west];
 

@@ -12,6 +12,8 @@ if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
 if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
 
+life_action_gathering = true;
+
 life_action_inUse = true;
 _zone = "";
 _requiredItem = "";
@@ -33,7 +35,7 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
     if (_zone != "") exitWith {};
 };
 
-if (_zone isEqualTo "") exitWith {life_action_inUse = false;};
+if (_zone isEqualTo "") exitWith {life_action_inUse = false; life_action_gathering = false;};
 
 if (_requiredItem != "") then {
     _valItem = missionNamespace getVariable "life_inv_" + _requiredItem;
@@ -43,34 +45,41 @@ if (_requiredItem != "") then {
          //Messages here
         };
         life_action_inUse = false;
+        life_action_gathering = false;
         _exit = true;
     };
 };
 
-if (_exit) exitWith {life_action_inUse = false;};
+if (_exit) exitWith {life_action_inUse = false;life_action_gathering = false;};
 
-_amount = round(random(_maxGather)) + 1;
-_diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
-    life_action_inUse = false;
+_pos = getposatl player;
+
+While{True} do {
+    if((getPosATL player) distance _pos > 0.5) exitWith {};
+
+    _amount = round(random(_maxGather)) + 1;
+    _diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+    if (_diff isEqualTo 0) exitWith {
+        hint localize "STR_NOTF_InvFull";
+        life_action_inUse = false;
+        life_action_gathering = false;
+    };
+
+    switch (_requiredItem) do {
+        case "pickaxe": {[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
+        default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
+    };
+
+    for "_i" from 0 to 4 do {
+        player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+        waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+        if((getPosATL player) distance _pos > 0.5) exitWith {};
+        sleep 0.5;
+    };
+    if((getPosATL player) distance _pos > 0.5) exitWith {};
+    if !([true,_resource,_diff] call life_fnc_handleInv) exitWith {};
+    sleep 1;
 };
 
-switch (_requiredItem) do {
-    case "pickaxe": {[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-    default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-};
-
-for "_i" from 0 to 4 do {
-    player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-    waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-    sleep 0.5;
-};
-
-if ([true,_resource,_diff] call life_fnc_handleInv) then {
-    //_itemName = M_CONFIG(getText,"VirtualItems",_resource,"displayName");
-    //titleText[format [localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN DOWN"];
-};
-
-sleep 1;
 life_action_inUse = false;
+life_action_gathering = false;

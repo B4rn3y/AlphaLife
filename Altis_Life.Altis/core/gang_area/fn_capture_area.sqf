@@ -33,7 +33,7 @@ _gang_id = if(playerSide isEqualTo west) then {"Polizei"} else {life_gangdata se
 
 _markername_radius setMarkerColor "ColorOrange";
 _markername_text setMarkerColor "ColorOrange";
-_markername_text setMarkerText format["Wird eingenommen durch: %1",_gang_name];
+_markername_text setMarkerText format["Gang Area PVP: Wird eingenommen durch: %1",_gang_name];
 
 _abort_capturing = {
     _markername_radius setMarkerColor "ColorBlue";
@@ -46,7 +46,7 @@ _abort_capturing = {
     if!(_cur_area_setting isEqualTo []) then {
         _markername_radius setMarkerColor "ColorRed";
         _markername_text setMarkerColor "ColorRed";
-        _markername_text setMarkerText format["Eingenommen durch: %1",_cur_area_setting select 1];
+        _markername_text setMarkerText format["Gang Area PVP: Eingenommen durch: %1",_cur_area_setting select 1];
     };
 };
 
@@ -86,10 +86,12 @@ _markername_text setMarkerColor "ColorRed";
 _laptop setvariable["capturing",nil,true];
 gang_area_capturing = nil;
 
-_markername_text setMarkerText format["Eingenommen durch: %1",_gang_name];
+_markername_text setMarkerText format["Gang Area PVP: Eingenommen durch: %1",_gang_name];
 
 _laptop setvariable["gang_area_info",[_gang_id,_gang_name],true];
 
+
+[3,format["%1h %2min: %3 und seine Gang %4 haben die Gang Area eingenommen",date select 3,date select 4,profileName, (group player) getVariable["gang_name",""]]] remoteExec ['life_fnc_centerMsg',-2,false];
 
 [format["Du hast erfolgreich die Gang-Area eingenommen. Ihr erhaltet nun alle %1 Minuten pro Gangmitglied $%2 solange die Gang-Area euch gehört.",(getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck_timer")/60),getnumber(missionConfigFile >> "Life_Settings" >> "gang_area_paycheck")]] spawn life_fnc_exp_hint;
 
