@@ -221,6 +221,7 @@ class Life_Client_Core {
         class processEVH {};
         class centerMsg {};
         class fadeSound {};
+        class radiation {};
     };
 
     class FSM {

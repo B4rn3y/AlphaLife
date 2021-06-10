@@ -31,6 +31,8 @@ if (isNull _curObject) exitWith {
             if (!alive _fish) then {
                 [_fish] call life_fnc_catchFish;
             };
+        } else {
+            [] spawn life_fnc_gather;
         };
     } else {
         _animal = (nearestObjects[player,(LIFE_SETTINGS(getArray,"animaltypes_hunting")),3]) select 0;

@@ -44,6 +44,7 @@ if (count (_this select 6) > 0) then {
 switch (playerSide) do {
     case west: {
         CONST(life_coplevel,(_this select 7));
+        CONST(life_swatlevel,(_this select 12));
         CONST(life_medicLevel,0);
         life_blacklisted = _this select 9;
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
@@ -57,6 +58,7 @@ switch (playerSide) do {
         life_is_arrested = _this select 7;
         LIFE_SAVED_NAME = _this select 13;
         CONST(life_coplevel, 0);
+        CONST(life_swatlevel, 0);
         CONST(life_medicLevel, 0);
         life_houses = _this select (_count - 3);
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
@@ -90,6 +92,7 @@ switch (playerSide) do {
     case independent: {
         CONST(life_medicLevel,(_this select 7));
         CONST(life_coplevel,0);
+        CONST(life_swatlevel, 0);
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
             life_thirst = ((_this select 9) select 1);

@@ -9,6 +9,7 @@ class Life_Settings {
     min_player_gang_area = 0; // minimum amount of players needed to be online to capture the gangarea
     gang_area_paycheck_timer = 60; // get every 10 Minutes money from the gang area (in seconds)
     gang_area_paycheck = 50000; // get 50k for every gang member online
+    hazard_suits[] = {"U_C_CBRN_Suit_01_Blue_F","U_C_Scientist"};  // uniforms to wear in the radiation zone
 /* Logging and Security Settings*/
     /* Security Settings */
     spyGlass_toggle = false; //Spyglass On/Off Toggle --> True = On & False = Off

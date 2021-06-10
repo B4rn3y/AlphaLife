@@ -71,10 +71,15 @@ While{True} do {
     };
 
     for "_i" from 0 to 4 do {
-        player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-        waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-        if((getPosATL player) distance _pos > 0.5) exitWith {};
-        sleep 0.5;
+        if(surfaceIsWater (visiblePositionASL player)) then {
+            if((getPosATL player) distance _pos > 0.5) exitWith {};
+            sleep 0.85;
+        } else {
+            player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+            waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+            if((getPosATL player) distance _pos > 0.5) exitWith {};
+            sleep 0.5;
+        };
     };
     if((getPosATL player) distance _pos > 0.5) exitWith {};
     if !([true,_resource,_diff] call life_fnc_handleInv) exitWith {};

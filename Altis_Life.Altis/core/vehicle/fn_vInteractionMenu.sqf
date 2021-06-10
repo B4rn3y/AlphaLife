@@ -67,7 +67,7 @@ if (playerSide isEqualTo west) then {
             };
         } else {
             _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+            _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+0.5];life_vInact_curTarget setVectorUp [0,0,1]; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
         };
     };

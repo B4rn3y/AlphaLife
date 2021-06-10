@@ -512,6 +512,7 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_uran.paa";
+        processedItem = "uran";
     };
 
     class washed_uran {
@@ -524,6 +525,7 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_uran.paa";
+        processedItem = "uran";
     };
 
     class dried_uran {
@@ -536,6 +538,7 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_uran.paa";
+        processedItem = "uran";
     };
 
     class uran {
@@ -572,6 +575,7 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_coal.paa";
+        processedItem = "black_powder";
     };
 
     class coal {
@@ -584,6 +588,7 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_coal.paa";
+        processedItem = "black_powder";
     };
 
     class black_powder {

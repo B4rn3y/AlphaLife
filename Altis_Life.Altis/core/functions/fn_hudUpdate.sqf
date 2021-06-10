@@ -33,7 +33,6 @@ if(life_fadeSound isEqualTo 0) then {
 	_value = (_x select 2)/100;
 	_control_empty progressSetPosition (1-_value);
 	_pos_f = ctrlPosition _control_full; // [x, y, w, h]
-	_pos_e = ctrlPosition _control_empty;
 	_control_empty ctrlSetPosition[_pos_f select 0,(_pos_f select 1)-((_pos_f select 3)*_value),_pos_f select 2, _pos_f select 3];
 	_control_empty ctrlCommit 0;
 } foreach
@@ -43,9 +42,3 @@ if(life_fadeSound isEqualTo 0) then {
 	[_W_f,_W_e,life_thirst]
 ];
 
-
-/*
-LIFEctrl(2200) progressSetPosition (life_hunger / 100);
-LIFEctrl(2201) progressSetPosition (1 - (damage player));
-LIFEctrl(2202) progressSetPosition (life_thirst / 100);
-*/

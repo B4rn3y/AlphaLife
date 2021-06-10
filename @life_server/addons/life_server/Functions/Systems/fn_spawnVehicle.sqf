@@ -105,7 +105,11 @@ _vehicle lock 2;
 [_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7)],true];
-_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
+
+if!(_side isEqualTo west) then {
+    _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
+};
+
 [_vehicle] call life_fnc_clearVehicleAmmo;
 
 if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
