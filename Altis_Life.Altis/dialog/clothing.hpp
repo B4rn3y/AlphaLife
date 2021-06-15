@@ -61,7 +61,7 @@ class Life_Clothing {
             idc = 3106;
             text = "";
             sizeEx = 0.035;
-            x = 0.148258 * safezoneW + safezoneX;
+            x = 0.135 * safezoneW + safezoneX;
             y = 0.439419 * safezoneH + safezoneY;
             w = 0.2;
             h = (1 / 25);
@@ -81,7 +81,7 @@ class Life_Clothing {
             idc = -1;
             text = "$STR_Global_Close";
             onButtonClick = "closeDialog 0; [] call life_fnc_playerSkins;";
-            x = 0.157 * safezoneW + safezoneX;
+            x = 0.149 * safezoneW + safezoneX;
             y = 0.489992 * safezoneH + safezoneY;
             w = (6.25 / 40);
             h = (1 / 25);
