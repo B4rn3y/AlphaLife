@@ -39,6 +39,13 @@ switch (playerSide) do
                     _path = _path + "cop_swat.jpg";
                 };
             };
+
+            case "U_B_GEN_Commander_F":
+            {
+                if(_swat) then {
+                    _path = _path + "cop_swat2.jpg";
+                };
+            };
         };
     };
 

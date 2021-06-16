@@ -96,7 +96,7 @@ diag_log "[Life Client] Past Settings Init";
 diag_log "[Life Client] Executing client.fsm";
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
-[player, life_settings_enableSidechannel, playerSide] remoteExecCall ["TON_fnc_manageSC", RSERV];
+//[player, life_settings_enableSidechannel, playerSide] remoteExecCall ["TON_fnc_manageSC", RSERV];
 
 [] spawn life_fnc_survival;
 

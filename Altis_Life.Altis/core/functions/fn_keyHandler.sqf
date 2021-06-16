@@ -19,6 +19,7 @@ private _speed = speed cursorObject;
 private _handled = false;
 private _interactionKey = if (actionKeys "User10" isEqualTo []) then {219} else {(actionKeys "User10") select 0};
 private _interruptionKeys = [17, 30, 31, 32]; //A,S,W,D
+private _mapKey = actionKeys "ShowMap" select 0;
 
 //Vault handling...
 if ((_code in (actionKeys "GetOver") || _code in (actionKeys "salute") || _code in (actionKeys "SitDown") || _code in (actionKeys "Throw") || _code in (actionKeys "GetIn") || _code in (actionKeys "GetOut") || _code in (actionKeys "Fire") || _code in (actionKeys "ReloadMagazine") || _code in [16,18]) && ((player getVariable ["restrained",false]) || (player getVariable ["playerSurrender",false]) || life_isknocked || life_istazed)) exitWith {
@@ -135,6 +136,12 @@ switch (_code) do {
                 player selectWeapon life_curWep_h;
             };
         };
+    };
+
+    //Map Key
+    case _mapKey:
+    {
+        [] spawn life_fnc_mapMarkerplayer;
     };
 
 

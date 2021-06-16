@@ -222,6 +222,7 @@ class Life_Client_Core {
         class centerMsg {};
         class fadeSound {};
         class radiation {};
+        class mapMarkerplayer {};
     };
 
     class FSM {

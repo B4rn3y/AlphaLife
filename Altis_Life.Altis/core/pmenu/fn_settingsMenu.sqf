@@ -51,6 +51,7 @@ if (isNil "life_settings_revealObjects") then {
     life_settings_revealObjects = profileNamespace setVariable ["life_settings_revealObjects",true];
 };
 
+/*
 if(life_settings_enableSidechannel) then {
     _side ctrlSetTextColor [0,1,0,1];
     _side ctrlSetText "ON";
@@ -60,7 +61,7 @@ if(life_settings_enableSidechannel) then {
     _side ctrlSetText "OFF";
     _side buttonSetAction "['sidechat',1] call life_fnc_s_onCheckedChange; [] call life_fnc_settingsMenu;";
 };
-
+*/
 if(life_settings_enableNewsBroadcast) then {
     _broadcast ctrlSetTextColor [0,1,0,1];
     _broadcast ctrlSetText "ON";

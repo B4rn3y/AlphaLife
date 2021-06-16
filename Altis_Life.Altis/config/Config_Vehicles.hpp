@@ -968,7 +968,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "textures\COP_Vehicles\COP_SUV.paa"
             }, "" },
             { "MED", "med", {
-                "textures\MEDIC_Vehicles\MEDIC_suv.png"
+                "textures\MEDIC_Vehicles\MEDIC_suv.jpg"
             }, "" }
         };
     };

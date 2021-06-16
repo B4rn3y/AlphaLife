@@ -141,7 +141,8 @@ class Clothing {
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
             { "U_BG_Guerrilla_6_1", "COP Uniform", 500, "call life_coplevel >= 1" },
-            { "U_I_CombatUniform", "SEK Uniform", 350, "call life_swatlevel >= 1" }
+            { "U_I_CombatUniform", "SEK Uniform", 350, "call life_swatlevel >= 1" },
+            { "U_B_GEN_Commander_F", "SEK Uniform 2", 350, "call life_swatlevel >= 1" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },

@@ -102,7 +102,7 @@ if (_mode) then {
 private "_vehicle";
 
 if ((life_veh_shop select 0) == "med_air_hs") then {
-    _vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
+    _vehicle = createVehicle [_className,[0,0,random[250,500,1250]],[], 0, "NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}}; //Wait?
     _pos= if(_is_coordinate) then {_spawnPoint} else {getmarkerpos _spawnPoint};
     _vehicle allowDamage false;
@@ -116,7 +116,8 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     sleep 0.6;
 } else {
     _pos= if(_is_coordinate) then {_spawnPoint} else {getmarkerpos _spawnPoint};
-    _vehicle = createVehicle [_className, [0,0,100], [], 0, "NONE"];
+    _vehicle= if(_is_coordinate) then {createVehicle [_className,_pos select 0,[], 0, "NONE"]} else {createVehicle [_className,getmarkerpos _spawnPoint,[], 0, "NONE"]};
+
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}}; //Wait?
     _vehicle allowDamage false; //Temp disable damage handling..
     if(_is_coordinate) then {

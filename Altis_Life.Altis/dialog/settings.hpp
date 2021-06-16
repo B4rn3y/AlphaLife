@@ -26,13 +26,15 @@ class SettingsMenu {
             h = 0.0419866;
         };
 
-        class SideChatHeader : PlayerTagsHeader {
+        class BroacastHeader : PlayerTagsHeader {
             idc = -1;
-            text = "$STR_SM_SC";
+            text = "$STR_SM_BCSW";
+
             x = 0.670455;
             y = 0.255892;
             w = 0.225;
             h = 0.0419866;
+
         };
 
         class RevealNearestHeader : PlayerTagsHeader {
@@ -44,14 +46,16 @@ class SettingsMenu {
             h = 0.0419866;
         };
 
-        class BroacastHeader : PlayerTagsHeader {
+/*
+        class SideChatHeader : PlayerTagsHeader {
             idc = -1;
-            text = "$STR_SM_BCSW";
+            text = "$STR_SM_SC";
             x = 0.670455;
             y = 0.36532;
             w = 0.225;
             h = 0.0419866;
         };
+        */
 
 /*
         class Title: Life_RscTitle {
@@ -205,9 +209,9 @@ class SettingsMenu {
 
         };
 
-        class SideChatONOFF: PlayerTagsONOFF {
-            idc = 2971;
-            tooltip = "$STR_GUI_SideSwitch";
+        class BroadcastONOFF: PlayerTagsONOFF {
+            idc = 2973;
+            tooltip = "$STR_GUI_BroadcastSwitch";
             // onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
             x = 0.909091;
             y = 0.255892;
@@ -224,17 +228,17 @@ class SettingsMenu {
             w = 0.0684345;
             h = 0.0436701;
         };
-
-        class BroadcastONOFF : PlayerTagsONOFF {
-            idc = 2973;
-            tooltip = "$STR_GUI_BroadcastSwitch";
+/*
+        class SideChannelOnOFF : PlayerTagsONOFF {
+            idc = 2971;
+            tooltip = "$STR_GUI_SideSwitch";
             //onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
             x = 0.909091;
             y = 0.36532;
             w = 0.0684345;
             h = 0.0436701;
         };
-
+*/
         class ButtonClose: life_RscButtonSilent {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};
