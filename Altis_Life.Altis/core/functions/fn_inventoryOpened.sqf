@@ -15,6 +15,9 @@ params [
 scopeName "main";
 private _list = ["LandVehicle", "Ship", "Air"];
 
+
+[] call life_fnc_playerSkins;
+
 {
     if (isNull _x) then {false breakOut "main"};
 

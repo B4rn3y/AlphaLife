@@ -78,23 +78,6 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
     _chest setVariable ["Trunk",_trunk,true];
 
-    _goods_value = 0;
-    {
-        _item = _x select 0;
-        _amount = _x select 1;
-        if!(gettext (missionConfigFile >> "VirtualItems" >> _item >> "processedItem") isEqualTo "") then {
-            _item = gettext (missionConfigFile >> "VirtualItems" >> _item >> "processedItem");
-        };
-        _item_value = getNumber (missionConfigFile >> "VirtualItems" >> _item >> "sellPrice");
-        if(_item_value > 0) then {
-            _goods_value = _goods_value + (_item_value * _amount);
-        };
-
-    } foreach (_trunk select 0);
-
-    _markername = "evidence_room";
-    _markername setMarkerText format ["Asservatenkammer - Waffen: %1 - Theor. Warenwert: $%2", count (weaponCargo _chest),[_goods_value] call life_fnc_numbertext];
-
 } foreach _queryResult;
 
 

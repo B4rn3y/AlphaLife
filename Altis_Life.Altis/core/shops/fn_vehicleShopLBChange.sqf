@@ -26,10 +26,12 @@ switch (playerSide) do {
     case west: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
+        _initalPrice = if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_cop") isEqualTo 0) then {_initalPrice} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_cop")};
     };
     case independent: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
+        _initalPrice = if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_med") isEqualTo 0) then {_initalPrice} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_med")};
     };
     case east: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
@@ -75,6 +77,8 @@ if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _classNameLife)) then {
 };
 _colorArray = M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures");
 
+_show_combo = false;
+
 {
     _flag = (_x select 1);
     _textureName = (_x select 0);
@@ -82,18 +86,24 @@ _colorArray = M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures");
         _x params ["_texture"];
         private _toShow = [_x] call life_fnc_levelCheck;
         if (_toShow) then {
+            _show_combo = true;
             _ctrl lbAdd _textureName;
             _ctrl lbSetValue [(lbSize _ctrl)-1,_forEachIndex];
         };
     };
 } forEach _colorArray;
 
-_numberindexcolorarray = [];
-for "_i" from 0 to (count(_colorArray) - 1) do {
-    _numberindexcolorarray pushBack _i;
+if(_show_combo) then {
+    _ctrl ctrlShow true;
+    _numberindexcolorarray = [];
+    for "_i" from 0 to (count(_colorArray) - 1) do {
+        _numberindexcolorarray pushBack _i;
+    };
+    _indexrandom = _numberindexcolorarray call BIS_fnc_selectRandom;
+    _ctrl lbSetCurSel _indexrandom;
+} else {
+    _ctrl ctrlShow false;
 };
-_indexrandom = _numberindexcolorarray call BIS_fnc_selectRandom;
-_ctrl lbSetCurSel _indexrandom;
 
 if (_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly"))) then {
     ctrlEnable [2309,false];

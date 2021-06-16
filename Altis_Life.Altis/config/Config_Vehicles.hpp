@@ -1,6 +1,6 @@
 class CarShops {
     /*
-    *    ARRAY FORMAT: 
+    *    ARRAY FORMAT:
     *        0: STRING (Classname)
     *        1: STRING (Condition)
     *    FORMAT:
@@ -85,7 +85,7 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "B_T_LSV_01_unarmed_F", "" },
+            { "B_LSV_01_unarmed_F", "" },
             { "O_T_LSV_02_unarmed_F", "" }
         };
     };
@@ -107,7 +107,7 @@ class CarShops {
         vehicles[] = {
             { "B_Heli_Attack_01_dynamicLoadout_F", "" },
             { "O_Heli_Attack_02_dynamicLoadout_F", "" },
-            { "B_CTRG_Heli_Transport_01_sand_F", "" },
+            { "B_Heli_Transport_01_F", "" },
             { "O_T_VTOL_02_vehicle_dynamicLoadout_F", "" }
         };
     };
@@ -116,7 +116,7 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "" },
+            { "C_SUV_01_F", "" },
             { "I_Truck_02_medical_F", "" },
             { "O_Truck_03_medical_F", "" },
             { "B_Truck_01_medical_F", "" }
@@ -134,22 +134,42 @@ class CarShops {
 
     class cop_car {
         side = "cop";
-        conditions = "";
+        conditions = "call life_Coplevel > 0";
         vehicles[] = {
+            {"B_Quadbike_01_F",""},
             { "C_Offroad_01_F", "" },
             { "C_SUV_01_F", "" },
-            { "C_Hatchback_01_sport_F", "call life_coplevel >= 1" },
-            { "B_MRAP_01_F", "call life_coplevel >= 2" },
-            { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" }
+            { "C_Hatchback_01_sport_F", "call life_Coplevel > 1" },
+            { "B_LSV_01_unarmed_F","call life_Coplevel > 2"},   //prowler
+            { "O_Truck_03_covered_F","call life_Coplevel > 5"},   // tempest abgedeckt
+            { "B_MRAP_01_F", "call life_Coplevel > 3" } // hunter
         };
     };
 
     class cop_air {
         side = "cop";
-        conditions = "call life_coplevel >= 3";
+        conditions = "call life_Coplevel > 0";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
-            { "B_Heli_Transport_01_F", "call life_coplevel >= 4" }
+            { "B_Heli_Light_01_F", "call life_Coplevel > 2" },
+            {"I_Heli_light_03_unarmed_F","call life_Coplevel > 4"},  // hellcat
+            {"B_Heli_Attack_01_dynamicLoadout_F","call life_Coplevel > 4"},   // blackfoot
+            { "B_Heli_Transport_01_F", "call life_Coplevel > 5" }     // ghost hawk
+        };
+    };
+
+    class swat_car {
+        side = "cop";
+        conditions = "call life_swatlevel > 0";
+        vehicles[] = {
+            {"I_MRAP_03_F",""}   // strider
+        };
+    };
+
+    class swat_air {
+        side = "cop";
+        conditions = "call life_swatlevel > 0";
+        vehicles[] = {
+            { "B_Heli_Transport_01_F", "" }     // ghost hawk
         };
     };
 
@@ -197,6 +217,52 @@ class LifeCfgVehicles {
         conditions = "";
         price = -1;
         textures[] = {};
+    };
+
+    // Prowler  [a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"]
+    class B_LSV_01_unarmed_F {
+        vItemSpace = 150;
+        conditions = "";
+        price = 65000;
+        price_cop = 45000;
+        textures[] = {
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Prowler1.paa",
+                "textures\COP_Vehicles\COP_Prowler2.paa",
+                "textures\COP_Vehicles\COP_Prowler3.paa",
+                "textures\COP_Vehicles\COP_Prowler4.paa"
+            }, "" },
+            { "Olive", "reb", {
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_01_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_02_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_03_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
+            }, "" },
+            { "Sand", "reb", {
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_01_sand_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_02_sand_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_03_sand_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_adds_sand_co.paa"
+            }, "" },
+            { "Dazzle", "reb", {
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_01_dazzle_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_02_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_03_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
+            }, "" },
+            { "Merc", "merc", {
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_01_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_02_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_03_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
+            }, "" },
+            { "Alpha", "alpha", {
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_01_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_02_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_03_olive_co.paa",
+                "a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
+            }, "" }
+        };
     };
 
     // Apex DLC
@@ -361,48 +427,70 @@ class LifeCfgVehicles {
 
     class B_Heli_Attack_01_dynamicLoadout_F {
         vItemSpace = 200;
-		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";       
+		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";
 		price = 5500000;
-        textures[] = {};
+        price_cop = 450000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
     };
-	
+
     class O_Heli_Attack_02_dynamicLoadout_F {
         vItemSpace = 200;
-		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";       
+		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";
 		price = 5500000;
         textures[] = {};
     };
-	
+
     class B_CTRG_Heli_Transport_01_sand_F {
         vItemSpace = 200;
-		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";       
+		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";
 		price = 5500000;
         textures[] = {};
     };
-	
+
     class O_T_VTOL_02_vehicle_dynamicLoadout_F {
         vItemSpace = 1000;
-		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";       
+		conditions = "license_civ_alpha || !(playerSide isEqualTo civilian)";
 		price = 15000000;
         textures[] = {};
     };
     class I_Heli_light_03_unarmed_F {
         vItemSpace = 150;
-		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)"; 
-        textures[] = {};
+		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)";
+        textures[] = {
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Hellcat.paa"
+            }, "" },
+            { "MED", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_hellcat.jpg"
+            }, "" }
+        };
         price = 4500000;
+        price_cop = 350000;
+        price_med = 150000;
     };
 
     class I_MRAP_03_F {
         vItemSpace = 125;
 		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)";
-        textures[] = {};
+        textures[] = {
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Strider.paa"
+            }, "" },
+            { "SEK", "swat", {
+                "textures\COP_Vehicles\COP_Strider.paa"
+            }, "" }
+        };
         price = 5000000;
+        price_cop = 200000;
     };
 
     class B_T_LSV_01_unarmed_F {
         vItemSpace = 75;
-		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)";  
+		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)";
         textures[] = {};
         price = 500000;
     };
@@ -502,8 +590,18 @@ class LifeCfgVehicles {
     class B_Heli_Transport_01_F {
         vItemSpace = 200;
         conditions = "license_cop_cAir || {!(playerSide isEqualTo west)}";
-        price = 200000;
-        textures[] = {};
+        price = 5500000;
+        price_cop = 400000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" },
+            { "Black", "swat", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
     };
 
     class B_MRAP_01_hmg_F {
@@ -635,6 +733,7 @@ class LifeCfgVehicles {
         vItemSpace = 100;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 25000;
+        price_cop = 15000;
         textures[] = {
             { "Red", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
@@ -664,7 +763,7 @@ class LifeCfgVehicles {
                 "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             }, "" },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\COP_Vehicles\COP_Offroader.paa"
             }, "" }
         };
     };
@@ -692,6 +791,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 70;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 150000;
+        price_cop = 45000;
         textures[] = {
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
@@ -712,7 +812,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             }, "" },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\COP_Vehicles\COP_Limo.paa"
             }, "" }
         };
     };
@@ -721,9 +821,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 50;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 10000;
+        price_cop = 7500;
         textures[] = {
-            { "Brown", "cop", {
-                "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa"
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             }, "" },
             { "Digi Desert", "reb", {
                 "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opfor_co.paa"
@@ -804,7 +905,15 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 800;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 2500000;
-        textures[] = {};
+        price_cop = 250000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
     };
 
     class C_Hatchback_01_F {
@@ -843,6 +952,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 75;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 40000;
+        price_cop = 22500;
+        price_med = 15000;
         textures[] = {
             { "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
@@ -854,7 +965,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             }, "" },
             { "Police", "cop", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
+                "textures\COP_Vehicles\COP_SUV.paa"
+            }, "" },
+            { "MED", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_suv.png"
             }, "" }
         };
     };
@@ -891,10 +1005,23 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 125;
 		conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha || !(playerSide isEqualTo civilian)";
         price = 4500000;
+        price_cop = 450000;
         textures[] = {
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Hunterfront.paa",
+                "textures\COP_Vehicles\COP_Hunterback.paa"
+            }, "" },
+            { "REB", "reb", {
+                "a3\soft_f\mrap_01\data\mrap_01_base_co.paa",
+                "a3\soft_f\mrap_01\data\mrap_01_adds_co.paa"
+            }, "" },
+            { "REB", "alpha", {
+                "a3\soft_f\mrap_01\data\mrap_01_base_co.paa",
+                "a3\soft_f\mrap_01\data\mrap_01_adds_co.paa"
+            }, "" },
+            { "REB", "merc", {
+                "a3\soft_f\mrap_01\data\mrap_01_base_co.paa",
+                "a3\soft_f\mrap_01\data\mrap_01_adds_co.paa"
             }, "" }
         };
     };
@@ -914,9 +1041,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 90;
         conditions = "license_civ_pilot || {license_cop_cAir} || {license_med_mAir}";
         price = 245000;
+        price_cop = 150000;
+        price_med = 100000;
         textures[] = {
             { "Police", "cop", {
-                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
+                "textures\COP_Vehicles\COP_Hummingbird.paa"
             }, "" },
             { "Sheriff", "civ", {
                 "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"
@@ -957,8 +1086,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Digi Green", "reb", {
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             }, "" },
-            { "EMS White", "med", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
+            { "EMS", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_m900.jpg"
             }, "" }
         };
     };
@@ -967,16 +1096,25 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 125;
         conditions = "license_civ_pilot || {!(playerSide isEqualTo civilian)}";
         price = 350000;
-        textures[] = {};
+        price_med = 100000;
+        textures[] = {
+            { "EMS", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_m900.jpg"
+            }, "" },
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Hummingbird.paa"
+            }, "" }
+        };
     };
 
     class O_Heli_Light_02_unarmed_F {
         vItemSpace = 450;
         conditions = "license_civ_pilot || {license_med_mAir} || {(playerSide isEqualTo west)}";
         price = 1000000;
+        price_med = 125000;
         textures[] = {
-            { "Black", "cop", {
-                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
+            { "COP", "cop", {
+                "textures\COP_Vehicles\COP_Orca.paa"
             }, "" },
             { "White / Blue", "civ", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"
@@ -987,8 +1125,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Desert Digi", "reb", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa"
             }, "" },
-            { "EMS White", "med", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
+            { "EMS", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_orca.jpg"
             }, "" }
         };
     };

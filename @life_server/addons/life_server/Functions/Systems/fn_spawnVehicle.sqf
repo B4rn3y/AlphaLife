@@ -102,13 +102,15 @@ _vehicle allowDamage true;
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
 _vehicle lock 2;
 //Reskin the vehicle
-[_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
+if!((_vInfo select 8) isEqualTo -1) then {
+    [_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
+};
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7)],true];
 
-if!(_side isEqualTo west) then {
+//if!(_side isEqualTo west) then {
     _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
+//};
 
 [_vehicle] call life_fnc_clearVehicleAmmo;
 

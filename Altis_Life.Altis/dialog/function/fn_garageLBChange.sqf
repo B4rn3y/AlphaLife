@@ -21,8 +21,10 @@ if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _classNameLife)) then {
     _classNameLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_className];
 };
-
-_vehicleColor = ((M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures") select (_dataArr select 1)) select 0);
+_vehicleColor = "Default";
+if!((_dataArr select 1) isEqualTo -1) then {
+    _vehicleColor = ((M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures") select (_dataArr select 1)) select 0);
+};
 if (isNil "_vehicleColor") then {_vehicleColor = "Default";};
 
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;

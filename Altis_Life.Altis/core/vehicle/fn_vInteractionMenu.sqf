@@ -59,17 +59,11 @@ if (playerSide isEqualTo west) then {
         _Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
         if (_curTarget isKindOf "Ship" && {local _curTarget} && {crew _curTarget isEqualTo []}) then { _Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
     } else {
-        if (!isNil "_id") then {
-            if !(_id in getDLCs 1) then {
-                _Btn6 ctrlSetText localize "STR_vInAct_GetInVehicle";
-                _Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-                if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
-            };
-        } else {
-            _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+0.5];life_vInact_curTarget setVectorUp [0,0,1]; closeDialog 0;";
-            if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
-        };
+
+        _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
+        _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2];life_vInact_curTarget setVectorUp [0,0,1]; closeDialog 0;";
+        if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
+
     };
 
 } else {
@@ -79,17 +73,11 @@ if (playerSide isEqualTo west) then {
         _Btn2 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
         if (alive _curTarget && {_curTarget isKindOf "Ship"} && {local _curTarget} && {crew _curTarget isEqualTo []}) then { _Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
     } else {
-        if (!isNil "_id") then {
-            if !(_id in getDLCs 1) then {
-                _Btn2 ctrlSetText localize "STR_vInAct_GetInVehicle";
-                _Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-                if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
-            };
-        } else {
-            _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-            if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
-        };
+
+        _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
+        _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2]; life_vInact_curTarget setVectorUp [0,0,1];closeDialog 0;";
+        if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+
     };
     if (typeOf _curTarget == "O_Truck_03_device_F") then {
         _Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
@@ -124,7 +112,15 @@ if (playerSide isEqualTo west) then {
         };
     };
 
-    _Btn4 ctrlShow false;
+    if (!isNil "_id") then {
+            if !(_id in getDLCs 1) then {
+                _Btn4 ctrlSetText localize "STR_vInAct_GetInVehicle";
+                _Btn4 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+                if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn4 ctrlEnable true;} else {_Btn4 ctrlEnable false};
+            };
+    } else {
+        _Btn4 ctrlShow false;
+    };
     _Btn5 ctrlShow false;
     _Btn6 ctrlShow false;
 };

@@ -55,7 +55,8 @@ private _conditions = M_CONFIG(getText,"LifeCfgVehicles",_className,"conditions"
 
 if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
 
-private _colorIndex = lbValue[2304,(lbCurSel 2304)];
+
+_colorIndex = if(ctrlShown ((findDisplay 2300) displayCtrl 2304)) then {lbValue[2304,(lbCurSel 2304)]}else{-1};
 
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
 if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText];closeDialog 0;};
@@ -115,7 +116,7 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     sleep 0.6;
 } else {
     _pos= if(_is_coordinate) then {_spawnPoint} else {getmarkerpos _spawnPoint};
-    _vehicle = createVehicle [_className, _pos, [], 0, "NONE"];
+    _vehicle = createVehicle [_className, [0,0,100], [], 0, "NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}}; //Wait?
     _vehicle allowDamage false; //Temp disable damage handling..
     if(_is_coordinate) then {
@@ -143,6 +144,7 @@ _vehicle setVariable ["vehicle_info_owners",[[getPlayerUID player,profileName]],
 switch (playerSide) do {
     case west: {
         [_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
+        _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
     };
     case civilian: {
         _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.

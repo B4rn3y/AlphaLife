@@ -17,6 +17,10 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 0) then {
     } foreach (getarray(configFile >> "CfgWeapons" >> _weapon >> "magazineWell"));
 
     {
+        _magArray pushBackUnique _x;
+    } foreach (getArray(configFile >> "CfgWeapons" >> _weapon >> "magazines"));
+
+    {
         if (_x in FETCH_CONFIG2(getArray,"CfgWeapons",_weapon,"muzzles")) then {
             _magArray append FETCH_CONFIG(getArray,"CfgWeapons",_weapon,_x,"magazines");
         };

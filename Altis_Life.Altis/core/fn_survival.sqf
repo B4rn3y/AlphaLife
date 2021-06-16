@@ -57,8 +57,8 @@ _lastState = vehicle player;
 
 for "_i" from 0 to 1 step 0 do {
     /* Thirst / Hunger adjustment that is time based */
-    if ((time - _waterTime) > 600 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
-    if ((time - _foodTime) > 850 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
+    if ((time - _waterTime) > 1200 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
+    if ((time - _foodTime) > 1700 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
 
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {

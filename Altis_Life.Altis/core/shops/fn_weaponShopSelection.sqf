@@ -34,8 +34,9 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
     };
     if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 0 && (uiNamespace getVariable ["Weapon_Accessories",0]) isEqualTo 0) then {
             if (isClass (configFile >> "CfgWeapons" >> _item)) then {
+
                 //Magazines menu
-                if (isArray (configFile >> "CfgWeapons" >> _item >> "magazineWell")) then {
+                if !(getarray(configFile >> "CfgWeapons" >> _item >> "magazineWell") isEqualTo []) then {
 
                     _bool = false;
                     {
@@ -44,7 +45,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
                             {
                                 if(_mag isEqualTo (_x select 0)) exitWith {_bool = true};
                             } forEach M_CONFIG(getArray,"WeaponShops",_shop,"mags");
-                        } foreach (getarray(configFile >> "CfgMagazineWells" >> _x >> "BI_Magazines"));
+                        } foreach ((getarray(configFile >> "CfgMagazineWells" >> _x >> "BI_Magazines"))+(getArray(configFile >> "CfgWeapons" >> _item >> "magazines")));
                     } foreach (getarray(configFile >> "CfgWeapons" >> _item >> "magazineWell"));
 
                     if (_bool) then {
@@ -53,7 +54,20 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
                         ((findDisplay 38400) displayCtrl 38406) ctrlEnable false;
                     };
                 } else {
-                    ((findDisplay 38400) displayCtrl 38406) ctrlEnable false;
+
+                    _bool = false;
+                    {
+                        _mag = _x;
+                        {
+                            if(_mag isEqualTo (_x select 0)) exitWith {_bool = true};
+                        } forEach M_CONFIG(getArray,"WeaponShops",_shop,"mags");
+                    } foreach (getArray(configFile >> "CfgWeapons" >> _item >> "magazines"));
+
+                    if (_bool) then {
+                        ((findDisplay 38400) displayCtrl 38406) ctrlEnable true;
+                    } else {
+                        ((findDisplay 38400) displayCtrl 38406) ctrlEnable false;
+                    };
                 };
 
                 //Accessories Menu

@@ -50,6 +50,11 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_rebel";
         items[] = {
+            { "Binocular", "", 2500, 75, "" },
+            { "Rangefinder", "", 5000, 75, "" },
+            { "ItemGPS", "", 2500, 50, "" },
+            { "FirstAidKit", "", 2500, 75, "" },
+            { "NVGoggles", "", 5000, 1000, "" },
             {"arifle_AKS_F","",150000,75000,""},  // aks 74 u
             {"arifle_AKM_F","",300000,150000,""},   // AKM
             {"arifle_Mk20_plain_F","",200000,100000,""}, // MK20
@@ -115,6 +120,11 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
+            { "Binocular", "", 2500, 75, "" },
+            { "Rangefinder", "", 5000, 75, "" },
+            { "ItemGPS", "", 2500, 50, "" },
+            { "FirstAidKit", "", 2500, 75, "" },
+            { "NVGoggles", "", 5000, 1000, "" },
             {"arifle_ARX_blk_F","",400000,200000,""},   // typ 115 black
             {"arifle_ARX_ghex_F","",400000,200000,""},   // typ 115 ghex
             {"arifle_ARX_hex_F","",400000,200000,""},   // typ 115 hex
@@ -167,6 +177,11 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
+            { "Binocular", "", 2500, 75, "" },
+            { "Rangefinder", "", 5000, 75, "" },
+            { "ItemGPS", "", 2500, 50, "" },
+            { "FirstAidKit", "", 2500, 75, "" },
+            { "NVGoggles", "", 5000, 1000, "" },
             {"srifle_DMR_04_F","",1250000,625000,""},   // asp black
             {"srifle_DMR_04_Tan_F","",1250000,625000,""},   // asp tan
             {"srifle_DMR_02_F","",1500000,750000,""},   //mar 10 black
@@ -286,6 +301,7 @@ class WeaponShops {
         conditions = "call life_coplevel > 0";
         items[] = {
             { "Binocular", "", 150, 75, "" },
+            { "Rangefinder", "", 5000, 75, "call life_coplevel > 1" },
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "NVGoggles", "", 2000, 1000, "" },
@@ -293,19 +309,19 @@ class WeaponShops {
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 5000, 1000, "" },
             { "arifle_SDAR_F", "", 10000, 5000, "" },
             { "arifle_SPAR_01_blk_F", "", 40000, 20000, "" },    // spar 16
-            { "arifle_SPAR_02_blk_F", "", 50000, 25000, "" },    // spar 16S
-            { "arifle_MXC_Black_F", "", 30000, 15000, "" },    // MXC
-            { "arifle_MX_Black_F", "", 50000, 25000, "" },    // MX
-            { "arifle_MSBS65_black_F", "", 45000, 22500, "" },    // promet
-            { "arifle_MXM_Black_F", "", 65000, 32500, "" },    // MXM
-            { "arifle_MX_SW_Black_F", "", 65000, 32500, "" },    // MXSW
+            { "arifle_SPAR_02_blk_F", "", 50000, 25000, "call life_coplevel > 1" },    // spar 16S
+            { "arifle_MXC_Black_F", "", 30000, 15000, "call life_coplevel > 1" },    // MXC
+            { "arifle_MX_Black_F", "", 50000, 25000, "call life_coplevel > 1" },    // MX
+            { "arifle_MSBS65_black_F", "", 45000, 22500, "call life_coplevel > 1" },    // promet
+            { "arifle_MXM_Black_F", "", 65000, 32500, "call life_coplevel > 2" },    // MXM
+            { "arifle_MX_SW_Black_F", "", 65000, 32500, "call life_coplevel > 2" },    // MXSW
             { "arifle_ARX_blk_F", "", 70000, 35000, "" },    // type115
-            { "arifle_SPAR_03_blk_F", "", 100000, 50000, "" },    // spar 17
-            { "srifle_EBR_F", "", 150000, 75000, "" },    // mk18
-            { "srifle_DMR_03_F", "", 150000, 75000, "" },    // mk18
-            { "LMG_03_F", "", 250000, 125000, "" },    // lim85
-            { "LMG_Mk200_black_F", "", 350000, 175000, "" },    // mk200
-            { "LMG_Zafir_F", "", 450000, 225000, "" }    // zafir
+            { "arifle_SPAR_03_blk_F", "", 100000, 50000, "call life_coplevel > 3" },    // spar 17
+            { "srifle_EBR_F", "", 150000, 75000, "call life_coplevel > 3" },    // mk18
+            { "srifle_DMR_03_F", "", 150000, 75000, "call life_coplevel > 3" },    // mk18
+            { "LMG_03_F", "", 250000, 125000, "call life_coplevel > 4" },    // lim85
+            { "LMG_Mk200_black_F", "", 350000, 175000, "call life_coplevel > 4" },    // mk200
+            { "LMG_Zafir_F", "", 450000, 225000, "call life_coplevel > 5" }    // zafir
         };
         mags[] = {
             { "16Rnd_9x21_Mag", "", 125, 60, "" },
@@ -342,7 +358,7 @@ class WeaponShops {
 
     //Swat Shops
     class cop_swat {
-        name = "Altis Swat Shop";
+        name = "Altis SEK Shop";
         side = "cop";
         conditions = "call life_swatlevel > 0";
         items[] = {

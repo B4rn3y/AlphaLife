@@ -9,7 +9,7 @@
 disableSerialization;
 
 
-private ["_display","_h_f","_h_e","_F_f","_F_e","_W_f","_W_e","_earplugs","_control_full","_control_empty","_value","_pos_f","_pos_e"];
+private ["_display","_h_f","_h_e","_F_f","_F_e","_W_f","_W_e","_uptime","_earplugs","_control_full","_control_empty","_value","_pos_f"];
 _display = uiNamespace getvariable["playerHUD",displayNull];
 if(isnull _display) exitWith {[] call life_fnc_hudSetup;};
 _h_f = _display displayCtrl 3200;
@@ -18,6 +18,9 @@ _F_f = _display displayCtrl 3202;
 _F_e = _display displayCtrl 3203;
 _W_f = _display displayCtrl 3204;
 _W_e = _display displayCtrl 3205;
+_uptime = _display displayCtrl 1101;
+
+_uptime ctrlSetStructuredText parsetext format["%1",[servertime,"HH:MM"] call BIS_fnc_secondsToString];
 
 _earplugs = _display displayCtrl 3000;
 

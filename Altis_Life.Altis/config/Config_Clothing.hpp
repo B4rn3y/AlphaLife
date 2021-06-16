@@ -21,30 +21,35 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_C_Poloshirt_stripped", "", 125, "" },
-            { "U_C_Poloshirt_redwhite", "", 150, "" },
-            { "U_C_Poloshirt_salmon", "", 175, "" },
-            { "U_C_Poloshirt_blue", "", 250, "" },
-            { "U_C_Poloshirt_burgundy", "", 275, "" },
-            { "U_C_Poloshirt_tricolour", "", 350, "" },
-            { "U_C_Poor_2", "", 250, "" },
-            { "U_IG_Guerilla2_2", "", 650, "" },
-            { "U_IG_Guerilla3_1", "", 735, "" },
-            { "U_OrestesBody", "", 1100, "" },
-            { "U_IG_Guerilla2_3", "", 1200, "" },
-            { "U_C_HunterBody_grn", "", 1500, "" },
-            { "U_C_WorkerCoveralls", "", 2500, "" },
-            { "U_NikosBody", "", 3000, "" },
-            { "U_NikosAgedBody", $STR_C_Civ_Niko, 5000, "" },
-            { "U_C_Man_casual_1_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_2_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_3_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_4_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_5_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_6_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_1_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_2_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_3_F", "", 5000, "" } //Apex DLC
+            { "U_C_Poloshirt_stripped", "", 10000, "" },
+            { "U_C_Poloshirt_redwhite", "", 10000, "" },
+            { "U_C_Poloshirt_salmon", "", 10000, "" },
+            { "U_C_Poloshirt_blue", "", 10000, "" },
+            { "U_C_Poloshirt_burgundy", "", 10000, "" },
+            { "U_C_Poloshirt_tricolour", "", 10000, "" },
+            { "U_C_Poor_2", "", 10000, "" },
+            { "U_IG_Guerilla2_2", "", 10000, "" },
+            { "U_IG_Guerilla3_1", "", 10000, "" },
+            { "U_OrestesBody", "", 10000, "" },
+            { "U_IG_Guerilla2_3", "", 10000, "" },
+            { "U_C_HunterBody_grn", "", 10000, "" },
+            { "U_C_WorkerCoveralls", "", 10000, "" },
+            { "U_NikosBody", "", 10000, "" },
+            { "U_NikosAgedBody", $STR_C_Civ_Niko, 10000, "" },
+            { "U_C_Man_casual_1_F", "", 10000, "" }, //Apex DLC
+            { "U_C_Man_casual_2_F", "", 10000, "" }, //Apex DLC
+            { "U_C_Man_casual_3_F", "", 10000, "" }, //Apex DLC
+            { "U_C_Man_casual_4_F", "", 10000, "" }, //Apex DLC
+            { "U_C_Man_casual_5_F", "", 10000, "" }, //Apex DLC
+            { "U_C_Man_casual_6_F", "", 10000, "" }, //Apex DLC
+            { "U_C_man_sport_1_F", "", 10000, "" }, //Apex DLC
+            { "U_C_man_sport_2_F", "", 10000, "" }, //Apex DLC
+            { "U_C_man_sport_3_F", "", 10000, "" },
+            { "U_C_FormalSuit_01_black_F", "", 15000, "" },
+            { "U_C_FormalSuit_01_tshirt_gray_F", "", 15000, "" },
+            { "U_C_FormalSuit_01_tshirt_black_F", "", 15000, "" },
+            { "U_C_CBRN_Suit_01_Blue_F", "HAZARD SUIT", 50000, "" },
+            { "U_C_Scientist", "HAZARD SUIT", 50000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -96,36 +101,36 @@ class Clothing {
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_AssaultPack_tna_f", "", 2000, "" }, //Apex DLC
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-            { "B_FieldPack_ghex_f", "", 5000, "" }, //Apex DLC
-            { "B_Bergen_sgg", "", 6500, "" },
-            { "B_Bergen_mcamo", "", 6500, "" },
-            { "B_Bergen_rgr", "", 6500, "" },
-            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" },
-            { "B_Carryall_ghex_f", "", 7500, "" }, //Apex DLC
-            { "B_Bergen_dgtl_f", "", 9500, "" }, //Apex DLC
-            { "B_Bergen_tna_f", "", 9500, "" } //Apex DLC
+            { "B_OutdoorPack_blk", "", 20000, "" },
+            { "B_AssaultPack_khk", "", 20000, "" },
+            { "B_AssaultPack_dgtl", "", 20000, "" },
+            { "B_AssaultPack_rgr", "", 20000, "" },
+            { "B_AssaultPack_sgg", "", 20000, "" },
+            { "B_AssaultPack_blk", "", 20000, "" },
+            { "B_AssaultPack_cbr", "", 20000, "" },
+            { "B_AssaultPack_mcamo", "", 20000, "" },
+            { "B_AssaultPack_tna_f", "", 20000, "" }, //Apex DLC
+            { "B_TacticalPack_oli", "", 20000, "" },
+            { "B_Kitbag_mcamo", "", 20000, "" },
+            { "B_Kitbag_sgg", "", 20000, "" },
+            { "B_Kitbag_cbr", "", 20000, "" },
+            { "B_FieldPack_blk", "", 20000, "" },
+            { "B_FieldPack_ocamo", "", 20000, "" },
+            { "B_FieldPack_oucamo", "", 20000, "" },
+            { "B_FieldPack_ghex_f", "", 20000, "" }, //Apex DLC
+            { "B_Bergen_sgg", "", 20000, "" },
+            { "B_Bergen_mcamo", "", 20000, "" },
+            { "B_Bergen_rgr", "", 20000, "" },
+            { "B_Bergen_blk", "", 20000, "" },
+            { "B_Carryall_ocamo", "", 25000, "" },
+            { "B_Carryall_oucamo", "", 25000, "" },
+            { "B_Carryall_mcamo", "", 25000, "" },
+            { "B_Carryall_oli", "", 25000, "" },
+            { "B_Carryall_khk", "", 25000, "" },
+            { "B_Carryall_cbr", "", 25000, "" },
+            { "B_Carryall_ghex_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_dgtl_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_tna_f", "", 50000, "" } //Apex DLC
         };
     };
 
@@ -135,10 +140,8 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_Rangemaster", $STR_C_Cop_uniforms, 25, "" },
-            { "U_B_CombatUniform_mcam_tshirt", "", 350, "call life_coplevel >= 1" },
-            { "U_B_CombatUniform_mcam_worn", "", 550, "call life_coplevel >= 2" },
-            { "U_B_survival_uniform", "", 1250, "call life_coplevel >= 1" }
+            { "U_BG_Guerrilla_6_1", "COP Uniform", 500, "call life_coplevel >= 1" },
+            { "U_I_CombatUniform", "SEK Uniform", 350, "call life_swatlevel >= 1" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -172,8 +175,7 @@ class Clothing {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_Rangemaster_belt", "", 800, "" },
             { "V_TacVest_blk_POLICE", "", 1000, "call life_coplevel >= 1" },
-            { "V_TacVest_gen_F", "", 1000, "call life_coplevel >= 1" }, //Apex DLC
-            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 2" }
+            { "V_PlateCarrier2_blk", "", 1500, "call life_coplevel >= 2" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
@@ -259,7 +261,7 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_Rangemaster", $STR_C_EMS_uniforms, 50, "" }
+            { "U_I_CombatUniform", $STR_C_EMS_uniforms, 50, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -284,20 +286,46 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_IG_Guerilla1_1", "", 5000, "" },
-            { "U_I_G_Story_Protagonist_F", "", 7500, "" },
-            { "U_I_G_resistanceLeader_F", "", 11500, "" },
-            { "U_IG_leader", "", 15340, "" },
-            { "U_O_PilotCoveralls", "", 15610, "" },
-            { "U_O_SpecopsUniform_ocamo", "", 17500, "" },
-            { "U_O_GhillieSuit", "", 50000, "" },
-            { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_3_F", "", 50032, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_4_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_5_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Camo_F", "", 52000, "" } //Apex DLC
+            { "U_IG_Guerilla1_1", "", 45000, "" },
+            { "U_I_G_Story_Protagonist_F", "", 45000, "" },
+            { "U_I_G_resistanceLeader_F", "", 45000, "" },
+            { "U_IG_leader", "", 45000, "" },
+            { "U_O_PilotCoveralls", "", 45000, "" },
+            { "U_O_SpecopsUniform_ocamo", "", 45000, "" },
+            { "U_B_T_Soldier_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_1_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_2_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_3_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_4_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_5_F", "", 45000, "" }, //Apex DLC
+            { "U_I_GhillieSuit", "", 100000, "" },
+            { "U_O_GhillieSuit", "", 100000, "" },
+            { "U_B_GhillieSuit", "", 100000, "" },
+            { "U_O_T_Sniper_F", "", 100000, "" },
+            { "U_B_T_Sniper_F", "", 100000, "" },
+            { "U_O_FullGhillie_lsh", "", 100000, "" },
+            { "U_O_FullGhillie_sard", "", 100000, "" },
+            { "U_O_FullGhillie_ard", "", 100000, "" },
+            { "U_O_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_B_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_I_C_Soldier_Para_1_F", "", 45000, "" },
+            { "U_I_C_Soldier_Para_5_F", "", 45000, "" },
+            { "U_I_C_Soldier_Camo_F", "", 45000, "" },
+            { "U_O_T_Soldier_F", "", 45000, "" },
+            { "U_I_L_Uniform_01_camo_F", "", 45000, "" },
+            { "U_I_E_Uniform_01_shortsleeve_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_wdl_f", "", 45000, "" },
+            { "U_I_L_Uniform_01_tshirt_olive_F", "", 45000, "" },
+            { "U_BG_Guerilla1_2_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_tshirt", "", 45000, "" },
+            { "U_I_CombatUniform", "", 45000, "" },
+            { "U_O_CombatUniform_ocamo", "", 45000, "" },
+            { "U_O_CombatUniform_oucamo", "", 45000, "" },
+            { "U_B_survival_uniform", "", 45000, "" },
+            { "U_B_CTRG_Soldier_urb_1_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_Arid_F", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -333,38 +361,54 @@ class Clothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_BandollierB_cbr", "", 4500, "" },
-            { "V_HarnessO_brn", "", 7500, "" },
-            { "V_TacVest_khk", "", 12500, "" },
-            { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
+            { "V_BandollierB_cbr", "", 10000, "" },
+            { "V_HarnessO_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
+            { "V_PlateCarrier1_rgr", "", 10000, "" },
+            { "V_TacVest_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_oli", "", 10000, "" },
+            { "V_I_G_resistanceLeader_F", "", 15000, "" },
+            { "V_PlateCarrier_Kerry", "", 15000, "" },
+            { "V_PlateCarrier2_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_wdl", "", 15000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
+            { "V_PlateCarrier2_wdl", "", 15000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-            { "B_Bergen_sgg", "", 6500, "" },
-            { "B_Bergen_mcamo", "", 6500, "" },
-            { "B_Bergen_rgr", "", 6500, "" },
-            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" }
+            { "B_OutdoorPack_blk", "", 20000, "" },
+            { "B_AssaultPack_khk", "", 20000, "" },
+            { "B_AssaultPack_dgtl", "", 20000, "" },
+            { "B_AssaultPack_rgr", "", 20000, "" },
+            { "B_AssaultPack_sgg", "", 20000, "" },
+            { "B_AssaultPack_blk", "", 20000, "" },
+            { "B_AssaultPack_cbr", "", 20000, "" },
+            { "B_AssaultPack_mcamo", "", 20000, "" },
+            { "B_AssaultPack_tna_f", "", 20000, "" }, //Apex DLC
+            { "B_TacticalPack_oli", "", 20000, "" },
+            { "B_Kitbag_mcamo", "", 20000, "" },
+            { "B_Kitbag_sgg", "", 20000, "" },
+            { "B_Kitbag_cbr", "", 20000, "" },
+            { "B_FieldPack_blk", "", 20000, "" },
+            { "B_FieldPack_ocamo", "", 20000, "" },
+            { "B_FieldPack_oucamo", "", 20000, "" },
+            { "B_FieldPack_ghex_f", "", 20000, "" }, //Apex DLC
+            { "B_Bergen_sgg", "", 20000, "" },
+            { "B_Bergen_mcamo", "", 20000, "" },
+            { "B_Bergen_rgr", "", 20000, "" },
+            { "B_Bergen_blk", "", 20000, "" },
+            { "B_Carryall_ocamo", "", 25000, "" },
+            { "B_Carryall_oucamo", "", 25000, "" },
+            { "B_Carryall_mcamo", "", 25000, "" },
+            { "B_Carryall_oli", "", 25000, "" },
+            { "B_Carryall_khk", "", 25000, "" },
+            { "B_Carryall_cbr", "", 25000, "" },
+            { "B_Carryall_ghex_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_dgtl_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_tna_f", "", 50000, "" } //Apex DLC
         };
     };
 
@@ -374,20 +418,46 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_IG_Guerilla1_1", "", 5000, "" },
-            { "U_I_G_Story_Protagonist_F", "", 7500, "" },
-            { "U_I_G_resistanceLeader_F", "", 11500, "" },
-            { "U_IG_leader", "", 15340, "" },
-            { "U_O_PilotCoveralls", "", 15610, "" },
-            { "U_O_SpecopsUniform_ocamo", "", 17500, "" },
-            { "U_O_GhillieSuit", "", 50000, "" },
-            { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_3_F", "", 50032, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_4_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_5_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Camo_F", "", 52000, "" } //Apex DLC
+            { "U_IG_Guerilla1_1", "", 45000, "" },
+            { "U_I_G_Story_Protagonist_F", "", 45000, "" },
+            { "U_I_G_resistanceLeader_F", "", 45000, "" },
+            { "U_IG_leader", "", 45000, "" },
+            { "U_O_PilotCoveralls", "", 45000, "" },
+            { "U_O_SpecopsUniform_ocamo", "", 45000, "" },
+            { "U_B_T_Soldier_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_1_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_2_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_3_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_4_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_5_F", "", 45000, "" }, //Apex DLC
+            { "U_I_GhillieSuit", "", 100000, "" },
+            { "U_O_GhillieSuit", "", 100000, "" },
+            { "U_B_GhillieSuit", "", 100000, "" },
+            { "U_O_T_Sniper_F", "", 100000, "" },
+            { "U_B_T_Sniper_F", "", 100000, "" },
+            { "U_O_FullGhillie_lsh", "", 100000, "" },
+            { "U_O_FullGhillie_sard", "", 100000, "" },
+            { "U_O_FullGhillie_ard", "", 100000, "" },
+            { "U_O_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_B_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_I_C_Soldier_Para_1_F", "", 45000, "" },
+            { "U_I_C_Soldier_Para_5_F", "", 45000, "" },
+            { "U_I_C_Soldier_Camo_F", "", 45000, "" },
+            { "U_O_T_Soldier_F", "", 45000, "" },
+            { "U_I_L_Uniform_01_camo_F", "", 45000, "" },
+            { "U_I_E_Uniform_01_shortsleeve_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_wdl_f", "", 45000, "" },
+            { "U_I_L_Uniform_01_tshirt_olive_F", "", 45000, "" },
+            { "U_BG_Guerilla1_2_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_tshirt", "", 45000, "" },
+            { "U_I_CombatUniform", "", 45000, "" },
+            { "U_O_CombatUniform_ocamo", "", 45000, "" },
+            { "U_O_CombatUniform_oucamo", "", 45000, "" },
+            { "U_B_survival_uniform", "", 45000, "" },
+            { "U_B_CTRG_Soldier_urb_1_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_Arid_F", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -423,38 +493,54 @@ class Clothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_BandollierB_cbr", "", 4500, "" },
-            { "V_HarnessO_brn", "", 7500, "" },
-            { "V_TacVest_khk", "", 12500, "" },
-            { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
+            { "V_BandollierB_cbr", "", 10000, "" },
+            { "V_HarnessO_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
+            { "V_PlateCarrier1_rgr", "", 10000, "" },
+            { "V_TacVest_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_oli", "", 10000, "" },
+            { "V_I_G_resistanceLeader_F", "", 15000, "" },
+            { "V_PlateCarrier_Kerry", "", 15000, "" },
+            { "V_PlateCarrier2_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_wdl", "", 15000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
+            { "V_PlateCarrier2_wdl", "", 15000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-            { "B_Bergen_sgg", "", 6500, "" },
-            { "B_Bergen_mcamo", "", 6500, "" },
-            { "B_Bergen_rgr", "", 6500, "" },
-            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" }
+            { "B_OutdoorPack_blk", "", 20000, "" },
+            { "B_AssaultPack_khk", "", 20000, "" },
+            { "B_AssaultPack_dgtl", "", 20000, "" },
+            { "B_AssaultPack_rgr", "", 20000, "" },
+            { "B_AssaultPack_sgg", "", 20000, "" },
+            { "B_AssaultPack_blk", "", 20000, "" },
+            { "B_AssaultPack_cbr", "", 20000, "" },
+            { "B_AssaultPack_mcamo", "", 20000, "" },
+            { "B_AssaultPack_tna_f", "", 20000, "" }, //Apex DLC
+            { "B_TacticalPack_oli", "", 20000, "" },
+            { "B_Kitbag_mcamo", "", 20000, "" },
+            { "B_Kitbag_sgg", "", 20000, "" },
+            { "B_Kitbag_cbr", "", 20000, "" },
+            { "B_FieldPack_blk", "", 20000, "" },
+            { "B_FieldPack_ocamo", "", 20000, "" },
+            { "B_FieldPack_oucamo", "", 20000, "" },
+            { "B_FieldPack_ghex_f", "", 20000, "" }, //Apex DLC
+            { "B_Bergen_sgg", "", 20000, "" },
+            { "B_Bergen_mcamo", "", 20000, "" },
+            { "B_Bergen_rgr", "", 20000, "" },
+            { "B_Bergen_blk", "", 20000, "" },
+            { "B_Carryall_ocamo", "", 25000, "" },
+            { "B_Carryall_oucamo", "", 25000, "" },
+            { "B_Carryall_mcamo", "", 25000, "" },
+            { "B_Carryall_oli", "", 25000, "" },
+            { "B_Carryall_khk", "", 25000, "" },
+            { "B_Carryall_cbr", "", 25000, "" },
+            { "B_Carryall_ghex_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_dgtl_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_tna_f", "", 50000, "" } //Apex DLC
         };
     };
 
@@ -464,20 +550,46 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_IG_Guerilla1_1", "", 5000, "" },
-            { "U_I_G_Story_Protagonist_F", "", 7500, "" },
-            { "U_I_G_resistanceLeader_F", "", 11500, "" },
-            { "U_IG_leader", "", 15340, "" },
-            { "U_O_PilotCoveralls", "", 15610, "" },
-            { "U_O_SpecopsUniform_ocamo", "", 17500, "" },
-            { "U_O_GhillieSuit", "", 50000, "" },
-            { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_3_F", "", 50032, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_4_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_5_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Camo_F", "", 52000, "" } //Apex DLC
+            { "U_IG_Guerilla1_1", "", 45000, "" },
+            { "U_I_G_Story_Protagonist_F", "", 45000, "" },
+            { "U_I_G_resistanceLeader_F", "", 45000, "" },
+            { "U_IG_leader", "", 45000, "" },
+            { "U_O_PilotCoveralls", "", 45000, "" },
+            { "U_O_SpecopsUniform_ocamo", "", 45000, "" },
+            { "U_B_T_Soldier_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_1_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_2_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_3_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_4_F", "", 45000, "" }, //Apex DLC
+            { "U_I_C_Soldier_Bandit_5_F", "", 45000, "" }, //Apex DLC
+            { "U_I_GhillieSuit", "", 100000, "" },
+            { "U_O_GhillieSuit", "", 100000, "" },
+            { "U_B_GhillieSuit", "", 100000, "" },
+            { "U_O_T_Sniper_F", "", 100000, "" },
+            { "U_B_T_Sniper_F", "", 100000, "" },
+            { "U_O_FullGhillie_lsh", "", 100000, "" },
+            { "U_O_FullGhillie_sard", "", 100000, "" },
+            { "U_O_FullGhillie_ard", "", 100000, "" },
+            { "U_O_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_B_T_FullGhillie_tna_F", "", 100000, "" },
+            { "U_I_C_Soldier_Para_1_F", "", 45000, "" },
+            { "U_I_C_Soldier_Para_5_F", "", 45000, "" },
+            { "U_I_C_Soldier_Camo_F", "", 45000, "" },
+            { "U_O_T_Soldier_F", "", 45000, "" },
+            { "U_I_L_Uniform_01_camo_F", "", 45000, "" },
+            { "U_I_E_Uniform_01_shortsleeve_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_wdl_f", "", 45000, "" },
+            { "U_I_L_Uniform_01_tshirt_olive_F", "", 45000, "" },
+            { "U_BG_Guerilla1_2_F", "", 45000, "" },
+            { "U_B_CombatUniform_mcam", "", 45000, "" },
+            { "U_B_CombatUniform_mcam_tshirt", "", 45000, "" },
+            { "U_I_CombatUniform", "", 45000, "" },
+            { "U_O_CombatUniform_ocamo", "", 45000, "" },
+            { "U_O_CombatUniform_oucamo", "", 45000, "" },
+            { "U_B_survival_uniform", "", 45000, "" },
+            { "U_B_CTRG_Soldier_urb_1_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_F", "", 45000, "" },
+            { "U_B_CTRG_Soldier_Arid_F", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -513,38 +625,54 @@ class Clothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_BandollierB_cbr", "", 4500, "" },
-            { "V_HarnessO_brn", "", 7500, "" },
-            { "V_TacVest_khk", "", 12500, "" },
-            { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
+            { "V_BandollierB_cbr", "", 10000, "" },
+            { "V_HarnessO_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
+            { "V_PlateCarrier1_rgr", "", 10000, "" },
+            { "V_TacVest_brn", "", 10000, "" },
+            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_oli", "", 10000, "" },
+            { "V_I_G_resistanceLeader_F", "", 15000, "" },
+            { "V_PlateCarrier_Kerry", "", 15000, "" },
+            { "V_PlateCarrier2_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_tna_F", "", 15000, "" },
+            { "V_PlateCarrier1_wdl", "", 15000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
+            { "V_PlateCarrier2_wdl", "", 15000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-            { "B_Bergen_sgg", "", 6500, "" },
-            { "B_Bergen_mcamo", "", 6500, "" },
-            { "B_Bergen_rgr", "", 6500, "" },
-            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" }
+            { "B_OutdoorPack_blk", "", 20000, "" },
+            { "B_AssaultPack_khk", "", 20000, "" },
+            { "B_AssaultPack_dgtl", "", 20000, "" },
+            { "B_AssaultPack_rgr", "", 20000, "" },
+            { "B_AssaultPack_sgg", "", 20000, "" },
+            { "B_AssaultPack_blk", "", 20000, "" },
+            { "B_AssaultPack_cbr", "", 20000, "" },
+            { "B_AssaultPack_mcamo", "", 20000, "" },
+            { "B_AssaultPack_tna_f", "", 20000, "" }, //Apex DLC
+            { "B_TacticalPack_oli", "", 20000, "" },
+            { "B_Kitbag_mcamo", "", 20000, "" },
+            { "B_Kitbag_sgg", "", 20000, "" },
+            { "B_Kitbag_cbr", "", 20000, "" },
+            { "B_FieldPack_blk", "", 20000, "" },
+            { "B_FieldPack_ocamo", "", 20000, "" },
+            { "B_FieldPack_oucamo", "", 20000, "" },
+            { "B_FieldPack_ghex_f", "", 20000, "" }, //Apex DLC
+            { "B_Bergen_sgg", "", 20000, "" },
+            { "B_Bergen_mcamo", "", 20000, "" },
+            { "B_Bergen_rgr", "", 20000, "" },
+            { "B_Bergen_blk", "", 20000, "" },
+            { "B_Carryall_ocamo", "", 25000, "" },
+            { "B_Carryall_oucamo", "", 25000, "" },
+            { "B_Carryall_mcamo", "", 25000, "" },
+            { "B_Carryall_oli", "", 25000, "" },
+            { "B_Carryall_khk", "", 25000, "" },
+            { "B_Carryall_cbr", "", 25000, "" },
+            { "B_Carryall_ghex_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_dgtl_f", "", 50000, "" }, //Apex DLC
+            { "B_Bergen_tna_f", "", 50000, "" } //Apex DLC
         };
     };
 

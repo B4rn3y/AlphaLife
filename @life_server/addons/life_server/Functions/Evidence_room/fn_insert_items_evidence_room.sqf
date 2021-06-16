@@ -41,19 +41,4 @@ _query = format ["UPDATE evidence_room SET inventory='%1' WHERE id='%2'",_trunkD
 [_query,1] call DB_fnc_asyncCall;
 
 
-_goods_value = 0;
-{
-    _item = _x select 0;
-    _amount = _x select 1;
-    if!(gettext (missionConfigFile >> "VirtualItems" >> _item >> "processedItem") isEqualTo "") then {
-        _item = gettext (missionConfigFile >> "VirtualItems" >> _item >> "processedItem");
-    };
-    _item_value = getNumber (missionConfigFile >> "VirtualItems" >> _item >> "sellPrice");
-    if(_item_value > 0) then {
-        _goods_value = _goods_value + (_item_value * _amount);
-    };
 
-} foreach _trunk_items;
-
-_markername = "evidence_room";
-_markername setMarkerText format ["Asservatenkammer - Waffen: %1 - Theor. Warenwert: $%2", count (weaponCargo evidence_box_0),[_goods_value] call life_fnc_numbertext];

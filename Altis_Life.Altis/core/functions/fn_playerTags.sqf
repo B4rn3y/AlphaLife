@@ -42,7 +42,7 @@ private _index = -1;
             if (count _sPos > 1 && {_distance < 15}) then {
                 _text = switch (true) do {
                     case (_x in (units group player) && playerSide isEqualTo civilian): {format ["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
-                    case (side _x isEqualTo west && {!isNil {_x getVariable "rank"}}): {format ["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
+                    case (side _x isEqualTo west && {!isNil {_x getVariable "rank"}}): {format ["<img image='%1' size='1'></img>[%3] %2",switch ((_x getVariable "rank")) do {
                         case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
                         case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
                         case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
@@ -51,7 +51,16 @@ private _index = -1;
                         case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
                         case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
                         default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-                        },_x getVariable ["realname",name _x]]};
+                        },_x getVariable ["realname",name _x],switch ((_x getVariable "rank")) do {
+                        case 2: {"Wachtmeister"};
+                        case 3: {"Oberwachtmeister"};
+                        case 4: {"Inspektor"};
+                        case 5: {"Gruppeninspektor"};
+                        case 6: {"Kommissar"};
+                        case 7: {"Stv. Polizeidirektor"};
+                        case 8: {"Polizeidirektor"};
+                        default {"Anwärter"};
+                        }]};
                     case (side _x isEqualTo independent): {format ["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x getVariable ["realname",name _x]]};
                     default {
                         if (!isNil {(group _x) getVariable "gang_name"}) then {

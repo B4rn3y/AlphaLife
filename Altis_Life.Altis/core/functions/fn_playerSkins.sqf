@@ -1,55 +1,70 @@
-#include "..\..\script_macros.hpp"
-/*
-    File: fn_playerSkins.sqf
-    Author: Daniel Stuart
 
-    Description:
-    Sets skins for players by their side and uniform.
-*/
-private ["_skinName"];
+private ["_path","_uniform","_coplevel","_swat","_mediclevel"];
 
-switch (playerSide) do {
-    case civilian: {
-        if (LIFE_SETTINGS(getNumber,"civ_skins") isEqualTo 1) then {
-            if (uniform player isEqualTo "U_C_Poloshirt_blue") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_1.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Poloshirt_burgundy") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_2.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Poloshirt_stripped") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_3.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Poloshirt_tricolour") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_4.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Poloshirt_salmon") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_5.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Poloshirt_redwhite") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_6.jpg"];
-            };
-            if (uniform player isEqualTo "U_C_Commoner1_1") then {
-                player setObjectTextureGlobal [0, "textures\civilian_uniform_7.jpg"];
-            };
-        };
-    };
+_path = "";
+_uniform = uniform player;
+switch (playerSide) do
+{
+    case west:
+    {
+        _path = "textures\uniforms\cop\";
+        _coplevel = call life_coplevel;
+        _swat = if(call life_swatlevel > 0) then {true} else {false};
+        switch (_uniform) do
+        {
+            case "U_BG_Guerrilla_6_1":
+            {
+                switch (_coplevel) do
+                {
+                    case 8:
+                    {
+                        _path = _path + "cop_president.jpg";
+                    };
 
-    case west: {
-        if (uniform player isEqualTo "U_Rangemaster") then {
-            _skinName = "textures\cop_uniform.jpg";
-            if (LIFE_SETTINGS(getNumber,"cop_extendedSkins") isEqualTo 1) then {
-                if (FETCH_CONST(life_coplevel) >= 1) then {
-                    _skinName = ["textures\cop_uniform_",(FETCH_CONST(life_coplevel)),".jpg"] joinString "";
+                    case 7:
+                    {
+                        _path = _path + "cop_president.jpg";
+                    };
+
+                    default
+                    {
+                        _path = _path + "cop_normal.jpg";
+                    };
                 };
             };
-            player setObjectTextureGlobal [0, _skinName];
+
+            case "U_I_CombatUniform":
+            {
+                if(_swat) then {
+                    _path = _path + "cop_swat.jpg";
+                };
+            };
         };
     };
 
-    case independent: {
-        if (uniform player isEqualTo "U_Rangemaster") then {
-            player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
+    case independent:
+    {
+        _path = "textures\uniforms\medic\";
+        _mediclevel = call life_mediclevel;
+        switch (_uniform) do
+        {
+            case "U_I_CombatUniform":
+            {
+                switch (_mediclevel) do
+                {
+                    default
+                    {
+                        _path = _path + "medic_normal.jpg";
+                    };
+                };
+            };
         };
+    };
+};
+
+if!(_path isEqualTo "") then {
+    player setObjectTextureGlobal[0,_path];
+    if(playerside in [west,independent]) then {
+        (unitBackpack player) setObjectTextureGlobal [0, ""];
     };
 };
