@@ -22,7 +22,7 @@ link7[] = {7,9};
 link8[] = {8,7};
 link9[] = {9,3};
 globals[] = {0.000000,0,0,0,0,640,480,1,64,6316128,1,-447.303223,398.651489,246.263763,-589.098633,799,789,1};
-window[] = {0,-1,-1,-1,-1,987,26,1556,26,1,817};
+window[] = {0,-1,-1,-32000,-32000,1117,156,1686,156,1,817};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -146,8 +146,11 @@ class FSM
                          "         [5,_group] spawn TON_fnc_updateGang;" \n
                          "         [format[""Gang-Area: $%1 wurden eurem Gang-Konto hinzugefuegt."",[_amount_money_to_add] call life_fnc_numbertext]] remoteexec[""life_fnc_exp_hint"",_group];" \n
                          "     };" \n
+                         " } else {" \n
+                         " 	[_paycheck_amount] remoteExec[""Life_fnc_gang_area_receive_money"",west];" \n
                          " };" \n
-                         "};"/*%FSM</STATEINIT""">*/;
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

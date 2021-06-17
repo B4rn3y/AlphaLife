@@ -3,7 +3,6 @@
 /*
     File: fn_vehTakeItem.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Used in the vehicle trunk menu, takes the selected item and puts it in the players virtual inventory
     if the player has room.

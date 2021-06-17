@@ -108,8 +108,8 @@ class playerHUD {
         {
             idc = 1200;
             text = "textures\HUD\serveruptime.paa";
-            x = 0.958984 * safezoneW + safezoneX;
-            y = 0.970371 * safezoneH + safezoneY;
+            x = 0.940625 * safezoneW + safezoneX;
+            y = 0.968519 * safezoneH + safezoneY;
             w = 0.0110156 * safezoneW;
             h = 0.0235186 * safezoneH;
         };
@@ -118,10 +118,10 @@ class playerHUD {
         {
             idc = 1101;
             text = ""; //--- ToDo: Localize;
-            x = 0.973047 * safezoneW + safezoneX;
-            y = 0.972222 * safezoneH + safezoneY;
-            w = 0.0223439 * safezoneW;
-            h = 0.0198148 * safezoneH;
+            x = 0.954688 * safezoneW + safezoneX;
+            y = 0.968518 * safezoneH + safezoneY;
+            w = 0.0348438 * safezoneW;
+            h = 0.0244444 * safezoneH;
         };
     };
 };
@@ -130,14 +130,60 @@ class playerHUD {
 
 /* #Kucume
 /* #Sokypo
+/* #Qonuqu
 $[
     1.063,
     ["Tablet",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
     [1100,"earplugs",[1,"earplugs.paa",["0.952291 * safezoneW + safezoneX","0.640333 * safezoneH + safezoneY","0.0331041 * safezoneW","0.0589743 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
     [1102,"blah",[1,"earplugs.paa",["0.952292 * safezoneW + safezoneX","0.772333 * safezoneH + safezoneY","0.0331042 * safezoneW","0.0589743 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-    [1200,"uptime_pic",[1,"serveruptime.paa",["0.958984 * safezoneW + safezoneX","0.970371 * safezoneH + safezoneY","0.0110156 * safezoneW","0.0235186 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-    [1101,"uptime_text",[1,"5:26",["0.973047 * safezoneW + safezoneX","0.972222 * safezoneH + safezoneY","0.0223439 * safezoneW","0.0198148 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+    [1200,"uptime_pic",[1,"serveruptime.paa",["0.940625 * safezoneW + safezoneX","0.968519 * safezoneH + safezoneY","0.0110156 * safezoneW","0.0235186 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1101,"uptime_text",[1,"5:26",["0.954688 * safezoneW + safezoneX","0.968518 * safezoneH + safezoneY","0.0348438 * safezoneW","0.0244444 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
+
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Barney, v1.063, #Qonuqu)
+////////////////////////////////////////////////////////
+
+class earplugs: RscStructuredText
+{
+    idc = 1100;
+    text = "earplugs.paa"; //--- ToDo: Localize;
+    x = 0.952291 * safezoneW + safezoneX;
+    y = 0.640333 * safezoneH + safezoneY;
+    w = 0.0331041 * safezoneW;
+    h = 0.0589743 * safezoneH;
+};
+class blah: RscStructuredText
+{
+    idc = 1102;
+    text = "earplugs.paa"; //--- ToDo: Localize;
+    x = 0.952292 * safezoneW + safezoneX;
+    y = 0.772333 * safezoneH + safezoneY;
+    w = 0.0331042 * safezoneW;
+    h = 0.0589743 * safezoneH;
+};
+class uptime_pic: RscPicture
+{
+    idc = 1200;
+    text = "serveruptime.paa";
+    x = 0.940625 * safezoneW + safezoneX;
+    y = 0.968519 * safezoneH + safezoneY;
+    w = 0.0110156 * safezoneW;
+    h = 0.0235186 * safezoneH;
+};
+class uptime_text: RscStructuredText
+{
+    idc = 1101;
+    text = "5:26"; //--- ToDo: Localize;
+    x = 0.954688 * safezoneW + safezoneX;
+    y = 0.968518 * safezoneH + safezoneY;
+    w = 0.0348438 * safezoneW;
+    h = 0.0244444 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
+
 
 
 ////////////////////////////////////////////////////////

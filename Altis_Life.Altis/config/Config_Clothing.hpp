@@ -154,7 +154,10 @@ class Clothing {
             { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 2" },
             { "H_MilCap_gen_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
             { "H_MilCap_tna_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
-            { "H_MilCap_oucamo", "", 1200, "call life_coplevel >= 2" }
+            { "H_MilCap_oucamo", "", 1200, "call life_coplevel >= 2" },
+            { "H_Cap_blk", "" , 500, "call life_coplevel >= 1" },
+            {"H_Beret_Colonel", "" , 500, "call life_coplevel >= 7"},
+            {"H_Beret_02", "" , 500, "call life_coplevel >= 5"}
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
@@ -170,13 +173,18 @@ class Clothing {
             { "G_Aviator", "", 100, "" },
             { "G_Lady_Mirror", "", 150, "" },
             { "G_Lady_Dark", "", 150, "" },
-            { "G_Lady_Blue", "", 150, "" }
+            { "G_Lady_Blue", "", 150, "" },
+            { "G_Balaclava_blk", "", 150, "call life_swatlevel >= 1" },
+            { "G_Balaclava_oli", "", 150, "call life_swatlevel >= 1" },
+            { "G_Balaclava_combat", "", 150, "call life_swatlevel >= 1" },
+            { "G_Balaclava_lowprofile", "", 150, "call life_swatlevel >= 1" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_Rangemaster_belt", "", 800, "" },
             { "V_TacVest_blk_POLICE", "", 1000, "call life_coplevel >= 1" },
-            { "V_PlateCarrier2_blk", "", 1500, "call life_coplevel >= 2" }
+            { "V_PlateCarrier2_blk", "", 1500, "call life_coplevel >= 2" },
+            { "V_PlateCarrier2_rgr", "", 1500, "call life_swatlevel > 0" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
@@ -364,19 +372,19 @@ class Clothing {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_BandollierB_cbr", "", 10000, "" },
             { "V_HarnessO_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
             { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
-            { "V_PlateCarrier1_rgr", "", 10000, "" },
-            { "V_TacVest_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
-            { "V_TacVest_oli", "", 10000, "" },
+            { "V_PlateCarrier1_rgr", "", 75000, "" },
+            { "V_TacVest_brn", "", 15000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
+            { "V_TacVest_oli", "", 15000, "" },
             { "V_I_G_resistanceLeader_F", "", 15000, "" },
-            { "V_PlateCarrier_Kerry", "", 15000, "" },
-            { "V_PlateCarrier2_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_wdl", "", 15000, "" },
-            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
-            { "V_PlateCarrier2_wdl", "", 15000, "" }
+            { "V_PlateCarrier_Kerry", "", 75000, "" },
+            { "V_PlateCarrier2_tna_F", "", 150000, "" },
+            { "V_PlateCarrier1_tna_F", "", 75000, "" },
+            { "V_PlateCarrier1_wdl", "", 75000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 75000, "" },
+            { "V_PlateCarrier2_wdl", "", 150000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
@@ -496,19 +504,19 @@ class Clothing {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_BandollierB_cbr", "", 10000, "" },
             { "V_HarnessO_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
             { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
-            { "V_PlateCarrier1_rgr", "", 10000, "" },
-            { "V_TacVest_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
-            { "V_TacVest_oli", "", 10000, "" },
+            { "V_PlateCarrier1_rgr", "", 75000, "" },
+            { "V_TacVest_brn", "", 15000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
+            { "V_TacVest_oli", "", 15000, "" },
             { "V_I_G_resistanceLeader_F", "", 15000, "" },
-            { "V_PlateCarrier_Kerry", "", 15000, "" },
-            { "V_PlateCarrier2_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_wdl", "", 15000, "" },
-            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
-            { "V_PlateCarrier2_wdl", "", 15000, "" }
+            { "V_PlateCarrier_Kerry", "", 75000, "" },
+            { "V_PlateCarrier2_tna_F", "", 150000, "" },
+            { "V_PlateCarrier1_tna_F", "", 75000, "" },
+            { "V_PlateCarrier1_wdl", "", 75000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 75000, "" },
+            { "V_PlateCarrier2_wdl", "", 150000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
@@ -628,19 +636,19 @@ class Clothing {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_BandollierB_cbr", "", 10000, "" },
             { "V_HarnessO_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
             { "V_TacChestrig_grn_F", "", 10000, "" }, //Apex DLC
-            { "V_PlateCarrier1_rgr", "", 10000, "" },
-            { "V_TacVest_brn", "", 10000, "" },
-            { "V_TacVest_khk", "", 10000, "" },
-            { "V_TacVest_oli", "", 10000, "" },
+            { "V_PlateCarrier1_rgr", "", 75000, "" },
+            { "V_TacVest_brn", "", 15000, "" },
+            { "V_TacVest_khk", "", 15000, "" },
+            { "V_TacVest_oli", "", 15000, "" },
             { "V_I_G_resistanceLeader_F", "", 15000, "" },
-            { "V_PlateCarrier_Kerry", "", 15000, "" },
-            { "V_PlateCarrier2_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_tna_F", "", 15000, "" },
-            { "V_PlateCarrier1_wdl", "", 15000, "" },
-            { "V_CarrierRigKBT_01_light_EAF_F", "", 15000, "" },
-            { "V_PlateCarrier2_wdl", "", 15000, "" }
+            { "V_PlateCarrier_Kerry", "", 75000, "" },
+            { "V_PlateCarrier2_tna_F", "", 150000, "" },
+            { "V_PlateCarrier1_tna_F", "", 75000, "" },
+            { "V_PlateCarrier1_wdl", "", 75000, "" },
+            { "V_CarrierRigKBT_01_light_EAF_F", "", 75000, "" },
+            { "V_PlateCarrier2_wdl", "", 150000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },

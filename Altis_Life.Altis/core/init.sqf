@@ -100,6 +100,8 @@ diag_log "[Life Client] Executing client.fsm";
 
 [] spawn life_fnc_survival;
 
+[] spawn life_fnc_initSafezones;
+
 0 cutText ["","BLACK IN"];
 
 [] spawn {

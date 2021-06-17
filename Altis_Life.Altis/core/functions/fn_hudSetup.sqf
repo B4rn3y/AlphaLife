@@ -29,7 +29,8 @@ _W_e = _display displayCtrl 3205;
     private ["_dam"];
     for "_i" from 0 to 1 step 0 do {
         _dam = damage player;
-        waitUntil {!((damage player) isEqualTo _dam)};
+        _servertime = serverTime;
+        waitUntil {(!((damage player) isEqualTo _dam)) || ((serverTime - _servertime) > 60)};
         [] call life_fnc_hudUpdate;
     };
 };

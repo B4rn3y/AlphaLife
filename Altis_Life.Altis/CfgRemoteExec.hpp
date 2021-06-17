@@ -79,6 +79,7 @@ class CfgRemoteExec {
         F(Life_fnc_LightsLoop,CLIENT)
         F(Life_fnc_exp_hint,CLIENT)
         F(Life_fnc_centerMsg,CLIENT)
+        F(Life_fnc_gang_area_receive_money,CLIENT)
 
         /* Server only functions */
         F(DB_fnc_insertRequest,SERVER)

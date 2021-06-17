@@ -127,7 +127,7 @@ class TrunkMenu {
         };
 
         class max_store: Life_RscButtonMenu {
-            idc = -1;
+            idc = 1337;
             text = "MAX";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[true] call life_fnc_vehStoreItem;";

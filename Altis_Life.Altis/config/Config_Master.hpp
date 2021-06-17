@@ -6,7 +6,7 @@
 */
 class Life_Settings {
 /* BA SHIT*/
-    min_player_gang_area = 0; // minimum amount of players needed to be online to capture the gangarea
+    min_player_gang_area = 10; // minimum amount of players needed to be online to capture the gangarea
     gang_area_paycheck_timer = 600; // get every 10 Minutes money from the gang area (in seconds)
     gang_area_paycheck = 50000; // get 50k for every gang member online
     hazard_suits[] = {"U_C_CBRN_Suit_01_Blue_F","U_C_Scientist"};  // uniforms to wear in the radiation zone
@@ -47,7 +47,7 @@ class Life_Settings {
     minimum_cops = 5; //Minimum cops required online to rob the Federal Reserve
 
     /*Death settings*/
-    drop_weapons_onDeath = false; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
+    drop_weapons_onDeath = true; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
 
     /* Basic System Configurations */
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules & https://www.bistudio.com/monetization
@@ -119,9 +119,9 @@ class Life_Settings {
     bank_civ = 500000; //Amount of cash in bank for new civillians
     bank_med = 500000; //Amount of cash in bank for new medics
 
-    paycheck_cop = 500; //Payment for cops
-    paycheck_civ = 350; //Payment for civillians
-    paycheck_med = 450; //Payment for medics
+    paycheck_cop = 25000; //Payment for cops
+    paycheck_civ = 10000; //Payment for civillians
+    paycheck_med = 40000; //Payment for medics
 
     paycheck_period = 5; //Scaled in minutes
     bank_transferTax = 0; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier

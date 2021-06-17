@@ -17,7 +17,7 @@ _back_btn = _display displayCtrl 2401;
 if(_actual_name isEqualTo "") then {
 	_text = "<t align='center' size='6' shadow='0'>Alpha Life</t><br /><br /><br /><br />";
 
-	_text = _text + "- Teamspeak: 45.89.140.192<br />- Website: website.de<br /><br />";
+	_text = _text + "- Teamspeak: alphalife<br /><br />";
 	_text = _text + format["Willkommen auf Alpha Life,<br /><br />solltest du fortfahren wird dein Datenbankeintrag mit dem Namen '%1' fest verknüpft werden und du kannst in Zukunft nur noch mit diesem Namen auf diesem Server spielen.<br /><br />Eine Änderung des Names kann NUR der Support vornehmen. Du hast jedoch jetzt nochmal die Möglichkeit im Arma 3 Hauptmenü deinen Namen zu ändern. Solltest du das nicht wollen, drücke bitte auf 'Einverstanden'.<br /><br />Viel Spaß auf dem Server.",profileName];
 
 	_str_text ctrlSetStructuredText parseText _text;

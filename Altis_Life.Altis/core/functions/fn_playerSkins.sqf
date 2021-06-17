@@ -1,5 +1,6 @@
 
-private ["_path","_uniform","_coplevel","_swat","_mediclevel"];
+
+private ["_path","_uniform","_root_path","_coplevel","_swat","_mediclevel"];
 
 _path = "";
 _uniform = uniform player;
@@ -7,7 +8,7 @@ switch (playerSide) do
 {
     case west:
     {
-        _path = "textures\uniforms\cop\";
+        _root_path = "textures\uniforms\cop\";
         _coplevel = call life_coplevel;
         _swat = if(call life_swatlevel > 0) then {true} else {false};
         switch (_uniform) do
@@ -18,17 +19,17 @@ switch (playerSide) do
                 {
                     case 8:
                     {
-                        _path = _path + "cop_president.jpg";
+                        _path = _root_path + "cop_president.jpg";
                     };
 
                     case 7:
                     {
-                        _path = _path + "cop_president.jpg";
+                        _path = _root_path + "cop_president.jpg";
                     };
 
                     default
                     {
-                        _path = _path + "cop_normal.jpg";
+                        _path = _root_path + "cop_normal.jpg";
                     };
                 };
             };
@@ -36,14 +37,14 @@ switch (playerSide) do
             case "U_I_CombatUniform":
             {
                 if(_swat) then {
-                    _path = _path + "cop_swat.jpg";
+                    _path = _root_path + "cop_swat.jpg";
                 };
             };
 
             case "U_B_GEN_Commander_F":
             {
                 if(_swat) then {
-                    _path = _path + "cop_swat2.jpg";
+                    _path = _root_path + "cop_swat2.jpg";
                 };
             };
         };
@@ -51,7 +52,7 @@ switch (playerSide) do
 
     case independent:
     {
-        _path = "textures\uniforms\medic\";
+        _root_path = "textures\uniforms\medic\";
         _mediclevel = call life_mediclevel;
         switch (_uniform) do
         {
@@ -61,7 +62,7 @@ switch (playerSide) do
                 {
                     default
                     {
-                        _path = _path + "medic_normal.jpg";
+                        _path = _root_path + "medic_normal.jpg";
                     };
                 };
             };

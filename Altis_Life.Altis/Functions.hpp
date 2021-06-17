@@ -22,6 +22,7 @@ class Life_Client_Core {
         class setupActions {};
         class setupEVH {};
         class survival {};
+        class initSafezones {};
     };
 
     class Actions {
@@ -249,6 +250,7 @@ class Life_Client_Core {
     class Gang_Area {
         file = "core\gang_area";
         class capture_area {};
+        class gang_area_receive_money {};
     };
 
     class Housing {

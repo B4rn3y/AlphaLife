@@ -251,8 +251,8 @@ switch (_code) do {
         };
     };
 
-    // Key 1 Menu System
-    case 2:
+    // Key 41 Menu System
+    case 41:
     {
         if(playerSide isEqualTo west)then
         {

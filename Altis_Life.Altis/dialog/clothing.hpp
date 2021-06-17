@@ -6,16 +6,16 @@ class Life_Clothing {
     //onLoad = "[] execVM 'core\client\keychain\init.sqf'";
 
     class controlsBackground {
-		
+
 		#define ScaleX safezoneW + safezoneX
 		#define ScaleY safezoneH + safezoneY
-		
+
 		#define START_X 0.08 * ScaleX
-		#define START_Y 0.2 * ScaleY		
-		
+		#define START_Y 0.2 * ScaleY
+
 		#define GENERAL_GUI_WIDTH 0.13 * safezoneW
 		#define BACKGROUND_HEIGHT 0.23 * safezoneH
-		
+
         class Life_RscTitleBackground: Life_RscText {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             idc = -1;
@@ -39,7 +39,7 @@ class Life_Clothing {
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = 3103;
-            text = "TITLE";
+            text = "";
             x = START_X;
             y = START_Y;
             w = GENERAL_GUI_WIDTH * 0.9;
@@ -59,7 +59,7 @@ class Life_Clothing {
 
         class PriceTag: Life_RscStructuredText {
             idc = 3102;
-            text = "Price: 1.550.000";
+            text = "";
             sizeEx = 0.035;
             x = START_X + (GENERAL_GUI_WIDTH/27);
             y = START_Y + BACKGROUND_HEIGHT;
@@ -69,7 +69,7 @@ class Life_Clothing {
 
         class TotalPrice: Life_RscStructuredText {
             idc = 3106;
-            text = "Total: 1.500.000";
+            text = "";
             sizeEx = 0.035;
             x = START_X + GENERAL_GUI_WIDTH/2;
             y = START_Y + BACKGROUND_HEIGHT;
