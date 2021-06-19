@@ -145,23 +145,6 @@ switch (_code) do {
     };
 
 
-    case 86: // Volume Sound up and down
-    {
-        //Reset den Sound
-        if(_shift AND _ctrlKey) exitWith
-        {
-            life_fadeSound = -1;
-            [] call life_fnc_fadeSound;
-            _handled = true;
-        };
-
-        if(_shift) then
-        {
-            [] call life_fnc_fadeSound;
-            _handled = true;
-        };
-    };
-
     //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
     case _interactionKey: {
         if (!life_action_inUse) then {
@@ -309,6 +292,7 @@ switch (_code) do {
 
     };
 
+/*
     //O Key
     case 24: {
         if (_shift) then {
@@ -319,6 +303,25 @@ switch (_code) do {
                 1 fadeSound 0.1;
                 systemChat localize "STR_MISC_soundfade";
             };
+        };
+    };
+
+*/
+
+    case 24: // Volume Sound up and down  O Key
+    {
+        //Reset den Sound
+        if(_shift AND _ctrlKey) exitWith
+        {
+            life_fadeSound = -1;
+            [] call life_fnc_fadeSound;
+            _handled = true;
+        };
+
+        if(_shift) then
+        {
+            [] call life_fnc_fadeSound;
+            _handled = true;
         };
     };
 

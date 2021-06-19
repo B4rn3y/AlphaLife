@@ -14,7 +14,7 @@ _fadeTo = (_possibleFade select life_fadeSound);
 
 if (_fadeTo < 1) then
 {
-	titleText [format["Spielsound verringert auf %1%2 \n Strg + Umschalt + < für normalen Sound .",_fadeTo*100,"%"], "PLAIN DOWN",0.5];
+	titleText [format["Spielsound verringert auf %1%2 \n Strg + Umschalt + O für normalen Sound .",_fadeTo*100,"%"], "PLAIN DOWN",0.5];
 }
 else
 {
