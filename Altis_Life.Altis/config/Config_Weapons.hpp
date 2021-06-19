@@ -111,7 +111,10 @@ class WeaponShops {
             { "optic_DMS", "", 50000, 25000, "" },
             { "optic_AMS", "", 50000, 25000, "" },
             { "optic_Arco_blk_F", "", 50000, 25000, "" },
-            { "optic_SOS", "", 50000, 25000, "" }
+            { "optic_SOS", "", 50000, 25000, "" },
+            { "acc_flashlight", "", 10000, 5000, "" },
+            { "acc_pointer_IR", "", 10000, 5000, "" },
+            { "bipod_01_F_blk", "", 10000, 5000, "" }
         };
     };
 
@@ -168,7 +171,10 @@ class WeaponShops {
             { "optic_DMS", "", 50000, 25000, "" },
             { "optic_AMS", "", 50000, 25000, "" },
             { "optic_Arco_blk_F", "", 50000, 25000, "" },
-            { "optic_SOS", "", 50000, 25000, "" }
+            { "optic_SOS", "", 50000, 25000, "" },
+            { "acc_flashlight", "", 10000, 5000, "" },
+            { "acc_pointer_IR", "", 10000, 5000, "" },
+            { "bipod_01_F_blk", "", 10000, 5000, "" }
         };
     };
 
@@ -223,7 +229,10 @@ class WeaponShops {
             { "optic_DMS", "", 50000, 25000, "" },
             { "optic_AMS", "", 50000, 25000, "" },
             { "optic_Arco_blk_F", "", 50000, 25000, "" },
-            { "optic_SOS", "", 50000, 25000, "" }
+            { "optic_SOS", "", 50000, 25000, "" },
+            { "acc_flashlight", "", 10000, 5000, "" },
+            { "acc_pointer_IR", "", 10000, 5000, "" },
+            { "bipod_01_F_blk", "", 10000, 5000, "" }
         };
     };
 

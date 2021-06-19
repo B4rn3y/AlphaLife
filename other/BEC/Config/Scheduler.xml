@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet href="acs.xsl" type="text/xsl" ?>
+
+
+
+<Scheduler>
+<!-- Test Nachricht, zwei Minuten nach dem Start von BEC -->
+<job id="0">
+<day>1,2,3,4,5,6,7</day>
+<start>000000</start>
+<runtime>000200</runtime>
+<loop>0</loop>
+<cmd>say -1 BEC gestarted | Scheduler meldet sich zum Dienst</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+
+
+<!-- ****** TEXTNACHRICHTEN WIEDERHOLEND ******* -->
+<!-- 3 Textnachrichten im Abstand von 20 Minuten -->
+
+<!-- Textnachricht 1 -->
+<job id="1">
+<day>1,2,3,4,5,6,7</day>
+<start>000000</start>
+<runtime>010000</runtime>
+<loop>-1</loop>
+<cmd>say -1 Teamspeak: alphalife</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- Textnachricht 2 (20 Minuten versetzt zur ersten) -->
+<job id="2">
+<day>1,2,3,4,5,6,7</day>
+<start>002000</start>
+<runtime>010000</runtime>
+<loop>-1</loop>
+<cmd>say -1 Alle Infos zum Server findest du im Discord (siehe Teamspeak)</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- Textnachricht 3 (40 Minuten versetzt zur ersten) -->
+<job id="3">
+<day>1,2,3,4,5,6,7</day>
+<start>004000</start>
+<runtime>010000</runtime>
+<loop>-1</loop>
+<cmd>say -1 Alle Regeln u.Ä. findest du im Discord</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+
+
+
+<!-- *** NACHRICHTEN VOR 00:00Uhr SERVER NEUSTART *** -->
+
+<!-- 30min Warnung um 23:30 Uhr -->
+<job id="4">
+<day>1,2,3,4,5,6,7</day>
+<start>23:30:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 30 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 15min Warnung um 23:45 Uhr -->
+<job id="5">
+<day>1,2,3,4,5,6,7</day>
+<start>23:45:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 15 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 5min Warnung um 23:55 Uhr -->
+<job id="6">
+<day>1,2,3,4,5,6,7</day>
+<start>23:55:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 5 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 1min Warnung um 23:59 Uhr -->
+<job id="7">
+<day>1,2,3,4,5,6,7</day>
+<start>23:59:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 1 minute. Speichern nicht vergessen.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<job id='8'>
+    <day>1,2,3,4,5,6,7</day>
+    <start>00:00:00</start>
+    <runtime>000020</runtime>
+    <loop>0</loop>
+    <cmd>C:\server\A3Master\BEC\stopserver.bat</cmd>
+</job>
+
+<!-- *** NACHRICHTEN VOR 06:00Uhr SERVER NEUSTART *** -->
+
+<!-- 30min Warnung um 05:30 Uhr -->
+<job id="9">
+<day>1,2,3,4,5,6,7</day>
+<start>05:30:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 30 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 15min Warnung um 05:45 Uhr -->
+<job id="10">
+<day>1,2,3,4,5,6,7</day>
+<start>05:45:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 15 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 5min Warnung um 05:55 Uhr -->
+<job id="11">
+<day>1,2,3,4,5,6,7</day>
+<start>05:55:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 5 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 1min Warnung um 05:59 Uhr -->
+<job id="12">
+<day>1,2,3,4,5,6,7</day>
+<start>05:59:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 1 minute. Speichern nicht vergessen.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<job id='13'>
+    <day>1,2,3,4,5,6,7</day>
+    <start>06:00:00</start>
+    <runtime>000020</runtime>
+    <loop>0</loop>
+    <cmd>C:\server\A3Master\BEC\stopserver.bat</cmd>
+</job>
+
+<!-- *** NACHRICHTEN VOR 12:00Uhr SERVER NEUSTART *** -->
+
+<!-- 30min Warnung um 11:30 Uhr -->
+<job id="14">
+<day>1,2,3,4,5,6,7</day>
+<start>11:30:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 30 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 15min Warnung um 11:45 Uhr -->
+<job id="15">
+<day>1,2,3,4,5,6,7</day>
+<start>11:45:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 15 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 5min Warnung um 11:55 Uhr -->
+<job id="16">
+<day>1,2,3,4,5,6,7</day>
+<start>11:55:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 5 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 1min Warnung um 11:59 Uhr -->
+<job id="17">
+<day>1,2,3,4,5,6,7</day>
+<start>11:59:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 1 minute. Speichern nicht vergessen.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<job id='18'>
+    <day>1,2,3,4,5,6,7</day>
+    <start>12:00:00</start>
+    <runtime>000020</runtime>
+    <loop>0</loop>
+    <cmd>C:\server\A3Master\BEC\stopserver.bat</cmd>
+</job>
+
+<!-- *** NACHRICHTEN VOR 18:00Uhr SERVER NEUSTART *** -->
+
+<!-- 30min Warnung um 17:30 Uhr -->
+<job id="19">
+<day>1,2,3,4,5,6,7</day>
+<start>17:30:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 30 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 15min Warnung um 17:45 Uhr -->
+<job id="20">
+<day>1,2,3,4,5,6,7</day>
+<start>17:45:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 15 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 5min Warnung um 17:55 Uhr -->
+<job id="21">
+<day>1,2,3,4,5,6,7</day>
+<start>17:55:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 5 minuten.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<!-- 1min Warnung um 17:59 Uhr -->
+<job id="22">
+<day>1,2,3,4,5,6,7</day>
+<start>17:59:00</start>
+<runtime>000000</runtime>
+<loop>0</loop>
+<cmd>say -1 Achtung: Serverrestart in 1 minute. Speichern nicht vergessen.</cmd>
+<cmdtype>0</cmdtype>
+</job>
+
+<job id='23'>
+    <day>1,2,3,4,5,6,7</day>
+    <start>18:00:00</start>
+    <runtime>000020</runtime>
+    <loop>0</loop>
+    <cmd>C:\server\A3Master\BEC\stopserver.bat</cmd>
+</job>
+
+
+</Scheduler>

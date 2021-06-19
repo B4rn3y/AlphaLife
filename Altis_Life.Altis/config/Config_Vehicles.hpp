@@ -223,7 +223,7 @@ class LifeCfgVehicles {
     class B_LSV_01_unarmed_F {
         vItemSpace = 150;
         conditions = "";
-        price = 65000;
+        price = 500000;
         price_cop = 45000;
         textures[] = {
             { "COP", "cop", {

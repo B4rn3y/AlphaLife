@@ -1,0 +1,1 @@
+ start /min "" "C:\server\A3Master\arma3server_x64.exe" -port=2402 -cfg=basic.cfg -config=server_test.cfg -bepath=C:\server\A3Master\battleye -profiles=C:\server\A3Master -autoinit "-servermod=@extDB3;@life_server_test"

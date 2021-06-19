@@ -24,7 +24,8 @@ if (_num < 1) exitWith {hint localize "STR_MISC_Under1";};
 _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 
 if(_all) then {
-    _num = [_ctrl,missionNamespace getvariable[format["life_inv_%1",_ctrl],0],_totalWeight select 1,_totalWeight select 0] call life_fnc_calWeightDiff;
+    _item_var = gettext(missionConfigFile >> "VirtualItems" >> _ctrl >> "variable");
+    _num = [_ctrl,missionNamespace getvariable[format["life_inv_%1",_item_var],0],_totalWeight select 1,_totalWeight select 0] call life_fnc_calWeightDiff;
 };
 
 _itemWeight = ([_ctrl] call life_fnc_itemWeight) * _num;

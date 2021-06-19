@@ -103,26 +103,6 @@ class playerHUD {
             w = 0.0331042 * safezoneW;
             h = 0.0589743 * safezoneH;
         };
-
-        class uptime_pic: life_RscPicture
-        {
-            idc = 1200;
-            text = "textures\HUD\serveruptime.paa";
-            x = 0.940625 * safezoneW + safezoneX;
-            y = 0.968519 * safezoneH + safezoneY;
-            w = 0.0110156 * safezoneW;
-            h = 0.0235186 * safezoneH;
-        };
-
-        class uptime_text: life_RscStructuredText
-        {
-            idc = 1101;
-            text = ""; //--- ToDo: Localize;
-            x = 0.954688 * safezoneW + safezoneX;
-            y = 0.968518 * safezoneH + safezoneY;
-            w = 0.0348438 * safezoneW;
-            h = 0.0244444 * safezoneH;
-        };
     };
 };
 

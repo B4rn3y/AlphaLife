@@ -8,15 +8,18 @@
 */
 private "_target";
 _target = param [0,objNull,[objNull]];
+_name = param[1,profileName,[""]];
 
 //Error checks
 if (isNull _target) exitWith {};
 if (!isPlayer _target) exitWith {};
 if (player distance _target > 4) exitWith {};
 life_knockout = true;
-[player,"AwopPercMstpSgthWrflDnon_End2"] remoteExecCall ["life_fnc_animSync",RCLIENT];
-sleep 0.08;
-[_target,profileName] remoteExec ["life_fnc_knockedOut",_target];
+if!(_target isEqualTo player) then {
+	[player,"AwopPercMstpSgthWrflDnon_End2"] remoteExecCall ["life_fnc_animSync",RCLIENT];
+	sleep 0.08;
+};
+[_target,_name] remoteExec ["life_fnc_knockedOut",_target];
 
 sleep 3;
 life_knockout = false;

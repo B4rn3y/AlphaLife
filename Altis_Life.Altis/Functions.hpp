@@ -99,6 +99,7 @@ class Life_Client_Core {
         class robReceive {};
         class tazed {};
         class Frogtrap {};
+        class robGasStation {};
     };
 
     class Config {
