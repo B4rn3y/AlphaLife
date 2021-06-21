@@ -20,3 +20,10 @@ TEXT HERE<br/><br/>
              "Alle Infos zum Server findest du im Discord. <br/>Den Link zum Discord findest du im Teamspeak<br/><br/>Teamspeak: alphalife"
         ]
     ];
+
+    player createDiaryRecord ["INFO",
+        [
+            "Tastaturbelegung",
+             "- Ohrenstöpsel : SHIFT + O <br/>- Niederschlagen: STRG+ G <br/>- Fesseln (Kabelbinder benötigt): SHIFT+ R <br/>- Interagieren: Windowstaste <br/>- GPS: STRG (rechts) + M <br/>"
+        ]
+    ];

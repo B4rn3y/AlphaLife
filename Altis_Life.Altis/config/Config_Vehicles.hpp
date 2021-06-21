@@ -119,7 +119,8 @@ class CarShops {
             { "C_SUV_01_F", "" },
             { "I_Truck_02_medical_F", "" },
             { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" }
+            { "B_Truck_01_medical_F", "" },
+            { "I_E_Van_02_transport_MP_F", "" }  // Van
         };
     };
 
@@ -433,6 +434,19 @@ class LifeCfgVehicles {
         textures[] = {
             { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
+    };
+
+    class I_E_Van_02_transport_MP_F {
+        vItemSpace = 200;
+        conditions = "";
+        price = 150000;
+        price_cop = 70000;
+        price_med = 70000;
+        textures[] = {
+            { "Medic", "med", {
+                "textures\MEDIC_Vehicles\MEDIC_van.jpg"
             }, "" }
         };
     };

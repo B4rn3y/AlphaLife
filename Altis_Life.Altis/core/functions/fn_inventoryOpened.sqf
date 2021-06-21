@@ -48,8 +48,10 @@ private _list = ["LandVehicle", "Ship", "Air"];
     };
 
     //Allow alive players who've been knocked out to be looted, just not the dead ones
+    /*
     if (_x isKindOf "CAManBase" && {!alive _x}) exitWith {
         hint localize "STR_NOTF_NoLootingPerson";
         true breakOut "main";
     };
+    */
 } count [_container, _secContainer];

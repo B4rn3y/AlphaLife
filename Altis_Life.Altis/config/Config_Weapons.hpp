@@ -324,7 +324,7 @@ class WeaponShops {
             { "arifle_MSBS65_black_F", "", 45000, 22500, "call life_coplevel > 1" },    // promet
             { "arifle_MXM_Black_F", "", 65000, 32500, "call life_coplevel > 2" },    // MXM
             { "arifle_MX_SW_Black_F", "", 65000, 32500, "call life_coplevel > 2" },    // MXSW
-            { "arifle_ARX_blk_F", "", 70000, 35000, "" },    // type115
+            { "arifle_ARX_blk_F", "", 70000, 35000, "call life_coplevel > 2" },    // type115
             { "arifle_SPAR_03_blk_F", "", 100000, 50000, "call life_coplevel > 3" },    // spar 17
             { "srifle_EBR_F", "", 150000, 75000, "call life_coplevel > 3" },    // mk18
             { "srifle_DMR_03_F", "", 150000, 75000, "call life_coplevel > 3" },    // mk18
@@ -447,6 +447,7 @@ class WeaponShops {
             { "ItemGPS", "", 100, 50, "" },
             { "Binocular", "", 150, 75, "" },
             { "FirstAidKit", "", 150, 75, "" },
+            { "Medikit", "", 1000, 75, "" },
             { "NVGoggles", "", 1200, 600, "" }
         };
         mags[] = {};

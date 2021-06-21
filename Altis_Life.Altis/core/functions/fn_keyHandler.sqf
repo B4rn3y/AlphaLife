@@ -123,6 +123,13 @@ switch (_code) do {
         };
     };
 
+    case 211: {
+        if ((playerSide in [west,independent]) && ( cursorObject getVariable["placed",false])) then {
+            deleteVehicle cursorObject;
+            ["Die Absperrung wurde entfernt"] spawn life_fnc_exp_hint;;
+        };
+    };
+
     //Holster / recall weapon. (Shift + H)
     case 35: {
         if (_shift && !_ctrlKey && !(currentWeapon player isEqualTo "")) then {
@@ -237,9 +244,17 @@ switch (_code) do {
     // Key 41 Menu System
     case 41:
     {
-        if(playerSide isEqualTo west)then
+        switch (playerSide) do
         {
-            [] call life_fnc_wantedMenu;
+            case west:
+            {
+                [] call life_fnc_CopOptionsMenu;
+            };
+
+            case independent:
+            {
+                [] call life_fnc_CopOptionsMenu;
+            };
         };
 
 

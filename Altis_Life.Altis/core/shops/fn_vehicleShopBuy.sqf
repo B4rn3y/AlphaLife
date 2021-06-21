@@ -30,15 +30,17 @@ switch (playerSide) do {
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
     };
     case west: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
+        _buyMultiplier = 1;
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
+        _initalPrice = if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _className>>"price_cop") isEqualTo 0) then {_initalPrice} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _className>>"price_cop")};
     };
     case independent: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
+        _buyMultiplier = 1;
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
+        _initalPrice = if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _className>>"price_med") isEqualTo 0) then {_initalPrice} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _className>>"price_med")};
     };
     case east: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
+        _buyMultiplier = 1;
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
     };
 };

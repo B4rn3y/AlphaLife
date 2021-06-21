@@ -3782,6 +3782,10 @@
             <Polish>%1 twój %2 jest usuwany przez Policję</Polish>
 			<Chinesesimp>%1 的 %2 正在被警察扣留。</Chinesesimp>
         </Key>
+        <Key ID="STR_NOTF_BeingImpounded_Medic">
+            <Original>%1 your %2 is being impounded by the medics.</Original>
+            <German>%1 dein %2 wird von den Medics beschlagnahmt!</German>
+        </Key>
         <Key ID="STR_NOTF_Impounding">
             <Original>Impounding Vehicle</Original>
             <Czech>vzdouvání Vehicle</Czech>
@@ -5530,6 +5534,10 @@
             <Polish>%1 Wystawił mandat w wysokości %2 dla %3</Polish>
 			<Chinesesimp>%1 开据金额 $%2 的罚单给 %3</Chinesesimp>
         </Key>
+        <Key ID="STR_MED_BillGive">
+            <Original>%1 gave a Bill of $%2 to %3</Original>
+            <German>%1 hat %3 eine Rechnung über $%2 ausgestellt.</German>
+        </Key>
         <Key ID="STR_Cop_Ticket_NotEnough">
             <Original>You don't have enough money in your bank account or on you to pay the ticket.</Original>
             <Czech>Nemáte dostatek peněz na váš bankovní účet, nebo na vás zaplatit letenku.</Czech>
@@ -5543,11 +5551,11 @@
 			<Chinesesimp>你的银行帐户中没有足够的钱来支付罚金。</Chinesesimp>
         </Key>
         <Key ID="STR_Cop_Ticket_NotEnoughNOTF">
-            <Original>%1 couldn't pay the ticket due to not having enough money.</Original>
+            <Original>%1 couldn't pay the price due to not having enough money.</Original>
             <Czech>%1 nemohl zaplatit letenku z důvodu nemají dostatek peněz.</Czech>
             <Spanish>%1 No puedo pagar el tiquete porque no tiene suficiente dinero.</Spanish>
             <Russian></Russian>
-            <German>%1 konnte den Strafzettel nicht bezahlen, weil er nicht genug Geld hat.</German>
+            <German>%1 konnte nicht bezahlen, weil er nicht genug Geld hat.</German>
             <French>%1 ne pouvait pas payer la contravention car il n'avait pas assez d'argent.</French>
             <Italian>%1 non può pagare la multa perchè non ha sufficienti fondi nel suo conto in banca.</Italian>
             <Portuguese>%1 não pode pagar a multa pois não tem dinheiro suficiente.</Portuguese>
@@ -5555,16 +5563,8 @@
 			<Chinesesimp>%1 由于没有足够的钱，无法支付罚金。</Chinesesimp>
         </Key>
         <Key ID="STR_Cop_Ticket_Paid">
-            <Original>You have paid the ticket of $%1</Original>
-            <Czech>Jste zaplatili letenku ve výši $%1</Czech>
-            <Spanish>Has pagado el tiquete de $%1</Spanish>
-            <Russian></Russian>
-            <German>Du hast den Strafzettel von $%1 bezahlt.</German>
-            <French>Vous avez payé l'amende de $%1</French>
-            <Italian>Hai pagato la multa di $%1</Italian>
-            <Portuguese>Você pagou a multa de R$%1</Portuguese>
-            <Polish>Zapłaciłeś mandat w wysokości $%1</Polish>
-			<Chinesesimp>你已经支付了 $%1 的罚金</Chinesesimp>
+            <Original>You have paid $%1</Original>
+            <German>Du hast $%1 bezahlt.</German>
         </Key>
         <Key ID="STR_Cop_Ticket_PaidNOTF">
             <Original>%1 paid the ticket of $%2</Original>
@@ -5590,6 +5590,14 @@
             <Polish>%1 zapłacił mandat.</Polish>
 			<Chinesesimp>%1 支付了罚金。</Chinesesimp>
         </Key>
+        <Key ID="STR_Med_Bill_PaidNOTF">
+            <Original>%1 paid the bill of $%2</Original>
+            <German>%1 zahlte eine Rechnung von $%2.</German>
+        </Key>
+        <Key ID="STR_Med_Bill_PaidNOTF_2">
+            <Original>%1 paid the bill.</Original>
+            <German>%1 hat die Rechnung bezahlt.</German>
+        </Key>
         <Key ID="STR_Cop_Ticket_GUI_Given">
             <Original>%1 has given you a ticket for $%2</Original>
             <Czech>%1 vám dal lístek za $ %2</Czech>
@@ -5602,6 +5610,10 @@
             <Polish>%1 dał ci mandat w wysokości $%2</Polish>
 			<Chinesesimp>%1 给你开了一张 $%2 的罚单</Chinesesimp>
         </Key>
+        <Key ID="STR_Med_Bill_GUI_Given">
+            <Original>%1 has given you a bill for $%2</Original>
+            <German>%1 hat dir eine Rechnung über $%2 gegeben.</German>
+        </Key>
         <Key ID="STR_Cop_Ticket_Refuse">
             <Original>%1 refused to pay the ticket.</Original>
             <Czech>%1 odmítl zaplatit letenku.</Czech>
@@ -5613,6 +5625,10 @@
             <Portuguese>%1 se recusou a pagar a multa.</Portuguese>
             <Polish>%1 odmówił zapłaty mandatu.</Polish>
 			<Chinesesimp>%1 拒绝支付罚金。</Chinesesimp>
+        </Key>
+        <Key ID="STR_Med_Bill_Refuse">
+            <Original>%1 refused to pay the bill.</Original>
+            <German>%1 weigert sich, die Rechnung zu bezahlen.</German>
         </Key>
         <Key ID="STR_Cop_BountyRecieve">
             <Original>You have collected a bounty of $%1 for arresting a criminal.</Original>
@@ -14275,4 +14291,181 @@
 			<Chinesesimp>%1 - %2 将 $%3 存进他们的银行账户。银行存款余额：$%4  手上现金：$%5</Chinesesimp>
         </Key>
     </Package>
+
+    <Package name="dispatchcenter_aapps">
+        <Key ID="STR_DC_noaccess">
+            <Original>Access denied</Original>
+            <German>Kein Zugriff</German>
+        </Key>
+        <Key ID="STR_DC_nodispatches">
+            <Original>No calls</Original>
+            <German>Keine Notrufe</German>
+        </Key>
+        <Key ID="STR_DC_notassigned">
+            <Original>Unassigned</Original>
+            <German>Nicht zugeteilt</German>
+        </Key>
+        <Key ID="STR_DC_accept">
+            <Original>Assign</Original>
+            <German>Annehmen</German>
+        </Key>
+        <Key ID="STR_DC_take_dispatch">
+            <Original>I'll do it</Original>
+            <German>Übernehmen</German>
+        </Key>
+        <Key ID="STR_DC_minute">
+            <Original>minute</Original>
+            <German>Minute</German>
+        </Key>
+        <Key ID="STR_DC_minutes">
+            <Original>minutes</Original>
+            <German>Minuten</German>
+        </Key>
+        <Key ID="STR_DC_secondes">
+            <Original>seconds</Original>
+            <German>Sekunden</German>
+        </Key>
+        <Key ID="STR_DC_notselected">
+            <Original>Please select a call...</Original>
+            <German>Du musst zuerst einen Notruf auswählen.</German>
+        </Key>
+        <Key ID="STR_DC_reload">
+            <Original>Please reopen the dialog</Original>
+            <German>Bitte lade das Menü neu...</German>
+        </Key>
+        <Key ID="STR_DC_alreadytoken">
+            <Original>You have already assigned this call to you</Original>
+            <German>Du hast diesen Auftrag bereits angenommen!</German>
+        </Key>
+        <Key ID="STR_DC_gui_take">
+            <Original>This call is already dispatched to %1. Do you want to take over?</Original>
+            <German>Dieser Auftrag wird bereits von %1 erledigt. Willst du ihn übernehmen?</German>
+        </Key>
+        <Key ID="STR_DC_del_dispatch">
+            <Original>Do you really want to delete %1's call?</Original>
+            <German>Willst du den Notruf von %1 wirklich löschen?</German>
+        </Key>
+        <Key ID="STR_DC_usepreset">
+            <Original>Please enter a text or choose a preset.</Original>
+            <German>Bitte gebe einen Text an oder wähle eine Vorlage.</German>
+        </Key>
+        <Key ID="STR_DC_sendmsg">
+            <Original>Answer sent successfully</Original>
+            <German>Nachricht erfolgreich gesendet</German>
+        </Key>
+        <Key ID="STR_DC_tooclose">
+            <Original>You're too close to the caller's location</Original>
+            <German>Du bist zu Nahe am Einsatzort</German>
+        </Key>
+        <Key ID="STR_DC_title">
+            <Original>Call</Original>
+            <German>Notruf</German>
+        </Key>
+        <Key ID="STR_DC_msg_allcops">
+            <Original>All Officers</Original>
+            <German>Alle Polizisten</German>
+        </Key>
+        <Key ID="STR_DC_msg_allmeds">
+            <Original>All Medics</Original>
+            <German>Alle Sanitäter</German>
+        </Key>
+        <Key ID="STR_DC_msg_to">
+            <Original>To</Original>
+            <German>An</German>
+        </Key>
+        <Key ID="STR_DC_msg_by">
+            <Original>By</Original>
+            <German>Von</German>
+        </Key>
+        <Key ID="STR_DC_med_auto_dispatch">
+            <Original>I am in need of reviving (This is an automatic message dispatched by the almost-dead guy)</Original>
+            <German>Ich benötige einen Revive - Automatische SOS Nachricht über das Telefon</German>
+        </Key>
+        <Key ID="STR_DC_delete">
+            <Original>Delete</Original>
+            <German>Löschen</German>
+        </Key>
+        <Key ID="STR_DC_send">
+            <Original>Send</Original>
+            <German>Senden</German>
+        </Key>
+        <Key ID="STR_DC_sendposition">
+            <Original>Send position</Original>
+            <German>Position mitsenden</German>
+        </Key>
+        <Key ID="STR_DC_seedispatch">
+            <Original>Show call</Original>
+            <German>Notruf anzeigen</German>
+        </Key>
+        <Key ID="STR_DC_unfinished">
+            <Original>Unfinished since:</Original>
+            <German>Ausstehend seit:</German>
+        </Key>
+        <Key ID="STR_DC_distance">
+            <Original>Distance:</Original>
+            <German>Distanz:</German>
+        </Key>
+        <Key ID="STR_DC_assigned">
+            <Original>Assigned:</Original>
+            <German>Bearbeiter:</German>
+        </Key>
+        <Key ID="STR_DC_answer">
+            <Original>Answer</Original>
+            <German>Antwort</German>
+        </Key>
+        <Key ID="STR_DC_information">
+            <Original>Information</Original>
+            <German>Informationen</German>
+        </Key>
+        <Key ID="STR_DC_availabledispatches">
+            <Original>Available calls</Original>
+            <German>Verfügbare Notrufe</German>
+        </Key>
+        <Key ID="STR_DC_dispatchcenter">
+            <Original>911 Call Management</Original>
+            <German>Notrufverwaltung</German>
+        </Key>
+        <Key ID="STR_DC_message">
+            <Original>Message</Original>
+            <German>Nachricht</German>
+        </Key>
+        </Package>
+        <Package name="dispatchcenter_presets_aapps">
+        <Key ID="STR_DC_MSG_own_message_title">
+            <Original>Custom Message</Original>
+            <German>Eigene Nachricht</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_onmyway_title">
+            <Original>On my way</Original>
+            <German>Unterwegs</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_onmyway">
+            <Original>We are working as good as we can and will be with you ASAP. Please stay calm and follow any instructions by authorities.</Original>
+            <German>Guten Tag! Wir sind schnellstmöglich bei Ihnen. Bitte bewahren Sie Ruhe und beachten Sie eventuelle Anweisungen von Beamten.</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_wquestions_title">
+            <Original>W-questions</Original>
+            <German>W-Fragen</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_wquestions">
+            <Original>We are unable to follow this call due to your instructions not being clear. Please give us more information (5 W-questions)</Original>
+            <German>Guten Tag! Leider können wir mit Ihren mangelhaften Informationen noch nicht handeln. Bitte beachten Sie die Fünf W-Fragen. Danke!</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_understaffed_title">
+            <Original>Understaffed</Original>
+            <German>Unterbesetzt</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_understaffed">
+            <Original>We are sorry, but as we are understaffed at the moment we're unable to dispatch a unit to you.</Original>
+            <German>Guten Tag! Leider können wir Ihrem Notruf im Moment nicht bzw. nur sehr verspätet nachgehen, da wir stark unterbesetzt sind.</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_terrorist_title">
+            <Original>Terrorist</Original>
+            <German>Terrorist</German>
+        </Key>
+        <Key ID="STR_DC_MSG_cop_terrorist">
+            <Original>We. do. not. negotiate. with. terorist. Find yourself a bomb!</Original>
+            <German>Guten Tag! Wir verhandeln nicht mit Terroristen. Suchen Sie sich einfach eine Bombe!</German>
+        </Key>
+        </Package>
 </Project>

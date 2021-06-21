@@ -33,7 +33,7 @@ if(_actual_name isEqualTo "") then {
 
 	_text = _text + "Solltest du deinen Namen ändern wollen, so geht das nur über den Support.<br /><br />";
 
-	_text = _text + "- Teamspeak: 45.89.140.192<br />- Website: website.de<br /><br />";
+	_text = _text + "- Teamspeak: alphalife<br /><br />";
 
 	_str_text ctrlSetStructuredText parseText _text;
 

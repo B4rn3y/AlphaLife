@@ -19,29 +19,44 @@ if (CASH < life_ticket_val) exitWith {
     [1] call SOCK_fnc_updatePartial;
     life_ticket_paid = true;
 
-    [0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
-    [1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
+    if((side life_ticket_cop) isEqualTo west) then {
+        [0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+        [1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
+
+        if (life_HC_isActive) then {
+            [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
+        } else {
+            [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
+        };
+    } else {
+        [0,"STR_Med_Bill_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+        [1,"STR_Med_Bill_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
+    };
+
     [life_ticket_val,player,life_ticket_cop] remoteExecCall ["life_fnc_ticketPaid",life_ticket_cop];
 
-    if (life_HC_isActive) then {
-        [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
-    } else {
-        [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
-    };
     closeDialog 0;
 };
 
 CASH = CASH - life_ticket_val;
 [0] call SOCK_fnc_updatePartial;
 life_ticket_paid = true;
+if((side life_ticket_cop) isEqualTo west) then {
+    if (life_HC_isActive) then {
+        [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
+    } else {
+        [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
+    };
 
-if (life_HC_isActive) then {
-    [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
+    [0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+    [1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 } else {
-    [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
+    [0,"STR_Med_Bill_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+    [1,"STR_Med_Bill_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 };
 
-[0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
-closeDialog 0;
-[1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
+
 [life_ticket_val,player,life_ticket_cop] remoteExecCall ["life_fnc_ticketPaid",life_ticket_cop];
+
+
+closeDialog 0;

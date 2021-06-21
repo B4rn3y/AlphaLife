@@ -30,8 +30,28 @@ if (isNil "_vehicleColor") then {_vehicleColor = "Default";};
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
-_price = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
+
 _storageFee = LIFE_SETTINGS(getNumber,"vehicle_storage_fee_multiplier");
+
+
+_price = switch (playerSide) do
+{
+    case west:
+    {
+        if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_cop") isEqualTo 0) then {M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price")} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_cop")};
+    };
+
+    case independent:
+    {
+        if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_med") isEqualTo 0) then {M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price")} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _classNameLife>>"price_med")};
+    };
+
+    default
+    {
+        M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
+    };
+};
+
 
 switch (playerSide) do {
     case civilian: {

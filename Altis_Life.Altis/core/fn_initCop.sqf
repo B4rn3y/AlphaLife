@@ -20,6 +20,7 @@ if ((FETCH_CONST(life_coplevel) isEqualTo 0) && (FETCH_CONST(life_adminlevel) is
 };
 //};
 
+0 call life_fnc_copcallmanagement;
 
 player setVariable ["rank",(FETCH_CONST(life_coplevel)),true];
 

@@ -138,6 +138,13 @@ class Life_Client_Core {
         class vehInvSearch {};
         class wantedGrab {};
         class gateAct {};
+        class copcallmanagement {};
+        class CopOptionsMenu {};
+        class placeablesMenu {};
+        class placeablesRemoveAll {};
+        class placeablePlace {};
+        class placeableCancel {};
+        class placeablesPlaceComplete {};
     };
 
     class Dialog_Controls {
@@ -304,6 +311,8 @@ class Life_Client_Core {
         class respawned {};
         class revived {};
         class revivePlayer {};
+        class medcallmanagement {};
+        class medInteractionMenu {};
     };
 
     class Network {

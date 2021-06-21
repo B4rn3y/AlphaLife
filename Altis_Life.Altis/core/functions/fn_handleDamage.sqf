@@ -20,7 +20,7 @@ if (!isNull _source && {_source != _unit}) then {
         if (currentWeapon _source in ["hgun_P07_snds_F"] && _projectile in ["B_9x21_Ball","B_556x45_dual"]) then {
             if (alive _unit) then {
                 if (playerSide isEqualTo civilian && {!life_istazed}) then {
-                    private _distance = 35;
+                    private _distance = 50;
                     if (_projectile isEqualTo "B_556x45_dual") then {_distance = 100};
                     if (_unit distance _source < _distance) then {
                         if !(isNull objectParent _unit) then {

@@ -7,7 +7,7 @@
 class Life_Settings {
 /* BA SHIT*/
     min_player_gang_area = 10; // minimum amount of players needed to be online to capture the gangarea
-    gang_area_paycheck_timer = 600; // get every 10 Minutes money from the gang area (in seconds)
+    gang_area_paycheck_timer = 300; // get every 5 Minutes money from the gang area (in seconds)
     gang_area_paycheck = 50000; // get 50k for every gang member online
     hazard_suits[] = {"U_C_CBRN_Suit_01_Blue_F","U_C_Scientist"};  // uniforms to wear in the radiation zone
 /* Logging and Security Settings*/
@@ -53,7 +53,7 @@ class Life_Settings {
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules & https://www.bistudio.com/monetization
     enable_fatigue = false; //Set to false to disable the ARMA 3 fatigue system.
     total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
-    respawn_timer = 30; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
+    respawn_timer = 120; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
 
     /* Channel 7 News Station Configurations */
     news_broadcast_cost = 150000; //Cost for a player to send a news station broadcast.
@@ -146,7 +146,7 @@ class Life_Settings {
     /* Vehicle Purchase Prices */
     vehicle_purchase_multiplier_CIVILIAN = 1; //Civilian Vehicle Buy Price = Config_Vehicle price * multiplier
     vehicle_purchase_multiplier_COP = 1; //Cop Vehicle Buy Price = Config_Vehicle price * multiplier
-    vehicle_purchase_multiplier_MEDIC = .75; //Medic Vehicle Buy Price = Config_Vehicle price * multiplier
+    vehicle_purchase_multiplier_MEDIC = 1; //Medic Vehicle Buy Price = Config_Vehicle price * multiplier
     vehicle_purchase_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
 
     /* Vehicle Rental Prices */
@@ -172,50 +172,50 @@ class Life_Settings {
     /* Wanted System Settings *
     /* crimes[] = {String, Bounty, Code} */
     crimes[] = {
-        {"STR_Crime_187V","650","187V"},
-        {"STR_Crime_187","2000","187"},
-        {"STR_Crime_901","450","901"},
-        {"STR_Crime_215","200","215"},
-        {"STR_Crime_213","1000","213"},
-        {"STR_Crime_211","100","211"},
-        {"STR_Crime_207","350","207"},
-        {"STR_Crime_207A","200","207A"},
-        {"STR_Crime_390","1500","390"},
-        {"STR_Crime_487","150","487"},
-        {"STR_Crime_488","70","488"},
-        {"STR_Crime_480","100","480"},
-        {"STR_Crime_481","100","481"},
-        {"STR_Crime_482","500","482"},
-        {"STR_Crime_483","950","483"},
-        {"STR_Crime_459","650","459"},
-        {"STR_Crime_666","200","666"},
-        {"STR_Crime_667","4500","667"},
-        {"STR_Crime_668","1500","668"},
-        {"STR_Crime_1","250","1"},
-        {"STR_Crime_2","200","2"},
-        {"STR_Crime_3","150","3"},
-        {"STR_Crime_4","250","4"},
-        {"STR_Crime_5","100","5"},
-        {"STR_Crime_6","80","6"},
-        {"STR_Crime_7","150","7"},
-        {"STR_Crime_8","5000","8"},
-        {"STR_Crime_9","5000","9"},
-        {"STR_Crime_10","15000","10"},
-        {"STR_Crime_11","10000","11"},
-        {"STR_Crime_12","2500","12"},
-        {"STR_Crime_13","1500","13"},
-        {"STR_Crime_14","500","14"},
-        {"STR_Crime_15","2500","15"},
-        {"STR_Crime_16","1500","16"},
-        {"STR_Crime_17","100","17"},
-        {"STR_Crime_18","1500","18"},
-        {"STR_Crime_19","2500","19"},
-        {"STR_Crime_20","500","20"},
-        {"STR_Crime_21","500","21"},
-        {"STR_Crime_22","2000","22"},
-        {"STR_Crime_23","5000","23"},
-        {"STR_Crime_24","10000","24"},
-        {"STR_Crime_25","20000","25"}
+        {"STR_Crime_187V","200000","187V"},
+        {"STR_Crime_187","200000","187"},
+        {"STR_Crime_901","100000","901"},
+        {"STR_Crime_215","50000","215"},
+        {"STR_Crime_213","200000","213"},
+        {"STR_Crime_211","150000","211"},
+        {"STR_Crime_207","200000","207"},
+        {"STR_Crime_207A","150000","207A"},
+        {"STR_Crime_390","100000","390"},
+        {"STR_Crime_487","50000","487"},
+        {"STR_Crime_488","50000","488"},
+        {"STR_Crime_480","50000","480"},
+        {"STR_Crime_481","100000","481"},
+        {"STR_Crime_482","75000","482"},
+        {"STR_Crime_483","150000","483"},
+        {"STR_Crime_459","100000","459"},
+        {"STR_Crime_666","100000","666"},
+        {"STR_Crime_667","200000","667"},
+        {"STR_Crime_668","50000","668"},
+        {"STR_Crime_1","25000","1"},
+        {"STR_Crime_2","25000","2"},
+        {"STR_Crime_3","25000","3"},
+        {"STR_Crime_4","25000","4"},
+        {"STR_Crime_5","25000","5"},
+        {"STR_Crime_6","25000","6"},
+        {"STR_Crime_7","25000","7"},
+        {"STR_Crime_8","50000","8"},
+        {"STR_Crime_9","50000","9"},
+        {"STR_Crime_10","50000","10"},
+        {"STR_Crime_11","75000","11"},
+        {"STR_Crime_12","50000","12"},
+        {"STR_Crime_13","50000","13"},
+        {"STR_Crime_14","50000","14"},
+        {"STR_Crime_15","50000","15"},
+        {"STR_Crime_16","50000","16"},
+        {"STR_Crime_17","50000","17"},
+        {"STR_Crime_18","50000","18"},
+        {"STR_Crime_19","50000","19"},
+        {"STR_Crime_20","50000","20"},
+        {"STR_Crime_21","50000","21"},
+        {"STR_Crime_22","150000","22"},
+        {"STR_Crime_23","300000","23"},
+        {"STR_Crime_24","200000","24"},
+        {"STR_Crime_25","200000","25"}
     };
 
     /* ! --- Do not change --- ! */

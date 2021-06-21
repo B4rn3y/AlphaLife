@@ -9,7 +9,7 @@ enableDebugConsole[] = { "76561198018512569"};
 #include "config\Config_Master.hpp"
 
 class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DatabaseName = "altislifetest"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
     DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
     HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
     /*
@@ -36,6 +36,20 @@ class CfgSounds {
         sound[] = {"\sounds\radiation.ogg", 1.0, 1};
         titles[] = {};
     };
+
+    class login {
+        name = "login";
+        sound[] = {"\sounds\login.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
+
+    class logout {
+        name = "logout";
+        sound[] = {"\sounds\logout.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
 
     class sirenLong {
         name = "sirenLong";

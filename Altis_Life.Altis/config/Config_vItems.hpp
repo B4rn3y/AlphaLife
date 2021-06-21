@@ -26,7 +26,7 @@ class VirtualShops {
     class rebel {
         name = "STR_Shops_Rebel";
         side = "civ";
-        conditions = "license_civ_rebel";
+        conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha";
         items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "frogtrap" };
     };
 
@@ -546,7 +546,7 @@ class VirtualItems {
         displayName = "STR_Item_Uran";
         weight = 2;
         buyPrice = -1;
-        sellPrice = 5000;
+        sellPrice = 40000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -809,7 +809,7 @@ class VirtualItems {
         variable = "apple";
         displayName = "STR_Item_Apple";
         weight = 1;
-        buyPrice = 100;
+        buyPrice = 1000;
         sellPrice = 750;
         illegal = false;
         edible = 10;

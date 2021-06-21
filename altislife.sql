@@ -80,6 +80,7 @@ CREATE TABLE IF NOT EXISTS `players` (
     `cash`         INT NOT NULL DEFAULT 0,
     `bankacc`      INT NOT NULL DEFAULT 0,
     `coplevel`     ENUM('0','1','2','3','4','5','6','7','8') NOT NULL DEFAULT '0',
+    `swatlevel`     ENUM('0','1') NOT NULL DEFAULT '0',
     `mediclevel`   ENUM('0','1','2','3','4','5') NOT NULL DEFAULT '0',
     `civ_licenses` TEXT NOT NULL,
     `cop_licenses` TEXT NOT NULL,

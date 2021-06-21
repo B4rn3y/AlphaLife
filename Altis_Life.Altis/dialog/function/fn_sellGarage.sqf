@@ -22,7 +22,25 @@ if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife)) then {
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_vehicle];
 };
 
-_price = M_CONFIG(getNumber,"LifeCfgVehicles",_vehicleLife,"price");
+
+_price = switch (playerSide) do
+{
+    case west:
+    {
+        if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife>>"price_cop") isEqualTo 0) then {M_CONFIG(getNumber,"LifeCfgVehicles",_vehicleLife,"price")} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife>>"price_cop")};
+    };
+
+    case independent:
+    {
+        if(getnumber(missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife>>"price_med") isEqualTo 0) then {M_CONFIG(getNumber,"LifeCfgVehicles",_vehicleLife,"price")} else {getnumber(missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife>>"price_med")};
+    };
+
+    default
+    {
+        M_CONFIG(getNumber,"LifeCfgVehicles",_vehicleLife,"price");
+    };
+};
+
 switch (playerSide) do {
     case civilian: {
         _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_CIVILIAN");

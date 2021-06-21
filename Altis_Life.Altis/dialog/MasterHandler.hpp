@@ -32,3 +32,5 @@
 #include "licenses.hpp" // 9580
 #include "player_inv_market.hpp" //9001
 #include "welcome_server.hpp" //9002
+#include "aapps_callmanagement.hpp" // 1011001
+#include "placeables.hpp"  // 20000

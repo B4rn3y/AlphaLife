@@ -98,6 +98,11 @@ if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
 
 //If target is a player then check if we can use the cop menu.
 if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
+
+    if(playerSide isEqualTo independent && alive _curObject && ((player distance _curObject) < 5)) exitWith {
+        [_curObject] call life_fnc_medInteractionMenu
+    };
+
     if ((_curObject getVariable ["restrained",false]) && !dialog && playerSide isEqualTo west) then {
         [_curObject] call life_fnc_copInteractionMenu;
     };

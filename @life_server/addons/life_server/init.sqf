@@ -163,6 +163,11 @@ TON_fnc_requestClientID =
 /* Miscellaneous mission-required stuff */
 life_wanted_list = [];
 
+life_cop_calls = [];
+publicVariable "life_cop_calls";
+life_med_calls = [];
+publicVariable "life_med_calls";
+
 cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 
 [] spawn {
@@ -203,6 +208,16 @@ _rsb setVariable ["locked",true,true];
 _rsb setVariable ["bis_disabled_Door_1",1,true];
 _dome allowDamage false;
 _rsb allowDamage false;
+
+0 spawn {   // baum kavala markt
+    _tree = createSimpleObject ["a3\plants_f\Tree\t_PhoenixC3s_F.p3d", [3658.27,13108.3,0.00140095]];
+    waitUntil {!isnil"_tree"};
+    waitUntil {!isnull _tree};
+    _tree setposatl [3658.27,13108.3,0.00140095];
+};
+
+
+
 
 // init the evidence room
 [] spawn life_fnc_init_evidence_room;
