@@ -253,7 +253,7 @@ class Licenses {
     class mercenary {
         variable = "mercenary";
         displayName = "STR_License_Mercenary";
-        price = 15000000;
+        price = 25000000;
         illegal = true;
         side = "civ";
     };
@@ -261,7 +261,7 @@ class Licenses {
     class alpha {
         variable = "alpha";
         displayName = "STR_License_Alpha";
-        price = 50000000;
+        price = 75000000;
         illegal = true;
         side = "civ";
     };

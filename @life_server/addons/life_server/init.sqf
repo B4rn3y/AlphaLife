@@ -217,7 +217,12 @@ _rsb allowDamage false;
 };
 
 
-
+{
+    clearWeaponCargoGlobal _x;
+    clearMagazineCargoGlobal _x;
+    clearItemCargoGlobal _x;
+    clearBackpackCargoGlobal _x;
+} foreach [cop_crate_1,cop_crate_2,cop_crate_3,cop_crate_4];
 
 // init the evidence room
 [] spawn life_fnc_init_evidence_room;

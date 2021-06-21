@@ -546,7 +546,7 @@ class VirtualItems {
         displayName = "STR_Item_Uran";
         weight = 2;
         buyPrice = -1;
-        sellPrice = 40000;
+        sellPrice = 35000;
         illegal = true;
         edible = -1;
         drinkable = -1;

@@ -904,7 +904,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_T_Truck_01_box_F {
         vItemSpace = 1500;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 9500000;
+        price = 15000000;
         textures[] = {};
     };
 

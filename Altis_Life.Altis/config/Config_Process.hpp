@@ -82,7 +82,7 @@ class ProcessAction {
     };
 
     class grenade {
-        MaterialsReq[] = {{"iron_refined",2},{"black_powder",1}};
+        MaterialsReq[] = {{"iron_refined",1},{"black_powder",1}};
         MaterialsGive[] = {{"grenade",1}};
         Text = "STR_Process_Grenade";
         //ScrollText = "Process Oil";

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1667;
+		nextID=1678;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3639.5154,12.157662,13105.992};
-		dir[]={-0.68702734,-0.41326496,-0.5976674};
-		up[]={-0.31179529,0.91061127,-0.2712408};
-		aside[]={-0.65633702,-1.8510036e-008,0.75446916};
+		pos[]={28294.41,40.707329,25730.982};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -82,13 +82,14 @@ addons[]=
 	"A3_Structures_F_EPC_Civ_Tourism",
 	"A3_Structures_F_Argo_Commercial_Supermarket_01",
 	"A3_Structures_F_Households_House_Shop02",
-	"A3_Structures_F_Exp_Commercial_FuelStation_01"
+	"A3_Structures_F_Exp_Commercial_FuelStation_01",
+	"A3_Supplies_F_Exp_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -264,6 +265,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item25
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -306,6 +314,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -320,24 +346,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -395,7 +403,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1049;
+		items=1055;
 		class Item0
 		{
 			dataType="Marker";
@@ -1555,7 +1563,7 @@ class Mission
 		class Item115
 		{
 			dataType="Marker";
-			position[]={16998.699,16.254538,12876.51};
+			position[]={16988.102,16.327662,12910.404};
 			name="civ_truck_shop1_1";
 			text="@STR_MAR_Truck_Shop";
 			type="c_car";
@@ -1568,7 +1576,7 @@ class Mission
 			position[]={17003.451,16.155035,12882.114};
 			name="civ_truck_2";
 			type="Empty";
-			angle=228.70024;
+			angle=228.70018;
 			id=134;
 		};
 		class Item117
@@ -1577,7 +1585,7 @@ class Mission
 			position[]={17007.275,16.105854,12877.843};
 			name="civ_truck_2_1";
 			type="Empty";
-			angle=227.15028;
+			angle=227.15022;
 			id=135;
 		};
 		class Item118
@@ -1667,20 +1675,20 @@ class Mission
 		class Item126
 		{
 			dataType="Marker";
-			position[]={14266.07,19.374266,16294.293};
+			position[]={14725.514,17.91,16773.045};
 			name="air_g_1";
 			type="Empty";
-			angle=153.94185;
+			angle=134.4286;
 			id=145;
 		};
 		class Item127
 		{
 			dataType="Marker";
-			position[]={14259,19.362194,16303.427};
+			position[]={14704.487,17.91,16790.785};
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.99367;
+			angle=224.99361;
 			id=146;
 		};
 		class Item128
@@ -1772,7 +1780,7 @@ class Mission
 			text="@STR_MAR_Market";
 			type="c_unknown";
 			colorName="ColorGreen";
-			angle=1.3701984;
+			angle=1.3701982;
 			id=155;
 			atlOffset=-0.58642578;
 		};
@@ -1966,7 +1974,7 @@ class Mission
 		class Item155
 		{
 			dataType="Marker";
-			position[]={16885.555,20.481829,12646.81};
+			position[]={16985.934,16.651453,12872.44};
 			name="atm_marker_5";
 			type="loc_Tourism";
 			colorName="ColorGreen";
@@ -13708,8 +13716,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16885.33,21.774281,12646.896};
-				angles[]={6.2674537,1.8589443,6.2621465};
+				position[]={16985.998,17.939762,12872.168};
+				angles[]={0.017270468,5.5326815,6.2437029};
 			};
 			side="Empty";
 			flags=4;
@@ -13720,7 +13728,6 @@ class Mission
 			};
 			id=551;
 			type="Land_Atm_02_F";
-			atlOffset=0.0011310577;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33045,8 +33052,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14259.365,19.36528,16302.676};
-						angles[]={0.0026529003,2.792649,6.2818413};
+						position[]={14704.853,17.911438,16790.035};
+						angles[]={0,2.792649,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -33489,8 +33496,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16988.002,17.216608,12910.123};
-						angles[]={0,2.1398184,6.2816415};
+						position[]={16988.002,17.216902,12910.123};
+						angles[]={0,2.1398261,6.2816491};
 					};
 					side="Civilian";
 					flags=4;
@@ -33502,6 +33509,7 @@ class Mission
 					};
 					id=1039;
 					type="C_man_p_shorts_1_F_afro";
+					atlOffset=0.00029373169;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36820,8 +36828,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17276.668,17.513527,12409.582};
-						angles[]={0,6.0862947,0};
+						position[]={17243.199,16.271759,12394.346};
+						angles[]={6.2685165,0.79892045,0.053282689};
 					};
 					side="Civilian";
 					flags=4;
@@ -36833,7 +36841,6 @@ class Mission
 					};
 					id=1197;
 					type="C_man_1";
-					atlOffset=0.00036239624;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36986,6 +36993,7 @@ class Mission
 						angles[]={6.2781239,3.8226376,0.027471483};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -36994,7 +37002,7 @@ class Mission
 					};
 					id=1209;
 					type="C_man_1";
-					atlOffset=0.43200016;
+					atlOffset=0.00019073486;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37713,7 +37721,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_Process_Grenade"",life_fnc_processAction,""grenade"",0,false,false,"""",' life_inv_iron_refined > 0 && !life_is_processing && !life_action_inUse',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""grenade"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""grenade"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""grenade"",0,false,false,"""",' !license_civ_grenade && playerSide isEqualTo civilian ',5];";
+						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_Process_Grenade"",life_fnc_processAction,""grenade"",0,false,false,"""",' life_inv_ironRefined > 0 && !life_is_processing && !life_action_inUse',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""grenade"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""grenade"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""grenade"",0,false,false,"""",' !license_civ_grenade && playerSide isEqualTo civilian ',5];";
 						disableSimulation=1;
 					};
 					id=1244;
@@ -39508,8 +39516,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17276.566,17.512152,12410.499};
-				angles[]={0,2.9381745,0};
+				position[]={17243.955,16.319624,12394.907};
+				angles[]={6.2685165,3.9339857,0.053282689};
 			};
 			side="Empty";
 			flags=4;
@@ -39520,7 +39528,6 @@ class Mission
 			};
 			id=1194;
 			type="Land_CashDesk_F";
-			atlOffset=0.00042533875;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48349,6 +48356,220 @@ class Mission
 			id=1664;
 			type="Land_InfoStand_V1_F";
 			atlOffset=0.4279995;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1049
+		{
+			dataType="Marker";
+			position[]={25836.537,20.369341,21421.846};
+			name="atm_marker_4_3";
+			type="loc_Tourism";
+			colorName="ColorGreen";
+			id=1667;
+		};
+		class Item1050
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={25836.65,21.64049,21421.426};
+				angles[]={6.2711854,0.77198434,6.2445378};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];";
+				name="a1_1";
+			};
+			id=1668;
+			type="Land_Atm_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1051
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3252.6003,2.9316943,12975.654};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this addAction [""Destroy Evidences"",{_obj = _this select 0;clearWeaponCargoGlobal _obj;clearMagazineCargoGlobal _obj;clearItemCargoGlobal _obj;clearBackpackCargoGlobal _obj;},nil,1,false,true,"""",""playerside isEqualTo west""];";
+				name="cop_crate_1";
+			};
+			id=1672;
+			type="Box_NATO_Uniforms_F";
+			atlOffset=0.42499995;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1052
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13823.785,21.033421,18991.467};
+				angles[]={6.2645278,0.81873393,0.026668631};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction [""Destroy Evidences"",{_obj = _this select 0;clearWeaponCargoGlobal _obj;clearMagazineCargoGlobal _obj;clearItemCargoGlobal _obj;clearBackpackCargoGlobal _obj;},nil,1,false,true,"""",""playerside isEqualTo west""];";
+				name="cop_crate_2";
+			};
+			id=1675;
+			type="Box_NATO_Uniforms_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1053
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16555.369,11.381529,12781.051};
+				angles[]={0,3.6835523,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction [""Destroy Evidences"",{_obj = _this select 0;clearWeaponCargoGlobal _obj;clearMagazineCargoGlobal _obj;clearItemCargoGlobal _obj;clearBackpackCargoGlobal _obj;},nil,1,false,true,"""",""playerside isEqualTo west""];";
+				name="cop_crate_3";
+			};
+			id=1676;
+			type="Box_NATO_Uniforms_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1054
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14148.911,19.491386,16299.022};
+				angles[]={0.010663962,0.69572312,0.0066671576};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction [""Destroy Evidences"",{_obj = _this select 0;clearWeaponCargoGlobal _obj;clearMagazineCargoGlobal _obj;clearItemCargoGlobal _obj;clearBackpackCargoGlobal _obj;},nil,1,false,true,"""",""playerside isEqualTo west""];";
+				name="cop_crate_4";
+			};
+			id=1677;
+			type="Box_NATO_Uniforms_F";
 			class CustomAttributes
 			{
 				class Attribute0
