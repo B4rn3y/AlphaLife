@@ -34,7 +34,7 @@ class ProcessAction {
     };
 
     class jewellry {
-        MaterialsReq[] = {{"diamond_cut",1},{"iron_refined",2}};
+        MaterialsReq[] = {{"diamond_cut",1},{"iron_refined",1}};
         MaterialsGive[] = {{"jewellry",1}};
         Text = "STR_Process_Jewellry";
         //ScrollText = "Process Oil";

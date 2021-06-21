@@ -36916,7 +36916,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_Process_Jewellry"",life_fnc_processAction,""jewellry"",0,false,false,"""",' life_inv_diamond_cut > 0 && !life_is_processing && !life_action_inUse',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
+						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_Process_Jewellry"",life_fnc_processAction,""jewellry"",0,false,false,"""",' life_inv_diamondCut > 0 && !life_is_processing && !life_action_inUse',5]; this addAction[format [""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""jewellry"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""jewellry"",0,false,false,"""",' !license_civ_jewellry && playerSide isEqualTo civilian ',5];";
 						disableSimulation=1;
 					};
 					id=1203;
