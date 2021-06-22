@@ -37,6 +37,8 @@ deleteVehicle life_corpse;
 life_action_inUse = false;
 life_is_alive = true;
 
+[250,"Wiederbelebt"] spawn life_fnc_addexp;
+
 player setVariable ["Revive",nil,true];
 player setVariable ["name",nil,true];
 player setVariable ["Reviving",nil,true];

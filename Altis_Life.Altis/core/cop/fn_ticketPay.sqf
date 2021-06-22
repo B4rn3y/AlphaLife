@@ -19,7 +19,10 @@ if (CASH < life_ticket_val) exitWith {
     [1] call SOCK_fnc_updatePartial;
     life_ticket_paid = true;
 
+
+
     if((side life_ticket_cop) isEqualTo west) then {
+        [250,"Bußgeld"] spawn life_fnc_addexp;
         [0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
         [1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 
@@ -29,6 +32,7 @@ if (CASH < life_ticket_val) exitWith {
             [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
         };
     } else {
+        [250,"Rechnung"] spawn life_fnc_addexp;
         [0,"STR_Med_Bill_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
         [1,"STR_Med_Bill_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
     };
@@ -42,6 +46,7 @@ CASH = CASH - life_ticket_val;
 [0] call SOCK_fnc_updatePartial;
 life_ticket_paid = true;
 if((side life_ticket_cop) isEqualTo west) then {
+    [250,"Bußgeld"] spawn life_fnc_addexp;
     if (life_HC_isActive) then {
         [getPlayerUID player] remoteExecCall ["HC_fnc_wantedRemove",HC_Life];
     } else {
@@ -51,6 +56,7 @@ if((side life_ticket_cop) isEqualTo west) then {
     [0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
     [1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 } else {
+    [250,"Rechnung"] spawn life_fnc_addexp;
     [0,"STR_Med_Bill_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
     [1,"STR_Med_Bill_PaidNOTF_2",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 };

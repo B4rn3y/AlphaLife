@@ -92,7 +92,11 @@ if (_sp isEqualType "") then {
     _vehicle = createVehicle [(_vInfo select 2),_sp,[],0,"NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
     _vehicle allowDamage false;
-    _vehicle setPosAtl _sp;
+    if(surfaceIsWater _sp) then {
+        _vehicle setPosAsl _sp;
+    } else {
+        _vehicle setPosAtl _sp;
+    };
     _vehicle setVectorUp (surfaceNormal _sp);
     _vehicle setDir _dir;
 };

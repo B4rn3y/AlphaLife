@@ -34,3 +34,4 @@
 #include "welcome_server.hpp" //9002
 #include "aapps_callmanagement.hpp" // 1011001
 #include "placeables.hpp"  // 20000
+#include "skills.hpp"  // 258645

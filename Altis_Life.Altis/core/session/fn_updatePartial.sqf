@@ -54,6 +54,15 @@ switch (_mode) do {
     case 7: {
         // Tonic is using for keychain..?
     };
+
+    case 8: {  // xp
+        _packet set[2,alpha_xp];
+        _packet set[4,alpha_lvl];
+    };
+
+    case 9: {  // quests
+        _packet set[2,alpha_quests];
+    };
 };
 
 if (life_HC_isActive) then {

@@ -90,6 +90,7 @@ if (vest player in _vest) then {_items_to_go_to_the_evidence_room pushback (vest
 if (headgear player in _headgear) then {_items_to_go_to_the_evidence_room pushback (headgear player);removeHeadgear player;};
 
 if!(_items_to_go_to_the_evidence_room isEqualTo []) then {
+    [100,"Beschlagnahmt"] spawn life_fnc_addexp;
     if!(isnil "evidence_box_0") then {
         if!(isnull evidence_box_0) then { // Check if the box is really there so the server does not have to
             [_items_to_go_to_the_evidence_room] remoteExec["life_fnc_insert_weapons_evidence_room",2];

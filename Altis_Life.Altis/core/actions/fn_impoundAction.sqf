@@ -62,6 +62,8 @@ if (count crew _vehicle isEqualTo 0) then {
         [_vehicle,true,player] remoteExec ["TON_fnc_vehicleStore",RSERV];
     };
 
+    [150,"Beschlagnahmen"] spawn life_fnc_addexp;
+
     waitUntil {!life_impound_inuse};
     if (playerSide isEqualTo west) then {
             _impoundMultiplier = LIFE_SETTINGS(getNumber,"vehicle_cop_impound_multiplier");

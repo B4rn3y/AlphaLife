@@ -16,6 +16,8 @@ private _esc = false;
 private _bail = false;
 private _time = time + (LIFE_SETTINGS(getNumber,"jail_timeMultiplier") * 60);
 
+[500,"Inhaftiert"] spawn life_fnc_addexp;
+
 if (_bad) then {
     _time = _time + 900;
 };
@@ -48,7 +50,7 @@ for "_i" from 0 to 1 step 0 do {
     };
 
     private _escDist = [[["Altis", 60], ["Tanoa", 145]]] call TON_fnc_terrainSort;
-    
+
     if (player distance (getMarkerPos "jail_marker") > _escDist) exitWith {
         _esc = true;
     };

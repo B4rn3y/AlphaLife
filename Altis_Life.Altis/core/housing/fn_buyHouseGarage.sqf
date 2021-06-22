@@ -30,6 +30,7 @@ if (_action) then {
     if (BANK < _price) exitWith {hint format [localize "STR_House_NotEnough"]};
     BANK = BANK - _price;
     [1] call SOCK_fnc_updatePartial;
+    [round(_price * 0.001),"Garagenkauf"] spawn life_fnc_addexp;
 
     if (life_HC_isActive) then {
         [_uid,_house,0] remoteExec ["HC_fnc_houseGarage",HC_Life];

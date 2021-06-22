@@ -58,6 +58,8 @@ if (life_garage_sp isEqualType []) then {
     };
 };
 
+[100,"Garage"] spawn life_fnc_addexp;
+
 hint localize "STR_Garage_SpawningVeh";
 BANK = BANK - _price;
 [1] call SOCK_fnc_updatePartial;

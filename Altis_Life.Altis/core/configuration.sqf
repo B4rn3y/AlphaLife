@@ -51,6 +51,11 @@ LIFE_SAVED_NAME = "";
 alpha_frogtime = 300;
 alpha_time_wait_light = 0.5; // warnblinker wartezeit
 life_fadeSound = 0;
+alpha_xp = 0;
+alpha_lvl = 0;
+alpha_quests = [];
+ALPHA_XP_CUR_LEVEL = 0;
+ALPHA_XP_TONXT_LEVEL = getNumber(missionConfigFile >> "Life_Settings" >> "xp_first_level");;
 
 //Minimum and maximum value you can select as radius with the slider
 stig_sz_radius_min = 300;

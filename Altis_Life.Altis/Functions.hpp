@@ -396,6 +396,12 @@ class Life_Client_Core {
         class weaponShopSelection {};
     };
 
+    class skills {
+        file = "core\skills";
+        class calculate_level {};
+        class addexp {};
+    };
+
     class Vehicle {
         file = "core\vehicle";
         class addVehicle2Chain {};

@@ -10,6 +10,9 @@ class Life_Settings {
     gang_area_paycheck_timer = 300; // get every 5 Minutes money from the gang area (in seconds)
     gang_area_paycheck = 50000; // get 50k for every gang member online
     hazard_suits[] = {"U_C_CBRN_Suit_01_Blue_F","U_C_Scientist"};  // uniforms to wear in the radiation zone
+    xp_first_level = 1000;
+    xp_gain_level = 500;
+    xp_gain_time = 300;   // xp given by the client.fsm
 /* Logging and Security Settings*/
     /* Security Settings */
     spyGlass_toggle = false; //Spyglass On/Off Toggle --> True = On & False = Off

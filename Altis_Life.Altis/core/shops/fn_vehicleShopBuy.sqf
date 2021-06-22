@@ -127,7 +127,11 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
         _vehicle setVectorUp (surfaceNormal (_pos select 0));
         _vehicle setDir (_pos select 1);
     } else {
-        _vehicle setPosatl (getMarkerPos _spawnPoint);
+        if(surfaceIsWater(getMarkerPos _spawnPoint)) then {
+            _vehicle setPosasl (getMarkerPos _spawnPoint);
+        } else {
+            _vehicle setPosatl (getMarkerPos _spawnPoint);
+        };
         _vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
         _vehicle setDir (markerDir _spawnPoint);
     };
@@ -164,6 +168,8 @@ switch (playerSide) do {
 _vehicle allowDamage true;
 
 life_vehicles pushBack _vehicle;
+
+[round(_purchasePrice * 0.001),"Fahrzeugkauf"] spawn life_fnc_addexp;
 
 //Always handle key management by the server
 [getPlayerUID player,playerSide,_vehicle,1] remoteExecCall ["TON_fnc_keyManagement",RSERV];

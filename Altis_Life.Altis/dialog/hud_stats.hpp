@@ -13,7 +13,40 @@ class playerHUD {
 
     class controlsBackground
     {
+        /*
+        class Progressbar: life_RscProgress
+        {
+            idc = 1100;
+            colorFrame[] = {1, 1, 1, 1};
+             colorBar[] = {1,0.502,0,1};
+            x = 0.874999 * safezoneW + safezoneX;
+            y = 0.965742 * safezoneH + safezoneY;
+            w = 0.120417 * safezoneW;
+            h = 0.0235185 * safezoneH;
+        };
 
+        class text_inside_Progressbar: life_RscStructuredText
+        {
+            idc = 1099;
+            text = "";
+            x = 0.874999 * safezoneW + safezoneX;
+            y = 0.965742 * safezoneH + safezoneY;
+            w = 0.120417 * safezoneW;
+            h = 0.0235185 * safezoneH;
+        };
+
+        class LVL_ANZEIGE: life_RscStructuredText
+        {
+            idc = 1101;
+            text = "";
+            x = 0.840625 * safezoneW + safezoneX;
+            y = 0.965741 * safezoneH + safezoneY;
+            w = 0.0339585 * safezoneW;
+            h = 0.0235185 * safezoneH;
+            colorBackground[]={0,0,0,0};
+            colorText[] = { 1 , 1 , 1 , 1 };
+        };
+*/
         class LIFE_BAR_Speaker: Life_RscPicture
         {
             idc = 3000;

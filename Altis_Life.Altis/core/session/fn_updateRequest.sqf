@@ -28,6 +28,9 @@ _array pushBack life_hunger;
 _array pushBack life_thirst;
 _array pushBack (damage player);
 _packet pushBack _array;
+_packet pushback alpha_xp;
+_packet pushBack alpha_lvl;
+_packet pushBack alpha_quests;
 
 switch (playerSide) do {
     case civilian: {

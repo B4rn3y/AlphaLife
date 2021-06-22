@@ -33,6 +33,8 @@ _illegalValue = 0;
     };
 } forEach (_vehicleInfo select 0);
 
+[round(_illegalValue*0.001),"Konfiszierung"] spawn life_fnc_addexp;
+
 if!(_items_for_evidence_room isEqualTo []) then {
     if!(isnil "evidence_box_0") then {
         if!(isnull evidence_box_0) then { // Check if the box is really there so the server does not have to

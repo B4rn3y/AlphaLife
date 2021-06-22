@@ -48,6 +48,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             _funds = group player getVariable "gang_bank";
             _funds = _funds - _price;
             group player setVariable ["gang_bank",_funds,true];
+            [round(_price * 0.001),"Einkauf"] spawn life_fnc_addexp;
             [_item,true] call life_fnc_handleItem;
 
             if (life_HC_isActive) then {
@@ -61,12 +62,14 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             if (_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
             hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
             CASH = CASH - _price;
+            [round(_price * 0.001),"Einkauf"] spawn life_fnc_addexp;
             [_item,true] call life_fnc_handleItem;
         };
     } else {
         if (_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
         hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
         CASH = CASH - _price;
+        [round(_price * 0.001),"Einkauf"] spawn life_fnc_addexp;
         [_item,true] call life_fnc_handleItem;
     };
 };

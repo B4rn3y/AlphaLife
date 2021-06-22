@@ -61,6 +61,7 @@ if (player getVariable ["restrained", false]) exitWith {life_action_inUse = fals
 if (_badDistance) exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel", "PLAIN"]; life_action_inUse = false;};
 
+[450,"Wiederbelebung"] spawn life_fnc_addexp;
 life_action_inUse = false;
 _target setVariable ["Revive", true, true];
 [profileName] remoteExecCall ["life_fnc_revived", _target];
