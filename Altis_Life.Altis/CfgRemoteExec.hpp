@@ -176,6 +176,8 @@ class CfgRemoteExec {
         F(life_fnc_simDisable,ANYONE)
 
         F(BIS_fnc_debugConsoleExec,ANYONE)
+        F(life_fnc_sz_msg_add,ANYONE)
+        F(life_fnc_sz_msg_del,ANYONE)
     };
 
     class Commands {

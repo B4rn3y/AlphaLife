@@ -4,8 +4,8 @@ class Admin_Conf {
 
         Scripts[] = {
             {"--==Standard Functions==--"},
-            { "Give Money (myself)", "[] spawn life_fnc_addMoney", 1},
-            { "Give Money (Selected Player)", "[lbdata[1501,(lbcursel 1501)]] spawn life_fnc_addMoney", 1},
+            { "Give Money (myself)", "[] spawn life_fnc_addMoney", 2},
+            { "Give Money (Selected Player)", "[lbdata[1501,(lbcursel 1501)]] spawn life_fnc_addMoney", 2},
             { "Tele/ESP", "[] spawn life_fnc_teleesp", 1},
             { "Spectate (Select Player), ", "[] spawn life_fnc_adminSpectate",1},
             { "TP Player to me", "[] spawn life_fnc_adminTpHere", 1},

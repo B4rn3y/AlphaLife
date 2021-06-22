@@ -174,6 +174,17 @@ class Life_Client_Core {
         class show_name_message {};
     };
 
+    class exclusion_zone {
+        file = "core\exclusion_zone";
+        class sz_add {};
+        class sz_del {};
+        class sz_find {};
+        class sz_hideGUI {};
+        class sz_msg_add {};
+        class sz_msg_del {};
+        class init_exclusion_zones {};
+    };
+
     class Functions {
         file = "core\functions";
         class AAN {};

@@ -19,6 +19,9 @@ while True:
 
     if not server:
         print(time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()), "Server is running:", server,"restarting...")
+        #print(time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()), "Beginning packing of PBOs")
+        #subprocess.call([r"C:\server\A3Master\Server Scripts\pbo_packer.bat"])
+        #print(time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()), "PBOs packed")
         subprocess.call([r"C:\server\A3Master\Server Scripts\restart_server.bat"])
         time_counter = 0
         subprocess.call([r"C:\server\A3Master\Server Scripts\backup_DB.bat"])

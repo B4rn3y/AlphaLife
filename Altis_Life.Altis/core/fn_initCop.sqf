@@ -22,6 +22,8 @@ if ((FETCH_CONST(life_coplevel) isEqualTo 0) && (FETCH_CONST(life_adminlevel) is
 
 0 call life_fnc_copcallmanagement;
 
+[] spawn life_fnc_init_exclusion_zones;
+
 player setVariable ["rank",(FETCH_CONST(life_coplevel)),true];
 
 (unitBackpack player) setObjectTextureGlobal [0, ""];
