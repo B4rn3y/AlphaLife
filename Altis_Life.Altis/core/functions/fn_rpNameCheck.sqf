@@ -29,7 +29,6 @@ try {
 	if (_spaces find 0 != -1 || _spaces find (count _name -1) != -1) then { // spaces on first or last char
 		throw "Leerzeichen am Anfang oder am Ende des Namens sind untersagt!";
 	};
-	hint format["%1", _cplNames];
 	if (count _parts -1 > _cplNames) then { // more then one 2 char element
 		throw "In deinem Namen ist nur ein Teil des Namens mit weniger als 3 Buchstaben erlaubt!";
 	};
