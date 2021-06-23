@@ -9,7 +9,7 @@ enableDebugConsole[] = { "76561198018512569"};
 #include "config\Config_Master.hpp"
 
 class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DatabaseName = "altislifetest"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
     DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
     HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
     /*
@@ -121,6 +121,15 @@ class CfgDebriefing {
         title = "$STR_NotWhitelisted_Title";
         subtitle = "$STR_Wrong_name_SubTitle";
         description = "$STR_Wrong_name_Descript";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0,0.3,0.6,1};
+    };
+
+    class WrongName_format {
+        title = "$STR_NotWhitelisted_Title";
+        subtitle = "$STR_Wrong_name_format_SubTitle";
+        description = "$STR_Wrong_name_format_Descript";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};

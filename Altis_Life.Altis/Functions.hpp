@@ -243,6 +243,7 @@ class Life_Client_Core {
         class fadeSound {};
         class radiation {};
         class mapMarkerplayer {};
+        class rpNameCheck {};
     };
 
     class FSM {

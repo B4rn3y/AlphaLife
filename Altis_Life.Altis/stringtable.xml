@@ -13540,6 +13540,14 @@
             <Original>Your current name and the name in the Database do not match. Please change your name.</Original>
             <German>Deine aktueller Name und dein in der Datenbank hinterlegter Name stimmen nicht überein. Bitte ändere deinen Namen.</German>
         </Key>
+        <Key ID="STR_Wrong_name_format_SubTitle">
+            <Original>Wrong name.</Original>
+            <German>Falscher Name.</German>
+        </Key>
+        <Key ID="STR_Wrong_name_format_Descript">
+            <Original>Your current name does not match the roleplay format, please change it in the main menu and try again.</Original>
+            <German>Deine aktueller Name ist nicht Roleplay konform, bitte ändere diesen im Hauptmenue und versuche es erneut.</German>
+        </Key>
         <Key ID="STR_name_invalid_SubTitle">
             <Original>Invalid name.</Original>
             <German>Ungültiger Name.</German>

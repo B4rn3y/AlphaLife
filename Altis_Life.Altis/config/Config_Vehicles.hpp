@@ -526,7 +526,7 @@ class LifeCfgVehicles {
     class B_Heli_Transport_03_unarmed_F {
         vItemSpace = 1000;
         conditions = "license_civ_pilot || {!(playerSide isEqualTo civilian)}";
-        price = 20000000;
+        price = 25000000;
         textures[] = {};
     };
 
@@ -541,7 +541,7 @@ class LifeCfgVehicles {
     class O_Heli_Transport_04_box_F {
         vItemSpace = 850;
         conditions = "license_civ_pilot || {!(playerSide isEqualTo civilian)}";
-        price = 10000000;
+        price = 15000000;
         textures[] = {};
     };
 
