@@ -519,7 +519,7 @@ class LifeCfgVehicles {
     class I_Heli_Transport_02_F {
         vItemSpace = 650;
         conditions = "license_civ_pilot || {license_med_mAir} || {(playerSide isEqualTo west)}";
-        price = 2500000;
+        price = 5500000;
         textures[] = {};
     };
 
