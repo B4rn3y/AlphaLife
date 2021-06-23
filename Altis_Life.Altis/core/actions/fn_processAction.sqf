@@ -114,7 +114,7 @@ if (_hasLicense) then {
         [true,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
     } count _newItem;
 
-    [_xp_per_weight * _oldItemWeight,"Verarbeitung"] spawn life_fnc_addexp;
+    [_xp_per_weight * (_oldItemWeight * _minimumConversions),"Verarbeitung"] spawn life_fnc_addexp;
 
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
     life_is_processing = false; life_action_inUse = false;
@@ -140,7 +140,7 @@ if (_hasLicense) then {
         [true,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
     } count _newItem;
 
-    [_xp_per_weight * _oldItemWeight,"Verarbeitung"] spawn life_fnc_addexp;
+    [_xp_per_weight * (_oldItemWeight * _minimumConversions),"Verarbeitung"] spawn life_fnc_addexp;
 
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
     CASH = CASH - _cost;

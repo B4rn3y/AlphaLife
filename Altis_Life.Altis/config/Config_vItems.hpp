@@ -558,7 +558,7 @@ class VirtualItems {
         displayName = "STR_Item_Grenade";
         weight = 3;
         buyPrice = -1;
-        sellPrice = 70000;
+        sellPrice = 55000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -657,7 +657,7 @@ class VirtualItems {
         displayName = "STR_Item_Snake_Venom";
         weight = 2;
         buyPrice = -1;
-        sellPrice = 7000;
+        sellPrice = 10000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -685,7 +685,7 @@ class VirtualItems {
         displayName = "STR_Item_LSD";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 7500;
+        sellPrice = 11000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -735,7 +735,7 @@ class VirtualItems {
         displayName = "STR_Item_Marijuana";
         weight = 2;
         buyPrice = 10000;
-        sellPrice = 5000;
+        sellPrice = 6500;
         illegal = true;
         edible = -1;
         drinkable = -1;

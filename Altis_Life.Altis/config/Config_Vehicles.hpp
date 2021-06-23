@@ -648,7 +648,7 @@ class LifeCfgVehicles {
     class O_Truck_03_transport_F {
         vItemSpace = 650;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 1000000;
+        price = 2500000;
         textures[] = { };
     };
 
@@ -897,7 +897,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_T_Truck_01_fuel_F {
         vItemSpace = 1000;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 3500000;
+        price = 6500000;
         textures[] = {};
     };
 
@@ -911,14 +911,14 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_T_Truck_01_covered_F {
         vItemSpace = 1000;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 4500000;
+        price = 6500000;
         textures[] = {};
     };
 
     class O_Truck_03_covered_F {
         vItemSpace = 800;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 2500000;
+        price = 4500000;
         price_cop = 250000;
         textures[] = {
             { "Black", "cop", {
@@ -1124,7 +1124,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class O_Heli_Light_02_unarmed_F {
         vItemSpace = 450;
         conditions = "license_civ_pilot || {license_med_mAir} || {(playerSide isEqualTo west)}";
-        price = 1000000;
+        price = 2500000;
         price_med = 125000;
         textures[] = {
             { "COP", "cop", {
