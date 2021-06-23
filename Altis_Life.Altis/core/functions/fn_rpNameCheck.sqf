@@ -17,8 +17,6 @@ _cplNames = 0;
 	if (count _x > 2) then {_cplNames = _cplNames + 1}; //For every namepart over 2 digits increment _cplnames
 }forEach _parts;
 
-hint format ["_name: %1 _parts: %2 _spaces: %3 _amount: %4", _name, _parts, _spaces, _amount];
-
 try {
 	if (_amount == 0) then { //no spaces
 		throw "Es sind nur Namen bestehend aus Vor- und Nachnamen gestattet";
