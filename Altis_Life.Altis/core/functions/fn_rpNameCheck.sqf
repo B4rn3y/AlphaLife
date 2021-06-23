@@ -17,8 +17,11 @@ _cplNames = 0;
 	if (count _x > 2) then {_cplNames = _cplNames + 1}; //For every namepart over 2 digits increment _cplnames
 }forEach _parts;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7a65d24c98f7d39313f1f43526dd349f7c3c332b
 try {
 	if (_amount isEqualTo 0) then { //no spaces
 		throw "Es sind nur Namen bestehend aus Vor- und Nachnamen gestattet";
@@ -30,8 +33,12 @@ try {
 	if (_spaces find 0 != -1 || _spaces find (count _name -1) != -1) then { // spaces on first or last char
 		throw "Leerzeichen am Anfang oder am Ende des Namens sind untersagt!";
 	};
+<<<<<<< HEAD
 
 	if (count _parts -1 > _cplNames) then {
+=======
+	if (count _parts -1 > _cplNames) then { // more then one 2 char element
+>>>>>>> 7a65d24c98f7d39313f1f43526dd349f7c3c332b
 		throw "In deinem Namen ist nur ein Teil des Namens mit weniger als 3 Buchstaben erlaubt!";
 	};
 	{
