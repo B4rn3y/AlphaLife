@@ -8,80 +8,80 @@ class CfgSkills {
                 {"Kupfer",
                     {
                         {1,"Kupfer 1","Du verarbeitest 10% schneller","copper",0.011},
-                        {9,"Kupfer 2","Du verarbeitest 20% schneller","copper",0.012},
-                        {23,"Kupfer 3","Du verarbeitest 30% schneller","copper",0.013},
-                        {25,"Kupfer 4","Du verarbeitest 40% schneller","copper",0.014},
-                        {29,"Kupfer 5","Du verarbeitest 50% schneller","copper",0.015}
+                        {3,"Kupfer 2","Du verarbeitest 20% schneller","copper",0.012},
+                        {5,"Kupfer 3","Du verarbeitest 30% schneller","copper",0.013},
+                        {7,"Kupfer 4","Du verarbeitest 40% schneller","copper",0.014},
+                        {11,"Kupfer 5","Du verarbeitest 50% schneller","copper",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Eisen",
                     {
-                        {8,"Eisen 1","Du verarbeitest 10% schneller","iron",0.011},
-                        {12,"Eisen 2","Du verarbeitest 20% schneller","iron",0.012},
-                        {28,"Eisen 3","Du verarbeitest 30% schneller","iron",0.013},
-                        {1,"Eisen 4","Du verarbeitest 40% schneller","iron",0.014},
-                        {1,"Eisen 5","Du verarbeitest 50% schneller","iron",0.015}
+                        {2,"Eisen 1","Du verarbeitest 10% schneller","iron",0.011},
+                        {4,"Eisen 2","Du verarbeitest 20% schneller","iron",0.012},
+                        {9,"Eisen 3","Du verarbeitest 30% schneller","iron",0.013},
+                        {13,"Eisen 4","Du verarbeitest 40% schneller","iron",0.014},
+                        {17,"Eisen 5","Du verarbeitest 50% schneller","iron",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Diamanten",
                     {
-                        {4,"Diamanten 1","Du verarbeitest 10% schneller","diamond",0.011},
-                        {13,"Diamanten 2","Du verarbeitest 20% schneller","diamond",0.012},
-                        {1,"Diamanten 3","Du verarbeitest 30% schneller","diamond",0.013},
-                        {1,"Diamanten 4","Du verarbeitest 40% schneller","diamond",0.014},
-                        {1,"Diamanten 5","Du verarbeitest 50% schneller","diamond",0.015}
+                        {6,"Diamanten 1","Du verarbeitest 10% schneller","diamond",0.011},
+                        {23,"Diamanten 2","Du verarbeitest 20% schneller","diamond",0.012},
+                        {27,"Diamanten 3","Du verarbeitest 30% schneller","diamond",0.013},
+                        {29,"Diamanten 4","Du verarbeitest 40% schneller","diamond",0.014},
+                        {31,"Diamanten 5","Du verarbeitest 50% schneller","diamond",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Glas",
                     {
-                        {5,"Glas 1","Du verarbeitest 10% schneller","sand",0.011},
-                        {16,"Glas 2","Du verarbeitest 20% schneller","sand",0.012},
-                        {1,"Glas 3","Du verarbeitest 30% schneller","sand",0.013},
-                        {1,"Glas 4","Du verarbeitest 40% schneller","sand",0.014},
-                        {1,"Glas 5","Du verarbeitest 50% schneller","sand",0.015}
+                        {8,"Glas 1","Du verarbeitest 10% schneller","sand",0.011},
+                        {24,"Glas 2","Du verarbeitest 20% schneller","sand",0.012},
+                        {32,"Glas 3","Du verarbeitest 30% schneller","sand",0.013},
+                        {37,"Glas 4","Du verarbeitest 40% schneller","sand",0.014},
+                        {39,"Glas 5","Du verarbeitest 50% schneller","sand",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Öl",
                     {
-                        {3,"Öl 1","Du verarbeitest 10% schneller","oil",0.011},
-                        {14,"Öl 2","Du verarbeitest 20% schneller","oil",0.012},
-                        {1,"Öl 3","Du verarbeitest 30% schneller","oil",0.013},
-                        {1,"Öl 4","Du verarbeitest 40% schneller","oil",0.014},
-                        {1,"Öl 5","Du verarbeitest 50% schneller","oil",0.015}
+                        {14,"Öl 1","Du verarbeitest 10% schneller","oil",0.011},
+                        {25,"Öl 2","Du verarbeitest 20% schneller","oil",0.012},
+                        {33,"Öl 3","Du verarbeitest 30% schneller","oil",0.013},
+                        {41,"Öl 4","Du verarbeitest 40% schneller","oil",0.014},
+                        {43,"Öl 5","Du verarbeitest 50% schneller","oil",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Perlen",
                     {
-                        {6,"Perlen 1","Du verarbeitest 10% schneller","shell",0.011},
-                        {17,"Perlen 2","Du verarbeitest 20% schneller","shell",0.012},
-                        {27,"Perlen 3","Du verarbeitest 30% schneller","shell",0.013},
-                        {1,"Perlen 4","Du verarbeitest 40% schneller","shell",0.014},
-                        {1,"Perlen 5","Du verarbeitest 50% schneller","shell",0.015}
+                        {18,"Perlen 1","Du verarbeitest 10% schneller","shell",0.011},
+                        {26,"Perlen 2","Du verarbeitest 20% schneller","shell",0.012},
+                        {34,"Perlen 3","Du verarbeitest 30% schneller","shell",0.013},
+                        {44,"Perlen 4","Du verarbeitest 40% schneller","shell",0.014},
+                        {48,"Perlen 5","Du verarbeitest 50% schneller","shell",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Schmuck",
                     {
-                        {18,"Schmuck 1","Du verarbeitest 10% schneller","jewellry",0.011},
-                        {26,"Schmuck 2","Du verarbeitest 20% schneller","jewellry",0.012},
-                        {1,"Schmuck 3","Du verarbeitest 30% schneller","jewellry",0.013},
-                        {1,"Schmuck 4","Du verarbeitest 40% schneller","jewellry",0.014},
-                        {1,"Schmuck 5","Du verarbeitest 50% schneller","jewellry",0.015}
+                        {19,"Schmuck 1","Du verarbeitest 10% schneller","jewellry",0.011},
+                        {35,"Schmuck 2","Du verarbeitest 20% schneller","jewellry",0.012},
+                        {45,"Schmuck 3","Du verarbeitest 30% schneller","jewellry",0.013},
+                        {47,"Schmuck 4","Du verarbeitest 40% schneller","jewellry",0.014},
+                        {51,"Schmuck 5","Du verarbeitest 50% schneller","jewellry",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Whiskey",
                     {
-                        {7,"Whiskey 1","Du verarbeitest 10% schneller","whiskey",0.011},
-                        {19,"Whiskey 2","Du verarbeitest 20% schneller","whiskey",0.012},
-                        {24,"Whiskey 3","Du verarbeitest 30% schneller","whiskey",0.013},
-                        {1,"Whiskey 4","Du verarbeitest 40% schneller","whiskey",0.014},
-                        {1,"Whiskey 5","Du verarbeitest 50% schneller","whiskey",0.015}
+                        {16,"Whiskey 1","Du verarbeitest 10% schneller","whiskey",0.011},
+                        {36,"Whiskey 2","Du verarbeitest 20% schneller","whiskey",0.012},
+                        {46,"Whiskey 3","Du verarbeitest 30% schneller","whiskey",0.013},
+                        {52,"Whiskey 4","Du verarbeitest 40% schneller","whiskey",0.014},
+                        {54,"Whiskey 5","Du verarbeitest 50% schneller","whiskey",0.015}
                     },
                     "playerside in [civilian]"
                 }
@@ -92,81 +92,81 @@ class CfgSkills {
             {
                 {"LSD",
                     {
-                        {21,"LSD 1","Du verarbeitest 10% schneller","lsd",0.011},
-                        {1,"LSD 2","Du verarbeitest 20% schneller","lsd",0.012},
-                        {1,"LSD 3","Du verarbeitest 30% schneller","lsd",0.013},
-                        {1,"LSD 4","Du verarbeitest 40% schneller","lsd",0.014},
-                        {1,"LSD 5","Du verarbeitest 50% schneller","lsd",0.015}
+                        {12,"LSD 1","Du verarbeitest 10% schneller","lsd",0.011},
+                        {38,"LSD 2","Du verarbeitest 20% schneller","lsd",0.012},
+                        {42,"LSD 3","Du verarbeitest 30% schneller","lsd",0.013},
+                        {49,"LSD 4","Du verarbeitest 40% schneller","lsd",0.014},
+                        {55,"LSD 5","Du verarbeitest 50% schneller","lsd",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Schlangengift",
                     {
-                        {1,"Schlangengift 1","Du verarbeitest 10% schneller","snake",0.011},
-                        {1,"Schlangengift 2","Du verarbeitest 20% schneller","snake",0.012},
-                        {1,"Schlangengift 3","Du verarbeitest 30% schneller","snake",0.013},
-                        {1,"Schlangengift 4","Du verarbeitest 40% schneller","snake",0.014},
-                        {1,"Schlangengift 5","Du verarbeitest 50% schneller","snake",0.015}
+                        {59,"Schlangengift 1","Du verarbeitest 10% schneller","snake",0.011},
+                        {65,"Schlangengift 2","Du verarbeitest 20% schneller","snake",0.012},
+                        {73,"Schlangengift 3","Du verarbeitest 30% schneller","snake",0.013},
+                        {77,"Schlangengift 4","Du verarbeitest 40% schneller","snake",0.014},
+                        {81,"Schlangengift 5","Du verarbeitest 50% schneller","snake",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Schwarzpulver",
                     {
-                        {1,"Schwarzpulver 1","Du verarbeitest 10% schneller",["coal","black_powder"],0.011},
-                        {1,"Schwarzpulver 2","Du verarbeitest 20% schneller",["coal","black_powder"],0.012},
-                        {1,"Schwarzpulver 3","Du verarbeitest 30% schneller",["coal","black_powder"],0.013},
-                        {1,"Schwarzpulver 4","Du verarbeitest 40% schneller",["coal","black_powder"],0.014},
-                        {1,"Schwarzpulver 5","Du verarbeitest 50% schneller",["coal","black_powder"],0.015}
+                        {64,"Schwarzpulver 1","Du verarbeitest 10% schneller",["coal","black_powder"],0.011},
+                        {74,"Schwarzpulver 2","Du verarbeitest 20% schneller",["coal","black_powder"],0.012},
+                        {79,"Schwarzpulver 3","Du verarbeitest 30% schneller",["coal","black_powder"],0.013},
+                        {81,"Schwarzpulver 4","Du verarbeitest 40% schneller",["coal","black_powder"],0.014},
+                        {83,"Schwarzpulver 5","Du verarbeitest 50% schneller",["coal","black_powder"],0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Granaten",
                     {
-                        {1,"Granaten 1","Du verarbeitest 10% schneller","grenade",0.011},
-                        {1,"Granaten 2","Du verarbeitest 20% schneller","grenade",0.012},
-                        {1,"Granaten 3","Du verarbeitest 30% schneller","grenade",0.013},
-                        {1,"Granaten 4","Du verarbeitest 40% schneller","grenade",0.014},
-                        {1,"Granaten 5","Du verarbeitest 50% schneller","grenade",0.015}
+                        {75,"Granaten 1","Du verarbeitest 10% schneller","grenade",0.011},
+                        {82,"Granaten 2","Du verarbeitest 20% schneller","grenade",0.012},
+                        {84,"Granaten 3","Du verarbeitest 30% schneller","grenade",0.013},
+                        {86,"Granaten 4","Du verarbeitest 40% schneller","grenade",0.014},
+                        {88,"Granaten 5","Du verarbeitest 50% schneller","grenade",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Uran",
                     {
-                        {1,"Uran 1","Du verarbeitest 10% schneller",["washed_uran","dried_uran","uran"],0.011},
-                        {1,"Uran 2","Du verarbeitest 20% schneller",["washed_uran","dried_uran","uran"],0.012},
-                        {1,"Uran 3","Du verarbeitest 30% schneller",["washed_uran","dried_uran","uran"],0.013},
-                        {1,"Uran 4","Du verarbeitest 40% schneller",["washed_uran","dried_uran","uran"],0.014},
-                        {1,"Uran 5","Du verarbeitest 50% schneller",["washed_uran","dried_uran","uran"],0.015}
+                        {76,"Uran 1","Du verarbeitest 10% schneller",["washed_uran","dried_uran","uran"],0.011},
+                        {78,"Uran 2","Du verarbeitest 20% schneller",["washed_uran","dried_uran","uran"],0.012},
+                        {85,"Uran 3","Du verarbeitest 30% schneller",["washed_uran","dried_uran","uran"],0.013},
+                        {87,"Uran 4","Du verarbeitest 40% schneller",["washed_uran","dried_uran","uran"],0.014},
+                        {89,"Uran 5","Du verarbeitest 50% schneller",["washed_uran","dried_uran","uran"],0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Heroin",
                     {
-                        {11,"Heroin 1","Du verarbeitest 10% schneller","heroin",0.011},
-                        {1,"Heroin 2","Du verarbeitest 20% schneller","heroin",0.012},
-                        {1,"Heroin 3","Du verarbeitest 30% schneller","heroin",0.013},
-                        {1,"Heroin 4","Du verarbeitest 40% schneller","heroin",0.014},
-                        {1,"Heroin 5","Du verarbeitest 50% schneller","heroin",0.015}
+                        {28,"Heroin 1","Du verarbeitest 10% schneller","heroin",0.011},
+                        {58,"Heroin 2","Du verarbeitest 20% schneller","heroin",0.012},
+                        {63,"Heroin 3","Du verarbeitest 30% schneller","heroin",0.013},
+                        {67,"Heroin 4","Du verarbeitest 40% schneller","heroin",0.014},
+                        {72,"Heroin 5","Du verarbeitest 50% schneller","heroin",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Kokain",
                     {
-                        {15,"Kokain 1","Du verarbeitest 10% schneller","cocaine",0.011},
-                        {1,"Kokain 2","Du verarbeitest 20% schneller","cocaine",0.012},
-                        {1,"Kokain 3","Du verarbeitest 30% schneller","cocaine",0.013},
-                        {1,"Kokain 4","Du verarbeitest 40% schneller","cocaine",0.014},
-                        {1,"Kokain 5","Du verarbeitest 50% schneller","cocaine",0.015}
+                        {21,"Kokain 1","Du verarbeitest 10% schneller","cocaine",0.011},
+                        {57,"Kokain 2","Du verarbeitest 20% schneller","cocaine",0.012},
+                        {62,"Kokain 3","Du verarbeitest 30% schneller","cocaine",0.013},
+                        {66,"Kokain 4","Du verarbeitest 40% schneller","cocaine",0.014},
+                        {71,"Kokain 5","Du verarbeitest 50% schneller","cocaine",0.015}
                     },
                     "playerside in [civilian]"
                 },
                 {"Marihuana",
                     {
-                        {22,"Marihuana 1","Du verarbeitest 10% schneller","marijuana",0.011},
-                        {1,"Marihuana 2","Du verarbeitest 20% schneller","marijuana",0.012},
-                        {1,"Marihuana 3","Du verarbeitest 30% schneller","marijuana",0.013},
-                        {1,"Marihuana 4","Du verarbeitest 40% schneller","marijuana",0.014},
-                        {1,"Marihuana 5","Du verarbeitest 50% schneller","marijuana",0.015}
+                        {15,"Marihuana 1","Du verarbeitest 10% schneller","marijuana",0.011},
+                        {53,"Marihuana 2","Du verarbeitest 20% schneller","marijuana",0.012},
+                        {56,"Marihuana 3","Du verarbeitest 30% schneller","marijuana",0.013},
+                        {61,"Marihuana 4","Du verarbeitest 40% schneller","marijuana",0.014},
+                        {69,"Marihuana 5","Du verarbeitest 50% schneller","marijuana",0.015}
                     },
                     "playerside in [civilian]"
                 }
@@ -201,11 +201,11 @@ class CfgSkills {
                 },
                 {"Wiederbelebung",
                     {
-                        {1,"Wiederbelebung 1","Du reanimierst 10% schneller","revive",0.011},
-                        {1,"Wiederbelebung 2","Du reanimierst 20% schneller","revive",0.012},
-                        {1,"Wiederbelebung 3","Du reanimierst 30% schneller","revive",0.013},
-                        {1,"Wiederbelebung 4","Du reanimierst 40% schneller","revive",0.014},
-                        {1,"Wiederbelebung 5","Du reanimierst 50% schneller","revive",0.015}
+                        {5,"Wiederbelebung 1","Du reanimierst 10% schneller","revive",0.011},
+                        {10,"Wiederbelebung 2","Du reanimierst 20% schneller","revive",0.012},
+                        {20,"Wiederbelebung 3","Du reanimierst 30% schneller","revive",0.013},
+                        {50,"Wiederbelebung 4","Du reanimierst 40% schneller","revive",0.014},
+                        {100,"Wiederbelebung 5","Du reanimierst 50% schneller","revive",0.015}
                     },
                     "playerside in [independent]"
                 },
@@ -252,11 +252,11 @@ class CfgSkills {
                 },
                 {"Beschlagnahmen",
                     {
-                        {1,"Beschlagnahmen 1","Du beschlagnahmst 10% schneller","impound",0.011},
-                        {1,"Beschlagnahmen 2","Du beschlagnahmst 20% schneller","impound",0.012},
-                        {1,"Beschlagnahmen 3","Du beschlagnahmst 30% schneller","impound",0.013},
-                        {1,"Beschlagnahmen 4","Du beschlagnahmst 40% schneller","impound",0.014},
-                        {1,"Beschlagnahmen 5","Du beschlagnahmst 50% schneller","impound",0.015}
+                        {5,"Beschlagnahmen 1","Du beschlagnahmst 10% schneller","impound",0.011},
+                        {10,"Beschlagnahmen 2","Du beschlagnahmst 20% schneller","impound",0.012},
+                        {20,"Beschlagnahmen 3","Du beschlagnahmst 30% schneller","impound",0.013},
+                        {50,"Beschlagnahmen 4","Du beschlagnahmst 40% schneller","impound",0.014},
+                        {100,"Beschlagnahmen 5","Du beschlagnahmst 50% schneller","impound",0.015}
                     },
                     "playerside in [west, independent]"
                 }
