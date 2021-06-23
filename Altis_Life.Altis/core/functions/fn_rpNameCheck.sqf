@@ -11,26 +11,27 @@ _cplNames = 0;
 
 
 {
-	if (_x == 32) then {_spaces append [_forEachIndex]}; //get all spaces from _name and save the index into _spaces
+	if (_x isEqualTo 32) then {_spaces pushback _forEachIndex}; //get all spaces from _name and save the index into _spaces
 } forEach _name;
 {
 	if (count _x > 2) then {_cplNames = _cplNames + 1}; //For every namepart over 2 digits increment _cplnames
 }forEach _parts;
 
-hint format ["_name: %1 _parts: %2 _spaces: %3 _amount: %4", _name, _parts, _spaces, _amount];
+
 
 try {
-	if (_amount == 0) then { //no spaces
+	if (_amount isEqualTo 0) then { //no spaces
 		throw "Es sind nur Namen bestehend aus Vor- und Nachnamen gestattet";
 	};
+
 	if (_amount > 3) then { // too much spaces
 		throw "Zu viele Leerzeichen im Namen!";
 	};
 	if (_spaces find 0 != -1 || _spaces find (count _name -1) != -1) then { // spaces on first or last char
 		throw "Leerzeichen am Anfang oder am Ende des Namens sind untersagt!";
 	};
-	hint format["%1", _cplNames];
-	if (count _parts -1 > _cplNames) then { // more then one 2 char element
+
+	if (count _parts -1 > _cplNames) then {
 		throw "In deinem Namen ist nur ein Teil des Namens mit weniger als 3 Buchstaben erlaubt!";
 	};
 	{
@@ -38,7 +39,7 @@ try {
 			throw "In deinem Namen sind ausschließlich Buchstaben des deutschen Alphabets gestattet!"
 		};
 	}forEach _name;
-	
+
 	"";
 } catch {
 	_exception;

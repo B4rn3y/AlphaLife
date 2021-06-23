@@ -58,7 +58,7 @@ if (life_garage_sp isEqualType []) then {
     };
 };
 
-[100,"Garage"] spawn life_fnc_addexp;
+[10,"Garage"] spawn life_fnc_addexp;
 
 hint localize "STR_Garage_SpawningVeh";
 BANK = BANK - _price;
