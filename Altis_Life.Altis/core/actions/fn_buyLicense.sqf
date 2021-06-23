@@ -20,7 +20,8 @@ CASH = CASH - _price;
 
 [0] call SOCK_fnc_updatePartial;
 
-[250,"Lizenz"] spawn life_fnc_addexp;
+
+[round(_price * 0.001),"Lizenz"] spawn life_fnc_addexp;
 
 titleText[format [localize "STR_NOTF_B_1", localize _displayName,[_price] call life_fnc_numberText],"PLAIN"];
 missionNamespace setVariable [_varName,true];

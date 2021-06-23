@@ -31,6 +31,13 @@ class CfgFunctions {
 
 class CfgSounds {
     sounds[] = {};
+    class achievement
+    {
+        name = "achievement";
+        sound[] = {"sounds\achievement.ogg", 1, 1,180};
+        titles[] = {};
+    };
+
     class radiation {
         name = "radiation";
         sound[] = {"\sounds\radiation.ogg", 1.0, 1};

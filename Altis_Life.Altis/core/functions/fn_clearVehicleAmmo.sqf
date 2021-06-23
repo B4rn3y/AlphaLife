@@ -42,9 +42,11 @@ if (_veh isEqualTo "B_Heli_Attack_01_dynamicLoadout_F") then {   // Blackfoot
     {_vehicle removeMagazinesTurret [_x,[0]];} foreach ["1000Rnd_20mm_shells","Laserbatteries","PylonMissile_1Rnd_AAA_missiles","PylonMissile_1Rnd_AAA_missiles","PylonRack_12Rnd_PG_missiles","PylonRack_12Rnd_PG_missiles","PylonMissile_1Rnd_AAA_missiles","PylonMissile_1Rnd_AAA_missiles"];
 };
 
-if (_veh isEqualTo "B_Heli_Attack_01_dynamicLoadout_F") then {   // y-32
+if (_veh isEqualTo "O_T_VTOL_02_vehicle_dynamicLoadout_F") then {   // y-32
     {_vehicle removeMagazinesTurret [_x,[0]];} foreach ["250Rnd_30mm_HE_shells_Tracer_Green","250Rnd_30mm_APDS_shells_Tracer_Green","Laserbatteries","PylonRack_4Rnd_LG_scalpel","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_4Rnd_LG_scalpel"];
 };
+
+
 
 
 

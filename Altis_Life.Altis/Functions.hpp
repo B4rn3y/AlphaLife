@@ -400,6 +400,9 @@ class Life_Client_Core {
         file = "core\skills";
         class calculate_level {};
         class addexp {};
+        class skill_menu_TreeSelChanged {};
+        class open_skill_menu {};
+        class init_skills {};
     };
 
     class Vehicle {

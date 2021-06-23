@@ -35,6 +35,7 @@ _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format ["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
+_cp_plus = missionNamespace getvariable["alpha_skills_lockpick",0.01];
 
 for "_i" from 0 to 1 step 0 do {
     if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
@@ -51,7 +52,7 @@ for "_i" from 0 to 1 step 0 do {
         _progressBar = _ui displayCtrl 38201;
         _titleText = _ui displayCtrl 38202;
     };
-    _cP = _cP + 0.01;
+    _cP = _cP + _cp_plus;
     _progressBar progressSetPosition _cP;
     _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
 

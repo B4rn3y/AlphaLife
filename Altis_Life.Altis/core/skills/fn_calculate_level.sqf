@@ -23,3 +23,7 @@ while{TRUE} do {
 alpha_lvl = _temp_lvl;
 ALPHA_XP_CUR_LEVEL = alpha_xp - (_temp_xp - _xp_this_level);
 ALPHA_XP_TONXT_LEVEL = _temp_xp - alpha_xp;
+ALPHA_XP_FOR_THIS_LEVEL = _xp_this_level;
+
+
+[] call life_fnc_hudupdate

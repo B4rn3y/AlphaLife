@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3622.168,49.096931,13088.244};
-		dir[]={0.55773598,-0.75204289,0.35156059};
-		up[]={0.63619787,0.65909004,0.40101844};
-		aside[]={0.53330028,-2.7113128e-007,-0.8460598};
+		pos[]={3304.1523,38.722942,12960.596};
+		dir[]={-0.80915517,-0.55826151,0.18347348};
+		up[]={-0.5444473,0.82966059,0.12345271};
+		aside[]={0.22114009,1.4401303e-007,0.97526956};
 	};
 };
 binarizationWanted=0;
@@ -348,24 +348,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -380,6 +362,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -1544,7 +1544,7 @@ class Mission
 			position[]={17003.451,16.155035,12882.114};
 			name="civ_truck_2";
 			type="Empty";
-			angle=228.70007;
+			angle=228.70006;
 			id=134;
 		};
 		class Item110
@@ -1553,7 +1553,7 @@ class Mission
 			position[]={17007.275,16.105854,12877.843};
 			name="civ_truck_2_1";
 			type="Empty";
-			angle=227.15012;
+			angle=227.1501;
 			id=135;
 		};
 		class Item111
@@ -1656,7 +1656,7 @@ class Mission
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.9935;
+			angle=224.99348;
 			id=146;
 		};
 		class Item121
@@ -45818,8 +45818,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3249.0613,4.8835526,12898.063};
-				angles[]={0,3.0017879,0};
+				position[]={3249.061,4.8839474,12898.063};
+				angles[]={0,3.001792,0};
 			};
 			side="Empty";
 			flags=1;
@@ -45828,7 +45828,7 @@ class Mission
 			};
 			id=1686;
 			type="Land_MilOffices_V1_F";
-			atlOffset=8.5006018;
+			atlOffset=8.5010004;
 		};
 		class Item982
 		{
@@ -49004,7 +49004,7 @@ class Mission
 			};
 			id=1790;
 			type="Land_LampStreet_02_double_F";
-			atlOffset=1.1601844;
+			atlOffset=1.1597891;
 		};
 		class Item1059
 		{
@@ -49144,7 +49144,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this addAction[""Open/Close"",{ " \n "    _obj=_this select 0; " \n "    if(_obj getVariable[""bis_disabled_Door_1"",0] isEqualTo 1) then { " \n "        _obj setVariable[""bis_disabled_Door_1"",0,true]; " \n "        [_obj] call life_fnc_doorAnimate; " \n "    } else { " \n "        [_obj] call life_fnc_doorAnimate; " \n "        _obj setVariable[""bis_disabled_Door_1"",1,true]; " \n "    }; " \n " " \n "},"""",0,false,false,"""",'playerside isEqualTo west',5];";
 			};
 			id=1797;
 			type="Land_BackAlley_01_l_gate_F";
@@ -49281,7 +49280,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this addAction[""Open/Close"",{ " \n "    _obj=_this select 0; " \n "    if(_obj getVariable[""bis_disabled_Door_1"",0] isEqualTo 1) then { " \n "        _obj setVariable[""bis_disabled_Door_1"",0,true]; " \n "        [_obj] call life_fnc_doorAnimate; " \n "    } else { " \n "        [_obj] call life_fnc_doorAnimate; " \n "        _obj setVariable[""bis_disabled_Door_1"",1,true]; " \n "    }; " \n " " \n "},"""",0,false,false,"""",'playerside isEqualTo west',5];";
 			};
 			id=1801;
 			type="Land_BackAlley_01_l_gate_F";
@@ -49571,7 +49569,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this addAction[""Open/Close"",{ " \n "    _obj=_this select 0; " \n "    if(_obj getVariable[""bis_disabled_Door_1"",0] isEqualTo 1) then { " \n "        _obj setVariable[""bis_disabled_Door_1"",0,true]; " \n "        [_obj] call life_fnc_doorAnimate; " \n "    } else { " \n "        [_obj] call life_fnc_doorAnimate; " \n "        _obj setVariable[""bis_disabled_Door_1"",1,true]; " \n "    }; " \n " " \n "},"""",0,false,false,"""",'playerside isEqualTo west',5];";
 			};
 			id=1814;
 			type="Land_BackAlley_01_l_gate_F";
@@ -49691,7 +49688,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="this addAction[""Open/Close"",{ " \n "    _obj=_this select 0; " \n "    if(_obj getVariable[""bis_disabled_Door_1"",0] isEqualTo 1) then { " \n "        _obj setVariable[""bis_disabled_Door_1"",0,true]; " \n "        [_obj] call life_fnc_doorAnimate; " \n "    } else { " \n "        [_obj] call life_fnc_doorAnimate; " \n "        _obj setVariable[""bis_disabled_Door_1"",1,true]; " \n "    }; " \n " " \n "},"""",0,false,false,"""",'playerside isEqualTo west',5];";
 			};
 			id=1817;
 			type="Land_BackAlley_01_l_gate_F";
@@ -51401,7 +51397,7 @@ class Mission
 			};
 			id=1873;
 			type="Land_ConcreteKerb_03_BW_short_F";
-			atlOffset=0.66381621;
+			atlOffset=0.6635139;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51641,7 +51637,7 @@ class Mission
 			};
 			id=1879;
 			type="Land_ConcreteKerb_03_BW_short_F";
-			atlOffset=0.38878202;
+			atlOffset=0.38836813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52957,7 +52953,7 @@ class Mission
 			position[]={3242.4905,31.570198,12954.867};
 			name="cop_car_1";
 			type="Empty";
-			angle=206.71707;
+			angle=206.71706;
 			id=1915;
 			atlOffset=29.446638;
 		};
@@ -53284,7 +53280,6 @@ class Mission
 			class Attributes
 			{
 				name="gateKavalaHQ";
-				disableSimulation=1;
 			};
 			id=1928;
 			type="Land_ConcreteWall_01_l_gate_F";

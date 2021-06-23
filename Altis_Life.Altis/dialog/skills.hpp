@@ -32,7 +32,7 @@ class skills {
         };
 
         class PlayersName: Life_RscTitle  {
-            idc = carry_weight;
+            idc = 2009;
             style = 1;
             text = "";
             x = 0.653535;

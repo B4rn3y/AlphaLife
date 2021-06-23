@@ -28,7 +28,7 @@ private _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format ["%2 (1%1)...", "%", _title];
 _progressBar progressSetPosition 0.01;
 private _cP = 0.01;
-
+private _cp_plus = missionNamespace getvariable["alpha_skills_revive",0.01];
 private _badDistance = false;
 for "_i" from 0 to 1 step 0 do {
     if !(animationState player isEqualTo "ainvpknlmstpsnonwnondnon_medic_1") then {
@@ -37,7 +37,7 @@ for "_i" from 0 to 1 step 0 do {
     };
 
     uiSleep .15;
-    _cP = _cP + .01;
+    _cP = _cP + _cp_plus;
     _progressBar progressSetPosition _cP;
     _titleText ctrlSetText format ["%3 (%1%2)...", round(_cP * 100), "%", _title];
     if (_cP >= 1 || {!alive player}) exitWith {};

@@ -23,7 +23,7 @@ _exit = false;
 if(playerSide isEqualTo civilian) then {
 	if(isnil "life_gangdata") exitWith {_exit = true};
 	if(life_gangdata isEqualTo []) exitWith {_exit = true};
-	_players = (playableUnits - [player]) apply {if((getplayeruid _x) in (life_gangdata select 5))then{_x};};
+	_players = (playableUnits - [player]) select {if((getplayeruid _x) in (life_gangdata select 5))then{true}else{false}};
 	if!(_players isEqualTo []) then {
 		_owners = _vehicle getVariable "vehicle_info_owners";
 		{
@@ -38,7 +38,7 @@ if(playerSide isEqualTo civilian) then {
 		_vehicle setVariable ["vehicle_info_owners",_owners,true];
 	};
 } else {
-	_players = (playableUnits - [player]) apply {if((side _x) isEqualTo playerSide) then {_x}};
+	_players = (playableUnits - [player]) select {if((side _x) isEqualTo playerSide) then {true}else{false}};
 	if!(_players isEqualTo []) then {
 		_owners = _vehicle getVariable "vehicle_info_owners";
 		{

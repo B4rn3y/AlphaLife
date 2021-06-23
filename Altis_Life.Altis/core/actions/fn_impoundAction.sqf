@@ -34,10 +34,10 @@ _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
-
+_cp_plus = missionNamespace getvariable["alpha_skills_impound",0.01];
 for "_i" from 0 to 1 step 0 do {
     uiSleep 0.09;
-    _cP = _cP + 0.01;
+    _cP = _cP + _cp_plus;
     _progress progressSetPosition _cP;
     _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
     if (_cP >= 1) exitWith {};

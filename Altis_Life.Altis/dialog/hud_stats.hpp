@@ -13,7 +13,7 @@ class playerHUD {
 
     class controlsBackground
     {
-        /*
+
         class Progressbar: life_RscProgress
         {
             idc = 1100;
@@ -46,7 +46,7 @@ class playerHUD {
             colorBackground[]={0,0,0,0};
             colorText[] = { 1 , 1 , 1 , 1 };
         };
-*/
+
         class LIFE_BAR_Speaker: Life_RscPicture
         {
             idc = 3000;

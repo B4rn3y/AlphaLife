@@ -25,7 +25,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
         _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
         _progress progressSetPosition 0.01;
         _cP = 0.01;
-
+        _cp_plus = missionNamespace getvariable["alpha_skills_repair",0.01];
         for "_i" from 0 to 1 step 0 do {
             if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
                 [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
@@ -34,7 +34,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
             };
 
             uiSleep 0.27;
-            _cP = _cP + 0.01;
+            _cP = _cP + _cp_plus;
             _progress progressSetPosition _cP;
             _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
             if (_cP >= 1) exitWith {};

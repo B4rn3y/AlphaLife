@@ -25,6 +25,8 @@ if (isClass (missionConfigFile >> "ProcessAction" >> _type)) then {
     _text = M_CONFIG(getText,"ProcessAction",_type,"Text");
 } else {_filter = true;};
 
+_cp_plus = missionNamespace getvariable[format["alpha_skills_%1",_type],0.01];
+
 if (_filter) exitWith {life_action_inUse = false;};
 
 _itemInfo = [_materialsRequired,_materialsGiven,_noLicenseCost,(localize format ["%1",_text])];
@@ -97,7 +99,7 @@ _cP = 0.01;
 if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.28;
-        _cP = _cP + 0.01;
+        _cP = _cP + _cp_plus;
         _vendor setVariable["percent",_cP*100];
         if (_cP >= 1) exitWith {};
         if (player distance _vendor > 10) exitWith {};
@@ -120,7 +122,7 @@ if (_hasLicense) then {
 
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.9;
-        _cP = _cP + 0.01;
+        _cP = _cP + _cp_plus;
         _vendor setVariable["percent",_cP*100];
         if (_cP >= 1) exitWith {};
         if (player distance _vendor > 10) exitWith {};

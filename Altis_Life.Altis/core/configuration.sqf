@@ -54,6 +54,7 @@ life_fadeSound = 0;
 alpha_xp = 0;
 alpha_lvl = 0;
 alpha_quests = [];
+ALPHA_XP_FOR_THIS_LEVEL = 1000;
 ALPHA_XP_CUR_LEVEL = 0;
 ALPHA_XP_TONXT_LEVEL = getNumber(missionConfigFile >> "Life_Settings" >> "xp_first_level");;
 

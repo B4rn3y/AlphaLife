@@ -85,7 +85,8 @@ class CfgSkills {
                     },
                     "playerside in [civilian]"
                 }
-            }
+            },
+            "playerside in [civilian]"
         },
         {
         "Illegales Farming",
@@ -112,11 +113,11 @@ class CfgSkills {
                 },
                 {"Schwarzpulver",
                     {
-                        {64,"Schwarzpulver 1","Du verarbeitest 10% schneller",["coal","black_powder"],0.011},
-                        {74,"Schwarzpulver 2","Du verarbeitest 20% schneller",["coal","black_powder"],0.012},
-                        {79,"Schwarzpulver 3","Du verarbeitest 30% schneller",["coal","black_powder"],0.013},
-                        {81,"Schwarzpulver 4","Du verarbeitest 40% schneller",["coal","black_powder"],0.014},
-                        {83,"Schwarzpulver 5","Du verarbeitest 50% schneller",["coal","black_powder"],0.015}
+                        {64,"Schwarzpulver 1","Du verarbeitest 10% schneller",{"coal","black_powder"},0.011},
+                        {74,"Schwarzpulver 2","Du verarbeitest 20% schneller",{"coal","black_powder"},0.012},
+                        {79,"Schwarzpulver 3","Du verarbeitest 30% schneller",{"coal","black_powder"},0.013},
+                        {81,"Schwarzpulver 4","Du verarbeitest 40% schneller",{"coal","black_powder"},0.014},
+                        {83,"Schwarzpulver 5","Du verarbeitest 50% schneller",{"coal","black_powder"},0.015}
                     },
                     "playerside in [civilian]"
                 },
@@ -132,11 +133,11 @@ class CfgSkills {
                 },
                 {"Uran",
                     {
-                        {76,"Uran 1","Du verarbeitest 10% schneller",["washed_uran","dried_uran","uran"],0.011},
-                        {78,"Uran 2","Du verarbeitest 20% schneller",["washed_uran","dried_uran","uran"],0.012},
-                        {85,"Uran 3","Du verarbeitest 30% schneller",["washed_uran","dried_uran","uran"],0.013},
-                        {87,"Uran 4","Du verarbeitest 40% schneller",["washed_uran","dried_uran","uran"],0.014},
-                        {89,"Uran 5","Du verarbeitest 50% schneller",["washed_uran","dried_uran","uran"],0.015}
+                        {76,"Uran 1","Du verarbeitest 10% schneller",{"washed_uran","dried_uran","uran"},0.011},
+                        {78,"Uran 2","Du verarbeitest 20% schneller",{"washed_uran","dried_uran","uran"},0.012},
+                        {85,"Uran 3","Du verarbeitest 30% schneller",{"washed_uran","dried_uran","uran"},0.013},
+                        {87,"Uran 4","Du verarbeitest 40% schneller",{"washed_uran","dried_uran","uran"},0.014},
+                        {89,"Uran 5","Du verarbeitest 50% schneller",{"washed_uran","dried_uran","uran"},0.015}
                     },
                     "playerside in [civilian]"
                 },
@@ -170,7 +171,8 @@ class CfgSkills {
                     },
                     "playerside in [civilian]"
                 }
-            }
+            },
+            "playerside in [civilian]"
         },
         {
         "Spieler",
@@ -191,6 +193,7 @@ class CfgSkills {
                     },
                     "true"
                 },
+
                 {"Paycheck",
                     {
                         {20,"Paycheck 1","Du bekommst 5% mehr Paycheck","paycheck",1.05},
@@ -227,7 +230,8 @@ class CfgSkills {
                     },
                     "playerside in [civilian]"
                 }
-            }
+            },
+            "true"
         },
         {
         "Vehikel",
@@ -244,9 +248,9 @@ class CfgSkills {
                 },
                 {"Gerät",
                     {
-                        {100,"Gerät 1","Dein Tempest Gerät arbeitet 10% effektiver","geraet",10},
-                        {150,"Gerät 2","Dein Tempest Gerät arbeitet 30% effektiver","geraet",30},
-                        {200,"Gerät 3","Dein Tempest Gerät arbeitet 50% effektiver","geraet",50}
+                        {100,"Gerät 1","Dein Tempest Gerät arbeitet 10% effektiver","geraet",1.1},
+                        {150,"Gerät 2","Dein Tempest Gerät arbeitet 30% effektiver","geraet",1.3},
+                        {200,"Gerät 3","Dein Tempest Gerät arbeitet 50% effektiver","geraet",1.5}
                     },
                     "playerside in [civilian]"
                 },
@@ -260,7 +264,8 @@ class CfgSkills {
                     },
                     "playerside in [west, independent]"
                 }
-            }
+            },
+            "true"
         }
     };
 

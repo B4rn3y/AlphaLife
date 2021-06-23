@@ -21,14 +21,14 @@ _W_f = _display displayCtrl 3204;
 _W_e = _display displayCtrl 3205;
 
 
-/*
+
 _progressbar = _display displayCtrl 1100;
 _text_in_progressbar = _display displayCtrl 1099;
 _LVL_ANZEIGE = _display displayCtrl 1101;
-_progressbar progressSetPosition (if(ALPHA_XP_CUR_LEVEL isEqualTo 0 || ALPHA_XP_TONXT_LEVEL isEqualTo 0) then {0} else {ALPHA_XP_CUR_LEVEL/ALPHA_XP_TONXT_LEVEL});
-_text_in_progressbar ctrlSetStructuredText parsetext format["<t size='1.0' align='center'>%1 / %2</t>",ALPHA_XP_CUR_LEVEL,ALPHA_XP_TONXT_LEVEL];
+_progressbar progressSetPosition (if(ALPHA_XP_CUR_LEVEL isEqualTo 0 || ALPHA_XP_TONXT_LEVEL isEqualTo 0 || ALPHA_XP_FOR_THIS_LEVEL isEqualTo 0) then {0} else {ALPHA_XP_CUR_LEVEL/ALPHA_XP_FOR_THIS_LEVEL});
+_text_in_progressbar ctrlSetStructuredText parsetext format["<t size='1.0' align='center'>%1 / %2</t>",ALPHA_XP_CUR_LEVEL,ALPHA_XP_FOR_THIS_LEVEL];
 _LVL_ANZEIGE ctrlSetStructuredText parsetext format["<t size='0.9' align='center'>%1</t>",alpha_lvl];
-*/
+
 _earplugs = _display displayCtrl 3000;
 
 if(life_fadeSound isEqualTo 0) then {

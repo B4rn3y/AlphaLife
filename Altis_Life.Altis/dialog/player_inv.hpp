@@ -85,6 +85,16 @@ class playerSettings {
             w = 0.0823233;
             h = 0.089899;
         };
+
+        class picture_skills: life_RscPicture
+        {
+            idc = -1;
+            text = "textures\zmenu\skills.paa";
+            x = 0.194445;
+            y = 0.314815;
+            w = 0.0823233;
+            h = 0.089899;
+        };
         class Picture_admin: life_RscPicture
         {
             idc = 1208;
@@ -290,6 +300,19 @@ class playerSettings {
             onButtonClick = "createDialog ""Life_key_management"";";
             x = 0.0972225;
             y = 0.195287;
+            w = 0.0823233;
+            h = 0.089899;
+        };
+
+
+        class picture_skills: life_RscButtonSilent
+        {
+            idc = 3003;
+            tooltip = "Skills";
+            onButtonClick = "0 spawn life_fnc_open_skill_menu;";
+
+            x = 0.194445;
+            y = 0.314815;
             w = 0.0823233;
             h = 0.089899;
         };

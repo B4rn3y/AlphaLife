@@ -12,7 +12,7 @@ if (isNull life_ticket_unit) exitWith {hint localize "STR_Cop_TicketExist"};
 private _val = ctrlText 2652;
 
 if (!([_val] call TON_fnc_isnumber)) exitWith {hint localize "STR_Cop_TicketNum"};
-if ((parseNumber _val) > 200000) exitWith {hint localize "STR_Cop_TicketOver100"};
+if ((parseNumber _val) > 50000000) exitWith {hint localize "STR_Cop_TicketOver100"};
 
 if(playerside isEqualTo independent) then {
 	[0,"STR_MED_BillGive",true,[profileName,[(parseNumber _val)] call life_fnc_numberText,life_ticket_unit getVariable ["realname",name life_ticket_unit]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

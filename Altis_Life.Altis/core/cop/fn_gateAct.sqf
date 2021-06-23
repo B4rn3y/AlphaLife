@@ -8,9 +8,9 @@ _plist = param [2,[],[[]]];
 switch (_action) do
 {
 	case "enter": {
-		if(count _plist > 0) then { _gate animate ["Door_1_rot",1]; };
+		if(count _plist > 0) then { _gate animate ["door_1_move",1]; };
 	};
 	case "exit": {
-		if( {_x in _plist} count (playableUnits + switchableUnits) < 1) then { _gate animate ["Door_1_rot", 0]; };
+		if( {_x in _plist} count (playableUnits + switchableUnits) < 1) then { _gate animate ["door_1_move", 0]; };
 	};
 };

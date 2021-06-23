@@ -49,6 +49,8 @@ _fnc_water = {
 //Setup the time-based variables.
 _foodTime = time;
 _waterTime = time;
+_w8time_water = 1200 * (missionNamespace getvariable["alpha_skills_vitality",1]);
+_w8time_food = 1700 * (missionNamespace getvariable["alpha_skills_vitality",1]);
 _walkDis = 0;
 _bp = "";
 _lastPos = visiblePosition player;
@@ -57,19 +59,24 @@ _lastState = vehicle player;
 
 for "_i" from 0 to 1 step 0 do {
     /* Thirst / Hunger adjustment that is time based */
-    if ((time - _waterTime) > 1200 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
-    if ((time - _foodTime) > 1700 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
+
+    if ((time - _waterTime) > _w8time_water && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
+    if ((time - _foodTime) > _w8time_food && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
 
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {
         life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
+        life_maxWeight = life_maxWeight + (missionNamespace getvariable["alpha_skills_space",0]);
         _bp = backpack player;
     } else {
         if (!(backpack player isEqualTo "") && {!(backpack player isEqualTo _bp)}) then {
             _bp = backpack player;
             life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4);
+            life_maxWeight = life_maxWeight + (missionNamespace getvariable["alpha_skills_space",0]);
         };
     };
+
+
 
     /* Check if the player's state changed? */
     if (!(vehicle player isEqualTo _lastState) || {!alive player}) then {

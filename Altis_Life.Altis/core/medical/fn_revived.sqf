@@ -34,6 +34,8 @@ life_corpse setVariable ["name",nil,true];
 [life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
 deleteVehicle life_corpse;
 
+player setAnimSpeedCoef (missionNamespace getvariable["alpha_skills_runner",1]);
+
 life_action_inUse = false;
 life_is_alive = true;
 

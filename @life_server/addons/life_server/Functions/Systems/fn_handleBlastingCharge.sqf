@@ -7,7 +7,7 @@
 private ["_bomb","_time"];
 _vault = param[0,objNull,[objNull]];
 if(isnull _vault) exitWith {};
-_time = time + (5 * 60);
+_time = time + (15 * 60);
 waitUntil{(round(_time - time) < 1)};
 sleep 0.9;
 if (!(_vault getVariable["chargeplaced",false])) exitWith {};
