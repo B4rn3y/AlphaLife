@@ -39311,7 +39311,7 @@ class Mission
 			position[]={16708.824,12.313987,13571.45};
 			class Attributes
 			{
-				condition="(objectparent player in thisList) && ((getposatl player select 2) < 20)";
+				condition="(vehicle player in thisList) && ((getposatl player select 2) < 20)";
 				onActivation="0 spawn life_fnc_radiation;";
 				onDeactivation="life_exited_radiation_zone = true;";
 				sizeA=210;
