@@ -174,7 +174,7 @@ class VirtualItems {
     //Virtual Items
 
     //Misc
-    class pickaxe {
+    class pickaxe {//Test
         variable = "pickaxe";
         displayName = "STR_Item_Pickaxe";
         weight = 2;
