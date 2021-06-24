@@ -12,7 +12,7 @@
 private ["_vendor","_type","_xp_per_weight","_filter","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_itemInfo","_oldItem","_newItem","_cost","_upp","_exit","_totalConversions","_var","_hasLicense","_minimumConversions","_oldItemWeight","_weight","_newItemWeight","_netChange","_freeSpace","_estConversions"];
 _vendor = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
-_xp_per_weight = 50;
+_xp_per_weight = 1;
 //Error check
 if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
 life_action_inUse = true;//Lock out other actions during processing.

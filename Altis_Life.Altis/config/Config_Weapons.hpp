@@ -50,8 +50,8 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_rebel";
         items[] = {
-            { "Binocular", "", 2500, 75, "" },
-            { "Rangefinder", "", 5000, 75, "" },
+            { "Binocular", "", 2500, 0, "" },
+            { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
             { "FirstAidKit", "", 2500, 75, "" },
             { "NVGoggles", "", 5000, 1000, "" },
@@ -123,8 +123,8 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
-            { "Binocular", "", 2500, 75, "" },
-            { "Rangefinder", "", 5000, 75, "" },
+            { "Binocular", "", 2500, 0, "" },
+            { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
             { "FirstAidKit", "", 2500, 75, "" },
             { "NVGoggles", "", 5000, 1000, "" },
@@ -183,8 +183,8 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
-            { "Binocular", "", 2500, 75, "" },
-            { "Rangefinder", "", 5000, 75, "" },
+            { "Binocular", "", 2500, 0, "" },
+            { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
             { "FirstAidKit", "", 2500, 75, "" },
             { "NVGoggles", "", 5000, 1000, "" },
@@ -266,7 +266,7 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
+            { "Binocular", "", 150, 0, "" },
             { "ItemGPS", "", 5000, 2500, "" },
             { "ItemMap", "", 5000, 2500, "" },
             { "ItemCompass", "", 5000, 2500, "" },
@@ -287,7 +287,7 @@ class WeaponShops {
         side = "";
         conditions = "";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
+            { "Binocular", "", 150, 0, "" },
             { "ItemGPS", "", 5000, 2500, "" },
             { "ItemMap", "", 5000, 2500, "" },
             { "ItemCompass", "", 5000, 2500, "" },
@@ -309,8 +309,8 @@ class WeaponShops {
         side = "cop";
         conditions = "call life_coplevel > 0";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
-            { "Rangefinder", "", 5000, 75, "call life_coplevel > 1" },
+            { "Binocular", "", 150, 0, "" },
+            { "Rangefinder", "", 5000, 0, "call life_coplevel > 1" },
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "NVGoggles", "", 2000, 1000, "" },
@@ -371,7 +371,7 @@ class WeaponShops {
         side = "cop";
         conditions = "call life_swatlevel > 0";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
+            { "Binocular", "", 150, 0, "" },
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "NVGoggles", "", 2000, 1000, "" },
@@ -445,7 +445,7 @@ class WeaponShops {
         conditions = "";
         items[] = {
             { "ItemGPS", "", 100, 50, "" },
-            { "Binocular", "", 150, 75, "" },
+            { "Binocular", "", 150, 0, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "Medikit", "", 1000, 75, "" },
             { "NVGoggles", "", 1200, 600, "" }
