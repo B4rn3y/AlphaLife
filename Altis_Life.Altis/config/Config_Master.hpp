@@ -92,7 +92,7 @@ class Life_Settings {
     houseGarage_buyPrice = 1000000;
     houseGarage_sellPrice = 350000;
 
-    /* Hunting & Fishing System Configurations */
+    /* Hunting & Fishing System Configurations *///Test
     animaltypes_fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" }; //Classnames of fish you can catch
     animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" }; //Classnames of aniamls you can hunt/gut
 
