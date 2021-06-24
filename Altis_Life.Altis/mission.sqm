@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=138;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7157;
+		nextID=7158;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13020;
+		nextID=17303;
 	};
 	class Camera
 	{
-		pos[]={3727.7734,53.457855,13024.887};
-		dir[]={0.2306082,-0.73987526,-0.63202935};
-		up[]={0.25360471,0.67273772,-0.6950534};
-		aside[]={-0.93945026,-1.0179356e-006,-0.34278029};
+		pos[]={3312.1147,15.958635,12951.686};
+		dir[]={-0.68214822,-0.41177115,0.60427231};
+		up[]={-0.30823955,0.91128236,0.27304986};
+		aside[]={0.66309702,2.4726614e-007,0.74855435};
 	};
 };
 binarizationWanted=0;
@@ -424,24 +424,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -456,6 +438,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -513,7 +513,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6159;
+		items=6160;
 		class Item0
 		{
 			dataType="Marker";
@@ -1742,7 +1742,7 @@ class Mission
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.99338;
+			angle=224.99336;
 			id=146;
 		};
 		class Item121
@@ -19201,13 +19201,13 @@ class Mission
 				angles[]={0,6.0063586,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=751;
 			type="Land_CashDesk_F";
+			atlOffset=0.3939209;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19248,6 +19248,7 @@ class Mission
 			};
 			id=752;
 			type="Land_CashDesk_F";
+			atlOffset=0.18852997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19492,6 +19493,7 @@ class Mission
 			};
 			id=758;
 			type="Land_CashDesk_F";
+			atlOffset=0.19405365;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -31634,7 +31636,6 @@ class Mission
 						angles[]={0,2.8397205,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Rob"",life_fnc_robGasStation,"""",0,false,false,"""",' playerside isEqualTo civilian',5];";
@@ -31643,7 +31644,7 @@ class Mission
 					};
 					id=1075;
 					type="C_Nikos_aged";
-					atlOffset=0.00032043457;
+					atlOffset=0.42199707;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31724,7 +31725,7 @@ class Mission
 					};
 					id=1077;
 					type="C_Nikos_aged";
-					atlOffset=9.9182129e-005;
+					atlOffset=0.19100189;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32210,7 +32211,7 @@ class Mission
 					};
 					id=1089;
 					type="C_Nikos_aged";
-					atlOffset=0.00020599365;
+					atlOffset=0.20899963;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33770,7 +33771,6 @@ class Mission
 						angles[]={0,3.0806456,6.2818937};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -33779,7 +33779,7 @@ class Mission
 					};
 					id=1216;
 					type="C_man_1";
-					atlOffset=0.00037145615;
+					atlOffset=3.0949998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36236,7 +36236,7 @@ class Mission
 			type="mil_box";
 			colorName="ColorWhite";
 			id=1204;
-			atlOffset=2.4264982;
+			atlOffset=2.4652107;
 		};
 		class Item718
 		{
@@ -55565,17 +55565,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17009.145,23.952215,12784.844};
-				angles[]={0,0.82331932,0};
+				position[]={17009.145,23.951803,12784.844};
+				angles[]={0,0.82332414,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\sLG_V2\werbebilder\logo.paa""]; ";
+				init="this setObjectTexture [0, ""textures\plakate\pollogo.paa""]; ";
 			};
 			id=2367;
 			type="UserTexture10m_F";
-			atlOffset=7.5804119;
+			atlOffset=7.5799999;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -85775,7 +85775,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=4708;
@@ -85836,7 +85836,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=4709;
@@ -85897,7 +85897,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=4710;
@@ -85958,12 +85958,12 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=4711;
 			type="SignAd_Sponsor_Vrana_F";
-			atlOffset=-0.52899933;
+			atlOffset=-0.52899837;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -86019,7 +86019,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=4712;
@@ -104332,7 +104332,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={16990.613,16.290663,12860.39};
-			angle=3.9895422;
+			angle=3.989542;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [west])); } count thisList > 0;";
@@ -104435,19 +104435,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3629.9121,10.405375,13106.543};
-				angles[]={0,1.6791017,0};
+				position[]={3629.9121,10.405645,13106.543};
+				angles[]={0,1.6790941,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7078;
 			type="SignAd_Sponsor_Vrana_F";
-			atlOffset=-0.77927017;
+			atlOffset=-0.77899933;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -104496,19 +104496,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3629.4773,10.395991,13102.862};
-				angles[]={0,1.6791017,0};
+				position[]={3629.4771,10.395851,13102.862};
+				angles[]={0,1.6790941,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7079;
 			type="SignAd_Sponsor_Vrana_F";
-			atlOffset=-0.80285931;
+			atlOffset=-0.8029995;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -104557,19 +104557,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3629.1714,10.32681,13099.427};
-				angles[]={0,1.6791017,0};
+				position[]={3629.1709,10.32645,13099.427};
+				angles[]={0,1.6790941,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7080;
 			type="SignAd_Sponsor_Vrana_F";
-			atlOffset=-0.88763809;
+			atlOffset=-0.88799858;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -104618,19 +104618,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3628.8193,10.334108,13095.902};
-				angles[]={0,1.6791017,0};
+				position[]={3628.8191,10.333759,13095.902};
+				angles[]={0,1.6790941,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\polparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\polparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7081;
 			type="SignAd_Sponsor_Vrana_F";
-			atlOffset=-0.89564991;
+			atlOffset=-0.89599991;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -104686,7 +104686,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7082;
@@ -104747,7 +104747,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 				disableSimulation=1;
 			};
 			id=7083;
@@ -105099,7 +105099,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 			};
 			id=7092;
 			type="SignAd_Sponsor_Vrana_F";
@@ -105140,7 +105140,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 			};
 			id=7093;
 			type="SignAd_Sponsor_Vrana_F";
@@ -105181,7 +105181,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 			};
 			id=7094;
 			type="SignAd_Sponsor_Vrana_F";
@@ -105222,7 +105222,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 			};
 			id=7095;
 			type="SignAd_Sponsor_Vrana_F";
@@ -105263,7 +105263,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""texture\plakate\emsparkplatz.paa""];";
+				init="this setObjectTexture [0, ""textures\plakate\emsparkplatz.paa""];";
 			};
 			id=7096;
 			type="SignAd_Sponsor_Vrana_F";
@@ -107697,7 +107697,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={3739.0117,17.81543,13040.517};
-			angle=0.40840524;
+			angle=0.40840521;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [independent])); } count thisList > 0;";
@@ -107732,6 +107732,65 @@ class Mission
 			id=7156;
 			type="EmptyDetector";
 			atlOffset=-0.0019989014;
+		};
+		class Item6159
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3281.5757,10.202934,12966.64};
+				angles[]={0,1.5584968,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this setObjectTexture [0, ""textures\plakate\pollogo.paa""]; ";
+			};
+			id=7157;
+			type="UserTexture10m_F";
+			atlOffset=7.8067698;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="texture\sLG_V2\werbebilder\logo.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };
