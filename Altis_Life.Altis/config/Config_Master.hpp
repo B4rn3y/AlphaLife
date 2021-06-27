@@ -92,7 +92,7 @@ class Life_Settings {
     houseGarage_buyPrice = 1000000;
     houseGarage_sellPrice = 350000;
 
-    /* Hunting & Fishing System Configurations *///Test
+    /* Hunting & Fishing System Configurations */
     animaltypes_fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" }; //Classnames of fish you can catch
     animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" }; //Classnames of aniamls you can hunt/gut
 
@@ -115,7 +115,7 @@ class Life_Settings {
     revive_civ = false; //true to enable civs the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_east = false; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_fee = 1500; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
-    hospital_heal_fee = 100; //Fee to heal at a hospital NPC
+    hospital_heal_fee = 50000; //Fee to heal at a hospital NPC
 
     /* Paycheck & Bank System Configurations */
     bank_cop = 500000; //Amount of cash in bank for new cops
