@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7158;
+		nextID=7161;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=21586;
+		nextID=30152;
 	};
 	class Camera
 	{
-		pos[]={3317.3091,54.093437,12955.372};
-		dir[]={-0.71042693,-0.68817383,0.14818157};
-		up[]={-0.67368925,0.72550082,0.14051935};
-		aside[]={0.20420548,-2.2756867e-006,0.97903067};
+		pos[]={17000.676,41.39518,12771.649};
+		dir[]={0.53686959,-0.66601354,0.51787853};
+		up[]={0.47934464,0.74593872,0.46238837};
+		aside[]={0.6942631,-3.0151568e-008,-0.71972167};
 	};
 };
 binarizationWanted=0;
@@ -1742,7 +1742,7 @@ class Mission
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.99335;
+			angle=224.99329;
 			id=146;
 		};
 		class Item121
@@ -55594,7 +55594,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="texture\sLG_V2\werbebilder\logo.paa";
+							value="";
 						};
 					};
 				};
@@ -104333,7 +104333,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={16990.613,16.290867,12860.39};
-			angle=3.9895434;
+			angle=3.9895422;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [west])); } count thisList > 0;";
@@ -107698,7 +107698,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={3739.012,17.8158,13040.517};
-			angle=0.40840703;
+			angle=0.40840691;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [independent])); } count thisList > 0;";
@@ -107739,8 +107739,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3281.5757,10.202934,12966.64};
-				angles[]={0,1.5584968,0};
+				position[]={3281.5759,10.203289,12966.64};
+				angles[]={0,1.5584917,0};
 			};
 			side="Empty";
 			class Attributes
@@ -107749,7 +107749,7 @@ class Mission
 			};
 			id=7157;
 			type="UserTexture10m_F";
-			atlOffset=7.8067698;
+			atlOffset=7.8071246;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -107767,7 +107767,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="texture\sLG_V2\werbebilder\logo.paa";
+							value="";
 						};
 					};
 				};

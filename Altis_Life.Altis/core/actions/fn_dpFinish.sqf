@@ -19,3 +19,7 @@ life_cur_task setTaskState "Succeeded";
 player removeSimpleTask life_cur_task;
 CASH = CASH + _price;
 [0] call SOCK_fnc_updatePartial;
+
+if!(15 in alpha_quests)then {
+    [15] spawn life_fnc_quest_achieved;
+};

@@ -40,6 +40,15 @@ class playerSettings {
             w = 0.0823233;
             h = 0.089899;
         };
+        class Picture_quests: life_RscPicture
+        {
+            idc = -1;
+            text = "textures\zmenu\quests.paa";
+            x = 0.296717;
+            y = 0.316498;
+            w = 0.0823233;
+            h = 0.089899;
+        };
         class picture_keys: life_RscPicture
         {
             idc = 1203;
@@ -290,6 +299,18 @@ class playerSettings {
             onButtonClick = "[] call life_fnc_settingsMenu;";
             x = 0.296717;
             y = 0.195287;
+            w = 0.0823233;
+            h = 0.089899;
+        };
+
+
+        class Picture_quests: life_RscButtonSilent
+        {
+            idc = -1;
+            tooltip = "Quests";
+            onButtonClick = "[] call life_fnc_questmenuopen;";
+            x = 0.296717;
+            y = 0.316498;
             w = 0.0823233;
             h = 0.089899;
         };

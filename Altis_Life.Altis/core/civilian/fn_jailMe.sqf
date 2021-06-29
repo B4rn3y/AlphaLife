@@ -18,6 +18,10 @@ private _time = time + (LIFE_SETTINGS(getNumber,"jail_timeMultiplier") * 60);
 
 [500,"Inhaftiert"] spawn life_fnc_addexp;
 
+if!(20 in alpha_quests)then {
+    [20] spawn life_fnc_quest_achieved;
+};
+
 if (_bad) then {
     _time = _time + 900;
 };

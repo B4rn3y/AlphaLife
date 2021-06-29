@@ -83,6 +83,11 @@ if (!_isVehicle) then {
 } else {
     _dice = random(100);
     if (_dice < 30) then {
+
+        if!(14 in alpha_quests)then {
+            [14] spawn life_fnc_quest_achieved;
+        };
+
         titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
         life_vehicles pushBack _curTarget;
 

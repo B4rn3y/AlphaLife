@@ -145,6 +145,8 @@ class Life_Client_Core {
         class placeablePlace {};
         class placeableCancel {};
         class placeablesPlaceComplete {};
+        class copLightPosition {};
+        class unlockVeh {};
     };
 
     class Dialog_Controls {
@@ -307,6 +309,7 @@ class Life_Client_Core {
         class placestorage {};
         class spikeStrip {};
         class storageBox {};
+        class painkiller {};
     };
 
     class Medical_System {
@@ -363,6 +366,15 @@ class Life_Client_Core {
         class licenseMenu {};
         class p_market_menu {};
         class p_market_menu_EVH {};
+    };
+
+    class Quests {
+        file = "core\quests";
+        class check_quests {};
+        class quest_achieved {};
+        class quest_config_index {};
+        class questmenuEVH {};
+        class questmenuopen {};
     };
 
     class Shops {

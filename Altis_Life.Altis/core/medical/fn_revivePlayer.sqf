@@ -67,6 +67,7 @@ _target setVariable ["Revive", true, true];
 [profileName] remoteExecCall ["life_fnc_revived", _target];
 
 if (playerSide isEqualTo independent) then {
+    _reviveCost = _reviveCost * 2;
     titleText[format [localize "STR_Medic_RevivePayReceive", _targetName,[_reviveCost] call life_fnc_numberText], "PLAIN"];
     BANK = BANK + _reviveCost;
     [1] call SOCK_fnc_updatePartial;

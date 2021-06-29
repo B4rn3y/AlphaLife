@@ -83,6 +83,11 @@ While{True} do {
     };
     if((getPosATL player) distance _pos > 0.5) exitWith {};
     if !([true,_resource,_diff] call life_fnc_handleInv) exitWith {};
+
+    if(_resource isEqualTo "unwashed_uran" && !(31 in alpha_quests)) then {
+        [31] spawn life_fnc_quest_achieved;
+    };
+
     sleep 1;
 };
 

@@ -70,6 +70,11 @@ switch (_item) do {
         closeDialog 0;
     };
 
+    case "painkiller": {
+        [] spawn life_fnc_painkiller;
+        closeDialog 0;
+    };
+
     case "defusekit": {
         [cursorObject] spawn life_fnc_defuseKit;
         closeDialog 0;

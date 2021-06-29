@@ -17,8 +17,17 @@ closeDialog 0;
 
 if (_size) then {
     _object = "B_supplyCrate_F" createVehicle [0,0,0];
+
+    if!(22 in alpha_quests)then {
+	    [22] spawn life_fnc_quest_achieved;
+	};
+
 } else {
     _object = "Box_IND_Grenades_F" createVehicle [0,0,0];
+
+    if!(21 in alpha_quests)then {
+	    [21] spawn life_fnc_quest_achieved;
+	};
 };
 
 life_container_activeObj = _object;

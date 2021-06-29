@@ -7848,6 +7848,10 @@
             <Polish>Ładunek wybuchowy</Polish>
 			<Chinesesimp>爆破装置</Chinesesimp>
         </Key>
+        <Key ID="STR_Item_Painkiller">
+            <Original>Painkiller</Original>
+            <German>Schmerzmittel</German>
+        </Key>
         <Key ID="STR_Item_BCutter">
             <Original>Bolt Cutter</Original>
             <Czech>Bolt Cutter</Czech>

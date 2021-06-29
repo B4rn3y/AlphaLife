@@ -64,6 +64,10 @@ if (player distance _target > _max_distance_rob) exitWith {[format["Bleibe in de
 _random_money = random[50000,125000,200000];
 alpha_cash = alpha_cash + _random_money;
 
+if!(19 in alpha_quests)then {
+    [19] spawn life_fnc_quest_achieved;
+};
+
 [format["Ausrauben erfolgreich, du hast $%1 gestohlen",[_random_money] call life_fnc_numbertext]] spawn life_fnc_exp_hint;
 
 call _abort_capturing;

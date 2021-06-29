@@ -33,6 +33,34 @@ if ([false,_type,_amount] call life_fnc_handleInv) then {
     CASH = CASH + _price;
     [0] call SOCK_fnc_updatePartial;
     [] call life_fnc_virt_update;
+
+    //check quests
+    if(_type isEqualTo "apple" && !(1 in alpha_quests))then {
+        [1] spawn life_fnc_quest_achieved;
+    };
+
+    if(_type isEqualTo "iron_refined" && !(2 in alpha_quests))then {
+        [2] spawn life_fnc_quest_achieved;
+    };
+
+    if(_type isEqualTo "copper_refined" && !(3 in alpha_quests))then {
+        [3] spawn life_fnc_quest_achieved;
+    };
+
+    if(_type isEqualTo "turtle_raw" && !(18 in alpha_quests))then {
+        [18] spawn life_fnc_quest_achieved;
+    };
+
+    if(_type isEqualTo "lsd" && !(33 in alpha_quests))then {
+        [33] spawn life_fnc_quest_achieved;
+    };
+
+    if(_type in["lsd","cocaine_processed","heroin_processed","marijuana"] && !(28 in alpha_quests))then {
+        [28] spawn life_fnc_quest_achieved;
+    };
+
+
+
 };
 
 if (life_shop_type isEqualTo "drugdealer") then {

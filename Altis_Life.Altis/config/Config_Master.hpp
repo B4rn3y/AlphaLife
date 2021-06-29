@@ -114,7 +114,7 @@ class Life_Settings {
     revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
     revive_civ = false; //true to enable civs the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_east = false; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
-    revive_fee = 1500; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
+    revive_fee = 50000; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
     hospital_heal_fee = 50000; //Fee to heal at a hospital NPC
 
     /* Paycheck & Bank System Configurations */
@@ -240,3 +240,4 @@ class Life_Settings {
 #include "Config_Loadouts.hpp"
 #include "Config_Admin.hpp"
 #include "Config_Skills.hpp"
+#include "Config_Quests.hpp"

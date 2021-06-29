@@ -39,12 +39,13 @@ if (LIFE_SETTINGS(getNumber,"donor_level") isEqualTo 1) then {
 if (count (_this select 6) > 0) then {
     {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 6);
 };
-
+_playtime = [0,0,0];
 //Parse side specific information.
 switch (playerSide) do {
     case west: {
         CONST(life_coplevel,(_this select 7));
         CONST(life_swatlevel,(_this select 12));
+        _playtime = call compile(call compile(_this select 11));
         alpha_xp = _this select 13;
         alpha_quests = _this select 14;
         CONST(life_medicLevel,0);
@@ -61,6 +62,7 @@ switch (playerSide) do {
         LIFE_SAVED_NAME = _this select 1;
         alpha_xp = _this select 13;
         alpha_quests = _this select 14;
+        _playtime = call compile(call compile(_this select 12));
         CONST(life_coplevel, 0);
         CONST(life_swatlevel, 0);
         CONST(life_medicLevel, 0);
@@ -94,6 +96,7 @@ switch (playerSide) do {
     };
 
     case independent: {
+        _playtime = call compile(call compile(_this select 10));
         CONST(life_medicLevel,(_this select 7));
         CONST(life_coplevel,0);
         CONST(life_swatlevel, 0);
@@ -114,4 +117,26 @@ if (count (_this select (_count - 1)) > 0) then {
     {life_vehicles pushBack _x;} forEach (_this select (_count - 1));
 };
 
+// check playtime for quests
+_time_played = 0;
+{_time_played = _time_played + _x;} foreach _playtime;
+
+_time_played spawn {
+    sleep 90;
+    waitUntil {!dialog};
+    {
+        if(_this >= (_x select 1) && !((_x select 0) in alpha_quests)) then {
+            sleep 20;
+            [(_x select 0)] spawn life_fnc_quest_achieved;
+        };
+    } foreach
+    [
+        [13, 300],
+        [30, 3000],
+        [36, 6000]
+    ];
+};
+
 life_session_completed = true;
+
+

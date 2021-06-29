@@ -20,21 +20,21 @@ class VirtualShops {
         name = "STR_Shops_Market";
         side = "med";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "toolkit", "fuelFull", "peach", "defibrillator" };
+        items[] = { "painkiller","waterBottle", "rabbit", "apple", "redgull", "tbacon", "toolkit", "fuelFull", "peach", "defibrillator" };
     };
 
     class rebel {
         name = "STR_Shops_Rebel";
         side = "civ";
         conditions = "license_civ_rebel || license_civ_mercenary || license_civ_alpha";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "frogtrap" };
+        items[] = { "painkiller","waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "frogtrap" };
     };
 
     class gang {
         name = "STR_Shops_Gang";
         side = "civ";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "frogtrap" };
+        items[] = { "painkiller","waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "frogtrap" };
     };
 
     class wongs {
@@ -153,7 +153,7 @@ class VirtualShops {
         name = "STR_Shops_Cop";
         side = "cop";
         conditions = "";
-        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" ,"boltcutter", "lockpick"};
+        items[] = { "painkiller","donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" ,"boltcutter", "lockpick"};
     };
 };
 
@@ -292,6 +292,18 @@ class VirtualItems {
         edible = -1;
         drinkable = -1;
         icon = "icons\ico_blastingCharge.paa";
+    };
+
+    class painkiller {
+        variable = "painkiller";
+        displayName = "STR_Item_Painkiller";
+        weight = 1;
+        buyPrice = 20000;
+        sellPrice = 10000;
+        illegal = false;
+        edible = -1;
+        drinkable = -1;
+        icon = "icons\ico_painkiller.paa";
     };
 
     class boltcutter {

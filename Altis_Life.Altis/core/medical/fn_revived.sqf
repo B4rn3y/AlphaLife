@@ -41,6 +41,10 @@ life_is_alive = true;
 
 [250,"Wiederbelebt"] spawn life_fnc_addexp;
 
+if!(6 in alpha_quests)then {
+    [6] spawn life_fnc_quest_achieved;
+};
+
 player setVariable ["Revive",nil,true];
 player setVariable ["name",nil,true];
 player setVariable ["Reviving",nil,true];

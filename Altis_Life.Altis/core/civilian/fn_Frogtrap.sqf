@@ -79,7 +79,9 @@ while {true} do
 		_buchte_placed setvariable["trap_time",serverTime,true];
 		_buchte_placed allowDamage false;
 
-
+		if!(32 in alpha_quests) then {
+	        [32] spawn life_fnc_quest_achieved;
+	    };
 	};
 	sleep 2;
 

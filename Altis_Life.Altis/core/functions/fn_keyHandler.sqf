@@ -219,7 +219,7 @@ switch (_code) do {
     case 38: {
         //If cop run checks for turning lights on.
         if (_shift && playerSide in [west,independent]) then {
-            if (!(isNull objectParent player) && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"]) then {
+            if !(isNull objectParent player) then {
                 if (!isNil {vehicle player getVariable "lights"}) then {
                     if (playerSide isEqualTo west) then {
                         [vehicle player] call life_fnc_sirenLights;

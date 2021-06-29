@@ -93,6 +93,12 @@ if (_spawnPoint isEqualTo "" && _spawnPoint isEqualType "") exitWith {hint local
 if (_spawnPoint isEqualTo [] && _spawnPoint isEqualType []) exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
 CASH = CASH - _purchasePrice;
 [0] call SOCK_fnc_updatePartial;
+
+
+if!(5 in alpha_quests)then {
+    [5] spawn life_fnc_quest_achieved;
+};
+
 if (_mode) then {
     hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 } else {

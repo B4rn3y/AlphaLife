@@ -102,6 +102,10 @@ _markername_text setMarkerText format["Gang Area PVP: Eingenommen durch: %1",_ga
 
 _laptop setvariable["gang_area_info",[_gang_id,_gang_name],true];
 
+if!(26 in alpha_quests) then {
+    [26] call life_fnc_quest_achieved;
+};
+
 if!(playerside isEqualTo west) then {
     [3,format["%1h %2min: %3 und seine Gang %4 haben die Gang Area eingenommen",date select 3,date select 4,profileName, (group player) getVariable["gang_name",""]]] remoteExec ['life_fnc_centerMsg',-2,false];
 } else {

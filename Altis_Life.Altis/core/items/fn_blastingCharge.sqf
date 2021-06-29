@@ -32,7 +32,11 @@ if(typeOf _vault isEqualTo "Land_CargoBox_V1_F") then {
 	hint localize "STR_ISTR_Blast_KeepOff";
 
 	[] remoteExec ["life_fnc_demoChargeTimer",[west,player]];
-	[_vault] remoteExec ["TON_fnc_handleBlastingCharge",2];
+	if(35 in alpha_quests) then {
+		[_vault] remoteExec ["TON_fnc_handleBlastingCharge",2];
+	} else {
+		[_vault, player] remoteExec ["TON_fnc_handleBlastingCharge",2];
+	};
 } else {
 	_ev_pos = [20902.4,19233.8,0.00143909];
 	if ((nearestObject [_ev_pos,"Land_Research_HQ_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Blast_Exploit"};

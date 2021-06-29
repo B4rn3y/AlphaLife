@@ -6,15 +6,21 @@
     Description:
     Adds the light effect to medic vehicles, specifically the offroad.
 */
+private ["_vehicle","_lightTime","_side","_clr","_lightRed","_lightBlue","_lightLeft","_lightPos","_leftOffset","_rightOffset","_lightRight","_leftRed"];
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_lightTime", 0.22, [0]]
+    ["_lightTime", 0.22, [0]],
+    ["_side", sideUnknown, [sideUnknown]]
 ];
 
-if (isNil "_vehicle" || {isNull _vehicle || {!(_vehicle getVariable "lights")}}) exitWith {};
-private _lightRed = [0.1, 0.1, 20];
-private _lightBlue = [0.1, 0.1, 20];
+if (isNil "_vehicle" || _side isEqualTo sideUnknown || {isNull _vehicle || {!(_vehicle getVariable "lights")}}) exitWith {};
+
+_clr = [nil,_side] call life_fnc_copLightPosition;
+
+
+private _lightRed = _clr select 1;
+private _lightBlue = _clr select 0;
 
 private _lightLeft = "#lightpoint" createVehicleLocal getPos _vehicle;
 sleep 0.2;
@@ -22,21 +28,16 @@ _lightLeft setLightColor _lightRed;
 _lightLeft setLightBrightness 0.2;
 _lightLeft setLightAmbient [0.1,0.1,1];
 
+_lightPos = [_vehicle] call life_fnc_copLightPosition;
 
-//Format: [[left position], [right position]]
-(switch (typeOf _vehicle) do {
-    case "C_Offroad_01_F": {
-        [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]];
-    };
-    default {
-        [[-1], [-1]];
-    };
-}) params ["_leftOffset", "_rightOffset"];
-
-if (_leftOffset isEqualTo [-1]) exitWith {
-    diag_log format ["Vehicle emergency lights not set for: %1",_vehicle];
+if (_lightPos isEqualTo []) exitWith {
+    diag_log format ["Vehicle emergency lights not set for: %1", typeof _vehicle];
     hint localize "STR_NOTF_ELSNotSet";
 };
+
+_leftOffset = _lightPos select 0;
+_rightOffset = _lightPos select 1;
+
 
 _lightLeft lightAttachObject [_vehicle, _leftOffset];
 

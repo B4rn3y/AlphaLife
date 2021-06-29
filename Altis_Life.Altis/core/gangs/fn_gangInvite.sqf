@@ -32,6 +32,10 @@ if (_action) then {
         [4,_group] remoteExecCall ["TON_fnc_updateGang",RSERV];
     };
 
+    if!(25 in alpha_quests) then {
+        [25] call life_fnc_quest_achieved;
+    };
+
 } else {
     _grpMembers = _group getVariable "gang_members";
     _grpMembers = _grpMembers - [getPlayerUID player];

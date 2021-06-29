@@ -11,7 +11,8 @@ params [["_unit",objNull,[objNull]]];
 
 if (isNull _unit) exitWith {};
 
-private _dropWeapons = LIFE_SETTINGS(getNumber,"drop_weapons_onDeath");
+//private _dropWeapons = LIFE_SETTINGS(getNumber,"drop_weapons_onDeath");
+private _dropWeapons = 0;
 
 private _primary = [primaryWeapon _unit, ""] select _dropWeapons;
 private _launcher = [secondaryWeapon _unit, ""] select _dropWeapons;

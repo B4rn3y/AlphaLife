@@ -21,7 +21,35 @@ CASH = CASH - _price;
 [0] call SOCK_fnc_updatePartial;
 
 
-[round(_price * 0.001),"Lizenz"] spawn life_fnc_addexp;
+[round(_price * 0.001),"Lizenzkauf"] spawn life_fnc_addexp;
+
+if(_type isEqualTo "driver" && !(9 in alpha_quests))then {
+    [9] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "gun" && !(10 in alpha_quests))then {
+    [10] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "pilot" && !(11 in alpha_quests))then {
+    [11] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "boat" && !(12 in alpha_quests))then {
+    [12] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "rebel" && !(27 in alpha_quests))then {
+    [27] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "mercenary" && !(37 in alpha_quests))then {
+    [37] spawn life_fnc_quest_achieved;
+};
+
+if(_type isEqualTo "alpha" && !(38 in alpha_quests))then {
+    [38] spawn life_fnc_quest_achieved;
+};
 
 titleText[format [localize "STR_NOTF_B_1", localize _displayName,[_price] call life_fnc_numberText],"PLAIN"];
 missionNamespace setVariable [_varName,true];

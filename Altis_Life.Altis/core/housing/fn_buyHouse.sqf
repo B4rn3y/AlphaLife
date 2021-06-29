@@ -33,6 +33,10 @@ if (_action) then {
     [1] call SOCK_fnc_updatePartial;
     [round((_houseCfg select 0) * 0.001),"Hauskauf"] spawn life_fnc_addexp;
 
+    if!(8 in alpha_quests)then {
+        [8] spawn life_fnc_quest_achieved;
+    };
+
     if (life_HC_isActive) then {
         [_uid,_house] remoteExec ["HC_fnc_addHouse",HC_Life];
     } else {

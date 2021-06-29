@@ -17,4 +17,8 @@ if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
 BANK = BANK - LIFE_SETTINGS(getNumber,"gang_price");
 [1] call SOCK_fnc_updatePartial;
 
+if!(24 in alpha_quests) then {
+	[24] call life_fnc_quest_achieved;
+};
+
 hint format [localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];

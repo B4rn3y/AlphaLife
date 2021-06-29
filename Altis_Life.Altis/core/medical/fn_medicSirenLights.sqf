@@ -11,7 +11,7 @@ params [
     ["_vehicle",objNull,[objNull]]
 ];
 if (isNull _vehicle) exitWith {}; //Bad entry!
-if !(typeOf _vehicle in ["C_Offroad_01_F"]) exitWith {}; //Last chance check to prevent something from defying humanity and creating a monster.
+if(([_vehicle] call life_fnc_copLightPosition) isEqualTo []) exitWith {};
 
 private _trueorfalse = _vehicle getVariable ["lights",false];
 
@@ -24,6 +24,6 @@ if (_trueorfalse) then {
     };
 } else {
     _vehicle setVariable ["lights",true,true];
-    private _jip = [_vehicle,0.22] remoteExec ["life_fnc_medicLights",RCLIENT,true];
+    private _jip = [_vehicle,0.22,playerSide] remoteExec ["life_fnc_medicLights",RCLIENT,true];
     _vehicle setVariable ["lightsJIP",_jip,true];
 };

@@ -12,3 +12,8 @@ if (isNull _vehicle) exitWith {}; //Bad vehicle type
 
 _vehicle setHitPointDamage["HitLFWheel",1];
 _vehicle setHitPointDamage["HitRFWheel",1];
+
+
+if(((driver _vehicle) isEqualTo player) && !(29 in alpha_quests)) then {
+	[29] spawn life_fnc_quest_achieved;
+};

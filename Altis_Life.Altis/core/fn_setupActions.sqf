@@ -20,10 +20,12 @@ switch (playerSide) do {
         life_actions pushBack (player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
         !isNull cursorObject && player distance cursorObject < 3.5 && isPlayer cursorObject && animationState cursorObject == "Incapacitated" && !(cursorObject getVariable ["robbed",false]) ']);
     };
-    
     //Cops
-    case west: { };
-    
+    case west: {
+        life_actions pushBack (player addAction["<t color='#1E90FF'>[Aussteigen] Fahrzeug",life_fnc_unlockVeh,"exit",100,false,false,"",'!isnull objectParent player']);
+        life_actions pushBack (player addAction["<t color='#1E90FF'>[Einsteigen] Fahrzeug",life_fnc_unlockVeh,"GetIn",100,false,false,"",'(cursorObject isKindOf "LandVehicle" || cursorObject isKindOf "Air" || cursorObject isKindOf "Ship") && isnull objectParent player && ((player distance cursorObject) < 10)']);
+     };
+
     //EMS
     case independent: { };
 

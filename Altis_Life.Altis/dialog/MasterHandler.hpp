@@ -35,3 +35,4 @@
 #include "aapps_callmanagement.hpp" // 1011001
 #include "placeables.hpp"  // 20000
 #include "skills.hpp"  // 258645
+#include "quest.hpp"  // 5223

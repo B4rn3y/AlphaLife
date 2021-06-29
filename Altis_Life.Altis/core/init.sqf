@@ -148,6 +148,8 @@ if (life_HC_isActive) then {
 
 [] call life_fnc_init_skills;
 
+0 spawn life_fnc_check_quests;
+
 player setAnimSpeedCoef (missionNamespace getvariable["alpha_skills_runner",1]);
 
 diag_log "----------------------------------------------------------------------------------------------------";
