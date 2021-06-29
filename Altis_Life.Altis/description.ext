@@ -38,6 +38,13 @@ class CfgSounds {
         titles[] = {};
     };
 
+    class police_speech1
+    {
+        name = "police_speech1";
+        sound[] = {"sounds\police_speech1.ogg", 1, 1,180};
+        titles[] = {};
+    };
+
     class radiation {
         name = "radiation";
         sound[] = {"\sounds\radiation.ogg", 1.0, 1};

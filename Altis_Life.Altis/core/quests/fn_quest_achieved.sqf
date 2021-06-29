@@ -8,7 +8,6 @@ _quest_ID = param[0,-1,[-1]];
 
 if(_quest_ID in alpha_quests) exitWith {};
 if(_quest_ID isEqualTo -1) exitWith {};
-if(!(playerside isEqualTo civilian)) exitWith {};
 
 
 //Normale Quest

@@ -126,7 +126,15 @@ switch (_code) do {
     case 211: {
         if ((playerSide in [west,independent]) && ( cursorObject getVariable["placed",false])) then {
             deleteVehicle cursorObject;
-            ["Die Absperrung wurde entfernt"] spawn life_fnc_exp_hint;;
+            ["Die Absperrung wurde entfernt"] spawn life_fnc_exp_hint;
+        };
+    };
+
+
+
+    case 39: {  // Ö
+        if ((playerSide in [west]) && !(isnull objectParent player)) then {
+            [objectParent player,"police_speech1",50,1] remoteExecCall ["life_fnc_say3D",-2];
         };
     };
 
