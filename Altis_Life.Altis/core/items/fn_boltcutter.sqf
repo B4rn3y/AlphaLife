@@ -41,9 +41,11 @@ if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 
 
 if ((nearestObject [_ev_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_ev_pos,"Land_Research_HQ_F"]) == _building) then {
     [[1,2],"STR_ISTR_Bolt_AlertEvidence_ROOM",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    [] remoteExec["life_fnc_bankSiren",-2];
 } else {
     if ((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) then {
         [[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        [] remoteExec["life_fnc_bankSiren",-2];
     } else {
         [0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
     };

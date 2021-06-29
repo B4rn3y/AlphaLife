@@ -147,6 +147,7 @@ class Life_Client_Core {
         class placeablesPlaceComplete {};
         class copLightPosition {};
         class unlockVeh {};
+        class bankSiren {};
     };
 
     class Dialog_Controls {
