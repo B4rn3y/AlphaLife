@@ -5,7 +5,7 @@ _side = param[1,sideUnknown,[sideUnknown]];
 
 if!(_side isEqualTo sideUnknown) exitWith {
 
-    _clr = switch (playerSide) do
+    _clr = switch (_side) do
     {
         case west:
         {

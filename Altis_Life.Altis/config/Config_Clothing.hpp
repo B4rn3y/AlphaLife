@@ -183,7 +183,16 @@ class Clothing {
             { "U_BG_Guerrilla_6_1", "COP Uniform", 500, "call life_coplevel >= 1" },
             { "U_I_CombatUniform", "SEK Uniform", 350, "call life_swatlevel >= 1" },
             { "U_B_GEN_Commander_F", "SEK Uniform 2", 350, "call life_swatlevel >= 1" },
-            { "U_I_ParadeUniform_01_AAF_decorated_F", "COP CHEF Uniform", 500, "call life_coplevel > 7" }
+            { "U_I_ParadeUniform_01_AAF_decorated_F", "COP CHEF Uniform", 500, "call life_coplevel > 7" },
+            { "U_I_GhillieSuit", "Zivil Ghillie", 500, "call life_swatlevel >= 1" },
+            { "U_O_GhillieSuit", "Zivil Ghillie", 500, "call life_swatlevel >= 1" },
+            { "U_O_T_FullGhillie_tna_F", "Zivil Ghillie", 500, "call life_swatlevel >= 1" },
+            { "U_I_FullGhillie_lsh", "Zivil Ghillie", 500, "call life_swatlevel >= 1" },
+            { "U_O_FullGhillie_ard", "Zivil Ghillie", 500, "call life_swatlevel >= 1" },
+            { "U_BG_Guerilla1_1", "Zivil Kleidung", 500, "call life_swatlevel >= 1" },
+            { "U_I_G_Story_Protagonist_F", "Zivil Kleidung", 500, "call life_swatlevel >= 1" },
+            { "U_C_Poloshirt_stripped", "Zivil Kleidung", 500, "call life_swatlevel >= 1" },
+            { "U_C_Poloshirt_blue", "Zivil Kleidung", 500, "call life_swatlevel >= 1" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -199,7 +208,12 @@ class Clothing {
             { "H_Cap_blk", "" , 500, "call life_coplevel >= 1" },
             {"H_Beret_Colonel", "" , 500, "call life_coplevel >= 7"},
             {"H_Beret_02", "" , 500, "call life_coplevel >= 5"},
-            { "H_ParadeDressCap_01_AAF_F", "COP CHEF HUT", 500, "call life_coplevel > 7" }
+            { "H_ParadeDressCap_01_AAF_F", "COP CHEF HUT", 500, "call life_coplevel > 7" },
+            { "H_Cap_blk_CMMG", "", 500, "call life_swatlevel >= 1" },
+            { "H_Cap_usblack", "", 500, "call life_swatlevel >= 1" },
+            { "H_Shemag_olive", "", 500, "call life_swatlevel >= 1" },
+            { "H_Booniehat_tna_F", "", 500, "call life_swatlevel >= 1" },
+            { "H_Booniehat_tan", "", 500, "call life_swatlevel >= 1" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
@@ -221,7 +235,10 @@ class Clothing {
             { "G_Balaclava_combat", "", 150, "call life_swatlevel >= 1" },
             { "G_Balaclava_lowprofile", "", 150, "call life_swatlevel >= 1" },
             { "G_Balaclava_TI_blk_F", "", 150, "call life_swatlevel >= 1" },
-            { "G_Balaclava_TI_G_blk_F", "", 150, "call life_swatlevel >= 1" }
+            { "G_Balaclava_TI_G_blk_F", "", 150, "call life_swatlevel >= 1" },
+            { "G_Bandanna_beast", "", 150, "call life_swatlevel >= 1" },
+            { "G_Bandanna_aviator", "", 150, "call life_swatlevel >= 1" },
+            { "G_Balaclava_TI_G_tna_F", "", 150, "call life_swatlevel >= 1" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },

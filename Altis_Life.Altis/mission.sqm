@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7168;
+		nextID=7172;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=38718;
+		nextID=43001;
 	};
 	class Camera
 	{
 		pos[]={15990.446,38.575283,16998.82};
-		dir[]={0.46660912,-0.75098801,-0.46722871};
-		up[]={0.53067648,0.6603151,-0.53138143};
-		aside[]={-0.7075808,1.5739352e-007,-0.70664144};
+		dir[]={0.46660694,-0.75098431,-0.46722642};
+		up[]={0.53067374,0.6603201,-0.53137827};
+		aside[]={-0.70757574,0,-0.70663762};
 	};
 };
 binarizationWanted=0;
@@ -424,24 +424,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -456,6 +438,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -513,7 +513,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6161;
+		items=6163;
 		class Item0
 		{
 			dataType="Marker";
@@ -1742,7 +1742,7 @@ class Mission
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
-			angle=224.99326;
+			angle=224.99323;
 			id=146;
 		};
 		class Item121
@@ -104259,7 +104259,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={16990.613,16.290867,12860.39};
-			angle=3.9895418;
+			angle=3.9895413;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [west])); } count thisList > 0;";
@@ -108007,6 +108007,26 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item6161
+		{
+			dataType="Marker";
+			position[]={3253.2561,2.135,12927.116};
+			name="police_hq_1";
+			type="Empty";
+			angle=347.89297;
+			id=7168;
+			atlOffset=0.096554041;
+		};
+		class Item6162
+		{
+			dataType="Marker";
+			position[]={14175.843,19.402,16292.752};
+			name="cop_spawn_5";
+			type="Empty";
+			angle=347.89297;
+			id=7169;
+			atlOffset=0.00024986267;
 		};
 	};
 };

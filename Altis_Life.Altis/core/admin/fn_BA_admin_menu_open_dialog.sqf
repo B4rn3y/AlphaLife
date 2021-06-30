@@ -186,7 +186,7 @@ _count = _count + 1;
 
 
 
-waitUntil {isnull (findDisplay 9858);};
+waitUntil {isnull (findDisplay 9000);};
 
 showchat true;
 

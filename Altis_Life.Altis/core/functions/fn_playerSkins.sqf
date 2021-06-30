@@ -72,7 +72,8 @@ switch (playerSide) do
 
 if!(_path isEqualTo "") then {
     player setObjectTextureGlobal[0,_path];
-    if(playerside in [west,independent]) then {
-        (unitBackpack player) setObjectTextureGlobal [0, ""];
-    };
+};
+
+if(playerside in [west,independent]) then {
+    (unitBackpack player) setObjectTextureGlobal [0, ""];
 };

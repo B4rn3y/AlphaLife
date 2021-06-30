@@ -69,7 +69,7 @@ switch (playerside) do
         } else {
 
             _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2];life_vInact_curTarget setVectorUp [0,0,1]; closeDialog 0;";
+            _Btn6 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2];[life_vInact_curTarget,[0,0,1]] remoteExec [""setvectorup"", life_vInact_curTarget]; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 
         };
@@ -84,7 +84,7 @@ switch (playerside) do
         } else {
 
             _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2]; life_vInact_curTarget setVectorUp [0,0,1];closeDialog 0;";
+            _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2]; [life_vInact_curTarget,[0,0,1]] remoteExec [""setvectorup"", life_vInact_curTarget];closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
 
         };
@@ -104,7 +104,7 @@ switch (playerside) do
         } else {
 
             _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2]; life_vInact_curTarget setVectorUp [0,0,1];closeDialog 0;";
+            _Btn2 buttonSetAction "life_vInact_curTarget setPosatl [getPosatl life_vInact_curTarget select 0, getPosatl life_vInact_curTarget select 1, (getPosatl life_vInact_curTarget select 2)+2]; [life_vInact_curTarget,[0,0,1]] remoteExec [""setvectorup"", life_vInact_curTarget];closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
 
         };

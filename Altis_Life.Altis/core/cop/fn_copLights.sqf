@@ -18,6 +18,7 @@ if (isNil "_vehicle" || _side isEqualTo sideUnknown || {isNull _vehicle || {!(_v
 
 _clr = [nil,_side] call life_fnc_copLightPosition;
 
+if(_clr isEqualTo []) exitWith {};
 
 private _lightRed = _clr select 1;
 private _lightBlue = _clr select 0;

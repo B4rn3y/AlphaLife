@@ -53,7 +53,7 @@ class WeaponShops {
             { "Binocular", "", 2500, 0, "" },
             { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
-            { "FirstAidKit", "", 2500, 75, "" },
+            { "FirstAidKit", "", 2500, 0, "" },
             { "NVGoggles", "", 5000, 1000, "" },
             {"arifle_AKS_F","",150000,75000,""},  // aks 74 u
             {"arifle_AKM_F","",300000,150000,""},   // AKM
@@ -126,7 +126,7 @@ class WeaponShops {
             { "Binocular", "", 2500, 0, "" },
             { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
-            { "FirstAidKit", "", 2500, 75, "" },
+            { "FirstAidKit", "", 2500, 0, "" },
             { "NVGoggles", "", 5000, 1000, "" },
             {"arifle_ARX_blk_F","",400000,200000,""},   // typ 115 black
             {"arifle_ARX_ghex_F","",400000,200000,""},   // typ 115 ghex
@@ -186,26 +186,26 @@ class WeaponShops {
             { "Binocular", "", 2500, 0, "" },
             { "Rangefinder", "", 5000, 0, "" },
             { "ItemGPS", "", 2500, 50, "" },
-            { "FirstAidKit", "", 2500, 75, "" },
+            { "FirstAidKit", "", 2500, 0, "" },
             { "NVGoggles", "", 5000, 1000, "" },
-            {"srifle_DMR_04_F","",1250000,625000,""},   // asp black
-            {"srifle_DMR_04_Tan_F","",1250000,625000,""},   // asp tan
-            {"srifle_DMR_02_F","",1500000,750000,""},   //mar 10 black
-            {"srifle_DMR_02_camo_F","",1500000,750000,""},   //mar 10 flecktarn
-            {"srifle_DMR_02_sniper_F","",1500000,750000,""},   //mar 10 sand
-            {"srifle_DMR_05_blk_F","",1500000,750000,""},     // cyrus black
-            {"srifle_DMR_05_tan_f","",1500000,750000,""},     // cyrus brown
-            {"srifle_DMR_05_hex_F","",1500000,750000,""},     // cyrus hex
-            {"LMG_Zafir_F","",3000000,1500000,""},  // zafir
-            {"srifle_LRR_F","",2500000,1250000,""}, // LRR black
-            {"srifle_LRR_camo_F","",2500000,1250000,""}, // LRR camo
-            {"srifle_LRR_tna_F","",2500000,1250000,""}, // LRR tan
-            {"srifle_GM6_F","",3500000,1750000,""}, // lynx black
-            {"srifle_GM6_camo_F","",3500000,1750000,""}, // lynx camo
-            {"srifle_GM6_ghex_F","",3500000,1750000,""}, // lynx tan
-            {"LMG_03_F","",1000000,500000,""}, // lim 85
-            {"LMG_Mk200_F","",1500000,750000,""}, //mk200 tan
-            {"LMG_Mk200_black_F","",1500000,750000,""} //mk200 black
+            {"srifle_DMR_04_F","",4000000,625000,""},   // asp black
+            {"srifle_DMR_04_Tan_F","",4000000,625000,""},   // asp tan
+            {"srifle_DMR_02_F","",8500000,750000,""},   //mar 10 black
+            {"srifle_DMR_02_camo_F","",8500000,750000,""},   //mar 10 flecktarn
+            {"srifle_DMR_02_sniper_F","",8500000,750000,""},   //mar 10 sand
+            {"srifle_DMR_05_blk_F","",9500000,750000,""},     // cyrus black
+            {"srifle_DMR_05_tan_f","",9500000,750000,""},     // cyrus brown
+            {"srifle_DMR_05_hex_F","",9500000,750000,""},     // cyrus hex
+            {"LMG_Zafir_F","",12500000,1500000,""},  // zafir
+            {"srifle_LRR_F","",14500000,1250000,""}, // LRR black
+            {"srifle_LRR_camo_F","",14500000,1250000,""}, // LRR camo
+            {"srifle_LRR_tna_F","",14500000,1250000,""}, // LRR tan
+            {"srifle_GM6_F","",15000000,1750000,""}, // lynx black
+            {"srifle_GM6_camo_F","",15000000,1750000,""}, // lynx camo
+            {"srifle_GM6_ghex_F","",15000000,1750000,""}, // lynx tan
+            {"LMG_03_F","",2500000,500000,""}, // lim 85
+            {"LMG_Mk200_F","",3500000,750000,""}, //mk200 tan
+            {"LMG_Mk200_black_F","",3500000,750000,""} //mk200 black
         };
         mags[] = {
             {"10Rnd_127x54_Mag","",15000,7500,""},  // asp mag
@@ -271,7 +271,7 @@ class WeaponShops {
             { "ItemMap", "", 5000, 2500, "" },
             { "ItemCompass", "", 5000, 2500, "" },
             { "ItemWatch", "", 50, 25, "" },
-            { "FirstAidKit", "", 10000, 5000, "" },
+            { "FirstAidKit", "", 10000, 0, "" },
             { "NVGoggles", "", 10000, 5000, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
@@ -292,7 +292,7 @@ class WeaponShops {
             { "ItemMap", "", 5000, 2500, "" },
             { "ItemCompass", "", 5000, 2500, "" },
             { "ItemWatch", "", 50, 25, "" },
-            { "FirstAidKit", "", 10000, 5000, "" },
+            { "FirstAidKit", "", 10000, 0, "" },
             { "NVGoggles", "", 10000, 5000, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
@@ -312,7 +312,7 @@ class WeaponShops {
             { "Binocular", "", 150, 0, "" },
             { "Rangefinder", "", 5000, 0, "call life_coplevel > 1" },
             { "ItemGPS", "", 100, 50, "" },
-            { "FirstAidKit", "", 150, 75, "" },
+            { "FirstAidKit", "", 150, 0, "" },
             { "NVGoggles", "", 2000, 1000, "" },
             { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 5000, 1000, "" },
@@ -330,7 +330,8 @@ class WeaponShops {
             { "srifle_DMR_03_F", "", 150000, 75000, "call life_coplevel > 3" },    // mk18
             { "LMG_03_F", "", 250000, 125000, "call life_coplevel > 4" },    // lim85
             { "LMG_Mk200_black_F", "", 350000, 175000, "call life_coplevel > 4" },    // mk200
-            { "LMG_Zafir_F", "", 450000, 225000, "call life_coplevel > 5" }    // zafir
+            { "LMG_Zafir_F", "", 450000, 225000, "call life_coplevel > 5" },    // zafir
+            { "srifle_DMR_02_F", "", 350000, 175000, "call life_coplevel > 6" }  // MAR 10
         };
         mags[] = {
             { "16Rnd_9x21_Mag", "", 125, 60, "" },
@@ -344,6 +345,7 @@ class WeaponShops {
             { "20Rnd_762x51_Mag", "", 125, 60, "" },    // spar17/mk18 mag
             { "200Rnd_556x45_Box_F", "", 250, 120, "" },    // lim85 mag
             { "200Rnd_65x39_cased_Box", "", 250, 120, "" },    // mk200 mag
+            { "10Rnd_338_Mag", "", 125, 60, "" },    // mar 10 mag
             { "150Rnd_762x54_Box", "", 250, 120, "" }    // zafir mag
         };
         accs[] = {
@@ -373,7 +375,7 @@ class WeaponShops {
         items[] = {
             { "Binocular", "", 150, 0, "" },
             { "ItemGPS", "", 100, 50, "" },
-            { "FirstAidKit", "", 150, 75, "" },
+            { "FirstAidKit", "", 150, 0, "" },
             { "NVGoggles", "", 2000, 1000, "" },
             { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 5000, 1000, "" },
@@ -446,7 +448,7 @@ class WeaponShops {
         items[] = {
             { "ItemGPS", "", 100, 50, "" },
             { "Binocular", "", 150, 0, "" },
-            { "FirstAidKit", "", 150, 75, "" },
+            { "FirstAidKit", "", 150, 0, "" },
             { "Medikit", "", 1000, 75, "" },
             { "NVGoggles", "", 1200, 600, "" }
         };

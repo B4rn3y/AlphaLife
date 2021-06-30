@@ -11,7 +11,7 @@ if!(playerside isEqualTo civilian) exitWith {};
 
 if((primaryWeapon player) isEqualTo "" && (handgunWeapon player) isEqualTo "") exitWith {["Du versuchst unbewaffnet eine Tankstelle auszurauben, der Besitzer verpügelt dich"] spawn life_fnc_exp_hint;[player,"Tankstellenbesitzer"] spawn life_fnc_knockoutAction;};
 
-_min_cops = 2;
+_min_cops = 3;
 _max_distance_rob = 7;
 if(playersnumber west < _min_cops) exitWith {[format["Es müssen mindestens %1 Cops online sein um dies tun zu können",_min_cops]] spawn life_fnc_exp_hint;};
 
