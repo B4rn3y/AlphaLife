@@ -123,6 +123,22 @@ switch (_code) do {
         };
     };
 
+    // E
+    case 18: {
+        if((vehicle player)isKindOf "landVehicle" && (driver (vehicle player)) isEqualTo player && isnil "alpha_nitro" && ((vehicle player) getvariable["alpha_nitro",0]) > 0) then {
+            [] spawn life_fnc_nitro;
+        };
+    };
+
+
+
+    // Ä
+    case 40: {
+        if((vehicle player)isKindOf "landVehicle" && (driver (vehicle player)) isEqualTo player && ((vehicle player) getvariable["alpha_light",-1]) >= 0) then {
+            0 spawn life_fnc_car_light;
+        };
+    };
+
     case 211: {
         if ((playerSide in [west,independent]) && ( cursorObject getVariable["placed",false])) then {
             deleteVehicle cursorObject;
@@ -346,6 +362,12 @@ switch (_code) do {
             [] call life_fnc_fadeSound;
             _handled = true;
         };
+
+
+        if(!_shift && (vehicle player)isKindOf "landVehicle" && (driver (vehicle player)) isEqualTo player && isnil "alpha_oil" && ((vehicle player) getvariable["alpha_oil",0]) > 0) then {
+            0 spawn life_fnc_oilspill_fire;
+        };
+
     };
 
     //U Key

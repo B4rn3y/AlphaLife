@@ -19,6 +19,11 @@ if (count _vInfo > 0) then {
     _plate = _vInfo select 1;
     _uid = _vInfo select 0;
 };
+_light_obj = _vehicle getvariable["alpha_light_obj",objNull];
+if!(isnull _light_obj) then {
+    lightDetachObject _light_obj;
+    deleteVehicle _light_obj;
+};
 
 // save damage.
 if (LIFE_SETTINGS(getNumber,"save_vehicle_damage") isEqualTo 1) then {
@@ -45,7 +50,7 @@ if (_impound) exitWith {
             deleteVehicle _vehicle;
         };
     } else {    // no free repairs!
-        _query = format ["UPDATE vehicles SET active='0', fuel='%3', damage='%4' WHERE pid='%1' AND plate='%2'",_uid , _plate, _fuel, _damage];
+        _query = format ["UPDATE vehicles SET active='0', fuel='%3', damage='%4', nitro='%5', oil='%6' WHERE pid='%1' AND plate='%2'",_uid , _plate, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
         _thread = [_query,1] call DB_fnc_asyncCall;
 
         if (!isNil "_vehicle" && {!isNull _vehicle}) then {
@@ -140,7 +145,7 @@ _trunk = [_trunk] call DB_fnc_mresArray;
 _cargo = [_cargo] call DB_fnc_mresArray;
 
 // update
-_query = format ["UPDATE vehicles SET active='0', inventory='%3', gear='%4', fuel='%5', damage='%6' WHERE pid='%1' AND plate='%2'", _uid, _plate, _trunk, _cargo, _fuel, _damage];
+_query = format ["UPDATE vehicles SET active='0', inventory='%3', gear='%4', fuel='%5', damage='%6',nitro='%7',oil='%8' WHERE pid='%1' AND plate='%2'", _uid, _plate, _trunk, _cargo, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
 _thread = [_query,1] call DB_fnc_asyncCall;
 
 if (!isNil "_vehicle" && {!isNull _vehicle}) then {

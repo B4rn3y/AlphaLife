@@ -241,3 +241,4 @@ class Life_Settings {
 #include "Config_Admin.hpp"
 #include "Config_Skills.hpp"
 #include "Config_Quests.hpp"
+#include "Config_Tuning.hpp"

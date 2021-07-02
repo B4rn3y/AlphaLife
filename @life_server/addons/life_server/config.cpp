@@ -57,6 +57,11 @@ class CfgFunctions {
             class invisibleOn {};
         };
 
+        class tuning_server {
+            file = "\life_server\Functions\tuning";
+            class tuning_update_vehicle {};
+        };
+
         class Evidence_room {
             file = "\life_server\Functions\Evidence_room"
             class init_evidence_room {};

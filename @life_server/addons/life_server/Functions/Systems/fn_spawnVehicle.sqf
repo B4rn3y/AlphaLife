@@ -28,7 +28,7 @@ serv_sv_use pushBack _vid;
 
 private _servIndex = serv_sv_use find _vid;
 
-private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist, nitro, oil, light, horn, material FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
 
 private _tickTime = diag_tickTime;
 private _queryResult = [_query,2] call DB_fnc_asyncCall;
@@ -111,6 +111,32 @@ if!((_vInfo select 8) isEqualTo -1) then {
 };
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7)],true];
+
+
+_nitro = _vInfo select 14;
+_oil = _vInfo select 15;
+_light = _vInfo select 16;
+_horn = _vInfo select 17;
+_material_ID = _vInfo select 18;
+
+if!(_nitro isEqualTo -1) then {
+    _vehicle setvariable["alpha_nitro",_nitro,true];
+};
+if!(_oil isEqualTo -1) then {
+    _vehicle setvariable["alpha_oil",_oil,true];
+};
+if!(_light isEqualTo -1) then {
+    _vehicle setvariable["alpha_light",_light,true];
+};
+if!(_horn isEqualTo -1) then {
+    _vehicle setVariable["alpha_horn",_horn,true];
+};
+if!(_material_ID isEqualTo -1) then {
+    _material = (getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "materials") select _material_ID) select 0;
+    {
+        _vehicle setObjectMaterialglobal[_foreachindex, _material];
+    } foreach (getObjectMaterials _vehicle);
+};
 
 //if!(_side isEqualTo west) then {
     _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.

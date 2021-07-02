@@ -3,7 +3,7 @@ class CfgQuests
 	class Quests
 	{
 
-		////////////////////////////////////////////   max wert 38
+		////////////////////////////////////////////   max wert 42
 		Quests[] = {
 			{"BASIC",
 				{
@@ -28,7 +28,11 @@ class CfgQuests
 					{19,"Kassenräuber", "Beraube erfolgreich eine Tankstelle","Du erhältst 500XP und 25.000$",500,25000,""},
 					{20,"Verknackt", "Werde von einem Polizisten inhaftiert","Du erhältst 2000XP und 75.000$",2000,75000,""},
 					{21,"Lagerrist", "Benutze eine kleine Lagerbox","Du erhältst 1000XP und 50.000$",1000,50000,""},
-					{22,"Lagerrist+", "Benutze eine große Lagerbox","Du erhältst 1500XP und 75.000$",1500,75000,""}
+					{22,"Lagerrist+", "Benutze eine große Lagerbox","Du erhältst 1500XP und 75.000$",1500,75000,""},
+					{39,"Vollgas", "Benutze Nitro in einem Auto","Du erhältst 800XP und 50.000$",800,50000,""},
+					{40,"Ölig hier", "Lege eine Ölspur","Du erhältst 3000XP und 75.000$",3000,75000,""},
+					{41,"Ausgerutscht", "Fahre durch eine Ölspur","Du erhältst 250XP und 15.000$",250,15000,""},
+					{42,"Tuner", "Tune dein Fahrzeug","Du erhältst 500XP und 25.000$",500,25000,""}
 
 				}
 			},

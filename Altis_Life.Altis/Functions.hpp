@@ -247,6 +247,7 @@ class Life_Client_Core {
         class radiation {};
         class mapMarkerplayer {};
         class rpNameCheck {};
+        class nearplayers {};
     };
 
     class FSM {
@@ -417,6 +418,22 @@ class Life_Client_Core {
         class skill_menu_TreeSelChanged {};
         class open_skill_menu {};
         class init_skills {};
+    };
+
+    class tuning {
+        file = "core\tuning";
+        class create_tuning_shop {};
+        class open_tuning_shop {};
+        class tuning_shop_combo_EVH {};
+        class tuning_shop_lb_EVH {};
+        class tuning_shop_buy {};
+        class GetInEVH {};
+        class GetOutEVH {};
+        class oilspill_fire {};
+        class oilspill_receive {};
+        class nitro {};
+        class update_vehicle_hud {};
+        class car_light {};
     };
 
     class Vehicle {

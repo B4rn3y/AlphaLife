@@ -9,7 +9,7 @@ enableDebugConsole[] = { "76561198018512569"};
 #include "config\Config_Master.hpp"
 
 class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DatabaseName = "altislifetest"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
     DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
     HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
     /*
@@ -23,6 +23,7 @@ class RscTitles {
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
     #include "dialog\centerMsg.hpp"
+    #include "dialog\hud_veh.hpp"
 };
 
 class CfgFunctions {
@@ -49,6 +50,69 @@ class CfgSounds {
     {
         name = "bankalarm";
         sound[] = {"sounds\bankalarm.ogg", 1, 1,180};
+        titles[] = {};
+    };
+
+    class CarHorn
+    {
+        name = "CarHorn";
+        sound[] = {"sounds\horns\MRAP_02_horn_2.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class TruckHorn
+    {
+        name = "TruckHorn";
+        sound[] = {"sounds\horns\MRAP_02_horn_1.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class FakeHorn
+    {
+        name = "FakeHorn";
+        sound[] = {"sounds\horns\MRAP_02_horn_2.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class TruckHorn2
+    {
+        name = "TruckHorn2";
+        sound[] = {"sounds\horns\truck_horn_2.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class TruckHorn3
+    {
+        name = "TruckHorn3";
+        sound[] = {"sounds\horns\truck_horn_3.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class SportCarHorn
+    {
+        name = "SportCarHorn";
+        sound[] = {"sounds\horns\car_horn_1.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class MiniCarHorn
+    {
+        name = "MiniCarHorn";
+        sound[] = {"sounds\horns\car_horn_2.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class PoliceHorn
+    {
+        name = "PoliceHorn";
+        sound[] = {"sounds\horns\Offroad_01_Gendarmerie_Siren_OneShot.wss", 1, 1,180};
+        titles[] = {};
+    };
+
+    class speed
+    {
+        name = "speed";
+        sound[] = {"sounds\speed.ogg", 1.0, 1};
         titles[] = {};
     };
 

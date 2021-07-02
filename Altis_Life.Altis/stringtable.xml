@@ -11144,6 +11144,10 @@
             <Italian>Concessionaria Camion</Italian>
 			<Chinesesimp>卡车商店</Origimnal>
         </Key>
+        <Key ID="STR_MAR_Tuning_Shop">
+            <Original>Tuning Shop</Original>
+            <German>Tuning-Werkstatt</German>
+        </Key>
         <Key ID="STR_MAR_Oil_Processing">
             <Original>Oil Processing</Original>
             <Czech>Zpracování olej</Czech>
