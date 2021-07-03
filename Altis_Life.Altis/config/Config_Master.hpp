@@ -13,6 +13,7 @@ class Life_Settings {
     xp_first_level = 1000;
     xp_gain_level = 500;
     xp_gain_time = 300;   // xp given by the client.fsm
+    vehicle_insurance_multiplier = 0.7;  // insurance cost cur. 70% of buy price
 /* Logging and Security Settings*/
     /* Security Settings */
     spyGlass_toggle = false; //Spyglass On/Off Toggle --> True = On & False = Off

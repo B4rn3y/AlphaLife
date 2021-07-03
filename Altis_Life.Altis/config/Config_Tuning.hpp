@@ -2,77 +2,74 @@
 class Tuning_Conf {
     class Conf {
 
-        material_cost = 1000000;
-        horn_cost = 1500000;
         nitro_cost = 500000;
         oil_cost = 2000000;
-        cost_lights = 5000000;
 
         nitro_amount = 5;
         oil_amount = 3;
 
         horns[] = {
-            {"CarHorn", "Car Horn"},
-            {"TruckHorn", "Truck Horn"},
-            {"TruckHorn2", "Truck Horn 2"},
-            {"TruckHorn3", "Truck Horn 3"},
-            {"SportCarHorn", "Sport Car Horn"},
-            {"MiniCarHorn", "Mini Car Horn"},
-            {"PoliceHorn", "[ILLEGAL] Police Horn"}
+            {"CarHorn", "Car Horn",1500000},
+            {"TruckHorn", "Truck Horn",1500000},
+            {"TruckHorn2", "Truck Horn 2",1500000},
+            {"TruckHorn3", "Truck Horn 3",1500000},
+            {"SportCarHorn", "Sport Car Horn",1500000},
+            {"MiniCarHorn", "Mini Car Horn",1500000},
+            {"PoliceHorn", "[ILLEGAL] Police Horn",1500000}
         };
 
 
         materials[] =
         {
-           {"material\blueShine.rvmat","Blue Shine"},
-           {"material\blueUltimate.rvmat","Blue Ultimate"},
-           {"material\crazyLasyShine.rvmat","Lasy Shine"},
-           {"material\csgoFadeShine.rvmat","Fade Shine"},
-           {"material\darkBlueGlow.rvmat","Dark Blue Glow"},
-           {"material\darkGreenGlow.rvmat","Dark Green Glow"},
-           {"material\fadeUltimate.rvmat","Fade"},
-           {"material\firestormRedEditionShine.rvmat","Firestorm Red"},
-           {"material\firestormYellowEditionShine.rvmat","Firestorm Yellow"},
-           {"material\flipFlopGreenShine.rvmat","Flip Flop Green"},
-           {"material\flipFlopYellowShine.rvmat","Flip Flop Yellow"},
-           {"material\girlsClubShine.rvmat","Girls Club"},
-           {"material\goldenRetrieverShine.rvmat","Golden Retriever"},
-           {"material\goldShine.rvmat","Gold"},
-           {"material\greenUltimate.rvmat","Green"},
-           {"material\lavaShine.rvmat","Lava"},
-           {"material\lemonGlow.rvmat","Lemon"},
-           {"material\lightBlueGlow.rvmat","Light Blue"},
-           {"material\lightGreenGlow.rvmat","Light Green"},
-           {"material\lilaGlow.rvmat","Lila"},
-           {"material\manderinGlow.rvmat","Manderin"},
-           {"material\mirror.rvmat","Mirror"},
-           {"material\oceanShine.rvmat","Ocean"},
-           {"material\orangeGlow.rvmat","Orange"},
-           {"material\pinkLadyGlow.rvmat","Pink"},
-           {"material\redGlow.rvmat","Red"},
-           {"material\redUltimate.rvmat","Red Ultimate"},
-           {"material\reverse1Ultimate.rvmat","Reverse 1"},
-           {"material\reverse2Ultimate.rvmat","Reverse 2"},
-           {"material\reverse3Ultimate.rvmat","Reverse 3"},
-           {"material\silentBlueGlow.rvmat","Silent Blue"},
-           {"material\silentGreenGlow.rvmat","Silent Green"},
-           {"material\stealthShine.rvmat","Stealth"},
-           {"material\twinColoursShine.rvmat","Twin Color"},
-           {"material\whiteBlueGlow.rvmat","White/Blue"},
-           {"material\yellowGlow.rvmat","Yellow"}
+           {"material\blueShine.rvmat","Blue Shine",1000000},
+           {"material\blueUltimate.rvmat","Blue Ultimate",1000000},
+           {"material\crazyLasyShine.rvmat","Lasy Shine",1000000},
+           {"material\csgoFadeShine.rvmat","Fade Shine",1000000},
+           {"material\darkBlueGlow.rvmat","Dark Blue Glow",1000000},
+           {"material\darkGreenGlow.rvmat","Dark Green Glow",1000000},
+           {"material\fadeUltimate.rvmat","Fade",1000000},
+           {"material\firestormRedEditionShine.rvmat","Firestorm Red",1000000},
+           {"material\firestormYellowEditionShine.rvmat","Firestorm Yellow",1000000},
+           {"material\flipFlopGreenShine.rvmat","Flip Flop Green",1000000},
+           {"material\flipFlopYellowShine.rvmat","Flip Flop Yellow",1000000},
+           {"material\girlsClubShine.rvmat","Girls Club",1000000},
+           {"material\goldenRetrieverShine.rvmat","Golden Retriever",1000000},
+           {"material\goldShine.rvmat","Gold",1000000},
+           {"material\greenUltimate.rvmat","Green",1000000},
+           {"material\lavaShine.rvmat","Lava",1000000},
+           {"material\lemonGlow.rvmat","Lemon",1000000},
+           {"material\lightBlueGlow.rvmat","Light Blue",1000000},
+           {"material\lightGreenGlow.rvmat","Light Green",1000000},
+           {"material\lilaGlow.rvmat","Lila",1000000},
+           {"material\manderinGlow.rvmat","Manderin",1000000},
+           {"material\mirror.rvmat","Mirror",1000000},
+           {"material\oceanShine.rvmat","Ocean",1000000},
+           {"material\orangeGlow.rvmat","Orange",1000000},
+           {"material\pinkLadyGlow.rvmat","Pink",1000000},
+           {"material\redGlow.rvmat","Red",1000000},
+           {"material\redUltimate.rvmat","Red Ultimate",1000000},
+           {"material\reverse1Ultimate.rvmat","Reverse 1",1000000},
+           {"material\reverse2Ultimate.rvmat","Reverse 2",1000000},
+           {"material\reverse3Ultimate.rvmat","Reverse 3",1000000},
+           {"material\silentBlueGlow.rvmat","Silent Blue",1000000},
+           {"material\silentGreenGlow.rvmat","Silent Green",1000000},
+           {"material\stealthShine.rvmat","Stealth",1000000},
+           {"material\twinColoursShine.rvmat","Twin Color",1000000},
+           {"material\whiteBlueGlow.rvmat","White/Blue",1000000},
+           {"material\yellowGlow.rvmat","Yellow",1000000}
         };
 
 
         light_color[] =
         {
-            {"Blue", {0.1, 0.1, 20}},
-            {"Red", {20, 0.1, 0.1}},
-            {"Orange",{0.996,0.573,0}},
-            {"Yellow",{0.875,0.996,0}},
-            {"Green",{0.016,0.996,0}},
-            {"Light Blue",{0,0.996,0.906}},
-            {"Pink",{0.941,0,1}},
-            {"Violet",{0.667,0,1}}
+            {"Blue", {0.1, 0.1, 1},5000000},
+            {"Red", {1, 0.1, 0.1},5000000},
+            {"Orange",{0.996,0.573,0},5000000},
+            {"Yellow",{0.875,0.996,0},5000000},
+            {"Green",{0.016,0.996,0},5000000},
+            {"Light Blue",{0,0.996,0.906},5000000},
+            {"Pink",{0.941,0,1},5000000},
+            {"Violet",{0.667,0,1},5000000}
         };
 
 

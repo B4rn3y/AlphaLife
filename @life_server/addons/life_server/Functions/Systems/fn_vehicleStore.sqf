@@ -19,11 +19,7 @@ if (count _vInfo > 0) then {
     _plate = _vInfo select 1;
     _uid = _vInfo select 0;
 };
-_light_obj = _vehicle getvariable["alpha_light_obj",objNull];
-if!(isnull _light_obj) then {
-    lightDetachObject _light_obj;
-    deleteVehicle _light_obj;
-};
+
 
 // save damage.
 if (LIFE_SETTINGS(getNumber,"save_vehicle_damage") isEqualTo 1) then {

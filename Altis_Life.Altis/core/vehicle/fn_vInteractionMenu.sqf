@@ -12,6 +12,7 @@
 #define Btn4 37453
 #define Btn5 37454
 #define Btn6 37455
+#define Btn7 37456
 #define Title 37401
 private ["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_id"];
 if (!dialog) then {
@@ -31,6 +32,7 @@ _Btn3 = _display displayCtrl Btn3;
 _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
+_Btn7 = _display displayCtrl Btn7;
 life_vInact_curTarget = _curTarget;
 _id = getObjectDLC _curTarget;
 
@@ -73,6 +75,17 @@ switch (playerside) do
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 
         };
+
+        _Btn7 ctrlEnable false;
+        _Btn7 ctrlSetText localize "STR_vInAct_RemoveHorn";
+        _Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_remove_horn; closeDialog 0;";
+        if(_curTarget isKindOf "landVehicle") then {
+            _Btn7 ctrlEnable true;
+        };
+
+        {
+            if ((player distance (getMarkerPos _x) <30)) exitWith { _Btn7 ctrlEnable true;};
+        } forEach LIFE_SETTINGS(getArray,"sendtoJail_locations");
     };
 
     case independent:
@@ -92,7 +105,7 @@ switch (playerside) do
         _Btn3 ctrlSetText localize "STR_vInAct_Impound";
         _Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction; closeDialog 0;";
 
-        {_x ctrlShow false;} foreach [_Btn4,_Btn5,_Btn6];
+        {_x ctrlShow false;} foreach [_Btn4,_Btn5,_Btn6,_Btn7];
     };
 
     default
@@ -132,7 +145,7 @@ switch (playerside) do
             _Btn4 ctrlShow false;
         };
 
-        {_x ctrlShow false;} foreach [_Btn5,_Btn6];
+        {_x ctrlShow false;} foreach [_Btn5,_Btn6,_Btn7];
 
     };
 };

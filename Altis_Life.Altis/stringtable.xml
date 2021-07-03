@@ -409,6 +409,10 @@
             <Polish>Sprzedaj</Polish>
 			<Chinesesimp>出售</Chinesesimp>
         </Key>
+        <Key ID="STR_Global_Insure">
+            <Original>Insure</Original>
+            <German>Versichern</German>
+        </Key>
         <Key ID="STR_Global_Buy">
             <Original>Buy</Original>
             <Czech>Koupit</Czech>
@@ -3785,6 +3789,10 @@
         <Key ID="STR_NOTF_BeingImpounded_Medic">
             <Original>%1 your %2 is being impounded by the medics.</Original>
             <German>%1 dein %2 wird von den Medics beschlagnahmt!</German>
+        </Key>
+        <Key ID="STR_NOTF_Remove_horn">
+            <Original>Removing Horn</Original>
+            <German>Entferne Hupe</German>
         </Key>
         <Key ID="STR_NOTF_Impounding">
             <Original>Impounding Vehicle</Original>
@@ -9876,6 +9884,10 @@
             <Polish>Ustaw pojazd</Polish>
 			<Chinesesimp>翻转载具</Chinesesimp>
         </Key>
+        <Key ID="STR_vInAct_RemoveHorn">
+            <Original>Remove Horn</Original>
+            <German>Hupe entfernen</German>
+        </Key>
         <Key ID="STR_vInAct_GetInVehicle">
             <Original>Get In Vehicle</Original>
             <Czech></Czech>
@@ -10527,6 +10539,17 @@
             <Portuguese>Capacidade do Reservatório:</Portuguese>
             <Polish>Pojemność baku:</Polish>
 			<Chinesesimp>燃料容量:</Chinesesimp>
+        </Key>
+        <Key ID="STR_Shop_Veh_UI_insured">
+            <Original>Insured:</Original>
+            <German>Versichert:</German>
+        </Key>
+        <Key ID="STR_Shop_Veh_UI_oil">
+            <Original>Oil:</Original>
+            <German>Öl:</German>
+        </Key>
+        <Key ID="STR_Shop_Veh_UI_nitro">
+            <Original>Nitro:</Original>
         </Key>
         <Key ID="STR_Shop_Veh_UI_Armor">
             <Original>Armor Rating:</Original>

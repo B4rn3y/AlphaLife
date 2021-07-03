@@ -17,6 +17,15 @@ _dataArr = call compile format ["%1",_dataArr];
 _className = (_dataArr select 0);
 _classNameLife = _className;
 
+_display = findDisplay 2800;
+_insure_btn = _display displayCtrl 97480;
+
+if((_dataArr select 7) isEqualTo 1) then {
+    _insure_btn ctrlEnable false;
+} else {
+    _insure_btn ctrlEnable true;
+};
+
 if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _classNameLife)) then {
     _classNameLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_className];
@@ -78,15 +87,17 @@ if (!(_sellPrice isEqualType 0) || _sellPrice < 1) then {_sellPrice = 500;};
 if (!(_retrievePrice isEqualType 0) || _retrievePrice < 1) then {_retrievePrice = 500;};
 
 (CONTROL(2800,2803)) ctrlSetStructuredText parseText format [
-    (localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
-    " +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>
-    " +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>
-    " +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>
-    " +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>
-    " +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>
-    " +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>
-    " +(localize "STR_Shop_Veh_UI_Fuel")+ " %7
-    ",
+    (localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>"
+    +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>"
+    +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>"
+    +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>"
+    +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>"
+    +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>"
+    +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>"
+    +(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>"
+    +(localize "STR_Shop_Veh_UI_insured")+ " %9<br/>"
+    +(localize "STR_Shop_Veh_UI_nitro")+ " %10<br/>"
+    +(localize "STR_Shop_Veh_UI_oil")+ " %11<br/>",
 [_retrievePrice] call life_fnc_numberText,
 [_sellPrice] call life_fnc_numberText,
 (_vehicleInfo select 8),
@@ -94,7 +105,10 @@ if (!(_retrievePrice isEqualType 0) || _retrievePrice < 1) then {_retrievePrice 
 (_vehicleInfo select 10),
 if (_trunkSpace isEqualTo -1) then {"None"} else {_trunkSpace},
 (_vehicleInfo select 12),
-_vehicleColor
+_vehicleColor,
+(_dataArr select 7),
+(_dataArr select 2),
+(_dataArr select 3)
 ];
 
 ctrlShow [2803,true];

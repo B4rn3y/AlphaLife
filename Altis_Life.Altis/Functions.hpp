@@ -148,6 +148,7 @@ class Life_Client_Core {
         class copLightPosition {};
         class unlockVeh {};
         class bankSiren {};
+        class remove_horn {};
     };
 
     class Dialog_Controls {
@@ -175,6 +176,7 @@ class Life_Client_Core {
         class vehicleGarage {};
         class wireTransfer {};
         class show_name_message {};
+        class insurecar {};
     };
 
     class exclusion_zone {
@@ -434,6 +436,7 @@ class Life_Client_Core {
         class nitro {};
         class update_vehicle_hud {};
         class car_light {};
+        class car_light_receive {};
     };
 
     class Vehicle {

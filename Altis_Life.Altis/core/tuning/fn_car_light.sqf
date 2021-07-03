@@ -18,41 +18,16 @@ if(_light_index isEqualTo -1) exitWith {};
 
 alpha_lights_tuning = true;
 
-_light_obj = _vehicle getvariable["alpha_light_obj",objNull];
+_light_on = _vehicle getvariable["alpha_light_bool",false];
 
-if(isnull _light_obj) then {
-	_color = (getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "light_color") select _light_index) select 1;
-
-	_pos = [];
-	{
-		if((_x select 0) isEqualTo (typeof _vehicle)) exitWith {_pos = _x select 1;};
-	} foreach getArray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "vehicle_light_pos");
-
-	if(_pos isEqualTo []) exitWith {};
-
-	_light_obj = "#lightpoint" createVehicle getPosatl _vehicle;
-	_light_obj lightAttachObject[_vehicle,_pos];
-	_light_obj setLightColor _color;
-	_light_obj setLightAmbient _color;
-	_light_obj setLightDayLight true;
-
-	_light_obj setLightAttenuation [0.181, 0, 1000,2000];
-	_light_obj setLightFlareSize 0.38;
-	_light_obj setLightFlareMaxDistance 150;
-	_light_obj setLightUseFlare true;
-
-	_brightness = 30;
-    if (sunOrMoon < 1) then {
-        _brightness = 2;
-    };
-	_light_obj setLightBrightness _brightness;
-	_vehicle setvariable["alpha_light_obj",_light_obj,true];
-	["Beleuchtung: AN"] spawn life_fnc_exp_hint;
-} else {
-	lightDetachObject _light_obj;
-	deleteVehicle _light_obj;
-	_vehicle setvariable["alpha_light_obj",nil,true];
+if(_light_on) then {
+	[_vehicle,false] remoteExec["life_Fnc_car_light_receive",-2];
+	_vehicle setvariable["alpha_light_bool",nil,true];
 	["Beleuchtung: AUS"] spawn life_fnc_exp_hint;
+} else {
+	[_vehicle,true] remoteExec["life_Fnc_car_light_receive",-2];
+	_vehicle setvariable["alpha_light_bool",true,true];
+	["Beleuchtung: AN"] spawn life_fnc_exp_hint;
 };
 
 

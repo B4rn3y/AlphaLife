@@ -37,6 +37,7 @@ switch (_index) do
 	{
 		_query = format["UPDATE vehicles SET horn = '%1' WHERE pid = '%2' and plate = '%3';",_index_item,_uid,_plate];
 		[_query,1] call DB_fnc_asyncCall;
+		_vehicle setVariable["alpha_horn",_index_item,true];
 	};
 
 	case 2:  // anderes

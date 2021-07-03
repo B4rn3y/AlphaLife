@@ -62,9 +62,9 @@ switch (_cur_sel_combo) do
 			life_tuning_light setLightFlareMaxDistance 150;
 			life_tuning_light setLightUseFlare true;
 
-			_brightness = 30;
+			_brightness = 200;
 		    if (sunOrMoon < 1) then {
-		        _brightness = 30;
+		        _brightness = 200;
 		    };
 			life_tuning_light setLightBrightness _brightness;
 

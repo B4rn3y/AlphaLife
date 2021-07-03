@@ -31,7 +31,7 @@ switch (_cur_sel) do
 	case 0:  // Folierungen
 	{
 		{
-			_lb lbadd format["$%1 - %2",[getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "material_cost")] call life_fnc_numbertext,_x select 1];
+			_lb lbadd format["$%1 - %2",[_x select 2] call life_fnc_numbertext,_x select 1];
 		} foreach getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "materials");
 		_lb lbSetCurSel 0;
 	};
@@ -39,7 +39,7 @@ switch (_cur_sel) do
 	case 1:  // Hupen
 	{
 		{
-			_lb lbadd format["$%1 - %2",[getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "horn_cost")] call life_fnc_numbertext,_x select 1];
+			_lb lbadd format["$%1 - %2",[_x select 2] call life_fnc_numbertext,_x select 1];
 		} foreach getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "horns");
 		_lb lbSetCurSel 0;
 	};
@@ -54,7 +54,7 @@ switch (_cur_sel) do
 	case 3:  // Unterbodenbeleuchtung
 	{
 		{
-			_lb lbadd format["$%1 - %2",[getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "cost_lights")] call life_fnc_numbertext,_x select 0];
+			_lb lbadd format["$%1 - %2",[_x select 2] call life_fnc_numbertext,_x select 0];
 		} foreach getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "light_color");
 		_lb lbSetCurSel 0;
 	};

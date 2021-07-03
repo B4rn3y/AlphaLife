@@ -18,7 +18,7 @@ switch (_cur_sel_combo) do
 	case 0: // Folierungen
 	{
 
-		_price = getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "material_cost");
+		_price  = ((getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "materials") select _cur_sel_lb) select 2);
 		if((alpha_atmbank - _price) < 0) exitWith {["Du hast nicht genügend Geld auf dem Konto!"] spawn life_fnc_exp_hint;};
 		alpha_atmbank = alpha_atmbank - _price;
 		[1] call SOCK_fnc_updatePartial;
@@ -38,15 +38,17 @@ switch (_cur_sel_combo) do
 
 	case 1: // Hupen
 	{
-		_price = getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "horn_cost");
+		_price = ((getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "horns") select _cur_sel_lb) select 2);
 		if((alpha_atmbank - _price) < 0) exitWith {["Du hast nicht genügend Geld auf dem Konto!"] spawn life_fnc_exp_hint;};
 		alpha_atmbank = alpha_atmbank - _price;
 		[1] call SOCK_fnc_updatePartial;
 
+		/*
 		_horn = ((getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "horns") select _cur_sel_lb) select 0);
 
 		life_tuning_original_vehicle removeWeaponTurret[life_tuning_original_vehicle currentWeaponTurret [-1],[-1]];
 		life_tuning_original_vehicle addWeaponTurret [_horn, [-1]];
+		*/
 
 		[life_tuning_original_vehicle,_cur_sel_combo,_cur_sel_lb] remoteexec["life_fnc_tuning_update_vehicle",2];
 		["Hupe wurde erfolgreich gekauft"] spawn life_fnc_exp_hint;
@@ -87,7 +89,7 @@ switch (_cur_sel_combo) do
 
 	case 3: // Unterbodenbeleuchtung
 	{
-		_price = getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "cost_lights");
+		_price = ((getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "light_color") select _cur_sel_lb) select 2);
 		if((alpha_atmbank - _price) < 0) exitWith {["Du hast nicht genügend Geld auf dem Konto!"] spawn life_fnc_exp_hint;};
 		alpha_atmbank = alpha_atmbank - _price;
 		[1] call SOCK_fnc_updatePartial;
