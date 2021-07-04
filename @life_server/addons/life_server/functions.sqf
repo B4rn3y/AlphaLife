@@ -154,8 +154,6 @@ compileFinal "
     if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3015,true];};
 
     [_msg,name player,0] remoteExecCall [""TON_fnc_clientMessage"",_to];
-    life_med_calls pushBack [(name player),(position player),_msg,servertime,"""",player];
-    publicVariable ""life_med_calls"";
     [] call life_fnc_cellphone;
     hint format [localize ""STR_CELLMSG_ToPerson"",name _to,_msg];
     ctrlShow[3015,true];

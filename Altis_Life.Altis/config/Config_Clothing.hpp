@@ -213,7 +213,8 @@ class Clothing {
             { "H_Cap_usblack", "", 500, "call life_swatlevel >= 1" },
             { "H_Shemag_olive", "", 500, "call life_swatlevel >= 1" },
             { "H_Booniehat_tna_F", "", 500, "call life_swatlevel >= 1" },
-            { "H_Booniehat_tan", "", 500, "call life_swatlevel >= 1" }
+            { "H_Booniehat_tan", "", 500, "call life_swatlevel >= 1" },
+            { "H_PilotHelmetFighter_I", "", 10000, "call life_coplevel >= 1" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
@@ -343,7 +344,8 @@ class Clothing {
             { "H_Cap_blu", "", 10, "" },
             { "H_Beret_CSAT_01_F", "", 10, "call life_mediclevel > 4" },
             { "H_CrewHelmetHeli_B", "", 30, "" },
-            { "H_Cap_red", "", 10, "" }
+            { "H_Cap_red", "", 10, "" },
+            { "H_PilotHelmetFighter_I", "", 10000, "call life_mediclevel >= 1" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },

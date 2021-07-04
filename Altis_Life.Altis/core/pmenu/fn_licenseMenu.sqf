@@ -17,7 +17,11 @@ _struct = "";
     _displayName = getText(_x >> "displayName");
 
     if (LICENSE_VALUE(configName _x,_side)) then {
-        _struct = _struct + format ["%1<br/>",localize _displayName];
+    	if((localize _displayName) isEqualTo "") then {
+    		_struct = _struct + format ["%1<br/>",_displayName];
+    	} else {
+        	_struct = _struct + format ["%1<br/>",localize _displayName];
+        };
     };
 } forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "Licenses"));
 

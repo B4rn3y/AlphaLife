@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7313;
+		nextID=7332;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=64416;
+		nextID=72982;
 	};
 	class Camera
 	{
-		pos[]={3274.0361,27.516335,12919.474};
-		dir[]={0.55309105,-0.42528361,0.71641803};
-		up[]={0.25989735,0.90505779,0.33664548};
-		aside[]={0.79157019,-2.8288923e-008,-0.61110765};
+		pos[]={8586.459,107.05077,25163.037};
+		dir[]={-0.24782179,-0.62508333,-0.74018657};
+		up[]={-0.1984662,0.78053838,-0.59276915};
+		aside[]={-0.9482764,-1.3061799e-007,0.31749246};
 	};
 };
 binarizationWanted=0;
@@ -30490,7 +30490,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,[""reb_v_1"",""reb_v_1_1""],""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel',5];this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""reb_v_1_1""; },"""",1.5,true,true,"""",""true"",5]; " \n "this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false;this addAction[""Air Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Air""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""reb_v_1_1""; },"""",1.5,true,true,"""",""true"",5]; this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,[""reb_v_1"",""reb_v_1_1""],""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel',5];this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""reb_v_1_1""; },"""",1.5,true,true,"""",""true"",5]; " \n "this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
 						name="reb_1_3";
 						disableSimulation=1;
 					};
@@ -33632,6 +33632,7 @@ class Mission
 						angles[]={6.2781239,3.8226376,0.027471483};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -33640,7 +33641,7 @@ class Mission
 					};
 					id=1209;
 					type="C_man_1";
-					atlOffset=0.43200016;
+					atlOffset=0.00019073486;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -34604,7 +34605,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this; " \n "this enableSimulation false; " \n "this allowDamage false; " \n "this setvariable[""realname"",""Söldner Fahrzeughändler""]; " \n "this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""mercenary_car"",civilian,[""merc_v_1"",""merc_v_2""],""merc"",""Mercenary Motorpool""],0,false,false,"""",'license_civ_mercenary',5]; " \n "this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""merc_v_2""; },"""",1.5,true,true,"""",""true"",5]; " \n "this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
+						init="removeallWeapons this; " \n "this enableSimulation false; " \n "this allowDamage false; this addAction[""Air Garage"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Air""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""merc_v_2""; },"""",1.5,true,true,"""",""true"",5];" \n "this setvariable[""realname"",""Söldner Fahrzeughändler""]; " \n "this addAction[localize""STR_MAR_W_E_Vehicle Shop"",life_fnc_vehicleShopMenu,[""mercenary_car"",civilian,[""merc_v_1"",""merc_v_2""],""merc"",""Mercenary Motorpool""],0,false,false,"""",'license_civ_mercenary',5]; " \n "this addAction[localize""STR_Garage_Title"",  {   if (life_HC_isActive) then {    [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu"";  disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""];  life_garage_sp = ""merc_v_2""; },"""",1.5,true,true,"""",""true"",5]; " \n "this addAction[localize""STR_MAR_Store_vehicle_in_Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store',5];";
 						name="reb_1_6";
 						disableSimulation=1;
 					};
@@ -34707,7 +34708,7 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=6;
+				items=15;
 				class Item0
 				{
 					dataType="Object";
@@ -34960,6 +34961,402 @@ class Mission
 										};
 									};
 									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8423.9414,101.25666,25172.67};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_7";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7314;
+					type="I_medic_F";
+					atlOffset=0.00017547607;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8422.2012,101.27139,25172.926};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_8";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7316;
+					type="I_medic_F";
+					atlOffset=0.00043487549;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8420.3154,101.06886,25173.164};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_9";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7318;
+					type="I_medic_F";
+					atlOffset=0.00064086914;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8418.3174,100.92597,25173.17};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_10";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7320;
+					type="I_medic_F";
+					atlOffset=6.8664551e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8416.5713,100.73555,25173.43};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_11";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7322;
+					type="I_medic_F";
+					atlOffset=0.00012969971;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8414.8662,100.49492,25173.871};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_12";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7324;
+					type="I_medic_F";
+					atlOffset=0.00048828125;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8413.0498,100.22952,25174.225};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_13";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7326;
+					type="I_medic_F";
+					atlOffset=-0.00026702881;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8410.8975,99.841507,25174.914};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_14";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7328;
+					type="I_medic_F";
+					atlOffset=0.00026702881;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8411.0918,99.268631,25177.055};
+						angles[]={0.26433012,3.2307963,6.2099862};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="medic_15";
+						description="WhiteListed - EMS Medic 6";
+						isPlayable=1;
+					};
+					id=7330;
+					type="I_medic_F";
+					atlOffset=0.00022125244;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
 								};
 							};
 						};
@@ -46933,7 +47330,7 @@ class Mission
 			};
 			id=1740;
 			type="Land_BackAlley_01_l_gate_F";
-			atlOffset=0.27600002;
+			atlOffset=0.27599978;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -104244,7 +104641,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={16990.613,16.290867,12860.39};
-			angle=3.9895396;
+			angle=3.9895391;
 			class Attributes
 			{
 				condition="{ ((_x isKindOf 'LandVehicle') and (side _x in [west])); } count thisList > 0;";
@@ -111225,7 +111622,7 @@ class Mission
 			position[]={15214.9,17.947001,17337.961};
 			name="cop_car_7";
 			type="Empty";
-			angle=225.66191;
+			angle=225.66188;
 			id=7257;
 			atlOffset=-0.026067734;
 		};

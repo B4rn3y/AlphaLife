@@ -372,7 +372,7 @@ class VirtualItems {
         displayName = "STR_Item_OilP";
         weight = 3;
         buyPrice = -1;
-        sellPrice = 7000;
+        sellPrice = 9000;
         illegal = false;
         edible = -1;
         drinkable = -1;
@@ -558,7 +558,7 @@ class VirtualItems {
         displayName = "STR_Item_Uran";
         weight = 2;
         buyPrice = -1;
-        sellPrice = 30000;
+        sellPrice = 28000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -570,7 +570,7 @@ class VirtualItems {
         displayName = "STR_Item_Grenade";
         weight = 3;
         buyPrice = -1;
-        sellPrice = 55000;
+        sellPrice = 50000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -644,7 +644,7 @@ class VirtualItems {
         displayName = "STR_Item_Pearl";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 11000;
+        sellPrice = 13000;
         illegal = false;
         edible = -1;
         drinkable = -1;
@@ -669,7 +669,7 @@ class VirtualItems {
         displayName = "STR_Item_Snake_Venom";
         weight = 2;
         buyPrice = -1;
-        sellPrice = 10000;
+        sellPrice = 15000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -697,7 +697,7 @@ class VirtualItems {
         displayName = "STR_Item_LSD";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 11000;
+        sellPrice = 13000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -746,8 +746,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 2;
-        buyPrice = 10000;
-        sellPrice = 6500;
+        buyPrice = 20000;
+        sellPrice = 9000;
         illegal = true;
         edible = -1;
         drinkable = -1;
@@ -772,7 +772,7 @@ class VirtualItems {
         displayName = "STR_Item_CocaineP";
         weight = 4;
         buyPrice = -1;
-        sellPrice = 9000;
+        sellPrice = 13000;
         illegal = true;
         edible = -1;
         drinkable = -1;

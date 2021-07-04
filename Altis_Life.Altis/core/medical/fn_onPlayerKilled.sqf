@@ -113,7 +113,9 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
     };
 };
 
+
 life_save_gear = [player] call life_fnc_fetchDeadGear;
+life_save_weapon_on_death = [life_save_gear select 0,life_save_gear select 8,life_save_gear select 2,life_save_gear select 10];
 
 if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
     _unit removeWeapon (primaryWeapon _unit);

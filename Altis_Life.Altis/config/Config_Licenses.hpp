@@ -291,4 +291,12 @@ class Licenses {
         illegal = false;
         side = "med";
     };
+    // gnag licenses -to be removed soon
+    class gang_anonym_alcoholic {
+        variable = "gang_anonym_alcoholic";
+        displayName = "Die Anonymen Alkoholiker";
+        price = 500000;
+        illegal = false;
+        side = "civ";
+    };
 };

@@ -68,6 +68,21 @@ switch (playerSide) do
             };
         };
     };
+
+    case civilian:
+    {
+        _root_path = "textures\uniforms\gangs\";
+        switch (_uniform) do
+        {
+            case "U_B_CombatUniform_mcam":
+            {
+                if(missionNamespace getvariable["license_civ_gang_anonym_alcoholic",false]) then {
+                    _path = _root_path + "anonymen_alkoholiker.jpg";
+                };
+
+            };
+        };
+    };
 };
 
 if!(_path isEqualTo "") then {

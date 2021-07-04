@@ -1,6 +1,6 @@
 
 
-USE `altislifetest`;
+USE `altislife`;
 
 
 ALTER TABLE `vehicles` ADD `material` INT NOT NULL DEFAULT '-1' AFTER `color`;
