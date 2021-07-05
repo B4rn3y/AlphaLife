@@ -2,7 +2,6 @@
 /*
     File: fn_onTakeItem.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Blocks the unit from taking something they should not have.
 */
@@ -17,4 +16,5 @@ _restrictedWeapons = LIFE_SETTINGS(getArray,"restricted_weapons");
 
 switch (playerSide) do
 {
+
 };

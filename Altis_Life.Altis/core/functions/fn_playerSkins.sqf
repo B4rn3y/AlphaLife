@@ -84,8 +84,20 @@ switch (playerSide) do
 
             case "U_I_CombatUniform":
             {
+
                 if(((group player) getvariable["gang_id",-1]) isEqualTo 51) then {
-                    _path = _root_path + "mobiles_einsatzkommando_uniform.png";
+                    _path = _root_path + "mobiles_einsatzkommando_uniform.jpg";
+                };
+
+                if(((group player) getvariable["gang_id",-1]) isEqualTo 21) then {
+                    _path = _root_path + "enemiesNightmare.jpg";
+                };
+            };
+
+            case "U_B_CTRG_1":
+            {
+                if(((group player) getvariable["gang_id",-1]) isEqualTo 23) then {
+                    _path = _root_path + "alits_nation_guard_uniform.jpg";
                 };
 
             };
@@ -96,7 +108,11 @@ switch (playerSide) do
             case "B_ViperHarness_blk_F":
             {
                 if(((group player) getvariable["gang_id",-1]) isEqualTo 51) then {
-                    (unitBackpack player) setObjectTextureGlobal[0,(_root_path + "mobiles_einsatzkommando_backpack.png")];
+                    (unitBackpack player) setObjectTextureGlobal[0,(_root_path + "mobiles_einsatzkommando_backpack.jpg")];
+                };
+
+                if(((group player) getvariable["gang_id",-1]) isEqualTo 23) then {
+                    (unitBackpack player) setObjectTextureGlobal[0,(_root_path + "altis_nation_guard_backpack.jpg")];
                 };
 
             };

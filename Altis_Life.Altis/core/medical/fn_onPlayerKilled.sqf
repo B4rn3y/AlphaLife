@@ -115,9 +115,16 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
 
 
 life_save_gear = [player] call life_fnc_fetchDeadGear;
-life_save_weapon_on_death = [life_save_gear select 0,life_save_gear select 8,life_save_gear select 2,life_save_gear select 10];
 
 if (LIFE_SETTINGS(getNumber,"drop_weapons_onDeath") isEqualTo 0) then {
+    _unit removeWeapon (primaryWeapon _unit);
+    _unit removeWeapon (handgunWeapon _unit);
+    _unit removeWeapon (secondaryWeapon _unit);
+};
+
+if(playerSide isEqualTo west) then {
+    life_cop_weapon_save = primaryWeapon _unit;
+    life_cop_weapon_acc_save = primaryWeaponItems _unit;
     _unit removeWeapon (primaryWeapon _unit);
     _unit removeWeapon (handgunWeapon _unit);
     _unit removeWeapon (secondaryWeapon _unit);
