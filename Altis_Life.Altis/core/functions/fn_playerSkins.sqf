@@ -81,6 +81,25 @@ switch (playerSide) do
                 };
 
             };
+
+            case "U_I_CombatUniform":
+            {
+                if(((group player) getvariable["gang_id",-1]) isEqualTo 51) then {
+                    _path = _root_path + "mobiles_einsatzkommando_uniform.png";
+                };
+
+            };
+        };
+
+        switch (backpack player) do
+        {
+            case "B_ViperHarness_blk_F":
+            {
+                if(((group player) getvariable["gang_id",-1]) isEqualTo 51) then {
+                    (unitBackpack player) setObjectTextureGlobal[0,(_root_path + "mobiles_einsatzkommando_backpack.png")];
+                };
+
+            };
         };
     };
 };

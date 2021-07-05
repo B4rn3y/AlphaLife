@@ -79,13 +79,13 @@ switch (playerside) do
         _Btn7 ctrlEnable false;
         _Btn7 ctrlSetText localize "STR_vInAct_RemoveHorn";
         _Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_remove_horn; closeDialog 0;";
-        if(_curTarget isKindOf "landVehicle") then {
+        _in_HQ = false;
+        {
+            if ((player distance (getMarkerPos _x) <30)) exitWith { _in_HQ = true;};
+        } forEach LIFE_SETTINGS(getArray,"sendtoJail_locations");
+        if(_curTarget isKindOf "landVehicle" && _in_HQ) then {
             _Btn7 ctrlEnable true;
         };
-
-        {
-            if ((player distance (getMarkerPos _x) <30)) exitWith { _Btn7 ctrlEnable true;};
-        } forEach LIFE_SETTINGS(getArray,"sendtoJail_locations");
     };
 
     case independent:
