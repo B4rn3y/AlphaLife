@@ -26,8 +26,8 @@ if (_itemConfig isEqualType []) then {
 if (_itemConfig isEqualTo "") exitWith {true};
 
 private _evaluation = call compile _itemConfig;
-
-if (_evaluation isEqualType true) then {
+diag_log str[_itemConfig,_evaluation];
+if (_evaluation isEqualType false) then {
     if (_evaluation) then {
         _return = true;
     };

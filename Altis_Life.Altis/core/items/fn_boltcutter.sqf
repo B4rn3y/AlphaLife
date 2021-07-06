@@ -18,8 +18,8 @@ _ev_pos = [20902.4,19233.8,0.00143909]; // evidence room
 
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
-if (((nearestObject [_ev_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_ev_pos,"Land_Research_HQ_F"]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith { // evidence room
-    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+if (((nearestObject [_ev_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_ev_pos,"Land_Research_HQ_F"]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_evidence_cops")))) exitWith { // evidence room
+    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_evidence_cops"))];
 };
 
 if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {

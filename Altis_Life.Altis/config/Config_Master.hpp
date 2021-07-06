@@ -48,7 +48,8 @@ class Life_Settings {
     /* ATM & Federal Reserve System Configurations */
     global_ATM = true; //Allow users to access any ATM on the map (Marked & Unmarked).
     noatm_timer = 10; //Time in minutes that players cannot deposit money after selling stolen gold.
-    minimum_cops = 5; //Minimum cops required online to rob the Federal Reserve
+    minimum_cops = 10; //Minimum cops required online to rob the Federal Reserve
+    minimum_evidence_cops = 7; //Minimum cops required online to rob the Evidence room
 
     /*Death settings*/
     drop_weapons_onDeath = true; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead

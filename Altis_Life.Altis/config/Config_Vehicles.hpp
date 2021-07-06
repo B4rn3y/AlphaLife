@@ -429,7 +429,12 @@ class LifeCfgVehicles {
                 "\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa",
                 "\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa",
                 "\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"
-            }, "" }
+            }, "" },
+            { "ANG", "reb", {
+                "textures\GANG_Vehicles\ANG_Quilin_1.jpg",
+                "textures\GANG_Vehicles\ANG_Quilin_2.jpg",
+                "textures\GANG_Vehicles\ANG_Quilin_3.jpg"
+            }, "((group player) getvariable[""gang_id"",-1]) isEqualTo 23" }
 
         };
     };

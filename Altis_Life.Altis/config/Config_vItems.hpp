@@ -275,7 +275,7 @@ class VirtualItems {
         displayName = "STR_Item_GoldBar";
         weight = 12;
         buyPrice = -1;
-        sellPrice = 95000;
+        sellPrice = 250000;
         illegal = true;
         edible = -1;
         drinkable = -1;

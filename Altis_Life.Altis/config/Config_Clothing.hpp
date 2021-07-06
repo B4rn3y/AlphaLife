@@ -418,7 +418,8 @@ class Clothing {
             { "U_O_R_Gorka_01_brown_F", "", 45000, "" },
             { "U_O_R_Gorka_01_camo_F", "", 45000, "" },
             { "U_I_E_Uniform_01_tanktop_F", "", 45000, "" },
-            { "U_C_E_LooterJacket_01_F", "", 45000, "" }
+            { "U_C_E_LooterJacket_01_F", "", 45000, "" },
+            { "U_B_CTRG_1", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -578,7 +579,8 @@ class Clothing {
             { "U_O_R_Gorka_01_brown_F", "", 45000, "" },
             { "U_O_R_Gorka_01_camo_F", "", 45000, "" },
             { "U_I_E_Uniform_01_tanktop_F", "", 45000, "" },
-            { "U_C_E_LooterJacket_01_F", "", 45000, "" }
+            { "U_C_E_LooterJacket_01_F", "", 45000, "" },
+            { "U_B_CTRG_1", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -739,7 +741,8 @@ class Clothing {
             { "U_O_R_Gorka_01_camo_F", "", 45000, "" },
             { "U_I_E_Uniform_01_tanktop_F", "", 45000, "" },
             { "U_C_E_LooterJacket_01_F", "", 45000, "" },
-            { "U_O_R_Gorka_01_black_F", "", 45000, "" }
+            { "U_O_R_Gorka_01_black_F", "", 45000, "" },
+            { "U_B_CTRG_1", "", 45000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },

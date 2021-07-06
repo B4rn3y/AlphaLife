@@ -23,7 +23,7 @@ _item = [_this,0,"",[""]] call BIS_fnc_param;
 _type = [_this,1,0,[0]] call BIS_fnc_param;
 if (_item isEqualTo "" || _type isEqualTo 0) exitWith {0};
 _ret = 0;
-
+_cfg = 0;
 _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon player];
 {
     if (!(_ret isEqualTo 0)) exitWith {}; //Make sure we exit the loop since there was already a match.
