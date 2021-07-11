@@ -16,5 +16,5 @@ player addEventHandler ["HandleRating", {0}];
 player addEventHandler ["GetInMan", life_fnc_GetInEVH];
 player addEventHandler ["GetOutMan", life_fnc_GetOutEVH];
 
-addMissionEventHandler ["Map", {_this call life_fnc_checkMap}];
+//addMissionEventHandler ["Map", {_this call life_fnc_checkMap}];
 

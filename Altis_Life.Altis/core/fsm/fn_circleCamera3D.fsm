@@ -1,0 +1,329 @@
+/*%FSM<COMPILE "D:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_circleCamera3D">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-12.527224,-278.608246,77.472786,-228.608246,0.000000,"init"};
+item1[] = {"end",4,218,-736.091309,-178.856262,-646.091431,-128.856262,0.000000,"end"};
+item2[] = {"true_",4,218,-126.594856,-274.827637,-36.594864,-224.827637,2.000000,"true?"};
+item3[] = {"End",1,250,-4.314882,-539.172852,85.685196,-489.172913,0.000000,"End"};
+item4[] = {"__1",4,218,-4.028528,-413.101959,85.971481,-363.101959,0.000000,""};
+item5[] = {"setup_camera",2,250,-266.560364,-266.821167,-176.560364,-216.821182,0.000000,"setup camera"};
+item6[] = {"cam_update_pos",2,250,-739.362976,-262.802185,-649.363342,-212.802185,0.000000,"cam update pos"};
+item7[] = {"time",4,218,-958.310364,-264.439240,-868.310486,-214.439255,0.000000,"time"};
+item8[] = {"End_1",1,250,-733.787415,-100.087273,-643.787292,-50.087341,0.000000,"End"};
+item9[] = {"true",4,218,-393.997986,-264.659576,-303.997986,-214.659576,0.000000,"true"};
+item10[] = {"_",2,250,-501.198608,-262.926086,-411.198608,-212.926086,0.000000,""};
+item11[] = {"true",4,218,-620.074646,-258.040833,-530.074646,-208.040833,0.000000,"true"};
+item12[] = {"_",4,218,115.461731,-277.523499,205.461731,-227.523499,0.000000,""};
+item13[] = {"__1",2,250,451.853760,-277.527313,541.853760,-227.527313,0.000000,""};
+item14[] = {"__2",2,250,248.088440,-280.926758,338.088440,-230.926758,0.000000,""};
+item15[] = {"_",4,4314,604.365173,-280.347748,694.365173,-230.347748,0.000000,""};
+item16[] = {"__3",2,250,762.095825,-278.244659,852.095825,-228.244659,0.000000,""};
+item17[] = {"true",4,218,742.122437,-524.968872,832.122437,-474.968872,0.000000,"true"};
+item18[] = {"__1",4,218,350.568054,-280.926758,440.568054,-230.926758,0.000000,""};
+item19[] = {"_",4,218,253.047119,-414.811340,343.047119,-364.811340,0.000000,""};
+link0[] = {0,2};
+link1[] = {0,4};
+link2[] = {0,12};
+link3[] = {1,8};
+link4[] = {2,5};
+link5[] = {4,3};
+link6[] = {5,9};
+link7[] = {6,1};
+link8[] = {6,7};
+link9[] = {7,6};
+link10[] = {9,10};
+link11[] = {10,11};
+link12[] = {11,6};
+link13[] = {12,14};
+link14[] = {13,15};
+link15[] = {14,18};
+link16[] = {14,19};
+link17[] = {15,16};
+link18[] = {16,17};
+link19[] = {17,3};
+link20[] = {18,13};
+link21[] = {19,3};
+globals[] = {0.000000,0,0,0,0,640,480,1,64,6316128,1,-70.130188,1042.701660,231.994476,-742.979614,670,587,1};
+window[] = {0,-1,-1,-1,-1,863,104,1544,104,1,688};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "fn_circleCamera3D";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_pos = param[0,[],[[]]];" \n
+                         "_x_add = param[1,15,[1]];" \n
+                         "_y_add = param[2,15,[1]];" \n
+                         "_z_add = param[3,3,[1]];" \n
+                         "_w8 = param[4,0.1,[1]];" \n
+                         "_var_to_watch = param[5,"""",[""""]];" \n
+                         "_update = param[6,false,[false]];" \n
+                         "_angle = 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true_">*/
+                                class true_
+                                {
+                                        itemno = 2;
+                                        priority = 2.000000;
+                                        to="setup_camera";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_pos isequalto [])  && !(_var_to_watch isequalto """") && !_update"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="__2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_pos isequalto []) && _update"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__1">*/
+                                class __1
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_var_to_watch isequalto """") && !_update) || _pos isequalto []"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setup_camera">*/
+                class setup_camera
+                {
+                        name = "setup_camera";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"life_cam_shop_3D_pos = _pos;" \n
+                         "" \n
+                         "life_cam_shop_3D = ""camera"" camCreate [(life_cam_shop_3D_pos select 0) + _x_add * sin _angle,(life_cam_shop_3D_pos select 1) + _x_add * cos _angle,(life_cam_shop_3D_pos select 2)+_z_add];" \n
+                         "life_cam_shop_3D cameraEffect [""Internal"", ""BACK""];" \n
+                         "life_cam_shop_3D camSetFocus [-1, -1];" \n
+                         "showCinemaBorder false;" \n
+                         "life_cam_shop_3D camCommit 0;" \n
+                         "" \n
+                         "life_cam_shop_3D camSetTarget _pos;" \n
+                         "" \n
+                         "life_cam_shop_3D camPreload 1.2;" \n
+                         "" \n
+                         "0 spawn {cutText ["""", ""BLACK OUT""];};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isnil _var_to_watch  || camPreloaded life_cam_shop_3D"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "cam_update_pos">*/
+                class cam_update_pos
+                {
+                        name = "cam_update_pos";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "_new_pos = [(life_cam_shop_3D_pos select 0) + _x_add * sin _angle,(life_cam_shop_3D_pos select 1) + _x_add * cos _angle,(life_cam_shop_3D_pos select 2)+_z_add];" \n
+                         "" \n
+                         "life_cam_shop_3D camSetPos _new_pos;" \n
+                         "life_cam_shop_3D camCommit _w8;" \n
+                         "" \n
+                         "_time = diag_ticktime;" \n
+                         "_angle = _angle + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "time">*/
+                                class time
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="cam_update_pos";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _time) >= _w8 && !isnil _var_to_watch"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "end">*/
+                                class end
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="End_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isnil _var_to_watch"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_1">*/
+                class End_1
+                {
+                        name = "End_1";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"life_cam_shop_3D cameraEffect [""TERMINATE"",""BACK""];" \n
+                         "camDestroy life_cam_shop_3D;" \n
+                         "" \n
+                         "life_cam_shop_3D = nil;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"0 spawn {cutText ["""", ""PLAIN"", 2];};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="cam_update_pos";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__1">*/
+                class __1
+                {
+                        name = "__1";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"0 spawn {cutText ["""", ""BLACK OUT""];};" \n
+                         "" \n
+                         "" \n
+                         "life_cam_shop_3D_pos = _pos;" \n
+                         "" \n
+                         "life_cam_shop_3D camSetTarget life_cam_shop_3D_pos;" \n
+                         "" \n
+                         "life_cam_shop_3D camPreload 0;" \n
+                         "" \n
+                         "_time = diag_ticktime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="__3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isnil _var_to_watch  || camPreloaded life_cam_shop_3D || (diag_ticktime - _time)>2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__2">*/
+                class __2
+                {
+                        name = "__2";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isnil ""life_cam_shop_3D"" || isnull life_cam_shop_3D || isnil ""life_cam_shop_3D_pos"" || (life_cam_shop_3D_pos isequalto _pos)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__1">*/
+                                class __1
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isnil ""life_cam_shop_3D"" && !isnull life_cam_shop_3D && !isnil ""life_cam_shop_3D_pos"" && !(life_cam_shop_3D_pos isequalto _pos)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__3">*/
+                class __3
+                {
+                        name = "__3";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"0 spawn {cutText ["""", ""PLAIN"", 2];};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "End",
+                "End_1",
+        };
+};
+/*%FSM</COMPILE>*/

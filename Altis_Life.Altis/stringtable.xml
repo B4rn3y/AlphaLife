@@ -413,6 +413,22 @@
             <Original>Insure</Original>
             <German>Versichern</German>
         </Key>
+        <Key ID="STR_gang_garage_add">
+            <Original>To Gang-Garage</Original>
+            <German>In die Gang-Garage</German>
+        </Key>
+        <Key ID="STR_garage_your_vehicles_combo">
+            <Original>Your vehicles</Original>
+            <German>Deine Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_garage_gang_vehicles_combo">
+            <Original>Gang vehicles</Original>
+            <German>Gang-Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_gang_garage_remove">
+            <Original>Remove from Gang-Garage</Original>
+            <German>Aus Gang-Garage entfernen</German>
+        </Key>
         <Key ID="STR_Global_Buy">
             <Original>Buy</Original>
             <Czech>Koupit</Czech>
@@ -1679,28 +1695,28 @@
 			<Chinesesimp>设置管理者</Chinesesimp>
         </Key>
         <Key ID="STR_Gang_PriceTxt">
-            <Original>To create a gang it costs $%1</Original>
-            <Czech>Chcete-li vytvořit gang stojí $%1</Czech>
-            <Spanish>Cuesta $%1 para crear una pandilla</Spanish>
-            <Russian></Russian>
-            <French>Le prix de création d'un gang est de %1$</French>
-            <German>Eine Gang zu erstellen kostet $%1.</German>
-            <Italian>Creare una gang costa $%1</Italian>
-            <Portuguese>Criar uma Gangue custa R$%1</Portuguese>
-            <Polish>Koszt ustanowienia gangu to $%1</Polish>
-			<Chinesesimp>创建一个帮派的成本 $%1</Chinesesimp>
+            <Original>To create a gang it costs $</Original>
+            <German>Eine Gang zu erstellen kostet $</German>
+        </Key>
+        <Key ID="STR_Gang_JoinTxt">
+            <Original>Or join a public gang</Original>
+            <German>Oder trete einer öffentlichen Gang bei.</German>
         </Key>
         <Key ID="STR_Gang_Create">
-            <Original>Create</Original>
+            <Original>Create Gang</Original>
             <Czech>Vytvořit</Czech>
             <Spanish>Crear</Spanish>
             <Russian></Russian>
-            <German>Erstellen</German>
+            <German>Gang Erstellen</German>
             <French>Créer</French>
             <Italian>Crea</Italian>
             <Portuguese>Criar</Portuguese>
             <Polish>Stwórz</Polish>
 			<Chinesesimp>创建</Chinesesimp>
+        </Key>
+        <Key ID="STR_Gang_Join_public">
+            <Original>Join Gang</Original>
+            <German>Gang Beitreten</German>
         </Key>
         <Key ID="STR_Gang_YGN">
             <Original>Your Gang Name</Original>
@@ -1737,6 +1753,22 @@
             <Portuguese>Desfazer Gangue</Portuguese>
             <Polish>Opuść gang</Polish>
 			<Chinesesimp>解散帮派</Chinesesimp>
+        </Key>
+        <Key ID="STR_Gang_setRights_Gang">
+            <Original>Set Rights</Original>
+            <German>Rechte setzen</German>
+        </Key>
+        <Key ID="STR_Gang_alliances_Gang">
+            <Original>Alliances sett.</Original>
+            <German>Allianzen einst.</German>
+        </Key>
+        <Key ID="STR_Gang_taxes_Gang">
+            <Original>Set taxes</Original>
+            <German>Steuern einst.</German>
+        </Key>
+        <Key ID="STR_Gang_public_Gang">
+            <Original>Public</Original>
+            <German>Öffentlich</German>
         </Key>
         <Key ID="STR_Gang_Invitation">
             <Original>Gang Invitation</Original>

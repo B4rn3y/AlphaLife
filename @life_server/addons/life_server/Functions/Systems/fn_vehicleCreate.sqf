@@ -29,6 +29,6 @@ _side = switch (_side) do {
 };
 
 _plate = round(random(1000000));
-[_uid,_side,_type,_classname,_color,_plate] call DB_fnc_insertVehicle;
+[_uid,_side,_type,_classname,_color,_plate,_vehicle] spawn DB_fnc_insertVehicle;
 
-_vehicle setVariable ["dbInfo",[_uid,_plate,0],true];
+//_vehicle setVariable ["dbInfo",[_uid,_plate,0],true];

@@ -6,7 +6,7 @@
     Description:
     Updates the gang information?
 */
-private ["_groupID","_bank","_maxMembers","_members","_membersFinal","_query","_owner"];
+private ["_mode","_groupID","_bank","_maxMembers","_members","_owner","_query","_deposit","_value","_unit","_cash","_funds","_pid","_alliances_first_gang","_gang_id_2","_alliances_2nd_gang","_alliances_my_gang","_gang_id_other_gang","_queryresult","_alliances","_index","_foreachindex"];
 params [
     ["_mode",0,[0]],
     ["_group",grpNull,[grpNull]]
@@ -70,27 +70,112 @@ switch (_mode) do {
     };
 
     case 3: {
+        params [
+            "",
+            "",
+            ["_pid","",[""]]
+        ];
         _owner = _group getVariable ["gang_owner",""];
         if (_owner isEqualTo "") exitWith {};
-        _query = format ["UPDATE gangs SET owner='%1' WHERE id='%2'",_owner,_groupID];
+        _query = format ["UPDATE gang_members SET leader='0' WHERE gang_id='%1';",_groupID];
+        [_query,1] call DB_fnc_asyncCall;
+        _query = format ["UPDATE gang_members SET leader='1',right_invite='1',right_expand='1',right_withdraw='1',right_skins='1',righ
+        ='1',right_house='1',right_garage='1' WHERE gang_id='%1' and pid = '%2';",_groupID,_owner];
     };
 
     case 4: {
-        _members = _group getVariable "gang_members";
-        if (count _members > (_group getVariable ["gang_maxMembers",8])) then {
-            _membersFinal = [];
-            for "_i" from 0 to _maxMembers -1 do {
-                _membersFinal pushBack (_members select _i);
-            };
-        } else {
-            _membersFinal = _group getVariable "gang_members";
-        };
-        _membersFinal = [_membersFinal] call DB_fnc_mresArray;
-        _query = format ["UPDATE gangs SET members='%1' WHERE id='%2'",_membersFinal,_groupID];
+        params [
+            "",
+            "",
+            ["_pid","",[""]]
+        ];
+
+        if(_pid isEqualTo "") exitWith {};
+        _query = format ["INSERT INTO gang_members (gang_id, pid, leader, right_invite, right_expand, right_withdraw, right_skins, right_kick) VALUES('%1','%2','0','0','0','0','0','0')",_groupID,_pid];
+
     };
 
     case 5: {
         _query = format ["UPDATE gangs SET bank='%1' WHERE id='%2'",(_group getVariable ["gang_bank",0]),_groupID];
+    };
+
+    case 6: {
+        params [
+            "",
+            "",
+            ["_pid","",[""]]
+        ];
+
+        if(_pid isEqualTo "") exitWith {};
+        _query = format ["DELETE FROM gang_members WHERE gang_id = '%1' and pid = '%2';",_groupID,_pid];
+
+    };
+
+    case 7: {
+        params [
+            "",
+            "",
+            ["_alliances_first_gang",[],[[]]],
+            ["_gang_id_2",-1,[0]],
+            ["_alliances_2nd_gang",[],[[]]]
+        ];
+
+        if(_gang_id_2 isEqualTo -1) exitWith {};
+
+        _alliances_first_gang = [_alliances_first_gang] call DB_fnc_mresArray;
+        _alliances_2nd_gang = [_alliances_2nd_gang] call DB_fnc_mresArray;
+
+
+        _query = format ["UPDATE gangs SET alliances = '%1' WHERE id = '%2';",_alliances_first_gang, _groupID];
+        [_query,1] call DB_fnc_asyncCall;
+        _query = format ["UPDATE gangs SET alliances = '%1' WHERE id = '%2';",_alliances_2nd_gang, _gang_id_2];
+    };
+
+    case 8: {
+        params [
+            "",
+            "",
+            ["_alliances_my_gang",[],[[]]],
+            ["_gang_id_other_gang",-1,[0]]
+        ];
+
+        if(_gang_id_other_gang isEqualTo -1) exitWith {};
+
+        _alliances_my_gang = [_alliances_my_gang] call DB_fnc_mresArray;
+
+
+        _query = format ["UPDATE gangs SET alliances = '%1' WHERE id = '%2';",_alliances_my_gang, _groupID];
+        [_query,1] call DB_fnc_asyncCall;
+        _query = format ["SELECT alliances FROM gangs WHERE id = '%1';",_gang_id_other_gang];
+        _queryresult = [_query,2] call DB_fnc_asyncCall;
+        _alliances = [_queryresult select 0] call DB_fnc_mresToArray;
+        _index = -1;
+        {
+            if((_x select 0) isEqualTo _groupID)exitWith {_index = _foreachindex};
+        } foreach _alliances;
+        if(_index isEqualTo -1) exitWith {_query = nil;};
+        _alliances deleteAt _index;
+        _query = format ["UPDATE gangs SET alliances = '%1' WHERE id = '%2';",([_alliances] call DB_fnc_mresArray), _gang_id_other_gang];
+    };
+
+    case 9: {
+        _query = format ["UPDATE gangs SET tax='%1' WHERE id='%2'",(_group getVariable ["gang_tax",0]),_groupID];
+    };
+
+    case 10: {
+        params [
+            "",
+            "",
+            ["_player_entry",[],[[]]]
+        ];
+
+        if(_player_entry isEqualTo [] || count _player_entry != 11) exitWith {};
+
+        _query = format["UPDATE gang_members SET right_invite='%1',right_expand='%2',right_withdraw='%3', right_skins='%4',right_kick='%5',right_house='%6',right_garage='%7' WHERE pid='%8' AND gang_id='%9'",(_player_entry select 4),(_player_entry select 5),(_player_entry select 6),(_player_entry select 7),(_player_entry select 8),(_player_entry select 9),(_player_entry select 10),(_player_entry select 2),(_player_entry select 0)];
+    };
+
+    case 11: {
+        _query = format ["UPDATE gangs SET public='%1' WHERE id='%2'",(_group getVariable ["gang_public",0]),_groupID];
     };
 };
 

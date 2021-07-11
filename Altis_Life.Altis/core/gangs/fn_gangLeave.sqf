@@ -14,15 +14,23 @@ _members = group player getVariable "gang_members";
 if (isNil "_members") exitWith {};
 if (!(_members isEqualType [])) exitWith {};
 
-_members = _members - [_unitID];
-group player setVariable ["gang_members",_members,true];
+_index = -1;
+{
+	if((_x select 2) isEqualTo _unitID) exitWith {_index = _foreachindex};
+} foreach _members;
+if(_index isEqualTo -1) exitWith {};
 
-[player,group player] remoteExec ["TON_fnc_clientGangLeft",player];
+_members deleteAt _index;
+group player setVariable ["gang_members",_members,true];
+[0,format["%1 hat die Gang verlassen",profileName]] remoteExec["life_fnc_gangUpdate_client",(group player)];
+
 
 if (life_HC_isActive) then {
-    [4,group player] remoteExec ["HC_fnc_updateGang",HC_Life]; //Update the database.
+    [6,group player,_unitID] remoteExec ["HC_fnc_updateGang",HC_Life]; //Update the database.
 } else {
-    [4,group player] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
+    [6,group player,_unitID] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
 };
+
+[player,group player] remoteExec ["TON_fnc_clientGangLeft",player];
 
 closeDialog 0;

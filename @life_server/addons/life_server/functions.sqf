@@ -55,6 +55,7 @@ compileFinal "
     _group = _this select 1;
     if (isNil ""_unit"" || isNil ""_group"") exitWith {};
     if (player isEqualTo _unit && (group player) == _group) then {
+        life_gangdata = [];
         life_my_gang = objNull;
         [player] joinSilent (createGroup civilian);
         hint localize ""STR_GNOTF_KickOutGang"";
@@ -103,6 +104,7 @@ compileFinal "
     if (isNil ""_unit"" || isNil ""_group"") exitWith {};
     if (player isEqualTo _unit && (group player) == _group) then {
         life_my_gang = objNull;
+        life_gangdata = [];
         [player] joinSilent (createGroup civilian);
         hint localize ""STR_GNOTF_LeaveGang"";
     };

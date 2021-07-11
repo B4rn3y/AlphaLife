@@ -35,7 +35,7 @@ if (life_is_alive && !life_is_arrested) then {
             CASH = 0;
             [0] call SOCK_fnc_updatePartial;
         };
-        [] call life_fnc_spawnMenu;
+        [] spawn life_fnc_spawnMenu;
         waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
         waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
     } else {

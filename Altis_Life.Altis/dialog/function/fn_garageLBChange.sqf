@@ -7,7 +7,7 @@
     Can't be bothered to answer it.. Already deleted it by accident..
 */
 disableSerialization;
-private ["_control","_index","_className","_classNameLife","_dataArr","_vehicleColor","_vehicleInfo","_trunkSpace","_sellPrice","_retrievePrice","_sellMultiplier","_price","_storageFee","_purchasePrice"];
+private ["_control","_index","_dataArr","_className","_classNameLife","_display","_insure_btn","_gang_btn","_vehicleColor","_vehicleInfo","_trunkSpace","_storageFee","_price","_purchasePrice","_sellMultiplier","_retrievePrice","_sellPrice","_vehicleskins","_foreachindex","_material_ID","_material"];
 _control = _this select 0;
 _index = _this select 1;
 
@@ -19,7 +19,12 @@ _classNameLife = _className;
 
 _display = findDisplay 2800;
 _insure_btn = _display displayCtrl 97480;
+_gang_btn = _display displayCtrl 2404;
+_unimpound_btn = _display displayCtrl 5213;
+_sell_btn = _display displayCtrl  7845;
 
+_sell_btn ctrlEnable true;
+_unimpound_btn ctrlEnable true;
 if((_dataArr select 7) isEqualTo 1) then {
     _insure_btn ctrlEnable false;
 } else {
@@ -111,5 +116,61 @@ _vehicleColor,
 (_dataArr select 3)
 ];
 
-ctrlShow [2803,true];
-ctrlShow [2830,true];
+ctrlShow[2803,true]; // str text
+ctrlShow[2830,true]; // veh info
+ctrlShow[2810,true]; // right bckgrnd
+if(!(playerSide in [west,opfor,independent]) && ((_dataArr select 10) isEqualTo getplayeruid player) && ((group player getVariable["gang_id",-1]) != -1)) then {
+    ctrlShow[2404,true];
+    if((_dataArr select 9) isEqualTo -1) then {
+        _gang_btn ctrlSetText localize "STR_gang_garage_add";
+        _gang_btn buttonSetAction "[true] spawn life_fnc_garage_set_gang;";
+    } else {
+        _gang_btn ctrlSetText localize "STR_gang_garage_remove";
+        _gang_btn buttonSetAction "[false] spawn life_fnc_garage_set_gang;";
+    };
+} else {
+    ctrlShow[2404,false];
+};
+
+if(!((_dataArr select 9) isEqualTo -1) && !((_dataArr select 10) isEqualTo getplayeruid player)) then {
+    _entry = [getplayeruid player] call life_fnc_gang_find_member_entry;
+    if(_entry isEqualTo []) exitWith {_unimpound_btn ctrlEnable false;};
+    if((_entry select 10) isEqualTo 1) then {
+        _unimpound_btn ctrlEnable true;
+    } else {
+        _unimpound_btn ctrlEnable false;
+    };
+};
+
+if!((_dataArr select 9) isEqualTo -1) then {
+    _sell_btn ctrlEnable false;
+};
+
+
+deleteVehicle LIFE_Garage_show_vehicle;
+
+waitUntil {if(isnil "LIFE_Garage_show_vehicle") exitWith{true}; isnull LIFE_Garage_show_vehicle};
+
+
+
+LIFE_Garage_show_vehicle = _className createVehicleLocal [23194.8,28544,50000.861];
+LIFE_Garage_show_vehicle setposatl [21085.9,7202.44,3.93473];
+LIFE_Garage_show_vehicle enableSimulation false;
+LIFE_Garage_show_vehicle setDir 359.072;
+
+
+_vehicleskins = [];
+if!((_dataArr select 1) isEqualTo -1) then {
+    _vehicleskins = ((M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures") select (_dataArr select 1)) select 2);
+};
+
+if(isnil "_vehicleskins") then {_vehicleskins = [];};
+
+{LIFE_Garage_show_vehicle setObjectTexture[_foreachindex,_x];} foreach _vehicleskins;
+_material_ID = _dataArr select 6;
+if!(_material_ID isEqualTo -1) then {
+    _material = (getarray(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "materials") select _material_ID) select 0;
+    {
+        LIFE_Garage_show_vehicle setObjectMaterial[_foreachindex, _material];
+    } foreach (getObjectMaterials LIFE_Garage_show_vehicle);
+};

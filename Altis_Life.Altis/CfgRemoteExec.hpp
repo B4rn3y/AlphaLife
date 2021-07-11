@@ -84,6 +84,9 @@ class CfgRemoteExec {
         F(LIFE_fnc_bankSiren,CLIENT)
         F(LIFE_fnc_oilspill_receive,CLIENT)
         F(LIFE_fnc_car_light_receive,CLIENT)
+        F(LIFE_fnc_gangUpdate_client,CLIENT)
+        F(LIFE_fnc_gang_invite_allie_received,CLIENT)
+        F(LIFE_fnc_gang_invite_allie_resp_received,CLIENT)
 
         /* Server only functions */
         F(DB_fnc_insertRequest,SERVER)
@@ -130,6 +133,7 @@ class CfgRemoteExec {
         F(life_fnc_update_evidence_room,SERVER)
         F(life_fnc_tuning_update_vehicle,SERVER)
         F(TON_fnc_insureCar,SERVER)
+        F(TON_fnc_garage_set_gang,SERVER)
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)

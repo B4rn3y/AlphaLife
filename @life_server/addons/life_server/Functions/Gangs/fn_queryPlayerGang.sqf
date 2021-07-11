@@ -5,15 +5,22 @@
     Description:
     Queries to see if the player belongs to any gang.
 */
-private ["_query","_queryResult"];
+private ["_query","_queryResult","_result_gang"];
 
-_query = format ["SELECT id, owner, name, maxmembers, bank, members FROM gangs WHERE active='1' AND members LIKE '%2%1%2'",_this,"%"];
 
-_queryResult = [_query,2] call DB_fnc_asyncCall;
+_query = format ["SELECT gang_members.gang_id,players.name, gang_members.pid, gang_members.leader, gang_members.right_invite, gang_members.right_expand, gang_members.right_withdraw, gang_members.right_skins, gang_members.right_kick, gang_members.right_house, gang_members.right_garage FROM gang_members LEFT JOIN players ON gang_members.pid = players.pid where gang_members.gang_id in(Select gang_id from gang_members where pid = '%1');",_this];
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
+
 
 if !(count _queryResult isEqualTo 0) then {
-    _tmp = [_queryResult select 5] call DB_fnc_mresToArray;
-    if (_tmp isEqualType "") then {_tmp = call compile format ["%1", _tmp];};
-    _queryResult set[5, _tmp];
+    _query = format ["SELECT id, name, tag, alliances, maxmembers, bank, tax, public FROM gangs WHERE id = '%1';",((_queryResult select 0)select 0)];
+    _queryResult = [_queryResult];
+
+    _result_gang = [_query,2] call DB_fnc_asyncCall;
+    if(count _result_gang > 0) then {
+    	_result_gang set[3,[_result_gang select 3] call DB_fnc_mresToArray];
+    };
+    _queryResult pushBack _result_gang;
 };
-missionNamespace setVariable [format ["gang_%1",_this],_queryResult];
+
+_queryResult

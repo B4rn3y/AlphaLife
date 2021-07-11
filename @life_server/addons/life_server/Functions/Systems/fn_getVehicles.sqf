@@ -19,7 +19,8 @@ if (_pid isEqualTo "" || _side isEqualTo sideUnknown || _type isEqualTo "" || is
     };
 };
 
-_unit = owner _unit;
+_gang_id = (group _unit) getVariable["gang_id",-2];
+
 _side = switch (_side) do {
     case west:{"cop"};
     case civilian: {"civ"};
@@ -31,7 +32,7 @@ if (_side == "Error") exitWith {
     [[]] remoteExec ["life_fnc_impoundMenu",(owner _unit)];
 };
 
-_query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, nitro, oil, light, horn, material, insure FROM vehicles WHERE pid='%1' AND alive='1' AND active='0' AND side='%2' AND type='%3'",_pid,_side,_type];
+_query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, nitro, oil, light, horn, material, insure, gang_id FROM vehicles WHERE (pid='%1' AND alive='1' AND active='0' AND side='%2' AND type='%3') OR (gang_id='%4' AND alive='1' AND active='0' AND side='%2' AND type='%3')",_pid,_side,_type,_gang_id];
 
 
 _tickTime = diag_tickTime;

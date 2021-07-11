@@ -36,7 +36,7 @@ if (_action) then {
     } else {
         [2,group player] remoteExec ["TON_fnc_updateGang",RSERV];
     };
-
+    [2,format["%1 hat die Gang-Slots erweitert",profileName]] remoteExec["life_fnc_gangUpdate_client",(group player)];
 } else {
     hint localize "STR_GNOTF_UpgradeCancel";
 };

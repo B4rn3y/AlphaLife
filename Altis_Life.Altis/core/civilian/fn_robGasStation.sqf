@@ -15,6 +15,9 @@ _min_cops = 3;
 _max_distance_rob = 7;
 if(playersnumber west < _min_cops) exitWith {[format["Es müssen mindestens %1 Cops online sein um dies tun zu können",_min_cops]] spawn life_fnc_exp_hint;};
 
+if(isnull([(_target getVariable["capturing",""])] call life_fnc_findplayerofpid)) then {
+    _target setVariable["capturing",nil,true];
+};
 
 if!((_target getVariable["capturing",""]) isEqualTo "") exitWith {["Diese Tankstelle wird bereits ausgeraubt"] spawn life_fnc_exp_hint;};
 if!(isnil "gas_station_capturing") exitWith {};
@@ -44,7 +47,7 @@ _cP = 0.01;
 
 
 for "_i" from 0 to 1 step 0 do {
-    uiSleep  6;
+    uiSleep  5;
     _cP = _cP + 0.01;
     _target setVariable["percent",_cP*100];
     if (_cP >= 1) exitWith {};
@@ -62,7 +65,7 @@ if!(alive player) exitWith {call _abort_capturing;};
 if(player getVariable ["restrained",false]) exitWith {["Ausrauben wird abgebrochen."] spawn life_fnc_exp_hint;call _abort_capturing;};
 if (player distance _target > _max_distance_rob) exitWith {[format["Bleibe in der Nähe vom Besitzer, max. %1m",_max_distance_rob]] spawn life_fnc_exp_hint;call _abort_capturing;};
 _random_money = random[50000,125000,200000];
-alpha_cash = alpha_cash + _random_money;
+alpha_cash = alpha_cash + round(_random_money);
 
 if!(19 in alpha_quests)then {
     [19] spawn life_fnc_quest_achieved;

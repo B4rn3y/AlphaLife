@@ -37,3 +37,6 @@
 #include "skills.hpp"  // 258645
 #include "quest.hpp"  // 5223
 #include "tuning.hpp" //57742
+#include "gang_join.hpp" // 518845
+#include "gang_taxes.hpp" // 84785
+#include "gang_set_rights.hpp" // 23541

@@ -13,12 +13,13 @@ if (isNull _vault) exitWith {}; //Bad object
 if ((typeOf _vault != "Land_CargoBox_V1_F") && (typeof _vault != "O_CargoNet_01_ammo_F")) exitWith {hint localize "STR_ISTR_Blast_VaultOnly"};
 if (_vault getVariable ["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if (_vault getVariable ["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
-if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
-     hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
-};
+
 
 
 if(typeOf _vault isEqualTo "Land_CargoBox_V1_F") then {
+	if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
+     	hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+	};
 	private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
 	private _altisArray = [16019.5,16952.9,0];
 	private _tanoaArray = [11074.2,11501.5,0.00137329];
@@ -38,6 +39,10 @@ if(typeOf _vault isEqualTo "Land_CargoBox_V1_F") then {
 		[_vault, player] remoteExec ["TON_fnc_handleBlastingCharge",2];
 	};
 } else {
+		if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_evidence_cops"))) exitWith {
+	     hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_evidence_cops"))];
+	};
+
 	_ev_pos = [20902.4,19233.8,0.00143909];
 	if ((nearestObject [_ev_pos,"Land_Research_HQ_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Blast_Exploit"};
 	if (!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?

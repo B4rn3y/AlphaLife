@@ -100,6 +100,7 @@ class Life_Client_Core {
         class tazed {};
         class Frogtrap {};
         class robGasStation {};
+        class robsmallbank {};
     };
 
     class Config {
@@ -177,6 +178,8 @@ class Life_Client_Core {
         class wireTransfer {};
         class show_name_message {};
         class insurecar {};
+        class garageComboChange {};
+        class garage_set_gang {};
     };
 
     class exclusion_zone {
@@ -250,11 +253,13 @@ class Life_Client_Core {
         class mapMarkerplayer {};
         class rpNameCheck {};
         class nearplayers {};
+        class findPlayerOfPID {};
     };
 
     class FSM {
         file = "core\fsm";
         class LightsLoop {ext = ".fsm";};
+        class circleCamera3D {ext = ".fsm";};
     };
 
     class Gangs {
@@ -271,6 +276,18 @@ class Life_Client_Core {
         class gangNewLeader {};
         class gangUpgrade {};
         class initGang {};
+        class gang_find_member_entry {};
+        class gangUpdate_client {};
+        class gangJoin {};
+        class gang_allie_menu {};
+        class gang_invite_allie {};
+        class gang_invite_allie_received {};
+        class gang_invite_allie_resp_received {};
+        class gang_remove_allie {};
+        class gang_set_taxes {};
+        class gang_rights_dialog_EVH {};
+        class gang_rights_dialog {};
+        class gang_public {};
     };
 
     class Gang_Area {

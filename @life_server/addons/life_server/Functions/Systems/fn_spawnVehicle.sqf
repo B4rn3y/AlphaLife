@@ -110,7 +110,7 @@ if!((_vInfo select 8) isEqualTo -1) then {
     [_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
 };
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
-_vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7),(_vInfo select 19)],true];
+_vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 0),(_vInfo select 19)],true];
 
 
 _nitro = _vInfo select 14;

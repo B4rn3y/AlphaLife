@@ -9,10 +9,12 @@ private["_vehicle","_vehicleLife","_vid","_pid","_unit","_multiplier","_price","
 disableSerialization;
 if ((lbCurSel 2802) isEqualTo -1) exitWith {hint localize "STR_Global_NoSelection"};
 _vehicle = lbData[2802,(lbCurSel 2802)];
-_vehicle = (call compile format["%1",_vehicle]) select 0;
+_data = (call compile format["%1",_vehicle]);
+_vehicle = _data select 0;
+
 _vehicleLife = _vehicle;
 _vid = lbValue[2802,(lbCurSel 2802)];
-_pid = getPlayerUID player;
+_pid = _data select 10;
 _unit = player;
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 if ((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay";};
@@ -39,7 +41,7 @@ if(!(_insurancePrice isEqualType 0) || _insurancePrice < 1) then {_insurancePric
 if(BANK < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_NotEnoughMoney"),[_insurancePrice] call life_fnc_numberText];};
 
 _action = [
-    format["Bist du dir sicher, dass du $%1 für eine Versicherung ausgeben willst?",_insurancePrice],
+    format["Bist du dir sicher, dass du $%1 für eine Versicherung ausgeben willst?",[_insurancePrice] call life_fnc_numberText],
     "BESTÄTIGUNG",
     "NE",
     "JA"

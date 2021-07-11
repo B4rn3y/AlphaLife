@@ -11,8 +11,8 @@
 
 sleep 0.5;
 if(visibleMap) then {
-	waitUntil {visibleMap && isNil "mapm"};
 	if(!isnil "mapm") exitWith {};
+	waitUntil {visibleMap};
 
 	_units_to_show = switch (playerside) do
 	{
@@ -48,6 +48,27 @@ if(visibleMap) then {
 
 		_markers pushBack [_marker,_x];
 	} foreach _units_to_show;
+
+
+	_alliances_ids = [];
+	{_alliances_ids pushBackUnique (_x select 0);} foreach ((group player) getVariable["gang_alliances",[]]);
+
+	if!(_alliances_ids isEqualTo []) then {
+		{
+			if((_x getVariable["gang_id",-1]) in _alliances_ids) then {
+				_gang_name = _x getVariable["gang_name","Unbekannt"];
+				{
+					_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
+					_marker setMarkerColorLocal "ColorOrange";
+					_marker setMarkerTypeLocal "Mil_dot";
+					_marker setMarkerTextLocal format["[%2] %1", name _x,_gang_name];
+
+					_markers pushBack [_marker,_x];
+				} foreach (units _x);
+			};
+		} foreach allGroups;
+
+	};
 
 
 	while {visibleMap} do

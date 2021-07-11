@@ -46,7 +46,7 @@ if (_impound) exitWith {
             deleteVehicle _vehicle;
         };
     } else {    // no free repairs!
-        _query = format ["UPDATE vehicles SET active='0', fuel='%3', damage='%4', nitro='%5', oil='%6' WHERE pid='%1' AND plate='%2'",_uid , _plate, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
+        _query = format ["UPDATE vehicles SET active='0', fuel='%3', damage='%4', nitro='%5', oil='%6' WHERE pid='%1' AND id='%2'",_uid , _plate, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
         _thread = [_query,1] call DB_fnc_asyncCall;
 
         if (!isNil "_vehicle" && {!isNull _vehicle}) then {
@@ -103,7 +103,7 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
 
         if (_blacklist) then {
             [_uid, _profileName, "481"] remoteExecCall["life_fnc_wantedAdd", RSERV];
-            _query = format ["UPDATE vehicles SET blacklist='1' WHERE pid='%1' AND plate='%2'", _uid, _plate];
+            _query = format ["UPDATE vehicles SET blacklist='1' WHERE pid='%1' AND id='%2'", _uid, _plate];
             _thread = [_query, 1] call DB_fnc_asyncCall;
         };
 
@@ -141,7 +141,7 @@ _trunk = [_trunk] call DB_fnc_mresArray;
 _cargo = [_cargo] call DB_fnc_mresArray;
 
 // update
-_query = format ["UPDATE vehicles SET active='0', inventory='%3', gear='%4', fuel='%5', damage='%6',nitro='%7',oil='%8' WHERE pid='%1' AND plate='%2'", _uid, _plate, _trunk, _cargo, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
+_query = format ["UPDATE vehicles SET active='0', inventory='%3', gear='%4', fuel='%5', damage='%6',nitro='%7',oil='%8' WHERE pid='%1' AND id='%2'", _uid, _plate, _trunk, _cargo, _fuel, _damage,(_vehicle getvariable["alpha_nitro",-1]),(_vehicle getvariable["alpha_oil",-1])];
 _thread = [_query,1] call DB_fnc_asyncCall;
 
 if (!isNil "_vehicle" && {!isNull _vehicle}) then {

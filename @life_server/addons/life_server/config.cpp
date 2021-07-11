@@ -97,6 +97,7 @@ class CfgFunctions {
             class handleBlastingCharge {};
             class terrainSort {};
             class insureCar {};
+            class garage_set_gang {};
         };
 
         class Housing {

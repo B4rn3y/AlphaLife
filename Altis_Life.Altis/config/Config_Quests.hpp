@@ -3,7 +3,7 @@ class CfgQuests
 	class Quests
 	{
 
-		////////////////////////////////////////////   max wert 42
+		////////////////////////////////////////////   max wert 43
 		Quests[] = {
 			{"BASIC",
 				{
@@ -49,14 +49,15 @@ class CfgQuests
 					{30,"Stammtisch", "Verbringe 50 Stunden auf der Insel","Du erhältst 20.000XP und 500.000$",20000,500000,""},
 					{31,"Verstrahlt", "Baue Uran ab","Du erhältst 800XP und 5000$",800,5000,""},
 					{32,"Froschfalle", "Stelle eine Froschfalle im Sumpf auf","Du erhältst 4500XP und 50.000$",4500,50000,""},
-					{33,"LSD", "Verkaufe LSD am Drogenhändler","Du erhältst 4500XP und 50000$",4500,50000,""}
+					{33,"LSD", "Verkaufe LSD am Drogenhändler","Du erhältst 4500XP und 50000$",4500,50000,""},
+					{43,"Sparfuchs", "Raube erfolgreich eine kleine Bank aus","Du erhältst 3000XP und 75000$",3000,75000,""}
 
 				}
 			},
 			{"ADVANCED",
 				{
 					{34,"Chiefklopper", "Schlage einen Polizeidirektor nieder","Du erhältst 35.000XP und 1.000.000$",35000,1000000,""},
-					{35,"Die Panzerknacker", "Mache einen Banküberfall und sprenge den Tresor","Du erhältst 3500XP und 100.000$",3500,100000,""},
+					{35,"Die Panzerknacker", "Mache einen Banküberfall und sprenge den Tresor","Du erhältst 6500XP und 100.000$",6500,100000,""},
 					{38,"Alpha", "Tritt der Alpha Bewegung bei indem du dir eine Alpha Lizenz kaufst","Du erhältst 10000XP und 1.000.000$",10000,1000000,""},
 					{36,"Lebende Legende", "Verbringe 100 Stunden auf der Insel","Du erhältst 35.000XP und 5.000.000$",35000,5000000,""}
 				}

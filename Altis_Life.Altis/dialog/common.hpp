@@ -226,13 +226,16 @@ class Life_RscHud
     text = "";
 };
 
-class Life_RscListNBox
+class life_RscListNBox
 {
     style = 16;
     type = 102;
     shadow = 0;
-    font = "RobotoCondensed";
-    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    font = "PuristaMedium";
+    sizeEx = "(         (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    colorPicture[] = {1,1,1,1};
+    colorPictureSelected[] = {1,1,1,1};
+    colorPictureDisabled[] = {1,1,1,1};
     color[] = {0.95,0.95,0.95,1};
     colorText[] = {1,1,1,1.0};
     colorDisabled[] = {1,1,1,0.25};
@@ -241,9 +244,6 @@ class Life_RscListNBox
     colorSelect2[] = {0,0,0,1};
     colorSelectBackground[] = {0.8,0.8,0.8,1};
     colorSelectBackground2[] = {1,1,1,0.5};
-    colorPicture[] = {1,1,1,1};
-    colorPictureSelected[] = {1,1,1,1};
-        colorPictureDisabled[] = {1,1,1,1};
     soundSelect[] = {"",0.1,1};
     soundExpand[] = {"",0.1,1};
     soundCollapse[] = {"",0.1,1};
@@ -252,8 +252,12 @@ class Life_RscListNBox
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
     autoScrollRewind = 0;
-    class ListScrollBar: Life_RscScrollBar{};
-    class ScrollBar: Life_RscScrollBar{};
+    rowHeight = 0.04;
+    drawSideArrows = 0;
+    idcLeft = -1;
+    idcRight = -1;
+    class ListScrollBar: life_RscScrollBar{};
+    class ScrollBar: life_RscScrollBar{};
 };
 
 

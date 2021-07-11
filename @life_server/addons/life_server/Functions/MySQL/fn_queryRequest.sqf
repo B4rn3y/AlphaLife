@@ -133,9 +133,8 @@ switch (_side) do {
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;
         waitUntil {scriptDone _houseData};
         _queryResult pushBack (missionNamespace getVariable [format ["houses_%1",_uid],[]]);
-        _gangData = _uid spawn TON_fnc_queryPlayerGang;
-        waitUntil{scriptDone _gangData};
-        _queryResult pushBack (missionNamespace getVariable [format ["gang_%1",_uid],[]]);
+        _gangData = _uid call TON_fnc_queryPlayerGang;
+        _queryResult pushBack _gangData;
 
     };
 

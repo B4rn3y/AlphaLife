@@ -29,13 +29,13 @@ switch (_index) do
 {
 	case 0:  // folien
 	{
-		_query = format["UPDATE vehicles SET material = '%1' WHERE pid = '%2' and plate = '%3';",_index_item,_uid,_plate];
+		_query = format["UPDATE vehicles SET material = '%1' WHERE pid = '%2' and id = '%3';",_index_item,_uid,_plate];
 		[_query,1] call DB_fnc_asyncCall;
 	};
 
 	case 1:  // hupen
 	{
-		_query = format["UPDATE vehicles SET horn = '%1' WHERE pid = '%2' and plate = '%3';",_index_item,_uid,_plate];
+		_query = format["UPDATE vehicles SET horn = '%1' WHERE pid = '%2' and id = '%3';",_index_item,_uid,_plate];
 		[_query,1] call DB_fnc_asyncCall;
 		_vehicle setVariable["alpha_horn",_index_item,true];
 	};
@@ -43,11 +43,11 @@ switch (_index) do
 	case 2:  // anderes
 	{
 		if(_index_item isEqualTo 0) then {
-			_query = format["UPDATE vehicles SET nitro = '%1' WHERE pid = '%2' and plate = '%3';",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "nitro_amount"),_uid,_plate];
+			_query = format["UPDATE vehicles SET nitro = '%1' WHERE pid = '%2' and id = '%3';",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "nitro_amount"),_uid,_plate];
 			[_query,1] call DB_fnc_asyncCall;
 			_vehicle setvariable["alpha_nitro",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "nitro_amount"),true];
 		} else {
-			_query = format["UPDATE vehicles SET oil = '%1' WHERE pid = '%2' and plate = '%3';",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "oil_amount"),_uid,_plate];
+			_query = format["UPDATE vehicles SET oil = '%1' WHERE pid = '%2' and id = '%3';",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "oil_amount"),_uid,_plate];
 			[_query,1] call DB_fnc_asyncCall;
 			_vehicle setvariable["alpha_oil",getnumber(missionConfigFile >> "Tuning_Conf" >> "Conf" >> "oil_amount"),true];
 		};
@@ -55,7 +55,7 @@ switch (_index) do
 
 	case 3:  // lights
 	{
-		_query = format["UPDATE vehicles SET light = '%1' WHERE pid = '%2' and plate = '%3';",_index_item,_uid,_plate];
+		_query = format["UPDATE vehicles SET light = '%1' WHERE pid = '%2' and id = '%3';",_index_item,_uid,_plate];
 		[_query,1] call DB_fnc_asyncCall;
 		_vehicle setvariable["alpha_light",_index_item,true];
 	};
